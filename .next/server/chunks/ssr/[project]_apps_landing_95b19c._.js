@@ -1,0 +1,346 @@
+module.exports = {
+
+"[project]/apps/landing/src/app/es/signup/page.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: require } = __turbopack_context__;
+{
+__turbopack_esm__({
+    "default": (()=>SignupPage)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/link.js [app-rsc] (ecmascript)");
+;
+;
+;
+;
+export default function SignupPage() {
+    return /*#__PURE__*/ _jsxDEV("main", {
+        className: "min-h-screen bg-white text-slate-900",
+        children: /*#__PURE__*/ _jsxDEV("div", {
+            className: "flex min-h-screen w-full flex-col lg:flex-row",
+            children: [
+                /*#__PURE__*/ _jsxDEV("section", {
+                    className: "flex w-full flex-col justify-between bg-white px-6 py-10 sm:px-10 lg:w-1/2 lg:px-24 lg:py-12",
+                    children: [
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("div", {
+                                    className: "flex items-center gap-2",
+                                    children: [
+                                        /*#__PURE__*/ _jsxDEV("div", {
+                                            className: "flex items-center",
+                                            children: [
+                                                /*#__PURE__*/ _jsxDEV("span", {
+                                                    className: "inline-block h-6 w-6 rounded-full border border-slate-900"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                                    lineNumber: 16,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("span", {
+                                                    className: "-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                                    lineNumber: 17,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                            lineNumber: 15,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("span", {
+                                            className: "text-[18px] font-semibold tracking-tight text-slate-900",
+                                            children: "Copiloto Médico"
+                                        }, void 0, false, {
+                                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                            lineNumber: 19,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                    lineNumber: 14,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("div", {
+                                    className: "mt-16 max-w-sm",
+                                    children: [
+                                        /*#__PURE__*/ _jsxDEV("h1", {
+                                            className: "font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-[32px]",
+                                            children: "Crea tu cuenta"
+                                        }, void 0, false, {
+                                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                            lineNumber: 26,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("p", {
+                                            className: "mt-3 text-sm text-slate-500",
+                                            children: [
+                                                "El registro en Copiloto Médico es actualmente ",
+                                                /*#__PURE__*/ _jsxDEV("span", {
+                                                    className: "font-semibold text-slate-800",
+                                                    children: "solo por invitación"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                                    lineNumber: 30,
+                                                    columnNumber: 63
+                                                }, this),
+                                                ". Si recibiste una invitación, usa el mismo correo electrónico para continuar."
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                            lineNumber: 29,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("form", {
+                                            className: "mt-8 space-y-4",
+                                            action: "#",
+                                            method: "post",
+                                            children: [
+                                                /*#__PURE__*/ _jsxDEV("div", {
+                                                    className: "space-y-2",
+                                                    children: [
+                                                        /*#__PURE__*/ _jsxDEV("label", {
+                                                            htmlFor: "email",
+                                                            className: "text-sm font-medium text-slate-800",
+                                                            children: "Correo electrónico"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                                            lineNumber: 36,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("input", {
+                                                            id: "email",
+                                                            name: "email",
+                                                            type: "email",
+                                                            required: true,
+                                                            placeholder: "email@example.com",
+                                                            className: "block w-full rounded-md border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                                            lineNumber: 42,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                                    lineNumber: 35,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("button", {
+                                                    type: "submit",
+                                                    className: "mt-2 inline-flex w-full items-center justify-center rounded-full bg-black px-4 py-3 text-sm font-semibold text-[#d5ff7c] shadow-sm transition hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 focus:ring-offset-white",
+                                                    children: "Continuar"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                                    lineNumber: 52,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                            lineNumber: 34,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("p", {
+                                            className: "mt-3 text-center text-[11px] text-slate-500",
+                                            children: [
+                                                "¿No tienes una invitación?",
+                                                " ",
+                                                /*#__PURE__*/ _jsxDEV(Link, {
+                                                    href: "/es/contact",
+                                                    className: "font-medium text-slate-900 hover:underline",
+                                                    children: "Solicita acceso"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                                    lineNumber: 62,
+                                                    columnNumber: 17
+                                                }, this),
+                                                "."
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                            lineNumber: 60,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("p", {
+                                            className: "mt-4 text-center text-xs text-slate-500",
+                                            children: [
+                                                "¿Ya tienes una cuenta?",
+                                                " ",
+                                                /*#__PURE__*/ _jsxDEV(Link, {
+                                                    href: "/es/login",
+                                                    target: "_blank",
+                                                    rel: "noreferrer",
+                                                    className: "font-medium text-slate-900 hover:underline",
+                                                    children: "Iniciar sesión"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                                    lineNumber: 73,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                            lineNumber: 71,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                    lineNumber: 25,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                            lineNumber: 12,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV(LocaleSelector, {}, void 0, false, {
+                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                            lineNumber: 85,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                    lineNumber: 11,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDEV("section", {
+                    className: "relative hidden w-full overflow-hidden lg:block lg:w-1/2",
+                    children: [
+                        /*#__PURE__*/ _jsxDEV(Image, {
+                            src: "/680b8bd084ba7f136270ee2a_testimonial1.webp",
+                            alt: "Profesional sanitario usando Copiloto Médico",
+                            fill: true,
+                            sizes: "50vw",
+                            className: "object-cover",
+                            priority: true
+                        }, void 0, false, {
+                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                            lineNumber: 90,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "absolute inset-0 bg-black/55"
+                        }, void 0, false, {
+                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                            lineNumber: 98,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "relative flex h-full flex-col justify-center px-10 py-12 text-white",
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("blockquote", {
+                                    className: "max-w-md text-lg leading-relaxed",
+                                    children: '"Estoy muy contento con que el grupo Recoletas haya incorporado Copiloto Médico. Me permite dedicar más tiempo al paciente y explicarle el diagnóstico y tratamiento de manera más completa. Bienvenida la IA que humaniza la consulta."'
+                                }, void 0, false, {
+                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                    lineNumber: 101,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("div", {
+                                    className: "mt-6 flex items-center gap-3 text-xs text-slate-200",
+                                    children: [
+                                        /*#__PURE__*/ _jsxDEV("div", {
+                                            className: "relative h-10 w-10 overflow-hidden rounded-full bg-slate-300",
+                                            children: /*#__PURE__*/ _jsxDEV(Image, {
+                                                src: "/6810bcac6fc499ede820f7a0_Juan Mora.png",
+                                                alt: "Profesional sanitario",
+                                                fill: true,
+                                                className: "object-cover"
+                                            }, void 0, false, {
+                                                fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                                lineNumber: 110,
+                                                columnNumber: 17
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                            lineNumber: 109,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("div", {
+                                            className: "space-y-0.5",
+                                            children: [
+                                                /*#__PURE__*/ _jsxDEV("p", {
+                                                    className: "text-sm font-semibold text-white",
+                                                    children: "Joel Joshi Otero"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                                    lineNumber: 118,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("p", {
+                                                    className: "text-[11px] text-slate-200/80",
+                                                    children: "Especialista en Cirugía Oral y Maxilofacial"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                                    lineNumber: 119,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("p", {
+                                                    className: "text-[11px] text-slate-200/80",
+                                                    children: "Recoletas Salud"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                                    lineNumber: 122,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                            lineNumber: 117,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                                    lineNumber: 108,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                            lineNumber: 100,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+                    lineNumber: 89,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+            lineNumber: 9,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/apps/landing/src/app/es/signup/page.tsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, this);
+}
+}}),
+"[project]/apps/landing/src/app/es/signup/page.tsx [app-rsc] (ecmascript, Next.js server component)": ((__turbopack_context__) => {
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, t: require } = __turbopack_context__;
+{
+__turbopack_export_namespace__(__turbopack_import__("[project]/apps/landing/src/app/es/signup/page.tsx [app-rsc] (ecmascript)"));
+}}),
+"[project]/apps/landing/.next-internal/server/app/es/signup/page/actions.js [app-rsc] (ecmascript)": (function(__turbopack_context__) {
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, m: module, e: exports, t: require } = __turbopack_context__;
+{
+}}),
+
+};
+
+//# sourceMappingURL=%5Bproject%5D_apps_landing_95b19c._.js.map

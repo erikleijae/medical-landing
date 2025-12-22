@@ -1,0 +1,56 @@
+{
+  "sorted_middleware": [],
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge/chunks/[project]__ead0eb._.js",
+        "server/edge/chunks/[root of the server]__d83a9c._.js",
+        "server/edge/chunks/edge-wrapper_d07d49.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/(/?index|/?index\\\\.json)?",
+          "originalSource": "/"
+        }
+      ],
+      "wasm": [],
+      "assets": [
+        {
+          "name": "server/edge/chunks/[project]__ead0eb._.js.map",
+          "filePath": "server/edge/chunks/[project]__ead0eb._.js.map"
+        },
+        {
+          "name": "server/edge/chunks/[project]__ead0eb._.js",
+          "filePath": "server/edge/chunks/[project]__ead0eb._.js"
+        },
+        {
+          "name": "server/edge/chunks/[root of the server]__d83a9c._.js.map",
+          "filePath": "server/edge/chunks/[root of the server]__d83a9c._.js.map"
+        },
+        {
+          "name": "server/edge/chunks/[root of the server]__d83a9c._.js",
+          "filePath": "server/edge/chunks/[root of the server]__d83a9c._.js"
+        },
+        {
+          "name": "server/edge/chunks/edge-wrapper_d07d49.js.map",
+          "filePath": "server/edge/chunks/edge-wrapper_d07d49.js.map"
+        },
+        {
+          "name": "server/edge/chunks/edge-wrapper_d07d49.js",
+          "filePath": "server/edge/chunks/edge-wrapper_d07d49.js"
+        }
+      ],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "RS6yHVZuJXLyM6YM2Vpl9BmztQUUx99ZHsnGQtzc6PM=",
+        "__NEXT_PREVIEW_MODE_ID": "5235aa5024c33e1524f5a27735250faf",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "68a8f928cff6474618e23640e5a0c134abd6f8d5b4ffcf93ee60b21dcb4c4ee8",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "2c553e423ee0f79e2256905ca70701dbc2492960f9ba3ffd04d9f9292f882085"
+      }
+    }
+  },
+  "instrumentation": null,
+  "functions": {}
+}
