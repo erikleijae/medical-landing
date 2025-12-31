@@ -2,27 +2,29 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { HeroVideo } from "../components/hero-video";
+import { BenefitsSimulator } from "../components/benefits-simulator";
+import { LanguageSwitcher } from "../components/language-switcher";
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* HEADER */}
-      <header className="bg-white">
+      <header className="sticky top-0 z-40 bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-8 px-6 py-4 md:px-8 lg:px-10">
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <div className="flex items-center">
               <span className="inline-block h-6 w-6 rounded-full border border-slate-900 bg-slate-900" />
               <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
             </div>
             <span className="text-[18px] font-semibold tracking-tight text-slate-900">Copiloto Médico</span>
-          </div>
+          </Link>
 
           <nav className="hidden items-center gap-8 text-sm text-slate-800 lg:flex">
             <Link href="/es/product" className="hover:text-slate-900">
               Producto
             </Link>
-            <Link href="/es/customer-stories" className="hover:text-slate-900">
-              Historias de clientes
+            <Link href="/es/benefits-simulator" className="hover:text-slate-900">
+              Simulador de beneficios
             </Link>
             <Link href="/es/pricing" className="hover:text-slate-900">
               Precio
@@ -30,6 +32,7 @@ export default function HomePage() {
           </nav>
 
           <div className="flex items-center gap-4 text-sm">
+            <LanguageSwitcher locale="es" />
             <Link
               href="/es/login"
               target="_blank"
@@ -38,18 +41,11 @@ export default function HomePage() {
             >
               Iniciar sesión
             </Link>
-            <span className="hidden text-slate-300 sm:inline">|</span>
             <Link
               href="/signup"
-              className="hidden text-slate-700 hover:text-slate-900 sm:inline"
-            >
-              Registrarse
-            </Link>
-            <Link
-              href="/es/contact"
               className="inline-flex items-center justify-center rounded-full bg-[#d5ff7c] px-5 py-2 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-[#c9f46c]"
             >
-              Solicitar demo
+              Comenzar gratis
               <span className="ml-1" aria-hidden>
                 →
               </span>
@@ -62,28 +58,21 @@ export default function HomePage() {
       <section className="bg-white">
         <div className="mx-auto flex max-w-6xl flex-col items-center px-6 pb-12 pt-20 text-center md:px-8 md:pb-16 md:pt-24 lg:px-0">
           <h1 className="font-display text-[38px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[44px] md:text-[50px]">
-            El asistente clínico de IA líder en{' '}
+            El asistente clínico de IA líder en{" "}
             <span className="border-b-[6px] border-[#d5ff7c] pb-1">America</span>
           </h1>
           <p className="mt-3 text-[15px] text-slate-500 sm:mt-4">
-            Más de 1.000 organizaciones sanitarias están ahorrando horas al día en tareas administrativas con Copiloto
-            Médico.
+            Utilizado por más de 1.000 doctores que ahorran tiempo cada día con Copiloto Médico.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/es/contact"
+              href="/signup"
               className="inline-flex items-center justify-center rounded-full bg-[#d5ff7c] px-6 py-2.5 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-[#c9f46c]"
             >
-              Solicitar demo
+              Comenzar gratis
               <span className="ml-1" aria-hidden>
                 →
               </span>
-            </Link>
-            <Link
-              href="/signup"
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-2.5 text-[13px] font-semibold text-slate-900 hover:bg-slate-50"
-            >
-              Pruébalo gratis
             </Link>
           </div>
         </div>
@@ -138,7 +127,7 @@ export default function HomePage() {
         <HeroVideo />
       </section>
 
-      {/* TANDem EN LA PRÁCTICA */}
+      {/* COPILOTO MÉDICO EN LA PRÁCTICA */}
       <section id="producto" className="bg-white">
         <div className="mx-auto max-w-6xl px-6 pt-16 pb-12">
           <div className="text-center">
@@ -146,7 +135,7 @@ export default function HomePage() {
               Copiloto Médico en la práctica
             </h2>
             <p className="mt-2 text-sm text-slate-500">
-              Más de 1000 organizaciones sanitarias confían en nosotros
+              Hospitales y clínicas en México y Estados Unidos confían en nosotros
             </p>
           </div>
 
@@ -154,81 +143,56 @@ export default function HomePage() {
             <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
               <div className="relative aspect-[16/9] w-full">
                 <Image
-                  src="/68a701201d6e0dcd3137fbbf_recoletas-p-500.avif"
-                  alt="Recoletas elige a Copiloto Médico"
+                  src="/Medica.png"
+                  alt="Médica Sur, hospital de alta especialidad en Ciudad de México"
                   fill
                   className="object-cover"
                   sizes="(min-width: 768px) 33vw, 100vw"
                 />
               </div>
               <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
-                <p>
-                  Recoletas elige a Copiloto Médico para llevar la IA a las consultas de más de 50 hospitales y clínicas
-                  en España.
+                <p className="text-justify">
+                  En México, hospitales de alta especialidad como Médica Sur buscan reducir la carga administrativa. Copiloto
+                  Médico recorta cerca de un 40 % del tiempo de consulta y genera la nota clínica solo con tu voz.
                 </p>
-                <Link
-                  href="/es/customer-stories/recoletas"
-                  className="mt-4 inline-flex items-center rounded-full bg-white px-4 py-1.5 text-[13px] font-medium text-slate-900 shadow-sm ring-1 ring-slate-200 hover:bg-slate-50"
-                >
-                  Leer publicación
-                  <span className="ml-1" aria-hidden>
-                    →
-                  </span>
-                </Link>
               </div>
             </article>
 
             <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
               <div className="relative aspect-[16/9] w-full">
                 <Image
-                  src="/68dceef83880f62a4f8c2d15_accrux-p-500.avif"
-                  alt="Copiloto Médico se ha asociado con Accurx"
+                  src="/DoctorSV.png"
+                  alt="Doctor SV, plataforma nacional de salud digital en El Salvador"
                   fill
                   className="object-cover"
                   sizes="(min-width: 768px) 33vw, 100vw"
                 />
               </div>
               <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
-                <p>
-                  Copiloto Médico se ha asociado con Accurx para ofrecer nuestro escriba médico con IA a 200.000
-                  profesionales del NHS.
+                <p className="text-justify">
+                  En El Salvador, Doctor SV moderniza la historia clínica digital del país. Asistentes de IA como Copiloto
+                  Médico complementan estas iniciativas al generar historias en minutos y reducir cerca de un 40 % del tiempo
+                  de consulta.
                 </p>
-                <Link
-                  href="/es/news/accurx-partnership"
-                  className="mt-4 inline-flex items-center rounded-full bg-white px-4 py-1.5 text-[13px] font-medium text-slate-900 shadow-sm ring-1 ring-slate-200 hover:bg-slate-50"
-                >
-                  Leer publicación
-                  <span className="ml-1" aria-hidden>
-                    →
-                  </span>
-                </Link>
               </div>
             </article>
 
             <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
               <div className="relative aspect-[16/9] w-full">
                 <Image
-                  src="/68a46f7b98a3bb8fe304f285_praktikertjänst-p-500.avif"
-                  alt="Praktikertjänst confía en Copiloto Médico"
+                  src="/houston.png"
+                  alt="Houston Methodist Hospital utilizando soluciones de inteligencia artificial"
                   fill
                   className="object-cover"
                   sizes="(min-width: 768px) 33vw, 100vw"
                 />
               </div>
               <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
-                <p>
-                  Praktikertjänst elige el asistente médico de IA de Copiloto Médico para llevar la documentación
-                  asistida por IA a la atención diaria.
+                <p className="text-justify">
+                  En Estados Unidos, hospitales como Houston Methodist Hospital lideran proyectos de scribes de IA. Copiloto
+                  Médico acerca este enfoque a la región y ayuda a recortar hasta 2 horas diarias de documentación por
+                  profesional.
                 </p>
-                <Link
-                  href="/es/customer-stories/praktikertjanst"
-                  className="mt-4 inline-flex items-center rounded-full bg-white px-4 py-1.5 text-[13px] font-medium text-slate-900 shadow-sm ring-1 ring-slate-200 hover:bg-slate-50"
-                >
-                  Ver video
-                  <span className="ml-1" aria-hidden>
-                    →
-                  </span>
-                </Link>
               </div>
             </article>
           </div>
@@ -245,7 +209,7 @@ export default function HomePage() {
           <div className="mt-6 flex flex-col items-center gap-3 text-sm text-slate-600">
             <div className="relative h-12 w-12 overflow-hidden rounded-full bg-slate-300">
               <Image
-                src="/6810bcac6fc499ede820f7a0_Juan Mora.png"
+                src="/6810bcac6fc499ede820f7a0_Juan Mora.png.png"
                 alt="Foto de Juan Mora Delgado"
                 fill
                 className="object-cover"
@@ -253,8 +217,8 @@ export default function HomePage() {
               />
             </div>
             <div>
-              <p className="text-sm font-semibold text-slate-900">Juan Mora Delgado</p>
-              <p className="text-xs text-slate-500">Médico internista, Hospital de Jerez</p>
+              <p className="text-sm font-semibold text-slate-900">Diana Martínez</p>
+              <p className="text-xs text-slate-500">Médica Sur</p>
             </div>
           </div>
         </div>
@@ -316,7 +280,7 @@ export default function HomePage() {
               <div className="relative aspect-[4/3] w-full">
                 <Image
                   src="/682dda247bf886638e57f4a2_sv3_3x-p-500.webp"
-                  alt="Profesional sanitario revisando la historia clínica en un ordenador"
+                  alt="Profesional de la salud revisando la historia clínica en un ordenador"
                   fill
                   className="object-cover"
                   sizes="(min-width: 768px) 33vw, 100vw"
@@ -350,7 +314,7 @@ export default function HomePage() {
               <div className="rounded-3xl bg-slate-50 p-5 shadow-sm">
                 <div className="relative overflow-hidden rounded-2xl bg-slate-100">
                   <Image
-                    src="/682dda8727cd852241825c5f_es5_4x.webp"
+                    src="/especialidades.png"
                     alt="Copiloto Médico adaptado a múltiples especialidades"
                     width={640}
                     height={360}
@@ -361,9 +325,29 @@ export default function HomePage() {
                 <div className="mt-4 text-sm text-slate-700">
                   <p className="text-sm font-semibold text-slate-900">Más de 50 especialidades compatibles</p>
                   <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                    Copiloto Médico entiende el idioma de tu especialidad y profesión. Diseñado para médicos, enfermeros,
-                    psicólogos, dentistas, fisioterapeutas y muchos más.
+                    Copiloto Médico entiende el idioma de tu especialidad y profesión. Diseñado para médicos, psicólogos,
+                    dentistas, fisioterapeutas, especialistas de urgencias, enfermeros y muchos más.
                   </p>
+                  <div className="mt-3 grid gap-2 text-[11px] text-slate-600 sm:grid-cols-2">
+                    <div className="rounded-2xl border border-slate-200 bg-white px-3 py-2">
+                      <p className="text-[11px] font-semibold text-slate-900">
+                        IA destilada por especialidad
+                      </p>
+                      <p className="mt-1">
+                        Modelos propios entrenados con datos clínicos reales para cada especialidad, desde Medicina Interna
+                        y Pediatría hasta Cirugía y Enfermería.
+                      </p>
+                    </div>
+                    <div className="rounded-2xl border border-slate-200 bg-white px-3 py-2">
+                      <p className="text-[11px] font-semibold text-slate-900">
+                        Menos ruido, más precisión
+                      </p>
+                      <p className="mt-1">
+                        Cada modelo destilado se ajusta al lenguaje clínico de su especialidad para reducir errores y
+                        alucinaciones.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -371,8 +355,8 @@ export default function HomePage() {
               <div className="rounded-3xl bg-slate-50 p-5 shadow-sm">
                 <div className="relative overflow-hidden rounded-2xl bg-slate-100">
                   <Image
-                    src="/682dda8f34f0db0e4a4da632_es6_4x.webp"
-                    alt="Botón de Transferir historia de Copiloto Médico"
+                    src="/medico.png"
+                    alt="Profesional de la salud transfiriendo la historia clínica digital con Copiloto Médico"
                     width={640}
                     height={360}
                     className="h-auto w-full object-cover"
@@ -380,10 +364,12 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="mt-4 text-sm text-slate-700">
-                  <p className="text-sm font-semibold text-slate-900">Transferencias al HIS con 1 clic</p>
+                  <p className="text-sm font-semibold text-slate-900">
+                    Transferencias a tu historia clínica digital (HIS) con 1 clic
+                  </p>
                   <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                    Copiloto Médico se integra con tu sistema de historia clínica y transfiere la documentación con un solo
-                    clic. Olvídate de copiar y pegar entre sistemas.
+                    Copiloto Médico se integra con tu historia clínica digital (HIS) y transfiere la documentación con un
+                    solo clic. Olvídate de copiar y pegar entre sistemas.
                   </p>
                 </div>
               </div>
@@ -406,8 +392,8 @@ export default function HomePage() {
                 <div className="mt-4">
                   <p className="text-sm font-semibold text-slate-900">Genera historias, documentos y cartas</p>
                   <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                    Obtén todo lo que necesitas de una consulta: historias clínicas, justificantes y otros documentos
-                    listos para enviar.
+                    Obtén todo lo que necesitas de una consulta: historias clínicas, justificantes y otros documentos listos
+                    para enviar.
                   </p>
                 </div>
               </div>
@@ -416,8 +402,8 @@ export default function HomePage() {
               <div className="rounded-3xl bg-slate-50 p-5 shadow-sm">
                 <div className="relative overflow-hidden rounded-2xl bg-slate-100">
                   <Image
-                    src="/680b89c61846a7cf255a4e19_uk_8.webp"
-                    alt="Profesional sanitario utilizando Copiloto Médico durante una consulta"
+                    src="/home_kid.png"
+                    alt="Profesional de la salud utilizando Copiloto Médico durante una consulta"
                     width={640}
                     height={640}
                     className="h-auto w-full object-cover"
@@ -425,8 +411,8 @@ export default function HomePage() {
                   />
                 </div>
                 <p className="mt-4 text-xs leading-relaxed text-slate-600">
-                  Copiloto Médico acompaña la consulta sin interrumpir la relación médico-paciente, manteniendo la
-                  atención en la persona.
+                  Copiloto Médico acompaña la consulta sin interrumpir la relación médico-paciente, manteniendo la atención
+                  en la persona.
                 </p>
               </div>
 
@@ -462,70 +448,29 @@ export default function HomePage() {
           <div className="grid items-stretch gap-6 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)]">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-slate-200">
               <Image
-                src="/680b8bd084ba7f136270ee2a_testimonial1.webp"
+                src="/680b8bd084ba7f136270ee2a_testimonial1.png"
                 alt="Médico generalista que utiliza Copiloto Médico"
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 22rem, 100vw"
               />
             </div>
-            <div className="flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-6 text-left shadow-sm">
+            <div className="flex flex-col justify-center rounded-3xl border border-slate-200 bg-white p-6 text-left shadow-sm">
               <div className="space-y-3">
                 <p className="text-lg font-medium leading-snug text-slate-900 sm:text-xl">
-                  «Copiloto Médico facilita mi jornada laboral para poder pasar más tiempo con cada paciente».
+                  «Estoy muy contenta con cómo Copiloto Médico me permite dedicar más tiempo al paciente en Médica Sur y
+                  explicar el diagnóstico y tratamiento de manera más completa. Bienvenida la IA que humaniza la consulta».
                 </p>
                 <div className="text-xs text-slate-600">
-                  <p className="font-semibold text-slate-900">Médico generalista</p>
-                  <p>Familjeläkarna, Suecia</p>
+                  <p className="font-semibold text-slate-900">Diana Martínez</p>
+                  <p>Profesional de la salud</p>
+                  <p>Pediatra</p>
+                  <p>Médica Sur</p>
                 </div>
               </div>
-              <div className="mt-4">
-                <button
-                  type="button"
-                  className="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-slate-50"
-                >
-                  Ver estudio de caso
-                  <span className="ml-1" aria-hidden>
-                    →
-                  </span>
-                </button>
-              </div>
             </div>
           </div>
 
-          {/* Caso 2 */}
-          <div className="mt-16 grid items-center gap-6 md:grid-cols-[minmax(0,1.6fr)_minmax(0,0.7fr)]">
-            <div className="space-y-3 text-left">
-              <p className="text-xl font-medium leading-snug text-slate-900 sm:text-2xl">
-                Ahora, los psicólogos de Mindler se ahorran horas todos los días, con menos estrés entre las sesiones.
-              </p>
-              <div className="text-xs text-slate-600">
-                <p className="font-semibold text-slate-900">Mindler</p>
-                <p>Proveedor de psicología en remoto</p>
-              </div>
-              <div className="pt-2">
-                <button
-                  type="button"
-                  className="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-slate-50"
-                >
-                  Ver estudio de caso
-                  <span className="ml-1" aria-hidden>
-                    →
-                  </span>
-                </button>
-              </div>
-            </div>
-
-            <div className="relative h-40 overflow-hidden rounded-3xl bg-[#e5d0ff] md:h-44">
-              <Image
-                src="/680a17e9f7c495837f0a7ddb_mindler.png"
-                alt="Logotipo de Mindler"
-                fill
-                className="object-cover"
-                sizes="(min-width: 768px) 16rem, 60vw"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -549,10 +494,11 @@ export default function HomePage() {
                 <span aria-hidden>✓</span>
               </div>
               <p className="text-sm font-semibold text-slate-900">
-                Leyes de datos de pacientes y RGPD
+                HIPAA y Normas Oficiales Mexicanas (NOM)
               </p>
               <p className="text-sm text-slate-700">
-                Nuestra solución cumple totalmente con las leyes nacionales sobre datos de pacientes y con el RGPD.
+                Copiloto Médico está diseñado para alinearse con los marcos de protección de datos de salud en México y
+                Estados Unidos, incluyendo HIPAA y las Normas Oficiales Mexicanas aplicables al expediente clínico.
               </p>
             </div>
 
@@ -561,10 +507,10 @@ export default function HomePage() {
                 <span aria-hidden>✓</span>
               </div>
               <p className="text-sm font-semibold text-slate-900">
-                Sin almacenamiento de audio
+                Sin documentación manual
               </p>
               <p className="text-sm text-slate-700">
-                El audio se procesa en tiempo real durante la consulta y no se almacena una vez finalizada.
+                Nuestra solución de voz única permite a los profesionales de la salud centrarse en la atención al paciente, sin necesidad de documentación manual.
               </p>
             </div>
 
@@ -573,10 +519,11 @@ export default function HomePage() {
                 <span aria-hidden>✓</span>
               </div>
               <p className="text-sm font-semibold text-slate-900">
-                Tratamiento de datos dentro de la UE
+                Tratamiento de datos en América del Norte
               </p>
               <p className="text-sm text-slate-700">
-                Todos los datos se cifran y se gestionan dentro de America cumpliendo la normativa vigente.
+                Todos los datos se cifran y se gestionan en centros de datos ubicados en América del Norte, cumpliendo la
+                normativa vigente en México y Estados Unidos.
               </p>
             </div>
           </div>
@@ -585,7 +532,7 @@ export default function HomePage() {
           <div className="mt-14 grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)] md:items-center">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-slate-300">
               <Image
-                src="/692573bae283b2fdbee9a46b_spain.avif"
+                src="/hipaa.png"
                 alt="Certificaciones de seguridad de Copiloto Médico"
                 fill
                 className="object-cover"
@@ -595,14 +542,14 @@ export default function HomePage() {
 
             <div className="space-y-4 text-left text-sm text-slate-700">
               <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
-                Con la confianza de más de 1000 organizaciones sanitarias de toda America
+                Con la confianza de más de 1000 doctores en toda América
               </h3>
               <p>
                 Basado en los más altos estándares de seguridad, Copiloto Médico garantiza una documentación basada en IA
                 segura y confiable.
               </p>
               <p>
-                Desde grandes redes hospitalarias hasta clínicas especializadas, los profesionales sanitarios utilizan
+                Desde grandes redes hospitalarias hasta clínicas especializadas, los profesionales de la salud utilizan
                 Copiloto Médico para ganar tiempo, calidad y tranquilidad en cada consulta.
               </p>
               <Link
@@ -637,7 +584,7 @@ export default function HomePage() {
               <div className="flex items-center gap-3">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full bg-slate-200">
                   <Image
-                    src="/6810bcac6fc499ede820f7a0_Juan Mora.png"
+                    src="/6810bcac6fc499ede820f7a0_Juan Mora.png.png"
                     alt="Foto de Juan Mora Delgado"
                     fill
                     className="object-cover"
@@ -645,15 +592,15 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="text-xs text-slate-600">
-                  <p className="text-sm font-semibold text-slate-900">Juan Mora Delgado</p>
-                  <p>Médico internista, Hospital de Jerez</p>
+                  <p className="text-sm font-semibold text-slate-900">Diana Martínez</p>
+                  <p>Médica Sur</p>
                 </div>
               </div>
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p className="text-sm text-slate-800">
                   “El uso de Copiloto Médico no obedece a estar al día con los últimos avances tecnológicos. Es, más que
-                  nada, un tema de buena práctica clínica. Copiloto Médico me permite no tener que pasar 3 horas al día
+                  nada, un tema de buena práctica clínica. Copiloto Médico me permite no tener que pasar 2 horas al día
                   tecleando y 15 minutos con pacientes. Una vez lo pruebas, no quieres volver atrás.”
                 </p>
               </blockquote>
@@ -679,16 +626,16 @@ export default function HomePage() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p>
-                  “Mientras exploro al paciente y converso con él de forma natural, Copiloto Médico transcribe y
-                  estructura toda la información clínica de forma precisa, incluso en casos complejos. El mayor
-                  beneficio: la aplicación redacta automáticamente las historias clínicas, lo que me ha ahorrado hasta 2
-                  horas diarias de trabajo administrativo.”
+                  “Mientras exploro al paciente y converso con él de forma natural, Copiloto Médico transcribe y estructura
+                  toda la información clínica de forma precisa, incluso en casos complejos. El mayor beneficio: la
+                  aplicación redacta automáticamente las historias clínicas, lo que me ha ahorrado hasta 2 horas diarias de
+                  trabajo administrativo.”
                 </p>
               </blockquote>
             </figure>
 
             {/* Card 3 */}
-            <figure className="flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-white p-8 text-left text-sm text-slate-700 shadow-sm">
+            <figure className="flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-white p-6 text-left text-sm text-slate-700 shadow-sm">
               <div className="flex items-center gap-3">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full bg-slate-200">
                   <Image
@@ -728,7 +675,7 @@ export default function HomePage() {
                 </div>
                 <div className="text-xs text-slate-600">
                   <p className="text-sm font-semibold text-slate-900">Jose Fernández Cuesta Peñafiel</p>
-                  <p>Pediatra, Hospital</p>
+                  <p>Pediatra, hospitalización domiciliaria pediátrica</p>
                 </div>
               </div>
               <div className="mt-3 text-amber-400">★★★★★</div>
@@ -742,40 +689,43 @@ export default function HomePage() {
               </blockquote>
             </figure>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-10 flex justify-center">
-            <Link
-              href="/es/customer-stories"
-              className="inline-flex items-center rounded-full border border-slate-300 bg-white px-5 py-2 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-slate-50"
-            >
-              Ver historias de clientes
-              <span className="ml-1" aria-hidden>
-                →
-              </span>
-            </Link>
+      {/* IMPACTO EN NÚMEROS */}
+      <section className="bg-slate-50/60">
+        <div className="mx-auto max-w-6xl px-6 py-14 md:px-8 lg:px-0">
+          <div className="mb-6 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+              Impacto en números
+            </p>
+            <h2 className="mt-3 text-[26px] font-semibold tracking-tight text-slate-900 sm:text-[30px]">
+              ¿Cuánto gana el médico por consulta usando Copiloto Médico?
+            </h2>
+            <p className="mx-auto mt-2 max-w-2xl text-sm text-slate-600">
+              Ajusta tus números y ve cuántas horas puedes ahorrar, cuántas consultas adicionales podrías atender y cuánto
+              ingreso extra podrías generar cada mes.
+            </p>
+          </div>
+          <div className="mx-auto mt-4 max-w-3xl">
+            <BenefitsSimulator variant="compact" />
           </div>
         </div>
       </section>
 
       {/* CTA FINAL */}
-      <section id="precio" className="border-t border-slate-100 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-20 text-center">
+      <section className="border-t border-slate-100 bg-gradient-to-b from-[#d5ff7c]/35 via-white to-white">
+        <div
+          id="precio"
+          className="mx-auto max-w-6xl px-6 py-20 text-center"
+        >
           <h2 className="font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[36px]">
-            Comenzar a usarlo es muy fácil
+            Comenzar a usar Copiloto Médico es muy fácil
           </h2>
           <p className="mt-2 text-[15px] text-slate-600">
             No se necesitan datos de pago. Empieza en 5 minutos.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/es/contact"
-              className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black"
-            >
-              Solicitar demo
-              <span className="ml-1" aria-hidden>
-                →
-              </span>
-            </Link>
             <Link
               href="/signup"
               className="inline-flex items-center justify-center rounded-full border border-slate-900 bg-white px-6 py-2.5 text-sm font-semibold text-slate-900 hover:bg-slate-50"
@@ -784,163 +734,47 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
 
-      {/* FOOTER */}
-      <footer id="recursos" className="border-t border-slate-100 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-16 text-xs text-slate-700 sm:text-[13px]">
-          <div className="grid gap-10 sm:grid-cols-3">
-            {/* Columna 1: Copiloto Médico / Producto */}
-            <div className="text-left">
-              <h3 className="mb-3 text-sm font-semibold text-slate-900">
-                Copiloto Médico
-              </h3>
-              <ul className="space-y-1.5">
-                <li>
-                  <Link
-                    href="/es/product"
-                    className="hover:text-slate-900"
-                  >
-                    Producto
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/es/customer-stories"
-                    className="hover:text-slate-900"
-                  >
-                    Historias de clientes
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/es/pricing"
-                    className="hover:text-slate-900"
-                  >
-                    Precio
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/es/login"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-slate-900"
-                  >
-                    Iniciar sesión
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/es/contact"
-                    className="hover:text-slate-900"
-                  >
-                    Solicitar demo
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/es/contact"
-                    className="hover:text-slate-900"
-                  >
-                    Contactar
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/signup"
-                    className="hover:text-slate-900"
-                  >
-                    Pruébalo gratis
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Columna 2: Recursos */}
-            <div className="text-left">
-              <h3 className="mb-3 text-sm font-semibold text-slate-900">Recursos</h3>
-              <ul className="space-y-1.5">
-                <li>
-                  <Link href="/es/data-security" className="hover:text-slate-900">
-                    Seguridad de datos
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/es/trust-center" className="hover:text-slate-900">
-                    Centro de confianza
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/es/news" className="hover:text-slate-900">
-                    Noticias
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://intercom-help.eu/tandem-eu/en/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-slate-900"
-                  >
-                    Help center ↗
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/es/customer-stories" className="hover:text-slate-900">
-                    Historias de clientes
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/es/about" className="hover:text-slate-900">
-                    Acerca de nosotros
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/es/download/instructions-for-use"
-                    className="hover:text-slate-900"
-                  >
-                    Instrucciones de uso ↗
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/es/download/product-label" className="hover:text-slate-900">
-                    Etiqueta del producto ↗
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Columna 3: Jurídico */}
-            <div className="text-left">
-              <h3 className="mb-3 text-sm font-semibold text-slate-900">Jurídico</h3>
-              <ul className="space-y-1.5">
-                <li>
-                  <Link href="/es/terms-of-service" className="hover:text-slate-900">
-                    Condiciones de servicio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/es/privacy-policy" className="hover:text-slate-900">
-                    Política de privacidad
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/es/cookie-policy" className="hover:text-slate-900">
-                    Política de Cookies
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/es/accessibility-statement" className="hover:text-slate-900">
-                    Declaración de accesibilidad
-                  </Link>
-                </li>
-              </ul>
-            </div>
+        {/* FOOTER */}
+        <footer
+          id="recursos"
+          className="border-t border-slate-100"
+        >
+          <div className="mx-auto max-w-6xl px-6 py-10 text-xs text-slate-700 sm:text-[13px]">
+            <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
+              <Link href="/es/product" className="hover:text-slate-900">
+                Producto
+              </Link>
+              <Link href="/es/pricing" className="hover:text-slate-900">
+                Precio
+              </Link>
+              <Link
+                href="/es/login"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-slate-900"
+              >
+                Iniciar sesión
+              </Link>
+              <Link href="/es/contact" className="hover:text-slate-900">
+                Contactar
+              </Link>
+              <Link href="/es/terms-of-service" className="hover:text-slate-900">
+                Condiciones de servicio
+              </Link>
+              <Link href="/es/privacy-policy" className="hover:text-slate-900">
+                Política de privacidad
+              </Link>
+              <Link href="/signup" className="hover:text-slate-900">
+                Pruébalo gratis
+              </Link>
+            </nav>
+            <p className="mt-4 text-center text-[11px] text-slate-400">
+              © 2026 Medical Copilot. Todos los derechos reservados.
+            </p>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </section>
     </main>
   );
 }

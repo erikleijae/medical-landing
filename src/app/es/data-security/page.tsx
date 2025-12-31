@@ -9,9 +9,9 @@ export default function DataSecurityPage() {
           Seguridad de datos en Copiloto Médico
         </h1>
         <p className="mt-4 text-sm text-slate-600">
-          Estamos migrando toda la información de seguridad y cumplimiento desde la antigua web de Tandem a este nuevo
-          sitio de Copiloto Médico. Mientras completamos la documentación, puedes contactar con nuestro equipo para
-          revisar en detalle requisitos regulatorios, acuerdos de tratamiento de datos y evaluaciones de impacto.
+          Estamos consolidando toda la información de seguridad y cumplimiento en este sitio de Copiloto Médico.
+          Mientras completamos la documentación, puedes contactar con nuestro equipo para revisar en detalle
+          requisitos regulatorios, acuerdos de tratamiento de datos y evaluaciones de impacto.
         </p>
         <p className="mt-3 text-sm text-slate-600">
           Copiloto Médico está diseñado para cumplir con normativas de protección de datos aplicables en América y en la

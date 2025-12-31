@@ -9,15 +9,13 @@ export default function ProductPage() {
       {/* HEADER */}
       <header className="bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-8 px-3 py-2 md:px-5 lg:px-6">
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <div className="flex items-center">
               <span className="inline-block h-6 w-6 rounded-full border border-slate-900 bg-slate-900" />
               <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
             </div>
-            <Link href="/" className="text-[18px] font-semibold tracking-tight text-slate-900">
-              Copiloto Médico
-            </Link>
-          </div>
+            <span className="text-[18px] font-semibold tracking-tight text-slate-900">Copiloto Médico</span>
+          </Link>
 
           <nav className="hidden items-center gap-8 text-sm text-slate-800 lg:flex">
             <Link href="/es/product" className="hover:text-slate-900">
@@ -25,6 +23,9 @@ export default function ProductPage() {
             </Link>
             <Link href="/es/customer-stories" className="hover:text-slate-900">
               Historias de clientes
+            </Link>
+            <Link href="/es/benefits-simulator" className="hover:text-slate-900">
+              Simulador de beneficios
             </Link>
             <Link href="/es/pricing" className="hover:text-slate-900">
               Precio
@@ -186,7 +187,7 @@ export default function ProductPage() {
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
                 <Image
                   src="/682dda247bf886638e57f4a2_sv3_3x-p-500.webp"
-                  alt="Profesional sanitario revisando la nota clínica"
+                  alt="Profesional de la salud revisando la nota clínica"
                   fill
                   className="object-cover"
                   sizes="(min-width: 768px) 33vw, 100vw"

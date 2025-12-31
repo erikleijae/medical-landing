@@ -17,7 +17,7 @@ const jsonLd = {
       name: "Copiloto Médico",
       url: siteUrl,
       description:
-        "Copiloto Médico es un asistente clínico basado en IA que redacta automáticamente informes y documentación clínica para que los profesionales sanitarios puedan centrarse en sus pacientes.",
+        "Copiloto Médico es un asistente clínico basado en IA que redacta automáticamente informes y documentación clínica para que los profesionales de la salud puedan centrarse en sus pacientes.",
       logo: `${siteUrl}/680a970e6d5665751f6bfcb8_gaias.png`,
     },
     {

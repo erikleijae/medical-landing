@@ -23,6 +23,9 @@ export default function DownloadPage() {
             <Link href="/es/customer-stories" className="hover:text-slate-900">
               Historias de clientes
             </Link>
+            <Link href="/es/benefits-simulator" className="hover:text-slate-900">
+              Simulador de beneficios
+            </Link>
             <Link href="/es/pricing" className="hover:text-slate-900">
               Precio
             </Link>

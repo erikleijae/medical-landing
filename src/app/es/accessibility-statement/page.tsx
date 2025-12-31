@@ -9,7 +9,7 @@ export default function AccessibilityStatementPage() {
           Declaración de accesibilidad
         </h1>
         <p className="mt-4 text-sm text-slate-600">
-          Queremos que Copiloto Médico sea accesible para el mayor número posible de profesionales sanitarios. Estamos
+          Queremos que Copiloto Médico sea accesible para el mayor número posible de profesionales de la salud. Estamos
           trabajando para cumplir con las pautas de accesibilidad web y recoger aquí los compromisos concretos.
         </p>
         <p className="mt-3 text-sm text-slate-600">

@@ -53,7 +53,7 @@ export default function LoginPagePt() {
                 <p className="text-[11px] text-slate-500">
                   Ao entrar, aceita os nossos{" "}
                   <Link
-                    href="/es/terms-of-service"
+                    href="/pt/terms-of-service"
                     className="underline underline-offset-2 hover:text-slate-900"
                   >
                     Termos de serviço

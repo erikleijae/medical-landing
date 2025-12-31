@@ -9,8 +9,8 @@ export default function InstructionsForUsePage() {
           Instrucciones de uso de Copiloto Médico
         </h1>
         <p className="mt-4 text-sm text-slate-600">
-          Estamos migrando las instrucciones de uso oficiales y demás documentación regulatoria desde la antigua página
-          de Tandem. Aquí encontrarás versiones actualizadas y localizadas de estos documentos.
+          Estamos migrando las instrucciones de uso oficiales y demás documentación regulatoria a este sitio de
+          Copiloto Médico. Aquí encontrarás versiones actualizadas y localizadas de estos documentos.
         </p>
         <p className="mt-3 text-sm text-slate-600">
           Si necesitas acceso inmediato a las instrucciones de uso para una implantación concreta, puedes solicitar los

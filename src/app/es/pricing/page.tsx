@@ -1,31 +1,34 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { BenefitsSimulator } from "../../../components/benefits-simulator";
+
 export default function PricingPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* HEADER */}
       <header className="bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-8 px-3 py-2 md:px-5 lg:px-6">
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <div className="flex items-center">
               <span className="inline-block h-6 w-6 rounded-full border border-slate-900 bg-slate-900" />
               <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
             </div>
-            <Link href="/" className="text-[18px] font-semibold tracking-tight text-slate-900">
-              Copiloto Médico
-            </Link>
-          </div>
+            <span className="text-[18px] font-semibold tracking-tight text-slate-900">Copiloto Médico</span>
+          </Link>
 
           <nav className="hidden items-center gap-8 text-sm text-slate-800 lg:flex">
             <Link href="/es/product" className="hover:text-slate-900">
               Producto
             </Link>
-            <Link href="/es/pricing" className="hover:text-slate-900">
-              Precio
-            </Link>
             <Link href="/es/customer-stories" className="hover:text-slate-900">
               Historias de clientes
+            </Link>
+            <Link href="/es/benefits-simulator" className="hover:text-slate-900">
+              Simulador de beneficios
+            </Link>
+            <Link href="/es/pricing" className="hover:text-slate-900">
+              Precio
             </Link>
           </nav>
 
@@ -63,10 +66,11 @@ export default function PricingPage() {
         <div className="mx-auto max-w-5xl px-4 pb-16 pt-20 text-center md:px-6 md:pb-20 md:pt-24 lg:px-0">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Precios</p>
           <h1 className="mt-4 font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[40px] md:text-[46px]">
-            De médicos independientes a grandes organizaciones sanitarias
+            De médicos independientes a grandes organizaciones de la salud
           </h1>
           <p className="mt-4 text-[15px] text-slate-600">
-            Ahorra entre 1 a 2 horas al día. Sin coste de instalación, sin contrato anual. Solo menos papeleo.
+            Ahorra alrededor de un 40 % del tiempo de consulta y elimina la documentación manual: solo habla y Copiloto
+            Médico se encarga del resto. Sin coste de instalación, sin contrato anual.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-8 md:gap-12">
             <Image
@@ -115,6 +119,30 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* SIMULADOR DE RETORNO */}
+      <section className="bg-slate-50/60">
+        <div className="mx-auto max-w-3xl px-6 pb-20 pt-14 md:px-8 lg:px-0">
+          <div className="mb-6 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+              Simulador de beneficios
+            </p>
+            <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-1 text-[11px] font-semibold text-slate-50">
+              <span>Diseñado para médicos</span>
+              <span className="h-1 w-1 rounded-full bg-slate-50/60" />
+              <span>Calcula tu retorno en menos de 1 minuto</span>
+            </div>
+            <h2 className="mt-4 font-display text-[26px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[30px]">
+              ¿Qué gana una consulta típica con Copiloto Médico?
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-600 sm:text-[15px]">
+              Calcula el impacto económico de usar Copiloto Médico.
+            </p>
+          </div>
+
+          <BenefitsSimulator />
+        </div>
+      </section>
+
       {/* PLANES */}
       <section className="border-t border-slate-100 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-14 md:px-8 lg:px-10">
@@ -123,7 +151,7 @@ export default function PricingPage() {
               Elige el plan que mejor se adapta a tu consulta
             </h2>
             <p className="mt-3 text-sm text-slate-500 sm:text-[15px]">
-              Todos los planes incluyen acceso al asistente clínico de IA de Copiloto Médico.
+              Todos los planes incluyen acceso al asistente clínico de IA de Copiloto Médico y documentación solo con tu voz.
             </p>
           </div>
 
@@ -132,7 +160,7 @@ export default function PricingPage() {
             <div className="flex flex-col rounded-3xl bg-slate-50 p-6 text-sm text-slate-800 shadow-sm md:p-8">
               <p className="text-sm font-semibold text-slate-900">Gratis</p>
               <p className="mt-1 text-xs text-slate-500">
-                Para médicos independientes que quieran explorar Copiloto Médico.
+                Para médicos que quieren probar Copiloto Médico en su consulta sin compromiso.
               </p>
               <p className="mt-6 text-3xl font-semibold text-slate-900">Gratis durante 30 días</p>
               <div className="mt-6">
@@ -144,9 +172,9 @@ export default function PricingPage() {
                 </Link>
               </div>
               <ul className="mt-6 space-y-2 text-xs text-slate-700">
-                <li>• Uso ilimitado con toda su funcionalidad.</li>
-                <li>• Plantillas estándar de informes médicos.</li>
-                <li>• Sin compromiso: no te pediremos tu tarjeta de crédito.</li>
+                <li>• Uso ilimitado del asistente clínico de IA durante el periodo de prueba.</li>
+                <li>• Plantillas estándar de notas y resúmenes clínicos.</li>
+                <li>• Sin compromiso: no te pedimos tu tarjeta de crédito.</li>
               </ul>
             </div>
 
@@ -154,25 +182,17 @@ export default function PricingPage() {
             <div className="flex flex-col rounded-3xl bg-[#dff4ff] p-6 text-sm text-slate-900 shadow-sm md:p-8">
               <p className="text-sm font-semibold text-slate-900">Plan estándar</p>
               <p className="mt-1 text-xs text-slate-600">
-                Para médicos individuales y pequeñas clínicas que buscan la experiencia completa de Copiloto Médico.
+                Para médicos individuales y pequeñas clínicas que quieren incorporar Copiloto Médico al día a día.
               </p>
               <p className="mt-6 text-3xl font-semibold text-slate-900">
-                $125
-                <span className="ml-1 align-baseline text-sm font-normal text-slate-600">por usuario/mes</span>
+                $1,999
+                <span className="ml-1 align-baseline text-sm font-normal text-slate-600">MXN por usuario/mes</span>
               </p>
-              <div className="mt-6">
-                <Link
-                  href="/es/contact"
-                  className="inline-flex w-full items-center justify-center rounded-full bg-slate-900 px-4 py-2 text-[13px] font-semibold text-white shadow-sm hover:bg-slate-800"
-                >
-                  Solicitar demo
-                </Link>
-              </div>
               <ul className="mt-6 space-y-2 text-xs text-slate-800">
-                <li>• Pruebalo gratis con tu equipo antes de decidir.</li>
-                <li>• Formación personalizada con nuestro equipo clínico.</li>
-                <li>• Hasta 3 plantillas de informes médicos creadas a medida.</li>
-                <li>• Integraciones con Sistemas de Información Clínica para transferir la nota en un clic.</li>
+                <li>• Pruébalo gratis con tu equipo antes de tomar la decisión final.</li>
+                <li>• Formación personalizada y acompañamiento de nuestro equipo clínico.</li>
+                <li>• Hasta 3 plantillas de informes médicos adaptadas a tu especialidad.</li>
+                <li>• Integraciones con tu sistema de historia clínica para transferir la nota en un clic.</li>
                 <li>• Sin permanencia: puedes cancelar en cualquier momento.</li>
               </ul>
             </div>
@@ -181,7 +201,7 @@ export default function PricingPage() {
             <div className="flex flex-col rounded-3xl bg-slate-900 p-6 text-sm text-slate-50 shadow-sm md:p-8">
               <p className="text-sm font-semibold text-slate-50">Plan de empresa</p>
               <p className="mt-1 text-xs text-slate-300">
-                Para clínicas grandes y organizaciones asistenciales.
+                Para hospitales, redes de clínicas y organizaciones asistenciales.
               </p>
               <p className="mt-6 text-3xl font-semibold text-slate-50">Precio a medida</p>
               <div className="mt-6">
@@ -193,11 +213,11 @@ export default function PricingPage() {
                 </Link>
               </div>
               <ul className="mt-6 space-y-2 text-xs text-slate-100">
-                <li>• Integraciones personalizadas con su sistema de historias clínicas.</li>
-                <li>• Incorporación, formación y gestión del despliegue a medida.</li>
-                <li>• Soporte prioritario de nuestro equipo clínico.</li>
-                <li>• Informes detallados de uso y adopción.</li>
-                <li>• Sin costes de instalación, integración ni incorporación.</li>
+                <li>• Integraciones personalizadas con tus sistemas de historias clínicas y agenda.</li>
+                <li>• Plan de incorporación, formación y despliegue adaptado a cada servicio.</li>
+                <li>• Soporte prioritario y sesiones con nuestro equipo clínico y de producto.</li>
+                <li>• Informes detallados de uso, adopción e impacto en tiempo y consultas.</li>
+                <li>• Sin costes de instalación inicial ni cargos ocultos.</li>
               </ul>
             </div>
           </div>
@@ -263,7 +283,7 @@ export default function PricingPage() {
         <div className="mx-auto max-w-4xl px-6 py-16 text-center">
           <p className="text-2xl font-medium leading-snug text-slate-900 sm:text-3xl md:text-4xl">
             "Hemos desplegado Copiloto Médico en nuestras clínicas y estamos muy contentos por cómo mejora las dinámicas de
-            la atención sanitaria. Ahora, nuestros médicos lo tienen más fácil para mirar a los ojos a los pacientes, en
+            la atención de la salud. Ahora, nuestros médicos lo tienen más fácil para mirar a los ojos a los pacientes, en
             lugar de al ordenador".
           </p>
           <div className="mt-6 text-lg tracking-[0.3em] text-amber-400">★★★★★</div>
@@ -299,31 +319,31 @@ export default function PricingPage() {
               <div className="text-base text-slate-900" aria-hidden>
                 •
               </div>
-              <p className="text-sm font-medium">Asistente médico de IA creado por médicos</p>
+              <p className="text-sm font-medium">Asistente clínico de IA diseñado junto a médicos de América Latina</p>
             </div>
             <div className="space-y-2">
               <div className="text-base text-slate-900" aria-hidden>
                 •
               </div>
-              <p className="text-sm font-medium">Marcado CE según MDR</p>
+              <p className="text-sm font-medium">Enfoque en cumplimiento de HIPAA y NOM mexicanas aplicables</p>
             </div>
             <div className="space-y-2">
               <div className="text-base text-slate-900" aria-hidden>
                 •
               </div>
-              <p className="text-sm font-medium">Certificado ISO 13485 y ENS Nivel ALTO</p>
+              <p className="text-sm font-medium">Documentación clínica solo con tu voz, sin tecleo manual</p>
             </div>
             <div className="space-y-2">
               <div className="text-base text-slate-900" aria-hidden>
                 •
               </div>
-              <p className="text-sm font-medium">Diseño intuitivo y minimalista</p>
+              <p className="text-sm font-medium">Diseño intuitivo para consultas presenciales y telemedicina</p>
             </div>
             <div className="space-y-2">
               <div className="text-base text-slate-900" aria-hidden>
                 •
               </div>
-              <p className="text-sm font-medium">Datos almacenados de forma segura en la UE</p>
+              <p className="text-sm font-medium">Datos cifrados y procesados en infraestructuras de América del Norte</p>
             </div>
           </div>
         </div>

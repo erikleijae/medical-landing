@@ -10,8 +10,7 @@ export default function TrustCenterPage() {
         </h1>
         <p className="mt-4 text-sm text-slate-600">
           Este centro reúne la información clave sobre seguridad, cumplimiento, privacidad y fiabilidad del servicio de
-          Copiloto Médico. Estamos migrando el contenido que antes se encontraba en el trust center de Tandem a esta
-          nueva ubicación.
+          Copiloto Médico. Aquí concentramos la información actualizada de referencia para nuestros clientes y usuarios.
         </p>
         <p className="mt-3 text-sm text-slate-600">
           Si necesitas documentación específica (evaluaciones de riesgo, acuerdos de tratamiento de datos o

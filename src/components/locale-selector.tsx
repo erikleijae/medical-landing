@@ -104,12 +104,12 @@ const LANGUAGE_OPTIONS: LanguageOption[] = [
   { code: "pt", label: "Português" },
 ];
 
-const DEFAULT_COUNTRY: CountryCode = "sv";
+const DEFAULT_COUNTRY: CountryCode = "mx";
 const DEFAULT_LANGUAGE: SupportedLanguage = "es";
 
 function getDefaultCountryForLanguage(language: SupportedLanguage): CountryCode {
   const preferredCode: CountryCode | null =
-    language === "es" ? "sv" : language === "pt" ? "br" : language === "en" ? "us" : null;
+    language === "es" ? "mx" : language === "pt" ? "br" : language === "en" ? "us" : null;
 
   if (preferredCode) {
     const preferred = COUNTRY_OPTIONS.find((country) => country.code === preferredCode);

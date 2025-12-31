@@ -10,7 +10,7 @@ export default function AccurxPartnershipNewsPage() {
         </h1>
         <p className="mt-4 text-sm text-slate-600">
           Copiloto Médico se ha asociado con Accurx para poner la documentación asistida por IA al alcance de miles de
-          profesionales sanitarios.
+          profesionales de la salud.
         </p>
         <p className="mt-3 text-sm text-slate-600">
           Esta colaboración facilita que equipos clínicos que ya trabajan con las herramientas de Accurx puedan añadir

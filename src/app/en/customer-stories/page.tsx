@@ -35,16 +35,16 @@ function HeaderEn() {
           </Link>
           <span className="hidden text-slate-300 sm:inline">|</span>
           <Link
-            href="/signup"
+            href="/en/signup"
             className="hidden text-slate-700 hover:text-slate-900 sm:inline"
           >
             Sign up
           </Link>
           <Link
-            href="/en/contact"
+            href="/en/signup"
             className="inline-flex items-center justify-center rounded-full bg-[#d5ff7c] px-5 py-2 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-[#c9f46c]"
           >
-            Request demo
+            Start for free
             <span className="ml-1" aria-hidden>
               →
             </span>
@@ -67,9 +67,23 @@ export default function CustomerStoriesPageEn() {
             </h1>
             <p className="mt-3 text-sm text-slate-600 sm:text-[15px]">
               Read how clinicians and healthcare organisations use Copiloto Médico to save time on documentation and focus
-              more on patients. The detailed case studies are being localised into English; in the meantime you can
-              request a demo and we will walk you through real examples.
+              more on patients. Below you can explore a selection of detailed case studies or request a demo to see them
+              in context.
             </p>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-xs text-slate-700">
+              <Link href="/en/customer-stories/familjelakarna" className="rounded-full border border-slate-200 px-3 py-1 hover:bg-slate-50">
+                Familjeläkarna
+              </Link>
+              <Link href="/en/customer-stories/mindler" className="rounded-full border border-slate-200 px-3 py-1 hover:bg-slate-50">
+                Mindler
+              </Link>
+              <Link href="/en/customer-stories/recoletas" className="rounded-full border border-slate-200 px-3 py-1 hover:bg-slate-50">
+                Recoletas
+              </Link>
+              <Link href="/en/customer-stories/praktikertjanst" className="rounded-full border border-slate-200 px-3 py-1 hover:bg-slate-50">
+                Praktikertjänst
+              </Link>
+            </div>
           </div>
         </div>
       </section>

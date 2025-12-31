@@ -16,9 +16,6 @@ function HeaderPt() {
           <Link href="/pt/product" className="hover:text-slate-900">
             Produto
           </Link>
-          <Link href="/pt/customer-stories" className="hover:text-slate-900">
-            Histórias de clientes
-          </Link>
           <Link href="/pt/pricing" className="hover:text-slate-900">
             Preços
           </Link>
@@ -41,10 +38,10 @@ function HeaderPt() {
             Criar conta
           </Link>
           <Link
-            href="/pt/contact"
+            href="/signup"
             className="inline-flex items-center justify-center rounded-full bg-[#d5ff7c] px-5 py-2 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-[#c9f46c]"
           >
-            Solicitar demonstração
+            Comece grátis
             <span className="ml-1" aria-hidden>
               →
             </span>

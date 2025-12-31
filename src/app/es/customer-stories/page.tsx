@@ -24,6 +24,9 @@ export default function CustomerStoriesPage() {
             <Link href="/es/customer-stories" className="hover:text-slate-900">
               Historias de clientes
             </Link>
+            <Link href="/es/benefits-simulator" className="hover:text-slate-900">
+              Simulador de beneficios
+            </Link>
             <Link href="/es/pricing" className="hover:text-slate-900">
               Precio
             </Link>
@@ -141,17 +144,6 @@ export default function CustomerStoriesPage() {
                   Un grupo hospitalario que busca liberar tiempo a sus especialistas en cada consulta, manteniendo la calidad
                   y el detalle de la historia clínica.
                 </p>
-                <div className="mt-4">
-                  <Link
-                    href="/es/customer-stories/recoletas"
-                    className="inline-flex items-center rounded-full bg-white px-4 py-1.5 text-[13px] font-medium text-slate-900 shadow-sm ring-1 ring-slate-200 hover:bg-slate-50"
-                  >
-                    Leer historia completa
-                    <span className="ml-1" aria-hidden>
-                      →
-                    </span>
-                  </Link>
-                </div>
               </div>
             </article>
 
@@ -174,17 +166,6 @@ export default function CustomerStoriesPage() {
                   Un equipo de psicología online que utiliza la IA para documentar cada sesión de forma consistente, sin
                   alargar la jornada.
                 </p>
-                <div className="mt-4">
-                  <Link
-                    href="/es/customer-stories/mindler"
-                    className="inline-flex items-center rounded-full bg-white px-4 py-1.5 text-[13px] font-medium text-slate-900 shadow-sm ring-1 ring-slate-200 hover:bg-slate-50"
-                  >
-                    Ver caso de uso
-                    <span className="ml-1" aria-hidden>
-                      →
-                    </span>
-                  </Link>
-                </div>
               </div>
             </article>
 
@@ -207,17 +188,6 @@ export default function CustomerStoriesPage() {
                   Centros de salud que utilizan Copiloto Médico para que cada profesional pueda dedicar más minutos a la
                   conversación clínica.
                 </p>
-                <div className="mt-4">
-                  <Link
-                    href="/es/customer-stories/familjelakarna"
-                    className="inline-flex items-center rounded-full bg-white px-4 py-1.5 text-[13px] font-medium text-slate-900 shadow-sm ring-1 ring-slate-200 hover:bg-slate-50"
-                  >
-                    Leer historia completa
-                    <span className="ml-1" aria-hidden>
-                      →
-                    </span>
-                  </Link>
-                </div>
               </div>
             </article>
           </div>
@@ -241,7 +211,7 @@ export default function CustomerStoriesPage() {
               <div className="flex items-center gap-3">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full bg-slate-200">
                   <Image
-                    src="/6810bcac6fc499ede820f7a0_Juan Mora.png"
+                    src="/6810bcac6fc499ede820f7a0_Juan Mora.png.png"
                     alt="Foto de un médico internista"
                     fill
                     className="object-cover"

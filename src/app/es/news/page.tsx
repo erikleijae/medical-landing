@@ -10,7 +10,7 @@ export default function NewsPage() {
         </h1>
         <p className="mt-4 text-sm text-slate-600">
           Estamos reconstruyendo la sección de noticias para reflejar la nueva marca Copiloto Médico. Muy pronto
-          encontrarás aquí casos de uso, colaboraciones con organizaciones sanitarias y novedades del producto.
+          encontrarás aquí casos de uso, colaboraciones con organizaciones de la salud y novedades del producto.
         </p>
         <p className="mt-3 text-sm text-slate-600">
           Mientras tanto, si quieres saber cómo se está utilizando la IA clínica en organizaciones similares a la tuya,

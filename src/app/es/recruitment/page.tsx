@@ -9,7 +9,7 @@ export default function RecruitmentPage() {
           Únete a Copiloto Médico
         </h1>
         <p className="mt-4 text-sm text-slate-600">
-          Estamos construyendo herramientas de IA clínica para que los profesionales sanitarios puedan dedicar más
+          Estamos construyendo herramientas de IA clínica para que los profesionales de la salud puedan dedicar más
           tiempo a cada paciente y menos a la documentación. Buscamos personas con perfil clínico, técnico y de
           operaciones que compartan esta misión.
         </p>

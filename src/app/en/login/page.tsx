@@ -53,7 +53,7 @@ export default function LoginPageEn() {
                 <p className="text-[11px] text-slate-500">
                   By logging in you accept our{" "}
                   <Link
-                    href="/es/terms-of-service"
+                    href="/en/terms-of-service"
                     className="underline underline-offset-2 hover:text-slate-900"
                   >
                     Terms of Service
@@ -65,7 +65,7 @@ export default function LoginPageEn() {
               <p className="mt-6 text-center text-[11px] text-slate-500">
                 Don&apos;t have an account?{" "}
                 <Link
-                  href="/signup"
+                  href="/en/signup"
                   className="font-medium text-slate-900 underline-offset-2 hover:underline"
                 >
                   Sign up

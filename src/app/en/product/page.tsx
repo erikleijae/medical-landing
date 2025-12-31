@@ -35,16 +35,16 @@ function HeaderEn() {
           </Link>
           <span className="hidden text-slate-300 sm:inline">|</span>
           <Link
-            href="/signup"
+            href="/en/signup"
             className="hidden text-slate-700 hover:text-slate-900 sm:inline"
           >
             Sign up
           </Link>
           <Link
-            href="/en/contact"
+            href="/en/signup"
             className="inline-flex items-center justify-center rounded-full bg-[#d5ff7c] px-5 py-2 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-[#c9f46c]"
           >
-            Request demo
+            Start for free
             <span className="ml-1" aria-hidden>
               →
             </span>

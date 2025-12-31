@@ -23,6 +23,9 @@ export default function ContactPage() {
             <Link href="/es/customer-stories" className="hover:text-slate-900">
               Historias de clientes
             </Link>
+            <Link href="/es/benefits-simulator" className="hover:text-slate-900">
+              Simulador de beneficios
+            </Link>
             <Link href="/es/pricing" className="hover:text-slate-900">
               Precio
             </Link>
@@ -236,8 +239,8 @@ export default function ContactPage() {
               </form>
 
               <p className="mt-5 text-center text-[10px] text-slate-400 sm:text-[11px]">
-                Copiloto Médico sigue estándares exigentes de seguridad y protección de datos, similares a certificaciones
-                como ISO 27001 y normativa de privacidad vigente.
+                Copiloto Médico sigue estándares exigentes de seguridad y protección de datos y cumple con la normativa de
+                privacidad vigente.
               </p>
             </div>
           </div>

@@ -10,7 +10,7 @@ export default function AboutPage() {
         </h1>
         <p className="mt-4 text-sm text-slate-600">
           Copiloto Médico es un asistente clínico con inteligencia artificial diseñado para reducir la carga
-          administrativa y devolver tiempo a la relación entre profesional sanitario y paciente.
+          administrativa y devolver tiempo a la relación entre profesional de la salud y paciente.
         </p>
         <p className="mt-3 text-sm text-slate-600">
           Nuestro equipo combina experiencia en tecnología, salud y diseño de producto para crear herramientas que se
