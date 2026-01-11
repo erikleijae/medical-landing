@@ -18,7 +18,7 @@ export default function TermsOfServicePageEn() {
           </p>
           <p>
             The service is provided by Copiloto Médico AB (org.nr 559444-6857). These General Terms and Conditions
-            govern the use of the Service. As used in these Terms of Use, "Copiloto Médico", "our service" or "Service"
+            govern the use of the Service. As used in these Terms of Use, &quot;Copiloto Médico&quot;, &quot;our service&quot; or &quot;Service&quot;
             means the digital documentation service provided by Copiloto Médico AB.
           </p>
         </section>
@@ -375,7 +375,7 @@ export default function TermsOfServicePageEn() {
             <h3 className="text-sm font-semibold text-slate-900">15.2 Subscription and usage fees</h3>
             <p>
               If the Customer or its Users exceed the limits of the free plan or opt to use any paid features, the
-              Customer will be charged the applicable subscription or usage fees ("Fees"). These Fees, along with any
+              Customer will be charged the applicable subscription or usage fees (&quot;Fees&quot;). These Fees, along with any
               applicable taxes, duties, or additional charges, will be clearly communicated at the time of sign-up or
               upgrade and may vary by region, currency, and payment method.
             </p>
@@ -385,7 +385,7 @@ export default function TermsOfServicePageEn() {
             <h3 className="text-sm font-semibold text-slate-900">15.3 Taxes and other charges</h3>
             <p>
               <span className="font-semibold">15.3.1 General tax responsibility.</span> Unless otherwise stated, all Fees
-              are exclusive of any taxes, duties, levies, or similar governmental assessments (collectively, "Taxes"). The
+              are exclusive of any taxes, duties, levies, or similar governmental assessments (collectively, &quot;Taxes&quot;). The
               Customer is responsible for paying all applicable Taxes associated with its purchases under this Agreement,
               except for taxes based on Copiloto Médico&apos;s net income.
             </p>

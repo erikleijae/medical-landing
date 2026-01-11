@@ -105,8 +105,8 @@ export default function SignupPage() {
 
           <div className="relative flex h-full flex-col justify-center px-10 py-12 text-white">
             <blockquote className="max-w-md text-lg leading-relaxed">
-              "Estoy muy contenta con cómo Copiloto Médico me permite dedicar más tiempo al paciente en Médica Sur y
-              explicar el diagnóstico y tratamiento de manera más completa. Bienvenida la IA que humaniza la consulta."
+              &quot;Estoy muy contenta con cómo Copiloto Médico me permite dedicar más tiempo al paciente en Médica Sur y
+              explicar el diagnóstico y tratamiento de manera más completa. Bienvenida la IA que humaniza la consulta.&quot;
             </blockquote>
 
             <div className="mt-6 flex items-center gap-3 text-xs text-slate-200">

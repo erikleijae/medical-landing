@@ -217,8 +217,8 @@ export default function FamiljelakarnaStoryPageEn() {
       <section className="border-t border-slate-100 bg-white">
         <div className="mx-auto max-w-3xl px-6 py-16 text-center">
           <p className="text-2xl font-medium leading-snug text-slate-900 sm:text-3xl">
-            "Once you start working with an AI clinical assistant, it is hard to imagine going back to writing all the
-            documentation yourself. The difference in time and peace of mind is noticeable in every visit."
+            &quot;Once you start working with an AI clinical assistant, it is hard to imagine going back to writing all the
+            documentation yourself. The difference in time and peace of mind is noticeable in every visit.&quot;
           </p>
           <div className="mt-6 flex flex-col items-center gap-3 text-sm text-slate-600">
             <div className="h-12 w-12 rounded-full bg-slate-300" />

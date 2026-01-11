@@ -376,7 +376,7 @@ export default function TermsOfServicePagePt() {
             <h3 className="text-sm font-semibold text-slate-900">15.2 Subscrições e taxas de utilização</h3>
             <p>
               Se o Cliente ou os seus Utilizadores excederem os limites do plano gratuito ou optarem por utilizar
-              funcionalidades pagas, serão cobradas as taxas de subscrição ou de utilização aplicáveis ("Taxas"). Estas
+              funcionalidades pagas, serão cobradas as taxas de subscrição ou de utilização aplicáveis (&quot;Taxas&quot;). Estas
               Taxas, bem como impostos, contribuições e outros encargos aplicáveis, serão comunicados de forma clara no
               momento da adesão ou upgrade e podem variar por região, moeda e método de pagamento.
             </p>
@@ -387,7 +387,7 @@ export default function TermsOfServicePagePt() {
             <p>
               <span className="font-semibold">15.3.1 Responsabilidade geral por impostos.</span> Salvo indicação em
               contrário, todas as Taxas são apresentadas sem impostos, contribuições ou taxas governamentais semelhantes
-              (coletivamente, "Impostos"). O Cliente é responsável pelo pagamento de todos os Impostos associados às suas
+              (coletivamente, &quot;Impostos&quot;). O Cliente é responsável pelo pagamento de todos os Impostos associados às suas
               compras ao abrigo deste Acordo, exceto impostos baseados no rendimento líquido do Copiloto Médico.
             </p>
             <p>

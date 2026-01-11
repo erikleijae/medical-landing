@@ -42,9 +42,114 @@ export default function PrivacyPolicyPage() {
       <div className="mx-auto max-w-3xl px-6 py-16">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Legal</p>
         <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-          Privacy policy
+          Política de privacidad
         </h1>
         <p className="mt-1 text-sm text-slate-500">Copiloto Médico</p>
+
+        <section className="mt-6 space-y-3 text-sm leading-relaxed text-slate-700">
+          <h2 className="text-base font-semibold text-slate-900">Aviso de privacidad para México</h2>
+          <p>
+            Si te encuentras en los Estados Unidos Mexicanos, el tratamiento de tus datos personales se realiza conforme a
+            la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y demás normativa aplicable.
+          </p>
+          <p>
+            Para los fines descritos en este aviso, Copiloto Médico AB (&quot;Copiloto Médico&quot;, &quot;nosotros&quot;) actúa como
+            responsable del tratamiento de tus datos personales cuando visitas este sitio web o cuando contratas, usas o
+            interactúas con nuestros servicios.
+          </p>
+
+          <h3 className="pt-2 text-sm font-semibold text-slate-900">
+            ¿Para qué fines utilizaremos tus datos personales?
+          </h3>
+          <p>
+            Los datos personales que recabamos los utilizaremos para finalidades necesarias para la prestación del servicio
+            que solicitas, tales como:
+          </p>
+          <ul className="list-disc space-y-1 pl-5">
+            <li>Crear, administrar y proteger tu cuenta y el acceso a la plataforma.</li>
+            <li>
+              Proveer funcionalidades del servicio (por ejemplo, transcripción, generación de borradores de notas clínicas y
+              documentación asociada).
+            </li>
+            <li>Brindar soporte, atender solicitudes, preguntas y comunicaciones.</li>
+            <li>Procesar pagos, facturación, administración de suscripciones y prevención de fraude.</li>
+            <li>
+              Mantener la seguridad del servicio, auditoría, control de calidad y cumplimiento de obligaciones legales.
+            </li>
+          </ul>
+          <p>
+            Adicionalmente, podremos tratar tus datos para finalidades no estrictamente necesarias, pero que nos permiten
+            mejorar tu experiencia, tales como análisis de uso, mejora del producto, investigación y el envío de
+            comunicaciones sobre actualizaciones o funcionalidades. Puedes oponerte a estos fines enviando una solicitud a
+            través de nuestros canales de contacto.
+          </p>
+
+          <h3 className="pt-2 text-sm font-semibold text-slate-900">
+            ¿Qué datos personales utilizaremos para estos fines?
+          </h3>
+          <p>
+            Dependiendo de cómo interactúes con Copiloto Médico, podremos tratar categorías de datos como:
+          </p>
+          <ul className="list-disc space-y-1 pl-5">
+            <li>
+              <span className="font-semibold">Identificación y contacto:</span> nombre, correo electrónico, teléfono.
+            </li>
+            <li>
+              <span className="font-semibold">Datos profesionales:</span> especialidad, organización/consultorio y datos de
+              perfil.
+            </li>
+            <li>
+              <span className="font-semibold">Datos de facturación y cobro:</span> información fiscal y datos de transacción
+              (por ejemplo, identificadores de pago), normalmente procesados por proveedores de pago.
+            </li>
+            <li>
+              <span className="font-semibold">Datos técnicos:</span> información sobre el dispositivo y el uso del sitio o
+              del servicio (por ejemplo, cookies, registros de actividad y métricas de rendimiento).
+            </li>
+            <li>
+              <span className="font-semibold">Contenido proporcionado en el servicio:</span> información que decidas cargar o
+              registrar (por ejemplo, audio, transcripciones, notas, plantillas). Este contenido puede incluir datos de
+              terceros (incluyendo pacientes) y, dependiendo del caso, datos sensibles.
+            </li>
+          </ul>
+
+          <h3 className="pt-2 text-sm font-semibold text-slate-900">Información de pacientes proporcionada por profesionales</h3>
+          <p>
+            Si utilizas Copiloto Médico en tu calidad de profesional de la salud y nos compartes información de pacientes,
+            declaras que cuentas con la base legal y/o autorizaciones necesarias para el tratamiento y la transferencia de
+            dicha información conforme a la normativa aplicable y a tu propio aviso de privacidad. En este contexto,
+            Copiloto Médico puede actuar como proveedor tecnológico que trata datos por cuenta del profesional o de la
+            institución, según corresponda.
+          </p>
+
+          <h3 className="pt-2 text-sm font-semibold text-slate-900">
+            ¿Con quién compartimos tu información personal y para qué fines?
+          </h3>
+          <p>
+            Podremos compartir datos personales únicamente cuando sea necesario para operar el servicio, por ejemplo con
+            proveedores que nos prestan servicios de infraestructura, almacenamiento, analítica, comunicación y pagos,
+            quienes están obligados contractualmente a proteger la información y a tratarla conforme a nuestras
+            instrucciones. También podremos divulgar información cuando sea requerido por autoridad competente o para
+            proteger nuestros derechos.
+          </p>
+
+          <h3 className="pt-2 text-sm font-semibold text-slate-900">Derechos ARCO</h3>
+          <p>
+            Tienes derecho a Acceder, Rectificar, Cancelar u Oponerte al tratamiento de tus datos personales (derechos
+            ARCO), así como a revocar tu consentimiento en los casos que proceda. Para ejercer estos derechos, contáctanos
+            a través de nuestro formulario de contacto o al correo <span className="font-semibold">support@copilotomedico.com</span>.
+          </p>
+
+          <h3 className="pt-2 text-sm font-semibold text-slate-900">Tecnologías de rastreo (cookies)</h3>
+          <p>
+            Utilizamos cookies y tecnologías similares para mejorar la experiencia de navegación, medir rendimiento y
+            proteger el sitio. Puedes consultar más información en nuestra{" "}
+            <Link href="/es/cookie-policy" className="font-semibold text-sky-700 hover:text-sky-900">
+              Política de Cookies
+            </Link>
+            .
+          </p>
+        </section>
 
         {/* 1. Purpose of this website privacy policy */}
         <section className="mt-6 space-y-3 text-sm leading-relaxed text-slate-700">
@@ -52,14 +157,14 @@ export default function PrivacyPolicyPage() {
             1. Purpose of this website privacy policy
           </h2>
           <p>
-            At Copiloto Médico ("Copiloto Médico" or "we"), we prioritise your privacy and are committed to safeguarding your
+            At Copiloto Médico (&quot;Copiloto Médico&quot; or &quot;we&quot;), we prioritise your privacy and are committed to safeguarding your
             personal data. This Privacy Policy explains how we collect, use, protect, and manage your personal data when you
             visit our website or otherwise interact with us as a user or prospective client. It also sets out your privacy
             rights and how the law protects you.
           </p>
           <p>
             This Website Privacy Policy describes how we handle your personal data when you visit our website (the
-            "Website"). Together with our terms of use, it governs your use of the Website and sets out the basis on which any
+            &quot;Website&quot;). Together with our terms of use, it governs your use of the Website and sets out the basis on which any
             personal data collected from you, or provided by you, will be processed.
           </p>
           <p>
@@ -247,7 +352,7 @@ export default function PrivacyPolicyPage() {
           </p>
         </section>
 
-        <p className="mt-10 text-xs text-slate-500">Last updated: October 5th, 2025</p>
+        <p className="mt-10 text-xs text-slate-500">Última actualización: 5 de octubre de 2025</p>
       </div>
 
       <footer id="recursos" className="border-t border-slate-100">

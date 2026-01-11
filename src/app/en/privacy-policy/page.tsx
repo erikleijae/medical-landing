@@ -47,14 +47,14 @@ export default function PrivacyPolicyPageEn() {
         <section className="mt-6 space-y-3 text-sm leading-relaxed text-slate-700">
           <h2 className="text-base font-semibold text-slate-900">1. Purpose of this website privacy policy</h2>
           <p>
-            At Copiloto Médico ("Copiloto Médico" or "we"), we prioritise your privacy and are committed to safeguarding
+            At Copiloto Médico (&quot;Copiloto Médico&quot; or &quot;we&quot;), we prioritise your privacy and are committed to safeguarding
             your personal data. This Privacy Policy explains how we collect, use, protect, and manage your personal data
             when you visit our website or otherwise interact with us as a user or prospective client. It also sets out
             your privacy rights and how the law protects you.
           </p>
           <p>
             This Website Privacy Policy describes how we handle your personal data when you visit our website (the
-            "Website"). Together with our terms of use, it governs your use of the Website and sets out the basis on
+            &quot;Website&quot;). Together with our terms of use, it governs your use of the Website and sets out the basis on
             which any personal data collected from you, or provided by you, will be processed.
           </p>
           <p>

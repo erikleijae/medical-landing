@@ -100,8 +100,8 @@ export default function CustomerStoriesPage() {
                 Impacto en la práctica diaria
               </p>
               <p className="text-sm text-slate-900">
-                "Ahora pienso en el paciente, no en las notas." "Me ahorro varios minutos en cada visita." "Es difícil
-                imaginar volver a teclear todo a mano." Son frases reales de profesionales que utilizan Copiloto Médico en
+                &quot;Ahora pienso en el paciente, no en las notas.&quot; &quot;Me ahorro varios minutos en cada visita.&quot; &quot;Es difícil
+                imaginar volver a teclear todo a mano.&quot; Son frases reales de profesionales que utilizan Copiloto Médico en
                 su día a día.
               </p>
               <p className="text-xs text-slate-500">
@@ -226,9 +226,9 @@ export default function CustomerStoriesPage() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p className="text-sm text-slate-800">
-                  "El uso de Copiloto Médico no va de estar a la última en tecnología, sino de buena práctica clínica. Me evita
+                  &quot;El uso de Copiloto Médico no va de estar a la última en tecnología, sino de buena práctica clínica. Me evita
                   pasar horas tecleando al final del día y me permite dedicar ese tiempo a mis pacientes. Una vez lo pruebas,
-                  no quieres volver atrás."
+                  no quieres volver atrás.&quot;
                 </p>
               </blockquote>
             </figure>
@@ -252,9 +252,9 @@ export default function CustomerStoriesPage() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p>
-                  "Mientras exploro al paciente y converso con él con naturalidad, Copiloto Médico transcribe y estructura la
+                  &quot;Mientras exploro al paciente y converso con él con naturalidad, Copiloto Médico transcribe y estructura la
                   información clínica en segundo plano. El mayor beneficio es que las historias clínicas se redactan
-                  prácticamente solas, lo que me ahorra hasta un par de horas de trabajo administrativo al día."
+                  prácticamente solas, lo que me ahorra hasta un par de horas de trabajo administrativo al día.&quot;
                 </p>
               </blockquote>
             </figure>
@@ -278,9 +278,9 @@ export default function CustomerStoriesPage() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p>
-                  "Hemos desplegado Copiloto Médico en nuestras clínicas y vemos cómo mejora la dinámica de la atención. Los
+                  &quot;Hemos desplegado Copiloto Médico en nuestras clínicas y vemos cómo mejora la dinámica de la atención. Los
                   profesionales pueden mirar a los ojos al paciente en lugar de al ordenador, y aun así las historias clínicas
-                  quedan completas y bien estructuradas."
+                  quedan completas y bien estructuradas.&quot;
                 </p>
               </blockquote>
             </figure>

@@ -282,9 +282,9 @@ export default function PricingPage() {
       <section className="border-t border-slate-100 bg-white">
         <div className="mx-auto max-w-4xl px-6 py-16 text-center">
           <p className="text-2xl font-medium leading-snug text-slate-900 sm:text-3xl md:text-4xl">
-            "Hemos desplegado Copiloto Médico en nuestras clínicas y estamos muy contentos por cómo mejora las dinámicas de
+            &quot;Hemos desplegado Copiloto Médico en nuestras clínicas y estamos muy contentos por cómo mejora las dinámicas de
             la atención de la salud. Ahora, nuestros médicos lo tienen más fácil para mirar a los ojos a los pacientes, en
-            lugar de al ordenador".
+            lugar de al ordenador&quot;.
           </p>
           <div className="mt-6 text-lg tracking-[0.3em] text-amber-400">★★★★★</div>
           <div className="mt-6 flex flex-col items-center gap-3 text-sm text-slate-600">

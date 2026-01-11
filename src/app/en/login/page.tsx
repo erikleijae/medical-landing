@@ -82,10 +82,10 @@ export default function LoginPageEn() {
 
                 <div className="relative space-y-3 text-left text-[11px]">
                   <div className="inline-flex max-w-xs rounded-2xl bg-slate-900 px-4 py-2 text-slate-50 shadow-sm">
-                    <p>"The patient has a history of…"</p>
+                    <p>&quot;The patient has a history of…&quot;</p>
                   </div>
                   <div className="inline-flex max-w-xs rounded-2xl bg-white/90 px-4 py-2 text-slate-700 shadow-sm">
-                    <p>"My assessment is…"</p>
+                    <p>&quot;My assessment is…&quot;</p>
                   </div>
                 </div>
               </div>

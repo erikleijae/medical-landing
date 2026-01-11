@@ -66,7 +66,7 @@ export default function ContactPagePt() {
             </p>
             <div className="mt-6 space-y-4 text-sm text-slate-700">
               <p className="text-[22px] font-medium leading-snug text-slate-900 sm:text-[26px]">
-                "Com o Copiloto Médico podemos focar totalmente no paciente sem nos preocupar com a digitação de notas."
+                &quot;Com o Copiloto Médico podemos focar totalmente no paciente sem nos preocupar com a digitação de notas.&quot;
               </p>
               <p>
                 O assistente clínico com IA ajuda a reduzir o tempo gasto em tarefas administrativas e a manter notas

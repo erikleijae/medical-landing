@@ -82,10 +82,10 @@ export default function LoginPagePt() {
 
                 <div className="relative space-y-3 text-left text-[11px]">
                   <div className="inline-flex max-w-xs rounded-2xl bg-slate-900 px-4 py-2 text-slate-50 shadow-sm">
-                    <p>"O paciente tem antecedentes de…"</p>
+                    <p>&quot;O paciente tem antecedentes de…&quot;</p>
                   </div>
                   <div className="inline-flex max-w-xs rounded-2xl bg-white/90 px-4 py-2 text-slate-700 shadow-sm">
-                    <p>"A minha avaliação é…"</p>
+                    <p>&quot;A minha avaliação é…&quot;</p>
                   </div>
                 </div>
               </div>

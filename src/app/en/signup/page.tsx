@@ -95,8 +95,8 @@ export default function SignupPageEn() {
 
           <div className="relative flex h-full flex-col justify-center px-10 py-12 text-white">
             <blockquote className="max-w-md text-lg leading-relaxed">
-              "Copiloto Médico lets me spend more time with each patient and explain diagnosis and treatment more
-              thoroughly. This is AI that helps humanise the consultation."
+              &quot;Copiloto Médico lets me spend more time with each patient and explain diagnosis and treatment more
+              thoroughly. This is AI that helps humanise the consultation.&quot;
             </blockquote>
 
             <div className="mt-6 flex items-center gap-3 text-xs text-slate-200">

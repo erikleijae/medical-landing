@@ -569,9 +569,9 @@ export default function HomePageEn() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p className="text-sm text-slate-800">
-                  "Using Copiloto Médico is not about keeping up with the latest technology. It is, above all, about good
+                  &quot;Using Copiloto Médico is not about keeping up with the latest technology. It is, above all, about good
                   clinical practice. Copiloto Médico means I no longer spend 2 hours a day typing and only 15 minutes with
-                  my patients. Once you try it, you don’t want to go back."
+                  my patients. Once you try it, you don’t want to go back.&quot;
                 </p>
               </blockquote>
             </figure>
@@ -595,9 +595,9 @@ export default function HomePageEn() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p>
-                  "While I examine the patient and have a natural conversation, Copiloto Médico transcribes and structures
+                  &quot;While I examine the patient and have a natural conversation, Copiloto Médico transcribes and structures
                   all the clinical information accurately, even in complex cases. The biggest benefit: the app drafts my
-                  notes automatically, saving me up to 2 hours of admin work every day."
+                  notes automatically, saving me up to 2 hours of admin work every day.&quot;
                 </p>
               </blockquote>
             </figure>
@@ -621,8 +621,8 @@ export default function HomePageEn() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p>
-                  "We have deployed Copiloto Médico across our clinics and are very happy with how it improves the dynamics
-                  of care. Our clinicians find it much easier to look patients in the eye instead of at the computer."
+                  &quot;We have deployed Copiloto Médico across our clinics and are very happy with how it improves the dynamics
+                  of care. Our clinicians find it much easier to look patients in the eye instead of at the computer.&quot;
                 </p>
               </blockquote>
             </figure>
@@ -646,9 +646,9 @@ export default function HomePageEn() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p>
-                  "In a complex setting such as paediatric home hospitalisation, with multiple interlocutors and long
+                  &quot;In a complex setting such as paediatric home hospitalisation, with multiple interlocutors and long
                   conversations, Copiloto Médico keeps the notes accurate and complete. I feel confident that nothing that
-                  parents share about my patients will be missed."
+                  parents share about my patients will be missed.&quot;
                 </p>
               </blockquote>
             </figure>

@@ -222,8 +222,8 @@ export default function FamiljelakarnaStoryPage() {
       <section className="border-t border-slate-100 bg-white">
         <div className="mx-auto max-w-3xl px-6 py-16 text-center">
           <p className="text-2xl font-medium leading-snug text-slate-900 sm:text-3xl">
-            "Una vez empiezas a trabajar con un asistente clínico de IA, cuesta imaginar volver a escribir toda la
-            documentación tú solo. La diferencia en tiempo y tranquilidad se nota en cada consulta."
+            &quot;Una vez empiezas a trabajar con un asistente clínico de IA, cuesta imaginar volver a escribir toda la
+            documentación tú solo. La diferencia en tiempo y tranquilidad se nota en cada consulta.&quot;
           </p>
           <div className="mt-6 flex flex-col items-center gap-3 text-sm text-slate-600">
             <div className="h-12 w-12 rounded-full bg-slate-300" />

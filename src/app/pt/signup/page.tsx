@@ -104,8 +104,8 @@ export default function SignupPagePt() {
 
           <div className="relative flex h-full flex-col justify-center px-10 py-12 text-white">
             <blockquote className="max-w-md text-lg leading-relaxed">
-              "O Copiloto Médico permite‑me dedicar mais tempo ao paciente e explicar o diagnóstico e o tratamento com mais
-              calma. É um exemplo de IA que ajuda a humanizar a consulta."
+              &quot;O Copiloto Médico permite‑me dedicar mais tempo ao paciente e explicar o diagnóstico e o tratamento com mais
+              calma. É um exemplo de IA que ajuda a humanizar a consulta.&quot;
             </blockquote>
 
             <div className="mt-6 flex items-center gap-3 text-xs text-slate-200">

@@ -69,7 +69,7 @@ export default function ContactPageEn() {
             </p>
             <div className="mt-6 space-y-4 text-sm text-slate-700">
               <p className="text-[22px] font-medium leading-snug text-slate-900 sm:text-[26px]">
-                "With Copiloto Médico we can focus entirely on the patient without worrying about typing notes."
+                &quot;With Copiloto Médico we can focus entirely on the patient without worrying about typing notes.&quot;
               </p>
               <p>
                 Copiloto Médico reduces the time spent on administrative tasks and helps keep detailed clinical notes after

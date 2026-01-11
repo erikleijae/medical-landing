@@ -47,13 +47,13 @@ export default function PrivacyPolicyPagePt() {
         <section className="mt-6 space-y-3 text-sm leading-relaxed text-slate-700">
           <h2 className="text-base font-semibold text-slate-900">1. Finalidade desta política de privacidade</h2>
           <p>
-            No Copiloto Médico ("Copiloto Médico" ou "nós"), damos prioridade à sua privacidade e estamos comprometidos em
+            No Copiloto Médico (&quot;Copiloto Médico&quot; ou &quot;nós&quot;), damos prioridade à sua privacidade e estamos comprometidos em
             proteger os seus dados pessoais. Esta Política de Privacidade explica como recolhemos, utilizamos, protegemos e
             gerimos os seus dados pessoais quando visita o nosso site ou interage connosco como utilizador ou potencial
             cliente. Também descreve os seus direitos de privacidade e como a legislação o protege.
           </p>
           <p>
-            Esta Política de Privacidade aplica‑se ao utilizar o nosso site (o "Site"). Em conjunto com os nossos termos de
+            Esta Política de Privacidade aplica‑se ao utilizar o nosso site (o &quot;Site&quot;). Em conjunto com os nossos termos de
             utilização, regula o uso do Site e define a base legal para o tratamento dos dados pessoais que recolhemos ou
             que nos fornece.
           </p>

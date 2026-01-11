@@ -59,7 +59,6 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
     hoursSavedPerMonth,
     extraConsultationsPerDay,
     globalBenefit,
-    totalBenefit,
   } = useMemo(() => {
     const reduction = REDUCTION_PERCENTAGE;
 
@@ -79,14 +78,12 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
     }
 
     const B1 = extraConsultations * WORKING_DAYS_PER_MONTH * pricePerConsultation;
-    const total = B1; // No restamos el precio mensual; lo mostramos solo como referencia
 
     return {
       hoursSavedPerDay: hoursSavedDay,
       hoursSavedPerMonth: hoursSavedMonth,
       extraConsultationsPerDay: extraConsultations,
       globalBenefit: B1,
-      totalBenefit: total,
     };
   }, [consultationsPerDay, consultationMinutes, pricePerConsultation]);
 

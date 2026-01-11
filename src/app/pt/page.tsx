@@ -204,7 +204,7 @@ export default function HomePagePt() {
       <section className="bg-white">
         <div className="mx-auto max-w-3xl px-6 pb-20 pt-8 text-center">
           <p className="text-3xl font-medium leading-snug text-slate-900 sm:text-4xl">
-            "Depois que você experimenta o Copiloto Médico, não quer voltar atrás."
+            &quot;Depois que você experimenta o Copiloto Médico, não quer voltar atrás.&quot;
           </p>
           <div className="mt-4 text-lg tracking-[0.3em] text-amber-400">★★★★★</div>
           <div className="mt-6 flex flex-col items-center gap-3 text-sm text-slate-600">
