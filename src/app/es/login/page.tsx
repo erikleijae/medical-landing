@@ -28,7 +28,7 @@ export default function LoginPageEs() {
                 diaria de hospitales de alta especialidad como Médica Sur y en profesionales como Diana Martínez.
               </p>
 
-              <form className="mt-8 space-y-4" action="#" method="post">
+              <form className="mt-8 space-y-4" action="#" method="post" autoComplete="off">
                 <div className="space-y-2">
                   <label
                     htmlFor="identifier"
@@ -40,6 +40,7 @@ export default function LoginPageEs() {
                     id="identifier"
                     name="identifier"
                     type="text"
+                    autoComplete="off"
                     required
                     placeholder="email@example.com o +52 55 0000 0000"
                     className="block w-full rounded-md border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
@@ -57,6 +58,7 @@ export default function LoginPageEs() {
                     id="password"
                     name="password"
                     type="password"
+                    autoComplete="off"
                     required
                     placeholder="Ingresa tu contraseña"
                     className="block w-full rounded-md border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"

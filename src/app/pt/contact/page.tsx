@@ -89,7 +89,7 @@ export default function ContactPagePt() {
                 </p>
               </div>
 
-              <form className="mt-6 space-y-4" action="#" method="post">
+              <form className="mt-6 space-y-4" action="#" method="post" autoComplete="off">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-1.5">
                     <label htmlFor="firstName" className="text-xs font-medium text-slate-800">
@@ -99,6 +99,7 @@ export default function ContactPagePt() {
                       id="firstName"
                       name="firstName"
                       type="text"
+                      autoComplete="off"
                       placeholder="ex.: Maria"
                       className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
                     />
@@ -111,6 +112,7 @@ export default function ContactPagePt() {
                       id="lastName"
                       name="lastName"
                       type="text"
+                      autoComplete="off"
                       placeholder="ex.: Silva"
                       className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
                     />
@@ -126,6 +128,7 @@ export default function ContactPagePt() {
                       id="email"
                       name="email"
                       type="email"
+                      autoComplete="off"
                       placeholder="voce@clinica.com"
                       className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
                     />
@@ -138,6 +141,7 @@ export default function ContactPagePt() {
                       id="phone"
                       name="phone"
                       type="tel"
+                      autoComplete="off"
                       placeholder="+55 11 90000-0000"
                       className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
                     />
@@ -152,6 +156,7 @@ export default function ContactPagePt() {
                     id="clinic"
                     name="clinic"
                     type="text"
+                    autoComplete="off"
                     placeholder="Nome da clínica"
                     className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
                   />
@@ -165,6 +170,7 @@ export default function ContactPagePt() {
                     id="interest"
                     name="interest"
                     rows={3}
+                    autoComplete="off"
                     placeholder="Conte brevemente sua especialidade e como gostaria de usar o Copiloto Médico."
                     className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
                   />

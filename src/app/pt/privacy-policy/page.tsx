@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     images: [
       {
-        url: "/Captura de pantalla 2025-12-07 a la(s) 11.07.14a.m..png",
-        width: 1200,
-        height: 630,
+        url: "/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp",
+        width: 500,
+        height: 500,
         alt: "Copiloto Médico, assistente clínico de IA",
       },
     ],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Política de privacidade | Copiloto Médico",
     description:
       "Saiba como o Copiloto Médico recolhe, utiliza e protege os seus dados pessoais quando visita o nosso site ou entra em contacto connosco.",
-    images: ["/Captura de pantalla 2025-12-07 a la(s) 11.07.14a.m..png"],
+    images: ["/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp"],
   },
 };
 

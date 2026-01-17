@@ -45,9 +45,9 @@ type BenefitsSimulatorProps = {
 };
 
 export function BenefitsSimulator({ variant = "full", language = "es" }: BenefitsSimulatorProps) {
-  const [consultationsPerDay, setConsultationsPerDay] = useState(10);
-  const [consultationMinutes, setConsultationMinutes] = useState(30);
-  const [pricePerConsultation, setPricePerConsultation] = useState(() => (language === "en" ? 80 : 800));
+  const [consultationsPerDay, setConsultationsPerDay] = useState<number | null>(null);
+  const [consultationMinutes, setConsultationMinutes] = useState<number | null>(null);
+  const [pricePerConsultation, setPricePerConsultation] = useState<number | null>(null);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
   const isEnglish = language === "en";
@@ -60,6 +60,15 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
     extraConsultationsPerDay,
     globalBenefit,
   } = useMemo(() => {
+    if (consultationsPerDay == null || consultationMinutes == null || pricePerConsultation == null) {
+      return {
+        hoursSavedPerDay: Number.NaN,
+        hoursSavedPerMonth: Number.NaN,
+        extraConsultationsPerDay: Number.NaN,
+        globalBenefit: Number.NaN,
+      };
+    }
+
     const reduction = REDUCTION_PERCENTAGE;
 
     const baselineMinutesPerDay = consultationsPerDay * consultationMinutes;
@@ -154,10 +163,11 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
           <input
             type="number"
             min={1}
-            value={consultationsPerDay === 0 ? "" : consultationsPerDay}
+            value={consultationsPerDay ?? ""}
+            autoComplete="off"
             onChange={(e) => {
               const value = e.target.value;
-              setConsultationsPerDay(value === "" ? 0 : Number(value));
+              setConsultationsPerDay(value === "" ? null : Number(value));
             }}
             className="mt-4 w-full rounded-full border border-slate-200 px-5 py-3 text-base font-medium text-slate-900 shadow-sm focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/15"
           />
@@ -220,10 +230,11 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
               <input
                 type="number"
                 min={0}
-                value={pricePerConsultation === 0 ? "" : pricePerConsultation}
+                value={pricePerConsultation ?? ""}
+                autoComplete="off"
                 onChange={(e) => {
                   const value = e.target.value;
-                  setPricePerConsultation(value === "" ? 0 : Number(value));
+                  setPricePerConsultation(value === "" ? null : Number(value));
                 }}
                 className="w-full rounded-full border border-slate-200 pl-8 pr-4 py-3 text-base font-medium text-slate-900 shadow-sm focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/15"
               />

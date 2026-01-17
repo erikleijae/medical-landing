@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/Captura de pantalla 2025-12-07 a la(s) 11.07.14a.m..png",
-        width: 1200,
-        height: 630,
+        url: "/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp",
+        width: 500,
+        height: 500,
         alt: "Copiloto Médico, AI clinical assistant",
       },
     ],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Privacy policy | Copiloto Médico",
     description:
       "Learn how Copiloto Médico collects, uses and protects your personal data when you visit our website or interact with us.",
-    images: ["/Captura de pantalla 2025-12-07 a la(s) 11.07.14a.m..png"],
+    images: ["/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp"],
   },
 };
 

@@ -61,9 +61,9 @@ export const metadata: Metadata = {
     locale: "es_MX",
     images: [
       {
-        url: "/Captura de pantalla 2025-12-07 a la(s) 11.07.14 a.m..png",
-        width: 1200,
-        height: 630,
+        url: "/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp",
+        width: 500,
+        height: 500,
         alt: "Copiloto Médico, asistente clínico de IA",
       },
     ],
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     description:
       "Céntrate en la asistencia mientras Copiloto Médico escribe tus informes después de cada consulta. Aumenta la productividad de tu consulta con nuestro asistente clínico basado en IA.",
     images: [
-      "/Captura de pantalla 2025-12-07 a la(s) 11.07.14 a.m..png",
+      "/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp",
     ],
   },
   robots: {

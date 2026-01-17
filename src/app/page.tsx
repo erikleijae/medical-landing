@@ -161,25 +161,6 @@ export default function HomePage() {
             <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
               <div className="relative aspect-[16/9] w-full">
                 <Image
-                  src="/DoctorSV.png"
-                  alt="Doctor SV, plataforma nacional de salud digital en El Salvador"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                />
-              </div>
-              <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
-                <p className="text-justify">
-                  En El Salvador, Doctor SV moderniza la historia clínica digital del país. Asistentes de IA como Copiloto
-                  Médico complementan estas iniciativas al generar historias en minutos y reducir cerca de un 40 % del tiempo
-                  de consulta.
-                </p>
-              </div>
-            </article>
-
-            <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-              <div className="relative aspect-[16/9] w-full">
-                <Image
                   src="/houston.png"
                   alt="Houston Methodist Hospital utilizando soluciones de inteligencia artificial"
                   fill

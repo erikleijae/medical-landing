@@ -185,8 +185,10 @@ export function LocaleSelector() {
   const pathname = usePathname();
   const router = useRouter();
 
-  const [countryCode, setCountryCode] = useState<CountryCode>(DEFAULT_COUNTRY);
-  const [languageCode, setLanguageCode] = useState<SupportedLanguage>(DEFAULT_LANGUAGE);
+  const [countryCode, setCountryCode] = useState<CountryCode | null>(null);
+  const [languageCode, setLanguageCode] = useState<SupportedLanguage | null>(null);
+  const [detectedCountryCode, setDetectedCountryCode] = useState<CountryCode>(DEFAULT_COUNTRY);
+  const [detectedLanguageCode, setDetectedLanguageCode] = useState<SupportedLanguage>(DEFAULT_LANGUAGE);
   const [isOpen, setIsOpen] = useState(false);
   const [initialized, setInitialized] = useState(false);
 
@@ -201,23 +203,26 @@ export function LocaleSelector() {
     const effectiveCountry: CountryCode =
       stored?.countryCode ?? getDefaultCountryForLanguage(effectiveLanguage);
 
-    setLanguageCode(effectiveLanguage);
-    setCountryCode(effectiveCountry);
+    setDetectedLanguageCode(effectiveLanguage);
+    setDetectedCountryCode(effectiveCountry);
     persistPreference({ countryCode: effectiveCountry, languageCode: effectiveLanguage });
     setInitialized(true);
   }, [pathname]);
 
   const selectedCountry =
-    COUNTRY_OPTIONS.find((country) => country.code === countryCode) ?? COUNTRY_OPTIONS[0];
+    COUNTRY_OPTIONS.find((country) => country.code === detectedCountryCode) ?? COUNTRY_OPTIONS[0];
   const selectedLanguage =
-    LANGUAGE_OPTIONS.find((language) => language.code === languageCode) ?? LANGUAGE_OPTIONS[0];
+    LANGUAGE_OPTIONS.find((language) => language.code === detectedLanguageCode) ?? LANGUAGE_OPTIONS[0];
 
   const displayLabel = `${selectedCountry.label} (${selectedLanguage.label})`;
 
   const handleApply = () => {
     if (!initialized) return;
 
-    const preference: StoredPreference = { countryCode, languageCode };
+    const preference: StoredPreference = {
+      countryCode: countryCode ?? detectedCountryCode,
+      languageCode: languageCode ?? detectedLanguageCode,
+    };
     persistPreference(preference);
 
     const language = preference.languageCode;
@@ -237,13 +242,19 @@ export function LocaleSelector() {
     }
 
     setIsOpen(false);
+    setCountryCode(null);
+    setLanguageCode(null);
   };
 
   return (
     <div className="mt-12 flex items-center justify-center text-[11px] text-slate-500 sm:justify-start sm:text-xs">
       <button
         type="button"
-        onClick={() => setIsOpen(true)}
+        onClick={() => {
+          setCountryCode(null);
+          setLanguageCode(null);
+          setIsOpen(true);
+        }}
         className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-3 py-1.5 text-[11px] text-slate-700 shadow-sm transition hover:bg-slate-50"
       >
         <span aria-hidden>🌐</span>
@@ -274,15 +285,16 @@ export function LocaleSelector() {
                 <div className="mt-2">
                   <select
                     className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/70"
-                    value={countryCode}
+                    value={countryCode ?? ""}
                     onChange={(event) => {
                       const value = event.target.value as CountryCode;
                       const exists = COUNTRY_OPTIONS.some((country) => country.code === value);
-                      if (exists) {
-                        setCountryCode(value);
-                      }
+                      if (exists) setCountryCode(value);
                     }}
                   >
+                    <option value="" disabled>
+                      Selecciona un país
+                    </option>
                     {COUNTRY_OPTIONS.map((option) => (
                       <option key={option.code} value={option.code}>
                         {option.label}

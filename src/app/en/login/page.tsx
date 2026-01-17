@@ -29,7 +29,7 @@ export default function LoginPageEn() {
                 <p className="mt-2 text-sm text-slate-500">to continue to Copiloto Médico</p>
               </div>
 
-              <form className="mt-6 space-y-4" action="#" method="post">
+              <form className="mt-6 space-y-4" action="#" method="post" autoComplete="off">
                 <div className="space-y-1.5">
                   <label htmlFor="email" className="text-xs font-medium text-slate-800">
                     Email
@@ -38,6 +38,7 @@ export default function LoginPageEn() {
                     id="email"
                     name="email"
                     type="email"
+                    autoComplete="off"
                     placeholder="email@example.com"
                     className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
                   />
