@@ -140,7 +140,7 @@ export default function HomePagePt() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
             <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
               <div className="relative aspect-[16/9] w-full">
                 <Image
@@ -148,7 +148,7 @@ export default function HomePagePt() {
                   alt="Médica Sur, hospital de alta complexidade na Cidade do México"
                   fill
                   className="object-cover"
-                  sizes="(min-width: 768px) 33vw, 100vw"
+                  sizes="(min-width: 768px) 50vw, 100vw"
                 />
               </div>
               <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
@@ -166,7 +166,7 @@ export default function HomePagePt() {
                   alt="Houston Methodist Hospital utilizando soluções de IA"
                   fill
                   className="object-cover"
-                  sizes="(min-width: 768px) 33vw, 100vw"
+                  sizes="(min-width: 768px) 50vw, 100vw"
                 />
               </div>
               <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
