@@ -66,11 +66,12 @@ export default function OpenGraphImage() {
                 fontWeight: 700,
                 color: "#ffffff",
                 lineHeight: 1.08,
+                display: "flex",
+                flexDirection: "column",
               }}
             >
-              La app que escribe
-              <br />
-              tus notas clínicas
+              <div>La app que escribe</div>
+              <div>tus notas clínicas</div>
             </div>
 
             <div
@@ -117,10 +118,17 @@ export default function OpenGraphImage() {
                 backgroundColor: "rgba(255,255,255,0.14)",
               }}
             />
-            <div style={{ fontSize: 16, color: "rgba(226,232,240,0.85)", lineHeight: 1.4 }}>
-              Compatible con tu flujo actual.
-              <br />
-              Funciona en Windows y Mac desde el navegador.
+            <div
+              style={{
+                fontSize: 16,
+                color: "rgba(226,232,240,0.85)",
+                lineHeight: 1.4,
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <div>Compatible con tu flujo actual.</div>
+              <div>Funciona en Windows y Mac desde el navegador.</div>
             </div>
           </div>
         </div>
