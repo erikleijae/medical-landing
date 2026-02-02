@@ -4,6 +4,8 @@ import Link from "next/link";
 import { HeroVideo } from "../../components/hero-video";
 import { BenefitsSimulator } from "../../components/benefits-simulator";
 import { LanguageSwitcher } from "../../components/language-switcher";
+import { ConsultationsCounter, HoursSavedCounter } from "../../components/consultations-counter";
+import { AudienceTabs } from "../../components/audience-tabs";
 
 export default function HomePagePt() {
   return (
@@ -128,87 +130,21 @@ export default function HomePagePt() {
         <HeroVideo />
       </section>
 
-      {/* COPILOTO NA PRÁTICA */}
-      <section id="produto" className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 pt-16 pb-12">
-          <div className="text-center">
-            <h2 className="text-[28px] font-semibold tracking-tight text-slate-900 sm:text-[32px]">
-              Copiloto Médico na prática
-            </h2>
-            <p className="mt-2 text-sm text-slate-500">
-              Mais de 1.000 organizações de saúde já confiam em nós.
-            </p>
-          </div>
+      <ConsultationsCounter
+        locale="pt"
+        title="Consultas com o Copiloto Médico"
+        subtitle="Este número aumenta em tempo real enquanto você navega."
+      />
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-              <div className="relative aspect-[16/9] w-full">
-                <Image
-                  src="/Medica.png"
-                  alt="Médica Sur, hospital de alta complexidade na Cidade do México"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                />
-              </div>
-              <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
-                <p className="text-justify">
-                  No México, hospitais de alta complexidade como o Médica Sur procuram reduzir a carga administrativa. O
-                  Copiloto Médico reduz cerca de 40% do tempo de consulta e gera a nota clínica apenas com a sua voz.
-                </p>
-              </div>
-            </article>
-
-            <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-              <div className="relative aspect-[16/9] w-full">
-                <Image
-                  src="/houston.png"
-                  alt="Houston Methodist Hospital utilizando soluções de IA"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                />
-              </div>
-              <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
-                <p className="text-justify">
-                  Nos Estados Unidos, hospitais como o Houston Methodist Hospital lideram projetos de scribes de IA. O
-                  Copiloto Médico traz essa abordagem para a região e ajuda a reduzir até 2 horas diárias de documentação
-                  por profissional.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* CITA EM DESTAQUE */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-3xl px-6 pb-20 pt-8 text-center">
-          <p className="text-3xl font-medium leading-snug text-slate-900 sm:text-4xl">
-            &quot;Depois que você experimenta o Copiloto Médico, não quer voltar atrás.&quot;
-          </p>
-          <div className="mt-4 text-lg tracking-[0.3em] text-amber-400">★★★★★</div>
-          <div className="mt-6 flex flex-col items-center gap-3 text-sm text-slate-600">
-            <div className="relative h-12 w-12 overflow-hidden rounded-full bg-slate-300">
-              <Image
-                src="/6810bcac6fc499ede820f7a0_Juan Mora.png.png"
-                alt="Foto de Diana Martínez"
-                fill
-                className="object-cover"
-                sizes="48px"
-              />
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-slate-900">Diana Martínez</p>
-              <p className="text-xs text-slate-500">Médica Sur</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HoursSavedCounter
+        locale="pt"
+        title="Horas poupadas"
+        subtitle="Economizamos 30% do tempo da consulta"
+      />
 
       {/* COMO FUNCIONA */}
       <section id="como-funciona" className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:px-8">
+        <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 sm:pt-28 md:px-8 md:pt-32">
           <div className="text-center">
             <h2 className="font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[36px]">
               Como funciona o Copiloto Médico
@@ -281,7 +217,7 @@ export default function HomePagePt() {
 
       {/* MELHORES HISTÓRIAS, MAIOR SEGURANÇA */}
       <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 pb-16 text-center">
+        <div className="mx-auto max-w-6xl px-6 py-32 text-center md:py-36">
           <h2 className="text-[28px] font-semibold tracking-tight text-slate-900 sm:text-[32px]">
             Melhores histórias, mais segurança
           </h2>
@@ -419,9 +355,64 @@ export default function HomePagePt() {
         </div>
       </section>
 
+      <AudienceTabs language="pt" />
+
+      {/* COPILOTO NA PRÁTICA */}
+      <section id="produto" className="bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-32 md:py-36">
+          <div className="text-center">
+            <h2 className="text-[28px] font-semibold tracking-tight text-slate-900 sm:text-[32px]">
+              Copiloto Médico na prática
+            </h2>
+            <p className="mt-2 text-sm text-slate-500">
+              Mais de 1.000 organizações de saúde já confiam em nós.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+              <div className="relative aspect-[16/9] w-full">
+                <Image
+                  src="/Medica.png"
+                  alt="Médica Sur, hospital de alta complexidade na Cidade do México"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              </div>
+              <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
+                <p className="text-justify">
+                  No México, hospitais de alta complexidade como o Médica Sur procuram reduzir a carga administrativa. O
+                  Copiloto Médico reduz cerca de 30% do tempo de consulta e gera a nota clínica apenas com a sua voz.
+                </p>
+              </div>
+            </article>
+
+            <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+              <div className="relative aspect-[16/9] w-full">
+                <Image
+                  src="/houston.png"
+                  alt="Houston Methodist Hospital utilizando soluções de IA"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              </div>
+              <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
+                <p className="text-justify">
+                  Nos Estados Unidos, hospitais como o Houston Methodist Hospital lideram projetos de scribes de IA. O
+                  Copiloto Médico traz essa abordagem para a região e ajuda a reduzir até 2 horas diárias de documentação
+                  por profissional.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* ESTUDOS DE CASO EM DESTAQUE */}
       <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 pb-20">
+        <div className="mx-auto max-w-6xl px-6 py-32 md:py-36">
           {/* Caso 1 */}
           <div className="grid items-stretch gap-6 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)]">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-slate-200">
@@ -453,88 +444,26 @@ export default function HomePagePt() {
         </div>
       </section>
 
-      {/* SEGURANÇA */}
-      <section id="seguranca" className="border-b border-slate-100 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          {/* Título e subtítulo centralizados */}
-          <div className="text-center">
-            <h2 className="font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[36px]">
-              Priorizamos a segurança e a integridade
-            </h2>
-            <p className="mt-3 text-[15px] text-slate-500">
-              O Copiloto Médico segue os mais altos padrões de segurança e proteção de dados.
-            </p>
-          </div>
-
-          {/* Linha de 3 bullets */}
-          <div className="mt-12 grid gap-10 text-center text-sm text-slate-700 sm:text-base md:grid-cols-3">
-            <div className="space-y-3">
-              <div className="text-sm text-slate-500">
-                <span aria-hidden>✓</span>
-              </div>
-              <p className="text-sm font-semibold text-slate-900">HIPAA e normas de saúde brasileiras</p>
-              <p className="text-sm text-slate-700">
-                O Copiloto Médico foi desenhado para se alinhar a marcos de proteção de dados de saúde na América Latina e
-                na América do Norte, incluindo HIPAA e regulamentações nacionais aplicáveis ao prontuário clínico.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <div className="text-sm text-slate-500">
-                <span aria-hidden>✓</span>
-              </div>
-              <p className="text-sm font-semibold text-slate-900">Menos documentação manual</p>
-              <p className="text-sm text-slate-700">
-                Nossa solução de voz permite que profissionais de saúde foquem no paciente, reduzindo ao mínimo a
-                necessidade de digitação manual.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <div className="text-sm text-slate-500">
-                <span aria-hidden>✓</span>
-              </div>
-              <p className="text-sm font-semibold text-slate-900">Dados tratados nas Américas</p>
-              <p className="text-sm text-slate-700">
-                Todos os dados são criptografados e processados em centros de dados localizados nas Américas, em
-                conformidade com a legislação aplicável.
-              </p>
-            </div>
-          </div>
-
-          {/* Bloco inferior com imagem e texto */}
-          <div className="mt-14 grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)] md:items-center">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-slate-300">
+      {/* CITA EM DESTAQUE */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-3xl px-6 py-32 text-center md:py-36">
+          <p className="text-3xl font-medium leading-snug text-slate-900 sm:text-4xl">
+            &quot;Depois que você experimenta o Copiloto Médico, não quer voltar atrás.&quot;
+          </p>
+          <div className="mt-4 text-lg tracking-[0.3em] text-amber-400">★★★★★</div>
+          <div className="mt-6 flex flex-col items-center gap-3 text-sm text-slate-600">
+            <div className="relative h-12 w-12 overflow-hidden rounded-full bg-slate-300">
               <Image
-                src="/hipaa.png"
-                alt="Certificações de segurança do Copiloto Médico"
+                src="/6810bcac6fc499ede820f7a0_Juan Mora.png.png"
+                alt="Foto de Diana Martínez"
                 fill
                 className="object-cover"
-                sizes="(min-width: 768px) 24rem, 100vw"
+                sizes="48px"
               />
             </div>
-
-            <div className="space-y-4 text-left text-sm text-slate-700">
-              <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
-                A confiança de mais de 1.000 médicos em toda a América
-              </h3>
-              <p>
-                Baseado nos mais altos padrões de segurança, o Copiloto Médico oferece documentação clínica baseada em IA
-                de forma segura e confiável.
-              </p>
-              <p>
-                De grandes redes hospitalares a clínicas especializadas, os profissionais de saúde utilizam o Copiloto
-                Médico para ganhar tempo, qualidade e tranquilidade em cada consulta.
-              </p>
-              <Link
-                href="/pt/data-security"
-                className="inline-flex items-center rounded-full border border-slate-300 bg-white px-5 py-2 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-slate-50"
-              >
-                Saiba mais sobre nossos protocolos de segurança
-                <span className="ml-1" aria-hidden>
-                  →
-                </span>
-              </Link>
+            <div>
+              <p className="text-sm font-semibold text-slate-900">Diana Martínez</p>
+              <p className="text-xs text-slate-500">Médica Sur</p>
             </div>
           </div>
         </div>
@@ -542,7 +471,7 @@ export default function HomePagePt() {
 
       {/* TESTEMUNHOS */}
       <section id="historias" className="border-b border-slate-100 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-20">
+        <div className="mx-auto max-w-6xl px-6 py-32 md:py-36">
           <div className="mb-10 text-center">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
               Médicos encantados
@@ -667,7 +596,7 @@ export default function HomePagePt() {
 
       {/* IMPACTO EM NÚMEROS */}
       <section className="bg-slate-50/60">
-        <div className="mx-auto max-w-6xl px-6 py-14 md:px-8 lg:px-0">
+        <div className="mx-auto max-w-6xl px-6 py-32 md:px-8 md:py-36 lg:px-0">
           <div className="mb-6 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
               Impacto em números
@@ -686,9 +615,96 @@ export default function HomePagePt() {
         </div>
       </section>
 
+      {/* SEGURANÇA */}
+      <section id="seguranca" className="border-b border-slate-100 bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-32 md:py-36">
+          {/* Título e subtítulo centralizados */}
+          <div className="text-center">
+            <h2 className="font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[36px]">
+              Priorizamos a segurança e a integridade
+            </h2>
+            <p className="mt-3 text-[15px] text-slate-500">
+              O Copiloto Médico segue os mais altos padrões de segurança e proteção de dados.
+            </p>
+          </div>
+
+          {/* Linha de 3 bullets */}
+          <div className="mt-12 grid gap-10 text-center text-sm text-slate-700 sm:text-base md:grid-cols-3">
+            <div className="space-y-3">
+              <div className="text-sm text-slate-500">
+                <span aria-hidden>✓</span>
+              </div>
+              <p className="text-sm font-semibold text-slate-900">HIPAA e normas de saúde brasileiras</p>
+              <p className="text-sm text-slate-700">
+                O Copiloto Médico foi desenhado para se alinhar a marcos de proteção de dados de saúde na América Latina e
+                na América do Norte, incluindo HIPAA e regulamentações nacionais aplicáveis ao prontuário clínico.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="text-sm text-slate-500">
+                <span aria-hidden>✓</span>
+              </div>
+              <p className="text-sm font-semibold text-slate-900">Menos documentação manual</p>
+              <p className="text-sm text-slate-700">
+                Nossa solução de voz permite que profissionais de saúde foquem no paciente, reduzindo ao mínimo a
+                necessidade de digitação manual.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="text-sm text-slate-500">
+                <span aria-hidden>✓</span>
+              </div>
+              <p className="text-sm font-semibold text-slate-900">Dados tratados nas Américas</p>
+              <p className="text-sm text-slate-700">
+                Todos os dados são criptografados e processados em centros de dados localizados nas Américas, em
+                conformidade com a legislação aplicável.
+              </p>
+            </div>
+          </div>
+
+          {/* Bloco inferior com imagem e texto */}
+          <div className="mt-14 grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)] md:items-center">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-slate-300">
+              <Image
+                src="/hipaa.png"
+                alt="Certificações de segurança do Copiloto Médico"
+                fill
+                className="object-cover"
+                sizes="(min-width: 768px) 24rem, 100vw"
+              />
+            </div>
+
+            <div className="space-y-4 text-left text-sm text-slate-700">
+              <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
+                A confiança de mais de 1.000 médicos em toda a América
+              </h3>
+              <p>
+                Baseado nos mais altos padrões de segurança, o Copiloto Médico oferece documentação clínica baseada em IA
+                de forma segura e confiável.
+              </p>
+              <p>
+                De grandes redes hospitalares a clínicas especializadas, os profissionais de saúde utilizam o Copiloto
+                Médico para ganhar tempo, qualidade e tranquilidade em cada consulta.
+              </p>
+              <Link
+                href="/pt/data-security"
+                className="inline-flex items-center rounded-full border border-slate-300 bg-white px-5 py-2 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-slate-50"
+              >
+                Saiba mais sobre nossos protocolos de segurança
+                <span className="ml-1" aria-hidden>
+                  →
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA FINAL */}
       <section id="precos" className="border-t border-slate-100 bg-gradient-to-b from-[#d5ff7c]/35 via-white to-white">
-        <div className="mx-auto max-w-6xl px-6 py-20 text-center">
+        <div className="mx-auto max-w-6xl px-6 py-32 text-center md:py-36">
           <h2 className="font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[36px]">
             Começar a usar o Copiloto Médico é muito fácil
           </h2>

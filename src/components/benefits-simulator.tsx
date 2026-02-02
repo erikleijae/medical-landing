@@ -3,7 +3,8 @@
 import { useMemo, useState } from "react";
 
 const WORKING_DAYS_PER_MONTH = 20;
-const REDUCTION_PERCENTAGE = 0.4; // 40 % menos tiempo por consulta con Copiloto Médico
+const REDUCTION_PERCENTAGE = 0.3; // 30 % menos tiempo por consulta con Copiloto Médico
+const MAX_MINUTES_SAVED_PER_CONSULTATION = 9;
 
 type Language = "es" | "en" | "pt";
 
@@ -45,9 +46,9 @@ type BenefitsSimulatorProps = {
 };
 
 export function BenefitsSimulator({ variant = "full", language = "es" }: BenefitsSimulatorProps) {
-  const [consultationsPerDay, setConsultationsPerDay] = useState<number | null>(null);
-  const [consultationMinutes, setConsultationMinutes] = useState<number | null>(null);
-  const [pricePerConsultation, setPricePerConsultation] = useState<number | null>(null);
+  const [consultationsPerDay, setConsultationsPerDay] = useState<number | null>(10);
+  const [consultationMinutes, setConsultationMinutes] = useState<number | null>(20);
+  const [pricePerConsultation, setPricePerConsultation] = useState<number | null>(800);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
   const isEnglish = language === "en";
@@ -72,17 +73,18 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
     const reduction = REDUCTION_PERCENTAGE;
 
     const baselineMinutesPerDay = consultationsPerDay * consultationMinutes;
-    const minutesSavedPerDay = baselineMinutesPerDay * reduction;
+    const minutesSavedPerConsultation = Math.min(
+      consultationMinutes * reduction,
+      MAX_MINUTES_SAVED_PER_CONSULTATION,
+    );
+    const minutesSavedPerDay = consultationsPerDay * minutesSavedPerConsultation;
     const hoursSavedDay = minutesSavedPerDay / 60;
     const hoursSavedMonth = hoursSavedDay * WORKING_DAYS_PER_MONTH;
 
     let extraConsultations = 0;
-    if (consultationMinutes > 0 && reduction < 1) {
-      const newConsultationMinutes = consultationMinutes * (1 - reduction);
-      const maxConsultationsPerDay =
-        newConsultationMinutes > 0
-          ? baselineMinutesPerDay / newConsultationMinutes
-          : 0;
+    if (consultationMinutes > 0) {
+      const newConsultationMinutes = Math.max(1, consultationMinutes - minutesSavedPerConsultation);
+      const maxConsultationsPerDay = baselineMinutesPerDay / newConsultationMinutes;
       extraConsultations = Math.max(0, maxConsultationsPerDay - consultationsPerDay);
     }
 
@@ -326,10 +328,10 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
             </h2>
             <p className="mt-2 text-xs text-slate-500">
               {isEnglish
-                ? "We use your own numbers and assume that Copiloto Médico reduces the time of each visit by 40%."
+                ? "We use your own numbers and assume Copiloto Médico reduces each visit by up to 30% (max ~9 minutes per visit)."
                 : isPortuguese
-                  ? "Usamos os seus próprios números e assumimos que o Copiloto Médico reduz em 40% o tempo de cada consulta."
-                  : "Usamos tus propias cifras y asumimos que Copiloto Médico reduce un 40% el tiempo de cada consulta."}
+                  ? "Usamos os seus próprios números e assumimos que o Copiloto Médico reduz em até 30% o tempo de cada consulta (máx. ~9 minutos por consulta)."
+                  : "Usamos tus propias cifras y asumimos que Copiloto Médico reduce hasta un 30% el tiempo de cada consulta (máx. ~9 minutos por consulta)."}
             </p>
             <div className="mt-3 space-y-2 text-xs text-slate-600">
               <p>
@@ -371,15 +373,15 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
               </p>
               <ul className="list-disc space-y-1 pl-4">
                 <li>
-                  {isEnglish && "We reduce the time of each visit by 40%."}
+                  {isEnglish && "We reduce the time of each visit by up to 30% (max ~9 minutes per visit)."}
                   {!isEnglish && language === "es" && (
                     <>
-                      Reducimos un <strong>40%</strong> el tiempo de cada consulta.
+                      Reducimos hasta un <strong>30%</strong> el tiempo de cada consulta (máx. <strong>9 min</strong> por consulta).
                     </>
                   )}
                   {!isEnglish && language === "pt" && (
                     <>
-                      Reduzimos em <strong>40%</strong> o tempo de cada consulta.
+                      Reduzimos em até <strong>30%</strong> o tempo de cada consulta (máx. <strong>9 min</strong> por consulta).
                     </>
                   )}
                 </li>

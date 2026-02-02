@@ -109,7 +109,7 @@ export default function OpenGraphImage() {
               Ahorra tiempo en consulta
             </div>
             <div style={{ display: "flex", gap: 10, alignItems: "baseline" }}>
-              <div style={{ fontSize: 52, fontWeight: 800, color: "#d5ff7c" }}>40%</div>
+              <div style={{ fontSize: 52, fontWeight: 800, color: "#d5ff7c" }}>30%</div>
               <div style={{ fontSize: 18, color: "rgba(226,232,240,0.85)" }}>menos documentación</div>
             </div>
             <div

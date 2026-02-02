@@ -1,0 +1,56 @@
+{
+  "sorted_middleware": [],
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge/chunks/_4380d7._.js",
+        "server/edge/chunks/[root of the server]__d7df46._.js",
+        "server/edge/chunks/edge-wrapper_994bd7.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/:path*{(\\\\.json)}?",
+          "originalSource": "/:path*"
+        }
+      ],
+      "wasm": [],
+      "assets": [
+        {
+          "name": "server/edge/chunks/_4380d7._.js.map",
+          "filePath": "server/edge/chunks/_4380d7._.js.map"
+        },
+        {
+          "name": "server/edge/chunks/_4380d7._.js",
+          "filePath": "server/edge/chunks/_4380d7._.js"
+        },
+        {
+          "name": "server/edge/chunks/[root of the server]__d7df46._.js.map",
+          "filePath": "server/edge/chunks/[root of the server]__d7df46._.js.map"
+        },
+        {
+          "name": "server/edge/chunks/[root of the server]__d7df46._.js",
+          "filePath": "server/edge/chunks/[root of the server]__d7df46._.js"
+        },
+        {
+          "name": "server/edge/chunks/edge-wrapper_994bd7.js.map",
+          "filePath": "server/edge/chunks/edge-wrapper_994bd7.js.map"
+        },
+        {
+          "name": "server/edge/chunks/edge-wrapper_994bd7.js",
+          "filePath": "server/edge/chunks/edge-wrapper_994bd7.js"
+        }
+      ],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "ZY3kbdU4EC6dWp7JhxzZDjc9OPVt7PghK+UTLaFtHXc=",
+        "__NEXT_PREVIEW_MODE_ID": "566f6e9f1848bc742ba2f83d554cfb2a",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "8930b8f01320ed13308f3e5128ed2dddaa06a7df2c0af7810a6cc63a1e25502f",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "56beca6d996054642915ebdffa33385351d4943974f2091749043c5f590069b7"
+      }
+    }
+  },
+  "instrumentation": null,
+  "functions": {}
+}

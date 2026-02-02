@@ -69,7 +69,7 @@ export default function PricingPage() {
             De médicos independientes a grandes organizaciones de la salud
           </h1>
           <p className="mt-4 text-[15px] text-slate-600">
-            Ahorra alrededor de un 40 % del tiempo de consulta y elimina la documentación manual: solo habla y Copiloto
+            Ahorra alrededor de un 30 % del tiempo de consulta y elimina la documentación manual: solo habla y Copiloto
             Médico se encarga del resto. Sin coste de instalación, sin contrato anual.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-8 md:gap-12">

@@ -3,30 +3,56 @@
   "middleware": {
     "/": {
       "files": [
-        "server/edge-runtime-webpack.js",
-        "server/src/middleware.js"
+        "server/edge/chunks/_4380d7._.js",
+        "server/edge/chunks/[root of the server]__d7df46._.js",
+        "server/edge/chunks/edge-wrapper_994bd7.js"
       ],
-      "name": "src/middleware",
+      "name": "middleware",
       "page": "/",
       "matchers": [
         {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(\\/?index|\\/?index\\.json))?[\\/#\\?]?$",
-          "originalSource": "/"
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/:path*"
         }
       ],
       "wasm": [],
-      "assets": [],
+      "assets": [
+        {
+          "name": "server/edge/chunks/_4380d7._.js.map",
+          "filePath": "server/edge/chunks/_4380d7._.js.map"
+        },
+        {
+          "name": "server/edge/chunks/_4380d7._.js",
+          "filePath": "server/edge/chunks/_4380d7._.js"
+        },
+        {
+          "name": "server/edge/chunks/[root of the server]__d7df46._.js.map",
+          "filePath": "server/edge/chunks/[root of the server]__d7df46._.js.map"
+        },
+        {
+          "name": "server/edge/chunks/[root of the server]__d7df46._.js",
+          "filePath": "server/edge/chunks/[root of the server]__d7df46._.js"
+        },
+        {
+          "name": "server/edge/chunks/edge-wrapper_994bd7.js.map",
+          "filePath": "server/edge/chunks/edge-wrapper_994bd7.js.map"
+        },
+        {
+          "name": "server/edge/chunks/edge-wrapper_994bd7.js",
+          "filePath": "server/edge/chunks/edge-wrapper_994bd7.js"
+        }
+      ],
       "env": {
-        "__NEXT_BUILD_ID": "Ldd7wn78HDs_b3a4fbmCp",
+        "__NEXT_BUILD_ID": "development",
         "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "ZY3kbdU4EC6dWp7JhxzZDjc9OPVt7PghK+UTLaFtHXc=",
-        "__NEXT_PREVIEW_MODE_ID": "fae980c2c6bb6d2e60985b296486eb3a",
-        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "ce3b69685f7336471fa7b4fb7cbe443121fe08b864af277741f38d23b93ba7ab",
-        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "497068a31a0f2d17326ab47b8225b6df411d32ba6e774521fe9737530316d71f"
+        "__NEXT_PREVIEW_MODE_ID": "566f6e9f1848bc742ba2f83d554cfb2a",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "8930b8f01320ed13308f3e5128ed2dddaa06a7df2c0af7810a6cc63a1e25502f",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "56beca6d996054642915ebdffa33385351d4943974f2091749043c5f590069b7"
       }
     }
   },
-  "functions": {},
   "sortedMiddleware": [
     "/"
-  ]
+  ],
+  "functions": {}
 }

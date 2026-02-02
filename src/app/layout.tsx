@@ -1,14 +1,22 @@
 import "./globals.css";
 
 import type { Metadata, Viewport } from "next";
+import { headers } from "next/headers";
 import { Inter, Playfair_Display } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-display" });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://copilotomedico.com";
+const defaultSiteUrl = "https://medicalcopilot.ai";
 
-const jsonLd = {
+function getBaseUrl(): string {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL;
+  }
+  return defaultSiteUrl;
+}
+
+const jsonLd = (siteUrl: string) => ({
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -30,10 +38,19 @@ const jsonLd = {
         "El asistente clínico de IA líder en America. Copiloto Médico redacta notas e informes clínicos después de cada consulta para ahorrar horas de trabajo administrativo.",
     },
   ],
-};
+});
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = await headers();
+  const host = headersList.get("host");
+  const protocol = headersList.get("x-forwarded-proto") ?? "https";
+  const baseUrl = host ? `${protocol}://${host}` : getBaseUrl();
+
+  const siteUrl = baseUrl;
+  const ogImageUrl = `${siteUrl}/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp`;
+
+  return {
+    metadataBase: new URL(siteUrl),
   title: {
     default: "El asistente clínico de IA líder en America | Copiloto Médico",
     template: "%s | Copiloto Médico",
@@ -53,7 +70,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "/",
+    url: siteUrl,
     title: "El asistente clínico de IA líder en America | Copiloto Médico",
     description:
       "Céntrate en la asistencia mientras Copiloto Médico escribe tus informes después de cada consulta. Aumenta la productividad de tu consulta con nuestro asistente clínico basado en IA.",
@@ -61,10 +78,11 @@ export const metadata: Metadata = {
     locale: "es_MX",
     images: [
       {
-        url: "/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp",
+        url: ogImageUrl,
         width: 500,
         height: 500,
         alt: "Copiloto Médico, asistente clínico de IA",
+        type: "image/webp",
       },
     ],
   },
@@ -73,9 +91,7 @@ export const metadata: Metadata = {
     title: "El asistente clínico de IA líder en America | Copiloto Médico",
     description:
       "Céntrate en la asistencia mientras Copiloto Médico escribe tus informes después de cada consulta. Aumenta la productividad de tu consulta con nuestro asistente clínico basado en IA.",
-    images: [
-      "/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp",
-    ],
+    images: [ogImageUrl],
   },
   robots: {
     index: true,
@@ -91,7 +107,8 @@ export const metadata: Metadata = {
   icons: {
     icon: "/Captura de pantalla 2025-12-07 a la(s) 11.07.14 a.m..png",
   },
-};
+  };
+}
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -112,7 +129,7 @@ export default function RootLayout({
       >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(getBaseUrl())) }}
         />
         {children}
       </body>

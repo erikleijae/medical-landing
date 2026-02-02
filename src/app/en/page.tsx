@@ -4,6 +4,8 @@ import Link from "next/link";
 import { HeroVideo } from "../../components/hero-video";
 import { BenefitsSimulator } from "../../components/benefits-simulator";
 import { LanguageSwitcher } from "../../components/language-switcher";
+import { ConsultationsCounter, HoursSavedCounter } from "../../components/consultations-counter";
+import { AudienceTabs } from "../../components/audience-tabs";
 
 export default function HomePageEn() {
   return (
@@ -128,87 +130,21 @@ export default function HomePageEn() {
         <HeroVideo />
       </section>
 
-      {/* COPILOTO EN LA PRÁCTICA */}
-      <section id="product" className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 pt-16 pb-12">
-          <div className="text-center">
-            <h2 className="text-[28px] font-semibold tracking-tight text-slate-900 sm:text-[32px]">
-              Copiloto Médico in practice
-            </h2>
-            <p className="mt-2 text-sm text-slate-500">
-              More than 1,000 healthcare organizations already trust us.
-            </p>
-          </div>
+      <ConsultationsCounter
+        locale="en"
+        title="Consultations with Copiloto Médico"
+        subtitle="This number increases in real time while you browse."
+      />
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-              <div className="relative aspect-[16/9] w-full">
-                <Image
-                  src="/Medica.png"
-                  alt="Médica Sur, high-complexity hospital in Mexico City"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                />
-              </div>
-              <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
-                <p className="text-justify">
-                  In Mexico, high-complexity hospitals such as Médica Sur aim to reduce administrative workload. Copiloto
-                  Médico cuts around 40% of consultation time and generates the clinical note using just your voice.
-                </p>
-              </div>
-            </article>
-
-            <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-              <div className="relative aspect-[16/9] w-full">
-                <Image
-                  src="/houston.png"
-                  alt="Houston Methodist Hospital using AI solutions"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                />
-              </div>
-              <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
-                <p className="text-justify">
-                  In the United States, hospitals such as Houston Methodist Hospital are leading AI scribe projects.
-                  Copiloto Médico brings this approach to the region and helps reduce up to 2 hours of daily
-                  documentation per clinician.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* HIGHLIGHTED QUOTE */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-3xl px-6 pb-20 pt-8 text-center">
-          <p className="text-3xl font-medium leading-snug text-slate-900 sm:text-4xl">
-            “Once you try Copiloto Médico, you don’t want to go back.”
-          </p>
-          <div className="mt-4 text-lg tracking-[0.3em] text-amber-400">★★★★★</div>
-          <div className="mt-6 flex flex-col items-center gap-3 text-sm text-slate-600">
-            <div className="relative h-12 w-12 overflow-hidden rounded-full bg-slate-300">
-              <Image
-                src="/6810bcac6fc499ede820f7a0_Juan Mora.png.png"
-                alt="Photo of Diana Martínez"
-                fill
-                className="object-cover"
-                sizes="48px"
-              />
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-slate-900">Diana Martínez</p>
-              <p className="text-xs text-slate-500">Médica Sur</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HoursSavedCounter
+        locale="en"
+        title="Hours saved"
+        subtitle="We save 30% of consultation time"
+      />
 
       {/* HOW IT WORKS */}
       <section id="how-it-works" className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:px-8">
+        <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 sm:pt-28 md:px-8 md:pt-32">
           <div className="text-center">
             <h2 className="font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[36px]">
               How Copiloto Médico works
@@ -279,7 +215,7 @@ export default function HomePageEn() {
         </div>
       </section>
       <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 pb-16 text-center">
+        <div className="mx-auto max-w-6xl px-6 py-32 text-center md:py-36">
           <h2 className="text-[28px] font-semibold tracking-tight text-slate-900 sm:text-[32px]">
             Better notes, safer care
           </h2>
@@ -408,8 +344,63 @@ export default function HomePageEn() {
         </div>
       </section>
 
+      <AudienceTabs language="en" />
+
+      {/* COPILOTO EN LA PRÁCTICA */}
+      <section id="product" className="bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-32 md:py-36">
+          <div className="text-center">
+            <h2 className="text-[28px] font-semibold tracking-tight text-slate-900 sm:text-[32px]">
+              Copiloto Médico in practice
+            </h2>
+            <p className="mt-2 text-sm text-slate-500">
+              More than 1,000 healthcare organizations already trust us.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+              <div className="relative aspect-[16/9] w-full">
+                <Image
+                  src="/Medica.png"
+                  alt="Médica Sur, high-complexity hospital in Mexico City"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              </div>
+              <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
+                <p className="text-justify">
+                  In Mexico, high-complexity hospitals such as Médica Sur aim to reduce administrative workload. Copiloto
+                  Médico cuts around 30% of consultation time and generates the clinical note using just your voice.
+                </p>
+              </div>
+            </article>
+
+            <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+              <div className="relative aspect-[16/9] w-full">
+                <Image
+                  src="/houston.png"
+                  alt="Houston Methodist Hospital using AI solutions"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              </div>
+              <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
+                <p className="text-justify">
+                  In the United States, hospitals such as Houston Methodist Hospital are leading AI scribe projects.
+                  Copiloto Médico brings this approach to the region and helps reduce up to 2 hours of daily
+                  documentation per clinician.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 pb-20">
+        <div className="mx-auto max-w-6xl px-6 py-32 md:py-36">
           <div className="grid items-stretch gap-6 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)]">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-slate-200">
               <Image
@@ -440,87 +431,33 @@ export default function HomePageEn() {
         </div>
       </section>
 
-      {/* SECURITY SECTION (shortened) */}
-      <section id="security" className="border-b border-slate-100 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <div className="text-center">
-            <h2 className="font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[36px]">
-              We prioritise security and integrity
-            </h2>
-            <p className="mt-3 text-[15px] text-slate-500">
-              Copiloto Médico follows strict standards for patient data protection and privacy.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-10 text-center text-sm text-slate-700 sm:text-base md:grid-cols-3">
-            <div className="space-y-3">
-              <div className="text-sm text-slate-500">
-                <span aria-hidden>✓</span>
-              </div>
-              <p className="text-sm font-semibold text-slate-900">Patient data laws and privacy regulations</p>
-              <p className="text-sm text-slate-700">
-                Our solution complies with strict national regulations for patient data and privacy.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <div className="text-sm text-slate-500">
-                <span aria-hidden>✓</span>
-              </div>
-              <p className="text-sm font-semibold text-slate-900">No audio is stored</p>
-              <p className="text-sm text-slate-700">
-                Audio is processed in real time during the visit and is not stored after the consultation ends.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <div className="text-sm text-slate-500">
-                <span aria-hidden>✓</span>
-              </div>
-              <p className="text-sm font-semibold text-slate-900">Data hosted within America</p>
-              <p className="text-sm text-slate-700">
-                All data is encrypted and processed within America in line with applicable regulations.
-              </p>
-            </div>
-          </div>
-          <div className="mt-14 grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)] md:items-center">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-slate-300">
+      {/* HIGHLIGHTED QUOTE */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-3xl px-6 py-32 text-center md:py-36">
+          <p className="text-3xl font-medium leading-snug text-slate-900 sm:text-4xl">
+            “Once you try Copiloto Médico, you don’t want to go back.”
+          </p>
+          <div className="mt-4 text-lg tracking-[0.3em] text-amber-400">★★★★★</div>
+          <div className="mt-6 flex flex-col items-center gap-3 text-sm text-slate-600">
+            <div className="relative h-12 w-12 overflow-hidden rounded-full bg-slate-300">
               <Image
-                src="/hipaa.png"
-                alt="Security and compliance certifications of Copiloto Médico"
+                src="/6810bcac6fc499ede820f7a0_Juan Mora.png.png"
+                alt="Photo of Diana Martínez"
                 fill
                 className="object-cover"
-                sizes="(min-width: 768px) 24rem, 100vw"
+                sizes="48px"
               />
             </div>
-
-            <div className="space-y-4 text-left text-sm text-slate-700">
-              <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
-                Trusted by more than 1,000 clinicians across the Americas
-              </h3>
-              <p>
-                Built on top of strong security standards, Copiloto Médico enables safe and reliable AI-powered
-                documentation.
-              </p>
-              <p>
-                From large hospital networks to specialised clinics, healthcare professionals use Copiloto Médico to gain
-                back time, quality and peace of mind in every consultation.
-              </p>
-              <Link
-                href="/en/data-security"
-                className="inline-flex items-center rounded-full border border-slate-300 bg-white px-5 py-2 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-slate-50"
-              >
-                Read more about our security protocols
-                <span className="ml-1" aria-hidden>
-                  →
-                </span>
-              </Link>
+            <div>
+              <p className="text-sm font-semibold text-slate-900">Diana Martínez</p>
+              <p className="text-xs text-slate-500">Médica Sur</p>
             </div>
           </div>
         </div>
       </section>
+
       <section id="stories" className="border-b border-slate-100 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-20">
+        <div className="mx-auto max-w-6xl px-6 py-32 md:py-36">
           <div className="mb-10 text-center">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
               Clinicians love Copiloto Médico
@@ -638,7 +575,7 @@ export default function HomePageEn() {
       </section>
 
       <section className="bg-slate-50/60">
-        <div className="mx-auto max-w-6xl px-6 py-14 md:px-8 lg:px-0">
+        <div className="mx-auto max-w-6xl px-6 py-32 md:px-8 md:py-36 lg:px-0">
           <div className="mb-6 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Impact in numbers</p>
             <h2 className="mt-3 text-[26px] font-semibold tracking-tight text-slate-900 sm:text-[30px]">
@@ -655,12 +592,92 @@ export default function HomePageEn() {
         </div>
       </section>
 
+      {/* SECURITY SECTION (shortened) */}
+      <section id="security" className="border-b border-slate-100 bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-32 md:py-36">
+          <div className="text-center">
+            <h2 className="font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[36px]">
+              We prioritise security and integrity
+            </h2>
+            <p className="mt-3 text-[15px] text-slate-500">
+              Copiloto Médico follows strict standards for patient data protection and privacy.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-10 text-center text-sm text-slate-700 sm:text-base md:grid-cols-3">
+            <div className="space-y-3">
+              <div className="text-sm text-slate-500">
+                <span aria-hidden>✓</span>
+              </div>
+              <p className="text-sm font-semibold text-slate-900">Patient data laws and privacy regulations</p>
+              <p className="text-sm text-slate-700">
+                Our solution complies with strict national regulations for patient data and privacy.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="text-sm text-slate-500">
+                <span aria-hidden>✓</span>
+              </div>
+              <p className="text-sm font-semibold text-slate-900">No audio is stored</p>
+              <p className="text-sm text-slate-700">
+                Audio is processed in real time during the visit and is not stored after the consultation ends.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="text-sm text-slate-500">
+                <span aria-hidden>✓</span>
+              </div>
+              <p className="text-sm font-semibold text-slate-900">Data hosted within America</p>
+              <p className="text-sm text-slate-700">
+                All data is encrypted and processed within America in line with applicable regulations.
+              </p>
+            </div>
+          </div>
+          <div className="mt-14 grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)] md:items-center">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-slate-300">
+              <Image
+                src="/hipaa.png"
+                alt="Security and compliance certifications of Copiloto Médico"
+                fill
+                className="object-cover"
+                sizes="(min-width: 768px) 24rem, 100vw"
+              />
+            </div>
+
+            <div className="space-y-4 text-left text-sm text-slate-700">
+              <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
+                Trusted by more than 1,000 clinicians across the Americas
+              </h3>
+              <p>
+                Built on top of strong security standards, Copiloto Médico enables safe and reliable AI-powered
+                documentation.
+              </p>
+              <p>
+                From large hospital networks to specialised clinics, healthcare professionals use Copiloto Médico to gain
+                back time, quality and peace of mind in every consultation.
+              </p>
+              <Link
+                href="/en/data-security"
+                className="inline-flex items-center rounded-full border border-slate-300 bg-white px-5 py-2 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-slate-50"
+              >
+                Read more about our security protocols
+                <span className="ml-1" aria-hidden>
+                  →
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA (mirroring ES) */}
       <section
         id="pricing"
         className="border-t border-slate-100 bg-gradient-to-b from-[#d5ff7c]/35 via-white to-white"
       >
-        <div className="mx-auto max-w-6xl px-6 py-20 text-center">
+        <div className="mx-auto max-w-6xl px-6 py-32 text-center md:py-36">
           <h2 className="font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[36px]">
             Getting started is easy
           </h2>
