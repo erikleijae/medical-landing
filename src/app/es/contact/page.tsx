@@ -12,7 +12,7 @@ export default function ContactPage() {
               <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
             </div>
             <Link href="/" className="text-[18px] font-semibold tracking-tight text-slate-900">
-              Copiloto Médico
+              DeepClinic Copilot
             </Link>
           </div>
 
@@ -72,7 +72,7 @@ export default function ContactPage() {
             <div className="mt-8 flex min-h-[260px] flex-col justify-between rounded-2xl bg-gradient-to-b from-slate-50 to-slate-100 px-6 py-8 text-slate-800 sm:min-h-[320px] sm:px-8 sm:py-10">
               <div className="space-y-4">
                 <p className="text-[22px] font-medium leading-snug text-slate-900 sm:text-[26px]">
-                  “Con la solución de IA de Copiloto Médico podemos centrarnos plenamente en el paciente sin preocuparnos por
+                  “Con la solución de IA de DeepClinic Copilot podemos centrarnos plenamente en el paciente sin preocuparnos por
                   escribir o dictar.”
                 </p>
                 <p className="text-sm text-slate-600">
@@ -105,10 +105,10 @@ export default function ContactPage() {
                   Demostración personalizada
                 </p>
                 <h1 className="text-lg font-semibold text-slate-900 sm:text-xl">
-                  Descubre Copiloto Médico con uno de nuestros especialistas
+                  Descubre DeepClinic Copilot con uno de nuestros especialistas
                 </h1>
                 <p className="text-xs text-slate-500 sm:text-[13px]">
-                  Comprueba cómo opera Copiloto Médico en la práctica diaria y resuelve dudas sobre tu caso concreto.
+                  Comprueba cómo opera DeepClinic Copilot en la práctica diaria y resuelve dudas sobre tu caso concreto.
                 </p>
               </div>
 
@@ -210,14 +210,14 @@ export default function ContactPage() {
 
                 <div className="space-y-1.5">
                   <label htmlFor="interest" className="text-xs font-medium text-slate-800">
-                    Su interés en Copiloto Médico
+                    Su interés en DeepClinic Copilot
                   </label>
                   <textarea
                     id="interest"
                     name="interest"
                     rows={3}
                     autoComplete="off"
-                    placeholder="Cuéntanos brevemente qué te interesa de Copiloto Médico o qué tipo de centro gestionas."
+                    placeholder="Cuéntanos brevemente qué te interesa de DeepClinic Copilot o qué tipo de centro gestionas."
                     className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
                   />
                 </div>
@@ -230,7 +230,7 @@ export default function ContactPage() {
                       className="mt-0.5 h-4 w-4 rounded border-slate-300 text-slate-900 focus:ring-slate-900"
                     />
                     <span>
-                      Acepto que Copiloto Médico se ponga en contacto conmigo. Mis datos personales se procesan de acuerdo con
+                      Acepto que DeepClinic Copilot se ponga en contacto conmigo. Mis datos personales se procesan de acuerdo con
                       la política de privacidad aplicable.
                     </span>
                   </label>
@@ -245,7 +245,7 @@ export default function ContactPage() {
               </form>
 
               <p className="mt-5 text-center text-[10px] text-slate-400 sm:text-[11px]">
-                Copiloto Médico sigue estándares exigentes de seguridad y protección de datos y cumple con la normativa de
+                DeepClinic Copilot sigue estándares exigentes de seguridad y protección de datos y cumple con la normativa de
                 privacidad vigente.
               </p>
             </div>

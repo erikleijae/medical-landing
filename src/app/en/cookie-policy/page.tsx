@@ -9,7 +9,7 @@ export default function CookiePolicyPageEn() {
           Cookie policy
         </h1>
         <p className="mt-4 text-sm text-slate-600">
-          This Cookie Policy explains how Copiloto Médico uses cookies and similar technologies on this website. It
+          This Cookie Policy explains how DeepClinic Copilot uses cookies and similar technologies on this website. It
           should be read together with our Privacy Policy, which explains how we handle your personal data more broadly.
         </p>
         <section className="mt-6 space-y-3 text-sm leading-relaxed text-slate-700">

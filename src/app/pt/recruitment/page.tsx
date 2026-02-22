@@ -6,7 +6,7 @@ export default function RecruitmentPagePt() {
       <div className="mx-auto max-w-3xl px-6 py-16">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Carreiras</p>
         <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-          Junta‑te ao Copiloto Médico
+          Junta‑te ao DeepClinic Copilot
         </h1>
         <p className="mt-4 text-sm text-slate-600">
           Estamos a construir ferramentas de IA clínica para que os profissionais de saúde possam dedicar mais tempo a cada

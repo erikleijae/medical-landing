@@ -12,7 +12,7 @@ export default function DownloadPage() {
               <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
             </div>
             <Link href="/" className="text-[18px] font-semibold tracking-tight text-slate-900">
-              Copiloto Médico
+              DeepClinic Copilot
             </Link>
           </div>
 
@@ -68,10 +68,10 @@ export default function DownloadPage() {
               Descargar
             </p>
             <h1 className="mt-3 font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[38px]">
-              Usa Copiloto Médico donde estés
+              Usa DeepClinic Copilot donde estés
             </h1>
             <p className="mt-4 text-sm text-slate-600">
-              Utiliza Copiloto Médico en la consulta o fuera de ella. Descarga la app de escritorio y los complementos para tu
+              Utiliza DeepClinic Copilot en la consulta o fuera de ella. Descarga la app de escritorio y los complementos para tu
               navegador para transferir tus notas de forma segura a tus sistemas clínicos.
             </p>
           </header>
@@ -82,7 +82,7 @@ export default function DownloadPage() {
               <div>
                 <h2 className="text-base font-semibold text-slate-900">Windows</h2>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Permite que Copiloto Médico funcione completamente para videollamadas o llamadas telefónicas (al capturar el
+                  Permite que DeepClinic Copilot funcione completamente para videollamadas o llamadas telefónicas (al capturar el
                   audio del paciente) y permite la transferencia a los sistemas de registros médicos locales.
                 </p>
               </div>
@@ -106,7 +106,7 @@ export default function DownloadPage() {
               <div>
                 <h2 className="text-base font-semibold text-slate-900">Web plugin</h2>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Complemento web para Chrome, Edge y Firefox. Permite transferir automáticamente las notas de Copiloto Médico a
+                  Complemento web para Chrome, Edge y Firefox. Permite transferir automáticamente las notas de DeepClinic Copilot a
                   tu sistema de registro médico basado en la web.
                 </p>
               </div>
@@ -130,7 +130,7 @@ export default function DownloadPage() {
               <div>
                 <h2 className="text-base font-semibold text-slate-900">iOS y Android</h2>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Accede a Copiloto Médico desde tu móvil. Inicia sesión con tu cuenta para utilizar la aplicación en iOS y
+                  Accede a DeepClinic Copilot desde tu móvil. Inicia sesión con tu cuenta para utilizar la aplicación en iOS y
                   Android.
                 </p>
               </div>
@@ -154,7 +154,7 @@ export default function DownloadPage() {
               <div>
                 <h2 className="text-base font-semibold text-slate-900">Edge plugin</h2>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Complemento web para Microsoft Edge. Permite transferir automáticamente las notas de Copiloto Médico a tu
+                  Complemento web para Microsoft Edge. Permite transferir automáticamente las notas de DeepClinic Copilot a tu
                   sistema de registro médico basado en la web.
                 </p>
               </div>
@@ -178,7 +178,7 @@ export default function DownloadPage() {
               <div>
                 <h2 className="text-base font-semibold text-slate-900">Firefox plugin</h2>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Complemento web para Firefox. Permite transferir automáticamente las notas de Copiloto Médico a tu sistema de
+                  Complemento web para Firefox. Permite transferir automáticamente las notas de DeepClinic Copilot a tu sistema de
                   registro médico basado en la web.
                 </p>
               </div>
@@ -226,7 +226,7 @@ export default function DownloadPage() {
               <div>
                 <h2 className="text-base font-semibold text-slate-900">Hojas informativas (PDF)</h2>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Documentos para clínicas y pacientes que explican qué es Copiloto Médico y cómo protegemos la información de
+                  Documentos para clínicas y pacientes que explican qué es DeepClinic Copilot y cómo protegemos la información de
                   los pacientes.
                 </p>
               </div>

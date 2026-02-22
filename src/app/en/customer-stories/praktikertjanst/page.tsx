@@ -13,7 +13,7 @@ export default function PraktikertjanstStoryPageEn() {
                 Praktikertjänst bets on AI‑assisted documentation
               </h1>
               <p className="mt-4 text-[15px] text-slate-600">
-                Praktikertjänst, a large network of clinics in Northern Europe, introduces Copiloto Médico to make daily
+                Praktikertjänst, a large network of clinics in Northern Europe, introduces DeepClinic Copilot to make daily
                 documentation easier for its professionals.
               </p>
               <p className="mt-3 text-sm text-slate-600">
@@ -56,7 +56,7 @@ export default function PraktikertjanstStoryPageEn() {
                 AI as support for clinical workflows
               </h2>
               <p>
-                Copiloto Médico generates a draft clinical note based on the conversation with the patient, allowing the
+                DeepClinic Copilot generates a draft clinical note based on the conversation with the patient, allowing the
                 professional to review and complete the necessary details before sending it to the health record system.
               </p>
             </div>
@@ -68,10 +68,10 @@ export default function PraktikertjanstStoryPageEn() {
         <div className="mx-auto max-w-6xl px-6 py-16 text-center text-slate-50 md:px-8 lg:px-10">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">Get started</p>
           <h2 className="mt-4 text-[26px] font-semibold tracking-tight sm:text-[30px]">
-            Discover how Copiloto Médico can help you
+            Discover how DeepClinic Copilot can help you
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-slate-300">
-            Book a demo to see how Copiloto Médico fits into the day‑to‑day work of your organisation.
+            Book a demo to see how DeepClinic Copilot fits into the day‑to‑day work of your organisation.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link

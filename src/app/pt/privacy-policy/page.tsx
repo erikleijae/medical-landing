@@ -1,34 +1,34 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Política de privacidade | Copiloto Médico",
+  title: "Política de privacidade | DeepClinic Copilot",
   description:
-    "Saiba como o Copiloto Médico recolhe, utiliza e protege os seus dados pessoais quando visita o nosso site ou entra em contacto connosco.",
+    "Saiba como o DeepClinic Copilot recolhe, utiliza e protege os seus dados pessoais quando visita o nosso site ou entra em contacto connosco.",
   alternates: {
     canonical: "/pt/privacy-policy",
   },
   openGraph: {
     type: "article",
     url: "/pt/privacy-policy",
-    title: "Política de privacidade | Copiloto Médico",
+    title: "Política de privacidade | DeepClinic Copilot",
     description:
-      "Consulte a política de privacidade do Copiloto Médico e como tratamos os seus dados pessoais e de navegação.",
-    siteName: "Copiloto Médico",
+      "Consulte a política de privacidade do DeepClinic Copilot e como tratamos os seus dados pessoais e de navegação.",
+    siteName: "DeepClinic Copilot",
     locale: "pt_BR",
     images: [
       {
         url: "/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp",
         width: 500,
         height: 500,
-        alt: "Copiloto Médico, assistente clínico de IA",
+        alt: "DeepClinic Copilot, assistente clínico de IA",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Política de privacidade | Copiloto Médico",
+    title: "Política de privacidade | DeepClinic Copilot",
     description:
-      "Saiba como o Copiloto Médico recolhe, utiliza e protege os seus dados pessoais quando visita o nosso site ou entra em contacto connosco.",
+      "Saiba como o DeepClinic Copilot recolhe, utiliza e protege os seus dados pessoais quando visita o nosso site ou entra em contacto connosco.",
     images: ["/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp"],
   },
 };
@@ -41,13 +41,13 @@ export default function PrivacyPolicyPagePt() {
         <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
           Política de privacidade
         </h1>
-        <p className="mt-1 text-sm text-slate-500">Copiloto Médico</p>
+        <p className="mt-1 text-sm text-slate-500">DeepClinic Copilot</p>
 
         {/* 1. Finalidade desta política de privacidade */}
         <section className="mt-6 space-y-3 text-sm leading-relaxed text-slate-700">
           <h2 className="text-base font-semibold text-slate-900">1. Finalidade desta política de privacidade</h2>
           <p>
-            No Copiloto Médico (&quot;Copiloto Médico&quot; ou &quot;nós&quot;), damos prioridade à sua privacidade e estamos comprometidos em
+            No DeepClinic Copilot (&quot;DeepClinic Copilot&quot; ou &quot;nós&quot;), damos prioridade à sua privacidade e estamos comprometidos em
             proteger os seus dados pessoais. Esta Política de Privacidade explica como recolhemos, utilizamos, protegemos e
             gerimos os seus dados pessoais quando visita o nosso site ou interage connosco como utilizador ou potencial
             cliente. Também descreve os seus direitos de privacidade e como a legislação o protege.
@@ -67,7 +67,7 @@ export default function PrivacyPolicyPagePt() {
         <section className="mt-8 space-y-3 text-sm leading-relaxed text-slate-700">
           <h2 className="text-base font-semibold text-slate-900">2. Responsável pelo tratamento de dados</h2>
           <p>
-            Para os fins descritos nesta Política de Privacidade, o Copiloto Médico atua como responsável pelo tratamento de
+            Para os fins descritos nesta Política de Privacidade, o DeepClinic Copilot atua como responsável pelo tratamento de
             dados. Isto significa que determinamos as finalidades e os meios de tratamento dos seus dados pessoais quando
             utiliza o Site ou interage connosco no âmbito desta política.
           </p>
@@ -88,7 +88,7 @@ export default function PrivacyPolicyPagePt() {
         <section className="mt-8 space-y-3 text-sm leading-relaxed text-slate-700">
           <h2 className="text-base font-semibold text-slate-900">3. Ligações para sites de terceiros</h2>
           <p>
-            O Site do Copiloto Médico pode incluir, ocasionalmente, ligações para sites de parceiros e outros terceiros.
+            O Site do DeepClinic Copilot pode incluir, ocasionalmente, ligações para sites de parceiros e outros terceiros.
             Estes sites e os serviços que prestam funcionam segundo as suas próprias políticas de privacidade. Não somos
             responsáveis pelas práticas de privacidade desses sites ou serviços. Recomendamos que leia atentamente as suas
             políticas de privacidade antes de fornecer qualquer dado pessoal ou utilizar as suas funcionalidades.
@@ -169,7 +169,7 @@ export default function PrivacyPolicyPagePt() {
             </li>
           </ul>
           <p>
-            Dependendo de como interage connosco, o Copiloto Médico pode tratar os seus dados pessoais para gerir pedidos e
+            Dependendo de como interage connosco, o DeepClinic Copilot pode tratar os seus dados pessoais para gerir pedidos e
             contactos, avaliar candidaturas, administrar e proteger o Site, cumprir obrigações regulatórias e melhorar os
             nossos produtos e serviços.
           </p>
@@ -195,7 +195,7 @@ export default function PrivacyPolicyPagePt() {
         <section className="mt-8 space-y-3 text-sm leading-relaxed text-slate-700">
           <h2 className="text-base font-semibold text-slate-900">8. Partilha dos seus dados pessoais</h2>
           <p>
-            No âmbito interno do Copiloto Médico, o acesso aos seus dados pessoais é limitado às pessoas que deles
+            No âmbito interno do DeepClinic Copilot, o acesso aos seus dados pessoais é limitado às pessoas que deles
             necessitam para desempenhar as suas funções. Poderemos partilhar os seus dados com prestadores de serviços que
             atuam como subcontratantes (por exemplo, fornecedores de serviços de TI, alojamento ou suporte). Estes
             prestadores só podem tratar os seus dados de acordo com as nossas instruções e devem protegê‑los de forma

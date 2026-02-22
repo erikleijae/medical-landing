@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 
 const WORKING_DAYS_PER_MONTH = 20;
-const REDUCTION_PERCENTAGE = 0.3; // 30 % menos tiempo por consulta con Copiloto Médico
+const REDUCTION_PERCENTAGE = 0.3; // 30 % menos tiempo por consulta con DeepClinic Copilot
 const MAX_MINUTES_SAVED_PER_CONSULTATION = 9;
 
 type Language = "es" | "en" | "pt";
@@ -279,10 +279,10 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
             </p>
             <p className="mt-0.5 text-[11px] text-slate-400">
               {isEnglish
-                ? "With the time you free up thanks to Copiloto Médico."
+                ? "With the time you free up thanks to DeepClinic Copilot."
                 : isPortuguese
-                  ? "Com o tempo liberado pelo Copiloto Médico."
-                  : "Con el tiempo liberado por Copiloto Médico."}
+                  ? "Com o tempo liberado pelo DeepClinic Copilot."
+                  : "Con el tiempo liberado por DeepClinic Copilot."}
             </p>
           </div>
           <div>
@@ -328,10 +328,10 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
             </h2>
             <p className="mt-2 text-xs text-slate-500">
               {isEnglish
-                ? "We use your own numbers and assume Copiloto Médico reduces each visit by up to 30% (max ~9 minutes per visit)."
+                ? "We use your own numbers and assume DeepClinic Copilot reduces each visit by up to 30% (max ~9 minutes per visit)."
                 : isPortuguese
-                  ? "Usamos os seus próprios números e assumimos que o Copiloto Médico reduz em até 30% o tempo de cada consulta (máx. ~9 minutos por consulta)."
-                  : "Usamos tus propias cifras y asumimos que Copiloto Médico reduce hasta un 30% el tiempo de cada consulta (máx. ~9 minutos por consulta)."}
+                  ? "Usamos os seus próprios números e assumimos que o DeepClinic Copilot reduz em até 30% o tempo de cada consulta (máx. ~9 minutos por consulta)."
+                  : "Usamos tus propias cifras y asumimos que DeepClinic Copilot reduce hasta un 30% el tiempo de cada consulta (máx. ~9 minutos por consulta)."}
             </p>
             <div className="mt-3 space-y-2 text-xs text-slate-600">
               <p>
@@ -366,10 +366,10 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
               </ul>
               <p className="mt-2">
                 {isEnglish
-                  ? "With that, we estimate your total consultation time and apply the effect of Copiloto Médico:"
+                  ? "With that, we estimate your total consultation time and apply the effect of DeepClinic Copilot:"
                   : isPortuguese
-                    ? "Com isso estimamos o tempo total de consulta e aplicamos o efeito do Copiloto Médico:"
-                    : "Con eso estimamos el tiempo total de consulta y aplicamos el efecto de Copiloto Médico:"}
+                    ? "Com isso estimamos o tempo total de consulta e aplicamos o efeito do DeepClinic Copilot:"
+                    : "Con eso estimamos el tiempo total de consulta y aplicamos el efecto de DeepClinic Copilot:"}
               </p>
               <ul className="list-disc space-y-1 pl-4">
                 <li>

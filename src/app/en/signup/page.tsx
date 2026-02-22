@@ -1,21 +1,97 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState, type FormEvent } from "react";
 
-import { LocaleSelector } from "../../../components/locale-selector";
+import { authClient, resolvePostSignupRedirectUrl } from "@/lib/auth-client";
+import { AuthLanguageSelect } from "../../../components/auth-language-select";
 
 export default function SignupPageEn() {
+  const [formError, setFormError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setFormError(null);
+
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const password = String(formData.get("password") ?? "").trim();
+
+    if (!name || !email || !password) {
+      setFormError("Please complete all fields to continue.");
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const { error: signUpError } = await authClient.signUp.email({
+        name,
+        email,
+        password,
+      });
+
+      if (signUpError) {
+        setFormError(signUpError.message ?? "We couldn't create your account.");
+        return;
+      }
+
+      const signInResult = await authClient.signIn.email({
+        email,
+        password,
+      });
+
+      if (signInResult?.error) {
+        setFormError(signInResult.error.message ?? "We couldn't sign you in.");
+        return;
+      }
+
+      if (signInResult?.data && "twoFactorRedirect" in signInResult.data && signInResult.data.twoFactorRedirect) {
+        setFormError("Two-factor verification is required. Continue in the main app.");
+        return;
+      }
+
+      window.location.href = resolvePostSignupRedirectUrl();
+    } catch (error) {
+      setFormError(error instanceof Error ? error.message : "We couldn't create your account.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleGoogleSignUp = async () => {
+    setFormError(null);
+    try {
+      await authClient.signIn.social({
+        provider: "google",
+        callbackURL: resolvePostSignupRedirectUrl(),
+        scopes: ["https://www.googleapis.com/auth/calendar.events"],
+      });
+    } catch (error) {
+      setFormError(error instanceof Error ? error.message : "Couldn't sign up with Google.");
+    }
+  };
+
   return (
     <main className="min-h-screen bg-white text-slate-900">
       <div className="flex min-h-screen w-full flex-col lg:flex-row">
         {/* LEFT SIDE: FORM */}
         <section className="flex w-full flex-col justify-between bg-white px-6 py-10 sm:px-10 lg:w-1/2 lg:px-24 lg:py-12">
           <div>
-            <div className="flex items-center gap-2">
-              <div className="flex items-center">
-                <span className="inline-block h-6 w-6 rounded-full border border-slate-900" />
-                <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
+            <div className="flex items-center justify-between gap-4">
+              <div className="flex items-center gap-2">
+                <div className="flex items-center">
+                  <span className="inline-block h-6 w-6 rounded-full border border-slate-900" />
+                  <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
+                </div>
+                <span className="text-[18px] font-semibold tracking-tight text-slate-900">
+                  DeepClinic
+                </span>
               </div>
-              <span className="text-[18px] font-semibold tracking-tight text-slate-900">Copiloto Médico</span>
+
+              <AuthLanguageSelect />
             </div>
 
             <div className="mt-16 max-w-sm">
@@ -23,11 +99,32 @@ export default function SignupPageEn() {
                 Create your account
               </h1>
               <p className="mt-3 text-sm text-slate-500">
-                Enter your email to continue to Copiloto Médico. We work with leading hospitals and clinics so that
-                clinicians can document faster while keeping high-quality notes.
+                Enter your name, email and password to continue to DeepClinic.
               </p>
 
-              <form className="mt-8 space-y-4" action="#" method="post" autoComplete="off">
+              <form
+                id="sign-up-form"
+                className="mt-8 space-y-4"
+                action="#"
+                method="post"
+                autoComplete="off"
+                onSubmit={handleSubmit}
+              >
+                <div className="space-y-2">
+                  <label htmlFor="name" className="text-sm font-medium text-slate-800">
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autoComplete="off"
+                    required
+                    placeholder="Name"
+                    className="block h-[72px] w-full rounded-md border border-slate-200 bg-slate-50 px-5 text-lg text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
+                  />
+                </div>
+
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium text-slate-800">
                     Email
@@ -38,8 +135,8 @@ export default function SignupPageEn() {
                     type="email"
                     autoComplete="off"
                     required
-                    placeholder="email@example.com"
-                    className="block w-full rounded-md border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
+                    placeholder="Email"
+                    className="block h-[72px] w-full rounded-md border border-slate-200 bg-slate-50 px-5 text-lg text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
                   />
                 </div>
 
@@ -53,41 +150,56 @@ export default function SignupPageEn() {
                     type="password"
                     autoComplete="off"
                     required
-                    placeholder="Create a secure password"
-                    className="block w-full rounded-md border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
+                    placeholder="Password"
+                    className="block h-[72px] w-full rounded-md border border-slate-200 bg-slate-50 px-5 text-lg text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
                   />
                 </div>
-
-                <button
-                  type="submit"
-                  className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-black px-4 py-3 text-sm font-semibold text-[#d5ff7c] shadow-sm transition hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 focus:ring-offset-white"
-                >
-                  Continue
-                </button>
               </form>
 
-              <p className="mt-4 text-center text-xs text-slate-500">
+              <div className="mt-4 space-y-3">
+                <button
+                  type="submit"
+                  form="sign-up-form"
+                  disabled={isSubmitting}
+                  className="inline-flex h-[72px] w-full items-center justify-center rounded-full bg-black px-5 text-lg font-semibold text-[#d5ff7c] shadow-sm transition hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 focus:ring-offset-white disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  {isSubmitting ? "Creating account..." : "Create account"}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleGoogleSignUp}
+                  disabled={isSubmitting}
+                  className="inline-flex h-[72px] w-full items-center justify-center rounded-full border border-slate-300 bg-white px-5 text-lg font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 focus:ring-offset-white disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  Sign up with Google
+                </button>
+              </div>
+
+              {formError ? (
+                <p className="mt-3 text-sm text-red-600" role="alert">
+                  {formError}
+                </p>
+              ) : null}
+
+              <p className="mt-6 text-center text-xs text-slate-600">
                 Already have an account?{" "}
                 <Link
                   href="/en/login"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-medium text-slate-900 hover:underline"
+                  className="font-semibold text-slate-900 underline underline-offset-4 decoration-slate-300 transition hover:decoration-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
                 >
-                  Log in
+                  Sign in
                 </Link>
               </p>
             </div>
           </div>
-
-          <LocaleSelector />
         </section>
 
         {/* RIGHT SIDE: IMAGE + TESTIMONIAL */}
         <section className="relative hidden w-full overflow-hidden lg:block lg:w-1/2">
           <Image
             src="/680b8bd084ba7f136270ee2a_testimonial1.png"
-            alt="Healthcare professional using Copiloto Médico"
+            alt="Healthcare professional using DeepClinic"
             fill
             sizes="50vw"
             className="object-cover"
@@ -97,8 +209,8 @@ export default function SignupPageEn() {
 
           <div className="relative flex h-full flex-col justify-center px-10 py-12 text-white">
             <blockquote className="max-w-md text-lg leading-relaxed">
-              &quot;Copiloto Médico lets me spend more time with each patient and explain diagnosis and treatment more
-              thoroughly. This is AI that helps humanise the consultation.&quot;
+              &quot;I’m very happy because DeepClinic allows me to spend more time with each patient and explain the diagnosis and
+              treatment more thoroughly. Welcome, AI that humanises the consultation.&quot;
             </blockquote>
 
             <div className="mt-6 flex items-center gap-3 text-xs text-slate-200">

@@ -46,7 +46,7 @@ function NotFound() {
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     className: "mt-3 text-sm text-slate-600 sm:text-[15px]",
-                    children: "Puede que el enlace esté roto o la URL tenga un error. Mientras tanto, Copiloto Médico sigue ayudando a los profesionales de la salud a ahorrar tiempo en documentación y a generar más ingresos con consultas extra."
+                    children: "Puede que el enlace esté roto o la URL tenga un error. Mientras tanto, DeepClinic Copilot sigue ayudando a los profesionales de la salud a ahorrar tiempo en documentación y a generar más ingresos con consultas extra."
                 }, void 0, false, {
                     fileName: "[project]/src/app/not-found.tsx",
                     lineNumber: 14,

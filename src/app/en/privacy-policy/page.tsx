@@ -1,34 +1,34 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy policy | Copiloto Médico",
+  title: "Privacy policy | DeepClinic Copilot",
   description:
-    "Learn how Copiloto Médico collects, uses and protects your personal data when you visit our website or interact with us.",
+    "Learn how DeepClinic Copilot collects, uses and protects your personal data when you visit our website or interact with us.",
   alternates: {
     canonical: "/en/privacy-policy",
   },
   openGraph: {
     type: "article",
     url: "/en/privacy-policy",
-    title: "Privacy policy | Copiloto Médico",
+    title: "Privacy policy | DeepClinic Copilot",
     description:
-      "Read Copiloto Médico's privacy policy and how we handle your personal and browsing data.",
-    siteName: "Copiloto Médico",
+      "Read DeepClinic Copilot's privacy policy and how we handle your personal and browsing data.",
+    siteName: "DeepClinic Copilot",
     locale: "en_US",
     images: [
       {
         url: "/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp",
         width: 500,
         height: 500,
-        alt: "Copiloto Médico, AI clinical assistant",
+        alt: "DeepClinic Copilot, AI clinical assistant",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Privacy policy | Copiloto Médico",
+    title: "Privacy policy | DeepClinic Copilot",
     description:
-      "Learn how Copiloto Médico collects, uses and protects your personal data when you visit our website or interact with us.",
+      "Learn how DeepClinic Copilot collects, uses and protects your personal data when you visit our website or interact with us.",
     images: ["/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp"],
   },
 };
@@ -41,13 +41,13 @@ export default function PrivacyPolicyPageEn() {
         <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
           Privacy policy
         </h1>
-        <p className="mt-1 text-sm text-slate-500">Copiloto Médico</p>
+        <p className="mt-1 text-sm text-slate-500">DeepClinic Copilot</p>
 
         {/* 1. Purpose of this website privacy policy */}
         <section className="mt-6 space-y-3 text-sm leading-relaxed text-slate-700">
           <h2 className="text-base font-semibold text-slate-900">1. Purpose of this website privacy policy</h2>
           <p>
-            At Copiloto Médico (&quot;Copiloto Médico&quot; or &quot;we&quot;), we prioritise your privacy and are committed to safeguarding
+            At DeepClinic Copilot (&quot;DeepClinic Copilot&quot; or &quot;we&quot;), we prioritise your privacy and are committed to safeguarding
             your personal data. This Privacy Policy explains how we collect, use, protect, and manage your personal data
             when you visit our website or otherwise interact with us as a user or prospective client. It also sets out
             your privacy rights and how the law protects you.
@@ -67,7 +67,7 @@ export default function PrivacyPolicyPageEn() {
         <section className="mt-8 space-y-3 text-sm leading-relaxed text-slate-700">
           <h2 className="text-base font-semibold text-slate-900">2. Data controller</h2>
           <p>
-            For the purposes described in this Privacy Policy, Copiloto Médico acts as the data controller. This means
+            For the purposes described in this Privacy Policy, DeepClinic Copilot acts as the data controller. This means
             that we determine the purposes and means of the processing of your personal data when you use the Website or
             otherwise interact with us in the context of this policy.
           </p>
@@ -89,7 +89,7 @@ export default function PrivacyPolicyPageEn() {
         <section className="mt-8 space-y-3 text-sm leading-relaxed text-slate-700">
           <h2 className="text-base font-semibold text-slate-900">3. Third party links</h2>
           <p>
-            From time to time, the Copiloto Médico Website may include links to websites belonging to partner networks
+            From time to time, the DeepClinic Copilot Website may include links to websites belonging to partner networks
             and other third parties. These websites and any services they provide operate under their own privacy
             policies. We are not responsible for the privacy practices of those websites or services. We encourage you to
             read their privacy policies before submitting any personal data or using their services.
@@ -167,7 +167,7 @@ export default function PrivacyPolicyPageEn() {
             </li>
           </ul>
           <p>
-            Depending on how you interact with us, Copiloto Médico may process your personal data in order to manage your
+            Depending on how you interact with us, DeepClinic Copilot may process your personal data in order to manage your
             queries, evaluate and manage job applications, administer and protect the Website, ensure compliance with
             regulatory obligations and improve our services.
           </p>
@@ -193,7 +193,7 @@ export default function PrivacyPolicyPageEn() {
         <section className="mt-8 space-y-3 text-sm leading-relaxed text-slate-700">
           <h2 className="text-base font-semibold text-slate-900">8. Disclosures of your personal data</h2>
           <p>
-            Within Copiloto Médico, access to your personal data is limited to those people who need it to perform their
+            Within DeepClinic Copilot, access to your personal data is limited to those people who need it to perform their
             duties. We may share your personal data with third-party service providers that act as data processors, such
             as providers of IT, hosting and support services. These providers are only allowed to process your personal
             data in accordance with our instructions and must protect it appropriately.

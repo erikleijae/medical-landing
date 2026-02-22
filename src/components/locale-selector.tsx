@@ -314,11 +314,10 @@ export function LocaleSelector() {
                         key={option.code}
                         type="button"
                         onClick={() => setLanguageCode(option.code)}
-                        className={`rounded-full border px-3 py-1.5 text-xs transition ${
-                          isActive
+                        className={`rounded-full border px-3 py-1.5 text-xs transition ${isActive
                             ? "border-slate-900 bg-slate-900 text-white"
                             : "border-slate-200 bg-slate-50 text-slate-700 hover:border-slate-300 hover:bg-slate-100"
-                        }`}
+                          }`}
                       >
                         {option.label}
                       </button>

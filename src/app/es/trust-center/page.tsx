@@ -6,11 +6,11 @@ export default function TrustCenterPage() {
       <div className="mx-auto max-w-3xl px-6 py-16">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Recursos</p>
         <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-          Centro de confianza de Copiloto Médico
+          Centro de confianza de DeepClinic Copilot
         </h1>
         <p className="mt-4 text-sm text-slate-600">
           Este centro reúne la información clave sobre seguridad, cumplimiento, privacidad y fiabilidad del servicio de
-          Copiloto Médico. Aquí concentramos la información actualizada de referencia para nuestros clientes y usuarios.
+          DeepClinic Copilot. Aquí concentramos la información actualizada de referencia para nuestros clientes y usuarios.
         </p>
         <p className="mt-3 text-sm text-slate-600">
           Si necesitas documentación específica (evaluaciones de riesgo, acuerdos de tratamiento de datos o

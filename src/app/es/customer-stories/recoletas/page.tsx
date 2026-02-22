@@ -17,7 +17,7 @@ export default function RecoletasStoryPage() {
                 al mismo tiempo el detalle y la calidad de la documentación.
               </p>
               <p className="mt-3 text-sm text-slate-600">
-                Con Copiloto Médico, los especialistas pueden centrarse más en la conversación con el paciente mientras la
+                Con DeepClinic Copilot, los especialistas pueden centrarse más en la conversación con el paciente mientras la
                 herramienta genera borradores estructurados de cada visita en segundo plano.
               </p>
             </div>
@@ -60,7 +60,7 @@ export default function RecoletasStoryPage() {
                 Menos tareas administrativas al final del día
               </h2>
               <p>
-                Antes de usar Copiloto Médico, parte de la documentación se completaba fuera del horario de consulta. Esto
+                Antes de usar DeepClinic Copilot, parte de la documentación se completaba fuera del horario de consulta. Esto
                 generaba carga adicional para los equipos y hacía más difícil mantener un ritmo de trabajo sostenible.
               </p>
               <p>
@@ -97,7 +97,7 @@ export default function RecoletasStoryPage() {
                 IA centrada en el profesional
               </p>
               <p className="text-sm text-slate-900">
-                Copiloto Médico está pensado para que el foco siga en el paciente. La herramienta acompaña la consulta sin
+                DeepClinic Copilot está pensado para que el foco siga en el paciente. La herramienta acompaña la consulta sin
                 interrumpir la conversación clínica.
               </p>
             </div>
@@ -112,7 +112,7 @@ export default function RecoletasStoryPage() {
             Lleva este modelo a tu organización
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-slate-300">
-            Prueba Copiloto Médico con tu propio flujo de trabajo y comprueba cómo cambia la forma de documentar cada
+            Prueba DeepClinic Copilot con tu propio flujo de trabajo y comprueba cómo cambia la forma de documentar cada
             visita.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

@@ -24,6 +24,14 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+
+    /* --- Brand (DeepClinic Copilot) --- */
+    --brand-bg: #ffffff;
+    --brand-ink: #0b0f1a;
+    --brand-accent: #b7f453;
+    --brand-accent-hover: #a7ea3d;
+    /* Más contraste para subrayados/bordes sobre blanco */
+    --brand-accent-strong: #8edc24;
   }
 
   .dark {
@@ -53,9 +61,43 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground font-sans;
+    background-color: var(--brand-bg);
+    color: var(--brand-ink);
   }
+}
+
+@layer utilities {
+  .bg-brand-accent {
+    background-color: var(--brand-accent);
+  }
+
+  .hover\\:bg-brand-accent-hover:hover {
+    background-color: var(--brand-accent-hover);
+  }
+
+  .text-brand-ink {
+    color: var(--brand-ink);
+  }
+
+  .border-brand-ink {
+    border-color: var(--brand-ink);
+  }
+
+  .border-brand-accent-strong {
+    border-color: var(--brand-accent-strong);
+  }
+
+  .ring-brand-accent {
+    --tw-ring-color: var(--brand-accent);
+  }
+
+  .ring-brand-accent-strong {
+    --tw-ring-color: var(--brand-accent-strong);
+  }
+
 }
 
 @keyframes counter-fade-up {
@@ -63,6 +105,7 @@
     opacity: 0;
     transform: translateY(14px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -73,9 +116,11 @@
   0% {
     transform: translateY(0) scale(1);
   }
+
   45% {
     transform: translateY(-0.5px) scale(1.02);
   }
+
   100% {
     transform: translateY(0) scale(1);
   }
@@ -86,10 +131,12 @@
     transform: translate(-50%, -50%) scale(0.92);
     opacity: 0.34;
   }
+
   50% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 0.18;
   }
+
   100% {
     transform: translate(-50%, -50%) scale(1.06);
     opacity: 0.34;
@@ -100,6 +147,7 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -110,6 +158,7 @@
     opacity: 0;
     transform: translateX(-28px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -121,6 +170,7 @@
     opacity: 0;
     transform: translateX(28px) scale(0.985);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0) scale(1);
@@ -131,10 +181,244 @@
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes dc_fade_up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+    filter: blur(2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@keyframes dc_drift_a {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(22px, -14px, 0) scale(1.06);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes dc_drift_b {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-18px, 16px, 0) scale(1.05);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes dc_drift_c {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(10px, 20px, 0) scale(1.04);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes dc_soft_pulse {
+  0% {
+    opacity: 0.55;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0.55;
+  }
+}
+
+@keyframes dc_bob {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 6px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes dc_spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dc_light_reveal {
+  0% {
+    opacity: 0;
+    filter: blur(30px);
+    transform: translate3d(120px, 0, 0) scale(1.10);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translate3d(0px, 0, 0) scale(1);
+  }
+}
+
+@keyframes dc_mask_sweep {
+  0% {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  100% {
+    -webkit-mask-position: 0% 0;
+    mask-position: 0% 0;
+  }
+}
+
+@keyframes dc_clip_sweep {
+  0% {
+    clip-path: inset(0 0 0 86%);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes dc_spark_slide {
+  0% {
+    opacity: 0.15;
+    transform: translate3d(-18px, 0, 0);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 0.15;
+    transform: translate3d(18px, 0, 0);
+  }
+}
+
+@keyframes dc_fog_flow {
+  0% {
+    background-position: 120% 50%;
+  }
+
+  100% {
+    background-position: -20% 50%;
+  }
+}
+
+@keyframes dc_fog_drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-22px, -8px, 0) scale(1.01);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes dc_star_drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-18px, 10px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes dc_twinkle {
+  0% {
+    opacity: 0.22;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.22;
+  }
+}
+
+@keyframes dc_light_drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-26px, 14px, 0) scale(1.02);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dc_motion {
+    animation: none !important;
+  }
+
+  .dc_mask_sweep {
+    -webkit-mask-position: 0% 0 !important;
+    mask-position: 0% 0 !important;
+  }
+
+  .dc_clip_sweep {
+    clip-path: inset(0 0 0 0) !important;
+  }
+
+  .dc_fog_flow {
+    background-position: 0% 50% !important;
   }
 }

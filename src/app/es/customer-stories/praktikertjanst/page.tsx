@@ -13,7 +13,7 @@ export default function PraktikertjanstStoryPage() {
                 Praktikertjänst apuesta por la documentación asistida por IA
               </h1>
               <p className="mt-4 text-[15px] text-slate-600">
-                Praktikertjänst, una gran red de clínicas en el norte de Europa, incorpora Copiloto Médico para facilitar la
+                Praktikertjänst, una gran red de clínicas en el norte de Europa, incorpora DeepClinic Copilot para facilitar la
                 documentación diaria de sus profesionales.
               </p>
               <p className="mt-3 text-sm text-slate-600">
@@ -56,7 +56,7 @@ export default function PraktikertjanstStoryPage() {
                 IA como apoyo al flujo de trabajo clínico
               </h2>
               <p>
-                Copiloto Médico genera un borrador de historia clínica a partir de la conversación con el paciente,
+                DeepClinic Copilot genera un borrador de historia clínica a partir de la conversación con el paciente,
                 permitiendo que el profesional revise y complete los detalles necesarios antes de enviarla al sistema de
                 historia clínica.
               </p>
@@ -69,10 +69,10 @@ export default function PraktikertjanstStoryPage() {
         <div className="mx-auto max-w-6xl px-6 py-16 text-center text-slate-50 md:px-8 lg:px-10">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">Empieza hoy</p>
           <h2 className="mt-4 text-[26px] font-semibold tracking-tight sm:text-[30px]">
-            Descubre cómo puede ayudarte Copiloto Médico
+            Descubre cómo puede ayudarte DeepClinic Copilot
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-slate-300">
-            Reserva una demostración para ver cómo se integra Copiloto Médico en el día a día de tu organización.
+            Reserva una demostración para ver cómo se integra DeepClinic Copilot en el día a día de tu organización.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link

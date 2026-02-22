@@ -12,7 +12,7 @@ export default function NotFound() {
           <br className="hidden sm:inline" /> pero tu tiempo sigue siendo valioso
         </h1>
         <p className="mt-3 text-sm text-slate-600 sm:text-[15px]">
-          Puede que el enlace esté roto o la URL tenga un error. Mientras tanto, Copiloto Médico sigue ayudando a los
+          Puede que el enlace esté roto o la URL tenga un error. Mientras tanto, DeepClinic Copilot sigue ayudando a los
           profesionales de la salud a ahorrar tiempo en documentación y a generar más ingresos con consultas extra.
         </p>
 

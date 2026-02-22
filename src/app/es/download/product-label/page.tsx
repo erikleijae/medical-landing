@@ -10,7 +10,7 @@ export default function ProductLabelPage() {
         </h1>
         <p className="mt-4 text-sm text-slate-600">
           Aquí centralizaremos la información de etiquetado, fichas técnicas y otra documentación regulatoria asociada a
-          Copiloto Médico.
+          DeepClinic Copilot.
         </p>
         <p className="mt-3 text-sm text-slate-600">
           Hasta que la migración esté completa, puedes solicitar la versión más reciente de estos documentos a nuestro

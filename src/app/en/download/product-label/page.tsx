@@ -10,7 +10,7 @@ export default function ProductLabelPageEn() {
         </h1>
         <p className="mt-4 text-sm text-slate-600">
           Here we will centralise labelling information, technical datasheets and other regulatory documentation related
-          to Copiloto Médico.
+          to DeepClinic Copilot.
         </p>
         <p className="mt-3 text-sm text-slate-600">
           Until the migration is complete, you can request the latest version of these documents from our compliance

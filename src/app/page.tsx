@@ -11,17 +11,20 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* HEADER */}
-      <header className="sticky top-0 z-40 bg-white">
+      <header className="sticky top-0 z-40 border-b border-slate-100/80 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-8 px-6 py-4 md:px-8 lg:px-10">
           <Link href="/" className="flex items-center gap-2">
             <div className="flex items-center">
-              <span className="inline-block h-6 w-6 rounded-full border border-slate-900 bg-slate-900" />
-              <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
+              <span className="inline-block h-6 w-6 rounded-full border border-brand-ink bg-[var(--brand-ink)]" />
+              <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-brand-ink bg-[var(--brand-bg)]" />
             </div>
-            <span className="text-[18px] font-semibold tracking-tight text-slate-900">Copiloto Médico</span>
+            <span className="text-[18px] font-semibold tracking-tight text-slate-900">DeepClinic Copilot</span>
           </Link>
 
           <nav className="hidden items-center gap-8 text-sm text-slate-800 lg:flex">
+            <Link href="/es/deepclinic" className="hover:text-slate-900">
+              DeepClinic
+            </Link>
             <Link href="/es/product" className="hover:text-slate-900">
               Producto
             </Link>
@@ -45,7 +48,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/signup"
-              className="inline-flex items-center justify-center rounded-full bg-[#d5ff7c] px-5 py-2 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-[#c9f46c]"
+              className="inline-flex items-center justify-center rounded-full bg-brand-accent px-5 py-2 text-[13px] font-semibold text-slate-900 shadow-sm ring-1 ring-black/5 hover:bg-brand-accent-hover"
             >
               Comenzar gratis
               <span className="ml-1" aria-hidden>
@@ -61,15 +64,15 @@ export default function HomePage() {
         <div className="mx-auto flex max-w-6xl flex-col items-center px-6 pb-12 pt-20 text-center md:px-8 md:pb-16 md:pt-24 lg:px-0">
           <h1 className="font-display text-[38px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[44px] md:text-[50px]">
             El asistente clínico de IA líder en{" "}
-            <span className="border-b-[6px] border-[#d5ff7c] pb-1">America</span>
+            <span className="border-b-[6px] border-brand-accent-strong pb-1">America</span>
           </h1>
           <p className="mt-3 text-[15px] text-slate-500 sm:mt-4">
-            Utilizado por más de 1.000 doctores que ahorran tiempo cada día con Copiloto Médico.
+            Utilizado por más de 1.000 doctores que ahorran tiempo cada día con DeepClinic Copilot.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/signup"
-              className="inline-flex items-center justify-center rounded-full bg-[#d5ff7c] px-6 py-2.5 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-[#c9f46c]"
+              className="inline-flex items-center justify-center rounded-full bg-brand-accent px-6 py-2.5 text-[13px] font-semibold text-slate-900 shadow-sm ring-1 ring-black/5 hover:bg-brand-accent-hover"
             >
               Comenzar gratis
               <span className="ml-1" aria-hidden>
@@ -131,7 +134,7 @@ export default function HomePage() {
 
       <ConsultationsCounter
         locale="es"
-        title="Consultas con Copiloto Médico"
+        title="Consultas con DeepClinic Copilot"
         subtitle="Este número aumenta en tiempo real mientras navegas."
       />
 
@@ -141,12 +144,12 @@ export default function HomePage() {
         subtitle="Ahorramos el 30% del tiempo de consulta"
       />
 
-      {/* CÓMO FUNCIONA COPILOTO MÉDICO */}
+      {/* CÓMO FUNCIONA DEEPCLINIC COPILOT */}
       <section id="como-funciona" className="bg-white">
         <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 sm:pt-28 md:px-8 md:pt-32">
           <div className="text-center">
             <h2 className="font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[36px]">
-              Cómo funciona Copiloto Médico
+              Cómo funciona DeepClinic Copilot
             </h2>
             <p className="mt-3 text-[15px] text-slate-500">
               Nuestro asistente médico con inteligencia artificial captura la visita para que puedas prestar toda tu
@@ -159,16 +162,16 @@ export default function HomePage() {
               <div className="relative aspect-[4/3] w-full">
                 <Image
                   src="/682dda116cdb3289f729c87c_sv1_3x-p-500.webp"
-                  alt="Pantalla de bienvenida de Copiloto Médico en un teléfono móvil"
+                  alt="Pantalla de bienvenida de DeepClinic Copilot en un teléfono móvil"
                   fill
                   className="object-cover"
                   sizes="(min-width: 768px) 33vw, 100vw"
                 />
               </div>
               <div className="px-5 pb-6 pt-4 text-sm text-slate-700">
-                <p className="text-[13px] font-semibold text-slate-900">1. Inicia Copiloto Médico</p>
+                <p className="text-[13px] font-semibold text-slate-900">1. Inicia DeepClinic Copilot</p>
                 <p className="mt-2 text-[13px] leading-relaxed text-slate-600">
-                  Simplemente inicia Copiloto Médico en su ordenador o dispositivo móvil y estará listo. Funciona a la
+                  Simplemente inicia DeepClinic Copilot en su ordenador o dispositivo móvil y estará listo. Funciona a la
                   perfección tanto para las visitas presenciales como virtuales.
                 </p>
               </div>
@@ -178,7 +181,7 @@ export default function HomePage() {
               <div className="relative aspect-[4/3] w-full">
                 <Image
                   src="/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp"
-                  alt="Interfaz de Copiloto Médico mostrando el estado de escucha"
+                  alt="Interfaz de DeepClinic Copilot mostrando el estado de escucha"
                   fill
                   className="object-cover"
                   sizes="(min-width: 768px) 33vw, 100vw"
@@ -187,7 +190,7 @@ export default function HomePage() {
               <div className="px-5 pb-6 pt-4 text-sm text-slate-700">
                 <p className="text-[13px] font-semibold text-slate-900">2. Se ha creado tu historia clínica</p>
                 <p className="mt-2 text-[13px] leading-relaxed text-slate-600">
-                  Mientras atiendes al paciente, Copiloto Médico trabaja en segundo plano para redactar tus historias
+                  Mientras atiendes al paciente, DeepClinic Copilot trabaja en segundo plano para redactar tus historias
                   clínicas.
                 </p>
               </div>
@@ -221,7 +224,7 @@ export default function HomePage() {
             Mejores historias, mayor seguridad
           </h2>
           <p className="mt-3 text-sm text-slate-500 sm:text-[15px]">
-            Copiloto Médico hace que la documentación clínica sea más rápida, fácil y precisa.
+            DeepClinic Copilot hace que la documentación clínica sea más rápida, fácil y precisa.
           </p>
 
           <div className="mt-10 space-y-8">
@@ -232,7 +235,7 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-2xl bg-slate-100">
                   <Image
                     src="/especialidades.png"
-                    alt="Copiloto Médico adaptado a múltiples especialidades"
+                    alt="DeepClinic Copilot adaptado a múltiples especialidades"
                     width={640}
                     height={360}
                     className="h-auto w-full object-cover"
@@ -242,7 +245,7 @@ export default function HomePage() {
                 <div className="mt-4 text-sm text-slate-700">
                   <p className="text-sm font-semibold text-slate-900">Más de 50 especialidades compatibles</p>
                   <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                    Copiloto Médico entiende el idioma de tu especialidad y profesión. Diseñado para médicos, psicólogos,
+                    DeepClinic Copilot entiende el idioma de tu especialidad y profesión. Diseñado para médicos, psicólogos,
                     dentistas, fisioterapeutas, especialistas de urgencias, enfermeros y muchos más.
                   </p>
                   <div className="mt-3 grid gap-2 text-[11px] text-slate-600 sm:grid-cols-2">
@@ -273,7 +276,7 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-2xl bg-slate-100">
                   <Image
                     src="/medico.png"
-                    alt="Profesional de la salud transfiriendo la historia clínica digital con Copiloto Médico"
+                    alt="Profesional de la salud transfiriendo la historia clínica digital con DeepClinic Copilot"
                     width={640}
                     height={360}
                     className="h-auto w-full object-cover"
@@ -285,7 +288,7 @@ export default function HomePage() {
                     Transferencias a tu historia clínica digital (HIS) con 1 clic
                   </p>
                   <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                    Copiloto Médico se integra con tu historia clínica digital (HIS) y transfiere la documentación con un
+                    DeepClinic Copilot se integra con tu historia clínica digital (HIS) y transfiere la documentación con un
                     solo clic. Olvídate de copiar y pegar entre sistemas.
                   </p>
                 </div>
@@ -299,7 +302,7 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-2xl bg-slate-100">
                   <Image
                     src="/682dda985c7d89da56d3ed2c_es7_4x.webp"
-                    alt="Creación de justificantes y documentos con Copiloto Médico"
+                    alt="Creación de justificantes y documentos con DeepClinic Copilot"
                     width={640}
                     height={360}
                     className="h-auto w-full object-cover"
@@ -320,7 +323,7 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-2xl bg-slate-100">
                   <Image
                     src="/home_kid.png"
-                    alt="Profesional de la salud utilizando Copiloto Médico durante una consulta"
+                    alt="Profesional de la salud utilizando DeepClinic Copilot durante una consulta"
                     width={640}
                     height={640}
                     className="h-auto w-full object-cover"
@@ -328,7 +331,7 @@ export default function HomePage() {
                   />
                 </div>
                 <p className="mt-4 text-xs leading-relaxed text-slate-600">
-                  Copiloto Médico acompaña la consulta sin interrumpir la relación médico-paciente, manteniendo la atención
+                  DeepClinic Copilot acompaña la consulta sin interrumpir la relación médico-paciente, manteniendo la atención
                   en la persona.
                 </p>
               </div>
@@ -338,7 +341,7 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-2xl bg-slate-100">
                   <Image
                     src="/682ddaa1be3339a4db428f1f_es8_4x.webp"
-                    alt="Ejemplo de codificación clínica automática con Copiloto Médico"
+                    alt="Ejemplo de codificación clínica automática con DeepClinic Copilot"
                     width={640}
                     height={360}
                     className="h-auto w-full object-cover"
@@ -348,7 +351,7 @@ export default function HomePage() {
                 <div className="mt-4">
                   <p className="text-sm font-semibold text-slate-900">Codificación clínica integrada</p>
                   <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                    Copiloto Médico muestra automáticamente los códigos clínicos relevantes para cada consulta, ayudando a
+                    DeepClinic Copilot muestra automáticamente los códigos clínicos relevantes para cada consulta, ayudando a
                     mantener una codificación precisa.
                   </p>
                 </div>
@@ -360,12 +363,12 @@ export default function HomePage() {
 
       <AudienceTabs language="es" />
 
-      {/* COPILOTO MÉDICO EN LA PRÁCTICA */}
+      {/* DEEPCLINIC COPILOT EN LA PRÁCTICA */}
       <section id="producto" className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-32 md:py-36">
           <div className="text-center">
             <h2 className="text-[28px] font-semibold tracking-tight text-slate-900 sm:text-[32px]">
-              Copiloto Médico en la práctica
+              DeepClinic Copilot en la práctica
             </h2>
             <p className="mt-2 text-sm text-slate-500">
               Hospitales y clínicas en México y Estados Unidos confían en nosotros
@@ -421,7 +424,7 @@ export default function HomePage() {
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-slate-200">
               <Image
                 src="/680b8bd084ba7f136270ee2a_testimonial1.png"
-                alt="Médico generalista que utiliza Copiloto Médico"
+                alt="Médico generalista que utiliza DeepClinic Copilot"
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 22rem, 100vw"
@@ -430,7 +433,7 @@ export default function HomePage() {
             <div className="flex flex-col justify-center rounded-3xl border border-slate-200 bg-white p-6 text-left shadow-sm">
               <div className="space-y-3">
                 <p className="text-lg font-medium leading-snug text-slate-900 sm:text-xl">
-                  «Estoy muy contenta con cómo Copiloto Médico me permite dedicar más tiempo al paciente en Médica Sur y
+                  «Estoy muy contenta con cómo DeepClinic Copilot me permite dedicar más tiempo al paciente en Médica Sur y
                   explicar el diagnóstico y tratamiento de manera más completa. Bienvenida la IA que humaniza la consulta».
                 </p>
                 <div className="text-xs text-slate-600">
@@ -450,7 +453,7 @@ export default function HomePage() {
       <section className="bg-white">
         <div className="mx-auto max-w-3xl px-6 py-32 text-center md:py-36">
           <p className="text-3xl font-medium leading-snug text-slate-900 sm:text-4xl">
-            ”Una vez pruebas Copiloto Médico,<br className="hidden sm:inline" /> no quieres volver atrás.”
+            ”Una vez pruebas DeepClinic Copilot,<br className="hidden sm:inline" /> no quieres volver atrás.”
           </p>
           <div className="mt-4 text-lg tracking-[0.3em] text-amber-400">★★★★★</div>
           <div className="mt-6 flex flex-col items-center gap-3 text-sm text-slate-600">
@@ -479,7 +482,7 @@ export default function HomePage() {
               Los Médicos, encantados
             </h2>
             <p className="mt-2 text-sm text-slate-600 sm:text-base">
-              Nos gusta Copiloto Médico. A nuestros usuarios, aún más.
+              Nos gusta DeepClinic Copilot. A nuestros usuarios, aún más.
             </p>
           </div>
 
@@ -504,8 +507,8 @@ export default function HomePage() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p className="text-sm text-slate-800">
-                  “El uso de Copiloto Médico no obedece a estar al día con los últimos avances tecnológicos. Es, más que
-                  nada, un tema de buena práctica clínica. Copiloto Médico me permite no tener que pasar 2 horas al día
+                  “El uso de DeepClinic Copilot no obedece a estar al día con los últimos avances tecnológicos. Es, más que
+                  nada, un tema de buena práctica clínica. DeepClinic Copilot me permite no tener que pasar 2 horas al día
                   tecleando y 15 minutos con pacientes. Una vez lo pruebas, no quieres volver atrás.”
                 </p>
               </blockquote>
@@ -531,7 +534,7 @@ export default function HomePage() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p>
-                  “Mientras exploro al paciente y converso con él de forma natural, Copiloto Médico transcribe y estructura
+                  “Mientras exploro al paciente y converso con él de forma natural, DeepClinic Copilot transcribe y estructura
                   toda la información clínica de forma precisa, incluso en casos complejos. El mayor beneficio: la
                   aplicación redacta automáticamente las historias clínicas, lo que me ha ahorrado hasta 2 horas diarias de
                   trabajo administrativo.”
@@ -559,7 +562,7 @@ export default function HomePage() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p>
-                  “Hemos desplegado Copiloto Médico en nuestras clínicas y estamos muy contentos por cómo mejora las
+                  “Hemos desplegado DeepClinic Copilot en nuestras clínicas y estamos muy contentos por cómo mejora las
                   dinámicas de la atención sanitaria. Ahora, nuestros médicos lo tienen más fácil para mirar a los ojos a
                   los pacientes, en lugar de al ordenador.”
                 </p>
@@ -587,7 +590,7 @@ export default function HomePage() {
               <blockquote className="mt-3 space-y-2">
                 <p>
                   “En un entorno complejo como lo es la hospitalización domiciliaria pediátrica, con múltiples
-                  interlocutores y conversaciones prolongadas, Copiloto Médico mantiene las historias clínicas precisas y
+                  interlocutores y conversaciones prolongadas, DeepClinic Copilot mantiene las historias clínicas precisas y
                   completas. Me siento tranquilo sabiendo que no se me va a olvidar nada de lo que comentan los padres de
                   mis pacientes.”
                 </p>
@@ -605,7 +608,7 @@ export default function HomePage() {
               Impacto en números
             </p>
             <h2 className="mt-3 text-[26px] font-semibold tracking-tight text-slate-900 sm:text-[30px]">
-              ¿Cuánto gana el médico por consulta usando Copiloto Médico?
+              ¿Cuánto gana el médico por consulta usando DeepClinic Copilot?
             </h2>
             <p className="mx-auto mt-2 max-w-2xl text-sm text-slate-600">
               Ajusta tus números y ve cuántas horas puedes ahorrar, cuántas consultas adicionales podrías atender y cuánto
@@ -627,7 +630,7 @@ export default function HomePage() {
               Priorizamos la seguridad y la integridad
             </h2>
             <p className="mt-3 text-[15px] text-slate-500">
-              Copiloto Médico cumple con los más altos estándares de seguridad y protección de datos.
+              DeepClinic Copilot cumple con los más altos estándares de seguridad y protección de datos.
             </p>
           </div>
 
@@ -641,7 +644,7 @@ export default function HomePage() {
                 HIPAA y Normas Oficiales Mexicanas (NOM)
               </p>
               <p className="text-sm text-slate-700">
-                Copiloto Médico está diseñado para alinearse con los marcos de protección de datos de salud en México y
+                DeepClinic Copilot está diseñado para alinearse con los marcos de protección de datos de salud en México y
                 Estados Unidos, incluyendo HIPAA y las Normas Oficiales Mexicanas aplicables al expediente clínico.
               </p>
             </div>
@@ -677,7 +680,7 @@ export default function HomePage() {
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-slate-300">
               <Image
                 src="/hipaa.png"
-                alt="Certificaciones de seguridad de Copiloto Médico"
+                alt="Certificaciones de seguridad de DeepClinic Copilot"
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 24rem, 100vw"
@@ -689,12 +692,12 @@ export default function HomePage() {
                 Con la confianza de más de 1000 doctores en toda América
               </h3>
               <p>
-                Basado en los más altos estándares de seguridad, Copiloto Médico garantiza una documentación basada en IA
+                Basado en los más altos estándares de seguridad, DeepClinic Copilot garantiza una documentación basada en IA
                 segura y confiable.
               </p>
               <p>
                 Desde grandes redes hospitalarias hasta clínicas especializadas, los profesionales de la salud utilizan
-                Copiloto Médico para ganar tiempo, calidad y tranquilidad en cada consulta.
+                DeepClinic Copilot para ganar tiempo, calidad y tranquilidad en cada consulta.
               </p>
               <Link
                 href="/es/data-security"
@@ -711,13 +714,13 @@ export default function HomePage() {
       </section>
 
       {/* CTA FINAL */}
-      <section className="border-t border-slate-100 bg-gradient-to-b from-[#d5ff7c]/35 via-white to-white">
+      <section className="border-t border-slate-100 bg-gradient-to-b from-[#b7f453]/50 via-white to-white">
         <div
           id="precio"
           className="mx-auto max-w-6xl px-6 py-32 text-center md:py-36"
         >
           <h2 className="font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[36px]">
-            Comenzar a usar Copiloto Médico es muy fácil
+            Comenzar a usar DeepClinic Copilot es muy fácil
           </h2>
           <p className="mt-2 text-[15px] text-slate-600">
             No se necesitan datos de pago. Empieza en 5 minutos.
@@ -767,7 +770,7 @@ export default function HomePage() {
               </Link>
             </nav>
             <p className="mt-4 text-center text-[11px] text-slate-400">
-              © 2026 Medical Copilot. Todos los derechos reservados.
+              © 2026 DeepClinic Copilot. Todos los derechos reservados.
             </p>
           </div>
         </footer>

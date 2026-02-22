@@ -17,7 +17,7 @@ export default function MindlerStoryPage() {
                 después de cada sesión.
               </p>
               <p className="mt-3 text-sm text-slate-600">
-                Con Copiloto Médico, las notas se generan durante la conversación con el paciente, permitiendo a los
+                Con DeepClinic Copilot, las notas se generan durante la conversación con el paciente, permitiendo a los
                 profesionales centrarse en la escucha activa y en la intervención clínica.
               </p>
             </div>
@@ -63,7 +63,7 @@ export default function MindlerStoryPage() {
                 clínico, pero sin convertir la escritura de notas en una carga añadida.
               </p>
               <p>
-                Copiloto Médico propone un borrador estructurado que el profesional revisa brevemente antes de enviarlo,
+                DeepClinic Copilot propone un borrador estructurado que el profesional revisa brevemente antes de enviarlo,
                 manteniendo la calidad y el detalle de la documentación.
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function MindlerStoryPage() {
                 IA como apoyo, no sustituto
               </p>
               <p className="text-sm text-slate-900">
-                Copiloto Médico ayuda a estructurar la documentación, pero la decisión clínica y el criterio terapéutico
+                DeepClinic Copilot ayuda a estructurar la documentación, pero la decisión clínica y el criterio terapéutico
                 siguen siendo responsabilidad del profesional.
               </p>
             </div>
@@ -104,7 +104,7 @@ export default function MindlerStoryPage() {
             Aplica este modelo a tu equipo
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-slate-300">
-            Prueba Copiloto Médico con tu organización y comprueba cómo cambia la forma de documentar cada sesión.
+            Prueba DeepClinic Copilot con tu organización y comprueba cómo cambia la forma de documentar cada sesión.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link

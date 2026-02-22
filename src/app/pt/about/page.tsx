@@ -5,9 +5,9 @@ export default function AboutPagePt() {
     <main className="min-h-screen bg-white text-slate-900">
       <div className="mx-auto max-w-3xl px-6 py-16">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Sobre nós</p>
-        <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">Copiloto Médico</h1>
+        <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">DeepClinic Copilot</h1>
         <p className="mt-4 text-sm text-slate-600">
-          O Copiloto Médico é um assistente clínico com inteligência artificial desenhado para reduzir a carga
+          O DeepClinic Copilot é um assistente clínico com inteligência artificial desenhado para reduzir a carga
           administrativa e devolver tempo à relação entre profissionais de saúde e pacientes.
         </p>
         <p className="mt-3 text-sm text-slate-600">

@@ -6,10 +6,10 @@ export default function HelpCenterPage() {
       <div className="mx-auto max-w-3xl px-6 py-16">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Ayuda</p>
         <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-          Centro de ayuda de Copiloto Médico
+          Centro de ayuda de DeepClinic Copilot
         </h1>
         <p className="mt-4 text-sm text-slate-600">
-          Estamos configurando un nuevo centro de ayuda para Copiloto Médico. Aquí podrás encontrar guías rápidas,
+          Estamos configurando un nuevo centro de ayuda para DeepClinic Copilot. Aquí podrás encontrar guías rápidas,
           preguntas frecuentes y recursos para la implantación en tu organización.
         </p>
         <p className="mt-3 text-sm text-slate-600">

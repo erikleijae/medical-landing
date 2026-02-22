@@ -8,7 +8,7 @@ export default function CookiePolicyPagePt() {
         <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
           Política de cookies
         </h1>
-        <p className="mt-1 text-sm text-slate-500">Copiloto Médico</p>
+        <p className="mt-1 text-sm text-slate-500">DeepClinic Copilot</p>
 
         {/* 1. O que são cookies */}
         <section className="mt-6 space-y-3 text-sm leading-relaxed text-slate-700">
@@ -20,9 +20,9 @@ export default function CookiePolicyPagePt() {
           </p>
         </section>
 
-        {/* 2. Como usamos cookies no site do Copiloto Médico */}
+        {/* 2. Como usamos cookies no site do DeepClinic Copilot */}
         <section className="mt-8 space-y-3 text-sm leading-relaxed text-slate-700">
-          <h2 className="text-base font-semibold text-slate-900">2. Como usamos cookies no Copiloto Médico</h2>
+          <h2 className="text-base font-semibold text-slate-900">2. Como usamos cookies no DeepClinic Copilot</h2>
           <p>
             Utilizamos cookies e tecnologias semelhantes neste site para:
           </p>
@@ -92,7 +92,7 @@ export default function CookiePolicyPagePt() {
           </p>
           <p>
             <Link href="/pt/contact" className="text-sm font-medium text-sky-700 hover:text-sky-900">
-              Falar com a equipa do Copiloto Médico
+              Falar com a equipa do DeepClinic Copilot
             </Link>
           </p>
         </section>

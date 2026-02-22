@@ -6,10 +6,10 @@ export default function NewsPagePt() {
       <div className="mx-auto max-w-3xl px-6 py-16">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Atualizações</p>
         <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-          Notícias e artigos do Copiloto Médico
+          Notícias e artigos do DeepClinic Copilot
         </h1>
         <p className="mt-4 text-sm text-slate-600">
-          Estamos a reconstruir a secção de notícias para refletir a nova marca Copiloto Médico. Em breve irá encontrar
+          Estamos a reconstruir a secção de notícias para refletir a nova marca DeepClinic Copilot. Em breve irá encontrar
           aqui casos de utilização, colaborações com organizações de saúde e novidades do produto.
         </p>
         <p className="mt-3 text-sm text-slate-600">

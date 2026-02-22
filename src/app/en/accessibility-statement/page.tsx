@@ -9,7 +9,7 @@ export default function AccessibilityStatementPageEn() {
           Accessibility statement
         </h1>
         <p className="mt-4 text-sm text-slate-600">
-          We want Copiloto Médico to be accessible to as many healthcare professionals as possible. We are working to
+          We want DeepClinic Copilot to be accessible to as many healthcare professionals as possible. We are working to
           align our website and product with modern accessibility guidelines and will publish specific commitments here.
         </p>
         <p className="mt-3 text-sm text-slate-600">

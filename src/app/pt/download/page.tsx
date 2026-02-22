@@ -10,7 +10,7 @@ function HeaderPt() {
             <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
           </div>
           <Link href="/pt" className="text-[18px] font-semibold tracking-tight text-slate-900">
-            Copiloto Médico
+            DeepClinic Copilot
           </Link>
         </div>
 
@@ -62,11 +62,11 @@ export default function DownloadPagePt() {
         <div className="mx-auto max-w-6xl px-6 py-20 md:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="font-display text-[32px] font-semibold tracking-tight text-slate-900 sm:text-[36px]">
-              Transferir o Copiloto Médico
+              Transferir o DeepClinic Copilot
             </h1>
             <p className="mt-3 text-sm text-slate-600 sm:text-[15px]">
               As aplicações para desktop e as extensões de navegador para Windows, macOS e principais navegadores estão
-              documentadas em espanhol. Você pode utilizá-las normalmente com a sua conta do Copiloto Médico.
+              documentadas em espanhol. Você pode utilizá-las normalmente com a sua conta do DeepClinic Copilot.
             </p>
             <p className="mt-4 text-xs text-slate-500">
               Por enquanto, consulte a página de downloads em espanhol para obter os instaladores e links mais recentes.

@@ -14,7 +14,7 @@ export default function PricingPage() {
               <span className="inline-block h-6 w-6 rounded-full border border-slate-900 bg-slate-900" />
               <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
             </div>
-            <span className="text-[18px] font-semibold tracking-tight text-slate-900">Copiloto Médico</span>
+            <span className="text-[18px] font-semibold tracking-tight text-slate-900">DeepClinic Copilot</span>
           </Link>
 
           <nav className="hidden items-center gap-8 text-sm text-slate-800 lg:flex">
@@ -132,10 +132,10 @@ export default function PricingPage() {
               <span>Calcula tu retorno en menos de 1 minuto</span>
             </div>
             <h2 className="mt-4 font-display text-[26px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[30px]">
-              ¿Qué gana una consulta típica con Copiloto Médico?
+              ¿Qué gana una consulta típica con DeepClinic Copilot?
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-600 sm:text-[15px]">
-              Calcula el impacto económico de usar Copiloto Médico.
+              Calcula el impacto económico de usar DeepClinic Copilot.
             </p>
           </div>
 
@@ -151,7 +151,7 @@ export default function PricingPage() {
               Elige el plan que mejor se adapta a tu consulta
             </h2>
             <p className="mt-3 text-sm text-slate-500 sm:text-[15px]">
-              Todos los planes incluyen acceso al asistente clínico de IA de Copiloto Médico y documentación solo con tu voz.
+              Todos los planes incluyen acceso al asistente clínico de IA de DeepClinic Copilot y documentación solo con tu voz.
             </p>
           </div>
 
@@ -160,7 +160,7 @@ export default function PricingPage() {
             <div className="flex flex-col rounded-3xl bg-slate-50 p-6 text-sm text-slate-800 shadow-sm md:p-8">
               <p className="text-sm font-semibold text-slate-900">Gratis</p>
               <p className="mt-1 text-xs text-slate-500">
-                Para médicos que quieren probar Copiloto Médico en su consulta sin compromiso.
+                Para médicos que quieren probar DeepClinic Copilot en su consulta sin compromiso.
               </p>
               <p className="mt-6 text-3xl font-semibold text-slate-900">Gratis durante 30 días</p>
               <div className="mt-6">
@@ -182,7 +182,7 @@ export default function PricingPage() {
             <div className="flex flex-col rounded-3xl bg-[#dff4ff] p-6 text-sm text-slate-900 shadow-sm md:p-8">
               <p className="text-sm font-semibold text-slate-900">Plan estándar</p>
               <p className="mt-1 text-xs text-slate-600">
-                Para médicos individuales y pequeñas clínicas que quieren incorporar Copiloto Médico al día a día.
+                Para médicos individuales y pequeñas clínicas que quieren incorporar DeepClinic Copilot al día a día.
               </p>
               <p className="mt-6 text-3xl font-semibold text-slate-900">
                 $1,999
@@ -263,7 +263,7 @@ export default function PricingPage() {
             <div className="py-6">
               <div className="flex items-start justify-between gap-4">
                 <p className="text-sm font-semibold text-slate-900">
-                  ¿Copiloto Médico puede transferir las notas automáticamente a mi sistema de registros médicos?
+                  ¿DeepClinic Copilot puede transferir las notas automáticamente a mi sistema de registros médicos?
                 </p>
                 <span className="mt-1 text-xl text-slate-400" aria-hidden>
                   •
@@ -282,7 +282,7 @@ export default function PricingPage() {
       <section className="border-t border-slate-100 bg-white">
         <div className="mx-auto max-w-4xl px-6 py-16 text-center">
           <p className="text-2xl font-medium leading-snug text-slate-900 sm:text-3xl md:text-4xl">
-            &quot;Hemos desplegado Copiloto Médico en nuestras clínicas y estamos muy contentos por cómo mejora las dinámicas de
+            &quot;Hemos desplegado DeepClinic Copilot en nuestras clínicas y estamos muy contentos por cómo mejora las dinámicas de
             la atención de la salud. Ahora, nuestros médicos lo tienen más fácil para mirar a los ojos a los pacientes, en
             lugar de al ordenador&quot;.
           </p>
@@ -310,7 +310,7 @@ export default function PricingPage() {
         <div className="mx-auto max-w-6xl px-6 py-14 md:px-8 lg:px-10">
           <div className="mb-10 text-center">
             <h2 className="text-[24px] font-semibold tracking-tight text-slate-900 sm:text-[28px]">
-              Siempre con Copiloto Médico
+              Siempre con DeepClinic Copilot
             </h2>
           </div>
 
@@ -356,7 +356,7 @@ export default function PricingPage() {
             Comience hoy
           </p>
           <h2 className="mt-4 text-[26px] font-semibold tracking-tight sm:text-[30px]">
-            Pruebe Copiloto Médico en su consulta
+            Pruebe DeepClinic Copilot en su consulta
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-slate-300">
             Active una prueba gratuita y compruebe por sí mismo cuánto tiempo puede ahorrar en documentación administrativa.

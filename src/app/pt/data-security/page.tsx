@@ -6,15 +6,15 @@ export default function DataSecurityPagePt() {
       <div className="mx-auto max-w-3xl px-6 py-16">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Recursos</p>
         <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-          Segurança de dados no Copiloto Médico
+          Segurança de dados no DeepClinic Copilot
         </h1>
         <p className="mt-4 text-sm text-slate-600">
-          Estamos a consolidar toda a informação sobre segurança e conformidade neste site do Copiloto Médico. Enquanto
+          Estamos a consolidar toda a informação sobre segurança e conformidade neste site do DeepClinic Copilot. Enquanto
           finalizamos a documentação completa em português, a nossa equipa pode partilhar consigo os detalhes técnicos e
           regulatórios que precisar.
         </p>
         <p className="mt-3 text-sm text-slate-600">
-          O Copiloto Médico foi desenhado para cumprir requisitos de proteção de dados aplicáveis na América e na União
+          O DeepClinic Copilot foi desenhado para cumprir requisitos de proteção de dados aplicáveis na América e na União
           Europeia, incluindo encriptação em trânsito e em repouso, controlos rigorosos de acesso e registos de auditoria
           para o acesso a dados sensíveis.
         </p>

@@ -14,7 +14,7 @@ export default function BenefitsSimulatorPage() {
               <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
             </div>
             <Link href="/" className="text-[18px] font-semibold tracking-tight text-slate-900">
-              Copiloto Médico
+              DeepClinic Copilot
             </Link>
           </div>
 
@@ -75,10 +75,10 @@ export default function BenefitsSimulatorPage() {
               <span>Calcula tu retorno en menos de 1 minuto</span>
             </div>
             <h1 className="mt-4 font-display text-[28px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[32px] md:text-[34px]">
-              ¿Cuánto gana el médico por consulta usando Copiloto Médico?
+              ¿Cuánto gana el médico por consulta usando DeepClinic Copilot?
             </h1>
             <p className="mx-auto mt-3 max-w-2xl text-[14px] text-slate-600">
-              Calcula el impacto económico de usar Copiloto Médico.
+              Calcula el impacto económico de usar DeepClinic Copilot.
             </p>
           </div>
 

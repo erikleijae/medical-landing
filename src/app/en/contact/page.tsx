@@ -10,7 +10,7 @@ function HeaderEn() {
             <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
           </div>
           <Link href="/en" className="text-[18px] font-semibold tracking-tight text-slate-900">
-            Copiloto Médico
+            DeepClinic Copilot
           </Link>
         </div>
 
@@ -69,10 +69,10 @@ export default function ContactPageEn() {
             </p>
             <div className="mt-6 space-y-4 text-sm text-slate-700">
               <p className="text-[22px] font-medium leading-snug text-slate-900 sm:text-[26px]">
-                &quot;With Copiloto Médico we can focus entirely on the patient without worrying about typing notes.&quot;
+                &quot;With DeepClinic Copilot we can focus entirely on the patient without worrying about typing notes.&quot;
               </p>
               <p>
-                Copiloto Médico reduces the time spent on administrative tasks and helps keep detailed clinical notes after
+                DeepClinic Copilot reduces the time spent on administrative tasks and helps keep detailed clinical notes after
                 each visit.
               </p>
             </div>
@@ -83,7 +83,7 @@ export default function ContactPageEn() {
               <div className="space-y-2">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Personalised demo</p>
                 <h1 className="text-lg font-semibold text-slate-900 sm:text-xl">
-                  Talk to our team about Copiloto Médico
+                  Talk to our team about DeepClinic Copilot
                 </h1>
                 <p className="text-xs text-slate-500 sm:text-[13px]">
                   Share a few details about your practice and we will contact you to schedule a short demo.
@@ -165,14 +165,14 @@ export default function ContactPageEn() {
 
                 <div className="space-y-1.5">
                   <label htmlFor="interest" className="text-xs font-medium text-slate-800">
-                    Your interest in Copiloto Médico
+                    Your interest in DeepClinic Copilot
                   </label>
                   <textarea
                     id="interest"
                     name="interest"
                     rows={3}
                     autoComplete="off"
-                    placeholder="Tell us briefly about your speciality and how you would like to use Copiloto Médico."
+                    placeholder="Tell us briefly about your speciality and how you would like to use DeepClinic Copilot."
                     className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
                   />
                 </div>
@@ -185,7 +185,7 @@ export default function ContactPageEn() {
                       className="mt-0.5 h-4 w-4 rounded border-slate-300 text-slate-900 focus:ring-slate-900"
                     />
                     <span>
-                      I agree to be contacted about Copiloto Médico. My personal data will be processed in accordance with the
+                      I agree to be contacted about DeepClinic Copilot. My personal data will be processed in accordance with the
                       applicable privacy policy.
                     </span>
                   </label>

@@ -10,7 +10,7 @@ function HeaderEn() {
             <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
           </div>
           <Link href="/en" className="text-[18px] font-semibold tracking-tight text-slate-900">
-            Copiloto Médico
+            DeepClinic Copilot
           </Link>
         </div>
 
@@ -69,10 +69,10 @@ export default function DownloadPageEn() {
           <header className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">Download</p>
             <h1 className="mt-3 font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[38px]">
-              Use Copiloto Médico wherever you work
+              Use DeepClinic Copilot wherever you work
             </h1>
             <p className="mt-4 text-sm text-slate-600">
-              Use Copiloto Médico in the clinic or remotely. Download the desktop app and browser extensions to securely
+              Use DeepClinic Copilot in the clinic or remotely. Download the desktop app and browser extensions to securely
               transfer your notes into your clinical systems.
             </p>
           </header>
@@ -83,7 +83,7 @@ export default function DownloadPageEn() {
               <div>
                 <h2 className="text-base font-semibold text-slate-900">Windows</h2>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Enables full use of Copiloto Médico for video or phone calls (by capturing the patient&apos;s audio) and
+                  Enables full use of DeepClinic Copilot for video or phone calls (by capturing the patient&apos;s audio) and
                   allows secure transfer of notes to local electronic health record systems.
                 </p>
               </div>
@@ -107,7 +107,7 @@ export default function DownloadPageEn() {
               <div>
                 <h2 className="text-base font-semibold text-slate-900">Web plugin</h2>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Browser extension for Chrome, Edge and Firefox. Lets you automatically transfer Copiloto Médico notes
+                  Browser extension for Chrome, Edge and Firefox. Lets you automatically transfer DeepClinic Copilot notes
                   into your web-based electronic health record system.
                 </p>
               </div>
@@ -131,7 +131,7 @@ export default function DownloadPageEn() {
               <div>
                 <h2 className="text-base font-semibold text-slate-900">iOS and Android</h2>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Access Copiloto Médico from your phone. Log in with your account to use the app on iOS and Android.
+                  Access DeepClinic Copilot from your phone. Log in with your account to use the app on iOS and Android.
                 </p>
               </div>
               <div className="mt-4">
@@ -154,7 +154,7 @@ export default function DownloadPageEn() {
               <div>
                 <h2 className="text-base font-semibold text-slate-900">Edge plugin</h2>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Browser extension for Microsoft Edge. Lets you automatically transfer Copiloto Médico notes into your
+                  Browser extension for Microsoft Edge. Lets you automatically transfer DeepClinic Copilot notes into your
                   web-based clinical system.
                 </p>
               </div>
@@ -178,7 +178,7 @@ export default function DownloadPageEn() {
               <div>
                 <h2 className="text-base font-semibold text-slate-900">Firefox plugin</h2>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Browser extension for Firefox. Lets you automatically transfer Copiloto Médico notes into your web-based
+                  Browser extension for Firefox. Lets you automatically transfer DeepClinic Copilot notes into your web-based
                   clinical system.
                 </p>
               </div>
@@ -226,7 +226,7 @@ export default function DownloadPageEn() {
               <div>
                 <h2 className="text-base font-semibold text-slate-900">Information sheets (PDF)</h2>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Documents for clinics and patients explaining what Copiloto Médico is and how we protect patient
+                  Documents for clinics and patients explaining what DeepClinic Copilot is and how we protect patient
                   information.
                 </p>
               </div>

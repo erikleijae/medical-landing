@@ -37,7 +37,7 @@ function HeroVideo() {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
                         className: "h-full w-full rounded-3xl",
                         src: "https://www.youtube.com/embed/rZnbL_LZSm0?autoplay=1&rel=0",
-                        title: "Copiloto Médico - Cómo funciona",
+                        title: "DeepClinic Copilot - Cómo funciona",
                         allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
                         allowFullScreen: true
                     }, void 0, false, {
@@ -66,7 +66,7 @@ function HeroVideo() {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
             type: "button",
             onClick: ()=>setIsPlaying(true),
-            className: "group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d5ff7c] focus-visible:ring-offset-4 focus-visible:ring-offset-white rounded-3xl",
+            className: "group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent-strong focus-visible:ring-offset-4 focus-visible:ring-offset-white rounded-3xl",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-[0_4px_24px_rgba(15,23,42,0.08)] transition-shadow duration-300 group-hover:shadow-[0_8px_40px_rgba(15,23,42,0.12)] group-hover:border-slate-300",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -94,7 +94,7 @@ function HeroVideo() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "pointer-events-none absolute inset-0 flex items-center justify-center",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex h-44 w-44 items-center justify-center rounded-full border-[4px] border-[#d5ff7c] bg-white/90 shadow-[0_20px_60px_rgba(15,23,42,0.2),0_0_0_1px_rgba(0,0,0,0.05)] transition-all duration-300 group-hover:scale-105 group-hover:border-[#c9f46c] group-hover:bg-white group-hover:shadow-[0_24px_72px_rgba(15,23,42,0.25)]",
+                                className: "flex h-44 w-44 items-center justify-center rounded-full border-[4px] border-brand-accent-strong bg-white/90 shadow-[0_20px_60px_rgba(15,23,42,0.2),0_0_0_1px_rgba(0,0,0,0.05)] transition-all duration-300 group-hover:scale-105 group-hover:bg-white group-hover:shadow-[0_24px_72px_rgba(15,23,42,0.25)]",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "inline-flex items-center gap-2.5 rounded-full bg-slate-900 px-6 py-3 text-[15px] font-semibold text-white shadow-lg transition-colors duration-300 group-hover:bg-slate-800",
                                     children: [
@@ -181,7 +181,7 @@ var _s = __turbopack_refresh__.signature();
 "use client";
 ;
 const WORKING_DAYS_PER_MONTH = 20;
-const REDUCTION_PERCENTAGE = 0.3; // 30 % menos tiempo por consulta con Copiloto Médico
+const REDUCTION_PERCENTAGE = 0.3; // 30 % menos tiempo por consulta con DeepClinic Copilot
 const MAX_MINUTES_SAVED_PER_CONSULTATION = 9;
 const CONSULTATIONS_PER_DAY_OPTIONS = [
     {
@@ -556,7 +556,7 @@ function BenefitsSimulator({ variant = "full", language = "es" }) {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "mt-0.5 text-[11px] text-slate-400",
-                                        children: isEnglish ? "With the time you free up thanks to Copiloto Médico." : isPortuguese ? "Com o tempo liberado pelo Copiloto Médico." : "Con el tiempo liberado por Copiloto Médico."
+                                        children: isEnglish ? "With the time you free up thanks to DeepClinic Copilot." : isPortuguese ? "Com o tempo liberado pelo DeepClinic Copilot." : "Con el tiempo liberado por DeepClinic Copilot."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/benefits-simulator.tsx",
                                         lineNumber: 280,
@@ -641,7 +641,7 @@ function BenefitsSimulator({ variant = "full", language = "es" }) {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "mt-2 text-xs text-slate-500",
-                            children: isEnglish ? "We use your own numbers and assume Copiloto Médico reduces each visit by up to 30% (max ~9 minutes per visit)." : isPortuguese ? "Usamos os seus próprios números e assumimos que o Copiloto Médico reduz em até 30% o tempo de cada consulta (máx. ~9 minutos por consulta)." : "Usamos tus propias cifras y asumimos que Copiloto Médico reduce hasta un 30% el tiempo de cada consulta (máx. ~9 minutos por consulta)."
+                            children: isEnglish ? "We use your own numbers and assume DeepClinic Copilot reduces each visit by up to 30% (max ~9 minutes per visit)." : isPortuguese ? "Usamos os seus próprios números e assumimos que o DeepClinic Copilot reduz em até 30% o tempo de cada consulta (máx. ~9 minutos por consulta)." : "Usamos tus propias cifras y asumimos que DeepClinic Copilot reduce hasta un 30% el tiempo de cada consulta (máx. ~9 minutos por consulta)."
                         }, void 0, false, {
                             fileName: "[project]/src/components/benefits-simulator.tsx",
                             lineNumber: 329,
@@ -689,7 +689,7 @@ function BenefitsSimulator({ variant = "full", language = "es" }) {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "mt-2",
-                                    children: isEnglish ? "With that, we estimate your total consultation time and apply the effect of Copiloto Médico:" : isPortuguese ? "Com isso estimamos o tempo total de consulta e aplicamos o efeito do Copiloto Médico:" : "Con eso estimamos el tiempo total de consulta y aplicamos el efecto de Copiloto Médico:"
+                                    children: isEnglish ? "With that, we estimate your total consultation time and apply the effect of DeepClinic Copilot:" : isPortuguese ? "Com isso estimamos o tempo total de consulta e aplicamos o efeito do DeepClinic Copilot:" : "Con eso estimamos el tiempo total de consulta y aplicamos el efecto de DeepClinic Copilot:"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/benefits-simulator.tsx",
                                     lineNumber: 367,

@@ -8,20 +8,20 @@ export default function TermsOfServicePage() {
         <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
           Condiciones de servicio
         </h1>
-        <p className="mt-1 text-sm text-slate-500">Copiloto Médico</p>
+        <p className="mt-1 text-sm text-slate-500">DeepClinic Copilot</p>
 
         {/* Intro */}
         <section className="mt-6 space-y-3 text-sm leading-relaxed text-slate-700">
           <p>
-            Copiloto Médico provides a personalised documentation service that allows users to transcribe and document
+            DeepClinic Copilot provides a personalised documentation service that allows users to transcribe and document
             patient conversations using an application on an internet-connected computer, tablet, or phone. The service
             aims to facilitate the creation of medical records for healthcare providers. The service is available online
             via web browser and requires an internet connection.
           </p>
           <p>
-            The service is provided by Copiloto Médico AB (org.nr 559444-6857). These General Terms and Conditions
-            govern the use of the Service. As used in these Terms of Use, &quot;Copiloto Médico&quot;, &quot;our service&quot; or &quot;Service&quot;
-            means the digital documentation service provided by Copiloto Médico AB.
+            The service is provided by DeepClinic Copilot AB (org.nr 559444-6857). These General Terms and Conditions
+            govern the use of the Service. As used in these Terms of Use, &quot;DeepClinic Copilot&quot;, &quot;our service&quot; or &quot;Service&quot;
+            means the digital documentation service provided by DeepClinic Copilot AB.
           </p>
         </section>
 
@@ -71,7 +71,7 @@ export default function TermsOfServicePage() {
           </p>
           <p>
             2.2 The Supplier shall provide the Customer with support as needed during regular business hours
-            (support@copilotomedico.com) and to provide the Service with an uptime of 99% on a quarterly basis,
+            (support@deepclinic.ai) and to provide the Service with an uptime of 99% on a quarterly basis,
             excluding periods of permitted downtime. The Provider is responsible for maintaining and updating the Service
             so that it remains functional and secure in accordance with applicable standards and practices in IT and
             healthcare. The permitted downtime for the Service, for maintenance and updates, is between the hours of
@@ -85,7 +85,7 @@ export default function TermsOfServicePage() {
         <section className="mt-8 space-y-3 text-sm leading-relaxed text-slate-700">
           <h2 className="text-base font-semibold text-slate-900">3. Acceptable use</h2>
           <p>
-            Copiloto Médico must be used responsibly and in line with its intended purpose of creating accurate, editable
+            DeepClinic Copilot must be used responsibly and in line with its intended purpose of creating accurate, editable
             drafts of medical notes.
           </p>
           <p className="font-semibold">User responsibilities:</p>
@@ -96,11 +96,11 @@ export default function TermsOfServicePage() {
             </li>
             <li>
               <span className="font-semibold">Professional judgment:</span> Rely on professional expertise when using
-              outputs from Copiloto Médico. The Service is a support tool, not a replacement for clinical
+              outputs from DeepClinic Copilot. The Service is a support tool, not a replacement for clinical
               decision-making.
             </li>
             <li>
-              <span className="font-semibold">Compliance:</span> Use Copiloto Médico in accordance with applicable
+              <span className="font-semibold">Compliance:</span> Use DeepClinic Copilot in accordance with applicable
               laws, regulations, and clinical standards in your jurisdiction.
             </li>
           </ul>
@@ -109,14 +109,14 @@ export default function TermsOfServicePage() {
           <ul className="list-disc space-y-1 pl-5">
             <li>Input false or misleading information into the system.</li>
             <li>
-              Attempt to use Copiloto Médico to generate medical diagnoses, treatment recommendations, or advice.
+              Attempt to use DeepClinic Copilot to generate medical diagnoses, treatment recommendations, or advice.
             </li>
             <li>
               Engage in actions that compromise the security, integrity, or performance of the Service (e.g.,
               reverse-engineering or tampering with the system).
             </li>
             <li>Share access credentials or allow unauthorised individuals to use their account.</li>
-            <li>Use Copiloto Médico for purposes outside its intended use.</li>
+            <li>Use DeepClinic Copilot for purposes outside its intended use.</li>
           </ul>
           <p>Any violation of these terms may result in suspension or termination of access.</p>
         </section>
@@ -139,7 +139,7 @@ export default function TermsOfServicePage() {
             maintaining accurate information about their account.
           </p>
           <p>
-            4.3 Copiloto Médico may terminate or block an account if necessary to protect the user, Copiloto Médico, or
+            4.3 DeepClinic Copilot may terminate or block an account if necessary to protect the user, DeepClinic Copilot, or
             our partners from identity theft or other fraudulent activity.
           </p>
         </section>
@@ -160,7 +160,7 @@ export default function TermsOfServicePage() {
           </p>
           <p>
             5.4 In particular, the Customer and the users for whom the Customer is responsible, except in cases where
-            expressly approved by Copiloto Médico, may not:
+            expressly approved by DeepClinic Copilot, may not:
           </p>
           <ul className="list-disc space-y-1 pl-5">
             <li>
@@ -181,7 +181,7 @@ export default function TermsOfServicePage() {
             </li>
           </ul>
           <p>
-            5.5 Copiloto Médico reserves the right to terminate or limit Customer&apos;s use of the Service if Customer or the
+            5.5 DeepClinic Copilot reserves the right to terminate or limit Customer&apos;s use of the Service if Customer or the
             users for whom Customer is responsible violate these Terms of Service or engage in illegal or fraudulent use
             of the Service.
           </p>
@@ -307,8 +307,8 @@ export default function TermsOfServicePage() {
         <section className="mt-8 space-y-3 text-sm leading-relaxed text-slate-700">
           <h2 className="text-base font-semibold text-slate-900">11. Development of the Service</h2>
           <p>
-            Any improvements, innovations or developments made by Copiloto Médico AB, either alone or together with the
-            Customer, will be and remain the property of Copiloto Médico AB. Customer shall have no rights to such
+            Any improvements, innovations or developments made by DeepClinic Copilot AB, either alone or together with the
+            Customer, will be and remain the property of DeepClinic Copilot AB. Customer shall have no rights to such
             improvements, innovations or developments.
           </p>
         </section>
@@ -370,9 +370,9 @@ export default function TermsOfServicePage() {
           <div className="space-y-2">
             <h3 className="text-sm font-semibold text-slate-900">15.1 Plans and pricing</h3>
             <p>
-              Copiloto Médico provides both free, usage-limited plans and paid subscription plans. The specific features,
+              DeepClinic Copilot provides both free, usage-limited plans and paid subscription plans. The specific features,
               usage limits, and pricing of each plan may vary depending on the User&apos;s location and currency. All pricing,
-              payment terms, and plan details are subject to change at Copiloto Médico&apos;s sole discretion.
+              payment terms, and plan details are subject to change at DeepClinic Copilot&apos;s sole discretion.
             </p>
           </div>
 
@@ -392,23 +392,23 @@ export default function TermsOfServicePage() {
               <span className="font-semibold">15.3.1 General tax responsibility.</span> Unless otherwise stated, all Fees
               are exclusive of any taxes, duties, levies, or similar governmental assessments (collectively, &quot;Taxes&quot;). The
               Customer is responsible for paying all applicable Taxes associated with its purchases under this Agreement,
-              except for taxes based on Copiloto Médico&apos;s net income.
+              except for taxes based on DeepClinic Copilot&apos;s net income.
             </p>
             <p>
-              <span className="font-semibold">15.3.2 Swedish customers.</span> Copiloto Médico AB is a Swedish company.
-              For Customers located in Sweden, Copiloto Médico will charge and collect Swedish value-added tax (VAT) or
+              <span className="font-semibold">15.3.2 Swedish customers.</span> DeepClinic Copilot AB is a Swedish company.
+              For Customers located in Sweden, DeepClinic Copilot will charge and collect Swedish value-added tax (VAT) or
               any other applicable taxes as required by Swedish law.
             </p>
             <p>
               <span className="font-semibold">15.3.3 Customers in other regions.</span> For Customers located outside
               Sweden, the applicable Taxes (including VAT, GST, or other consumption taxes) will depend on the
-              jurisdiction in which the Customer operates or resides. The Customer acknowledges that Copiloto Médico may
+              jurisdiction in which the Customer operates or resides. The Customer acknowledges that DeepClinic Copilot may
               be required to charge certain Taxes based on local rules, and the Customer agrees to pay such Taxes. If
-              Copiloto Médico is not required to collect Taxes for a particular jurisdiction, the Customer remains
+              DeepClinic Copilot is not required to collect Taxes for a particular jurisdiction, the Customer remains
               responsible for any Taxes owed to the relevant authorities.
             </p>
             <p>
-              <span className="font-semibold">15.3.4 Bank and conversion fees.</span> Copiloto Médico is not liable for
+              <span className="font-semibold">15.3.4 Bank and conversion fees.</span> DeepClinic Copilot is not liable for
               any bank fees, foreign exchange fees, or other surcharges that may be assessed by the Customer&apos;s payment
               provider.
             </p>
@@ -423,7 +423,7 @@ export default function TermsOfServicePage() {
             </p>
             <p>
               <span className="font-semibold">15.4.2 Authorised charges.</span> By submitting card information, the
-              Customer authorises Copiloto Médico and its designated payment processors to charge the provided card for
+              Customer authorises DeepClinic Copilot and its designated payment processors to charge the provided card for
               all Fees due under the chosen plan or usage.
             </p>
           </div>
@@ -431,9 +431,9 @@ export default function TermsOfServicePage() {
           <div className="space-y-2">
             <h3 className="text-sm font-semibold text-slate-900">15.5 Changes to fees and payment terms</h3>
             <p>
-              Copiloto Médico reserves the right to modify its Fees, payment terms, and pricing structures at any time.
+              DeepClinic Copilot reserves the right to modify its Fees, payment terms, and pricing structures at any time.
               Such modifications may include changing, adding, or removing free plan usage limits, subscription tiers, or
-              the pricing of any paid offerings. Copiloto Médico will make reasonable efforts to notify the Customer of
+              the pricing of any paid offerings. DeepClinic Copilot will make reasonable efforts to notify the Customer of
               any material changes to the Fees or payment terms in advance (e.g., by email or notification within the
               Service). The Customer&apos;s continued use of the Service following any Fee change constitutes acceptance of
               the revised Fees.
@@ -448,7 +448,7 @@ export default function TermsOfServicePage() {
               Usage-based Fees will be billed as indicated in the applicable plan.
             </p>
             <p>
-              <span className="font-semibold">15.6.2 Statements of charges.</span> Copiloto Médico will provide a
+              <span className="font-semibold">15.6.2 Statements of charges.</span> DeepClinic Copilot will provide a
               statement of charges, which may be delivered electronically (via email or made available in the Service&apos;s
               account dashboard). This document is not an invoice for future payment but rather a record of the charges
               applied to the card on file.
@@ -459,11 +459,11 @@ export default function TermsOfServicePage() {
             <h3 className="text-sm font-semibold text-slate-900">15.7 Late payments and non-payment</h3>
             <p>
               <span className="font-semibold">15.7.1 Payment failure.</span> If payment is declined or otherwise not
-              received on time, Copiloto Médico may charge interest on overdue amounts at the maximum rate permitted by
+              received on time, DeepClinic Copilot may charge interest on overdue amounts at the maximum rate permitted by
               applicable law.
             </p>
             <p>
-              <span className="font-semibold">15.7.2 Suspension or termination.</span> Copiloto Médico may suspend or
+              <span className="font-semibold">15.7.2 Suspension or termination.</span> DeepClinic Copilot may suspend or
               terminate the Customer&apos;s access to the Service if Fees remain unpaid after reasonable notice has been
               provided.
             </p>
@@ -473,7 +473,7 @@ export default function TermsOfServicePage() {
             <h3 className="text-sm font-semibold text-slate-900">15.8 Refunds</h3>
             <p>
               Unless required by applicable law or otherwise agreed in writing, all Fees are non-refundable. However,
-              Copiloto Médico may, at its sole discretion, choose to offer refunds or credits in specific cases (e.g.,
+              DeepClinic Copilot may, at its sole discretion, choose to offer refunds or credits in specific cases (e.g.,
               service disruptions exceeding agreed-upon uptime).
             </p>
           </div>
@@ -483,7 +483,7 @@ export default function TermsOfServicePage() {
             <p>
               All Fees will be charged in the currency specified in the Customer&apos;s subscription plan. If a currency
               conversion is necessary, it will be handled by the Customer&apos;s payment provider at its conversion rates and
-              fees. Copiloto Médico is not responsible for any currency conversion fees or charges imposed by the
+              fees. DeepClinic Copilot is not responsible for any currency conversion fees or charges imposed by the
               Customer&apos;s payment provider.
             </p>
           </div>

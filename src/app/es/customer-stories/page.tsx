@@ -13,7 +13,7 @@ export default function CustomerStoriesPage() {
               <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
             </div>
             <Link href="/" className="text-[18px] font-semibold tracking-tight text-slate-900">
-              Copiloto Médico
+              DeepClinic Copilot
             </Link>
           </div>
 
@@ -69,10 +69,10 @@ export default function CustomerStoriesPage() {
               Historias de clientes
             </p>
             <h1 className="mt-3 font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[38px] md:text-[44px]">
-              Cómo Copiloto Médico ayuda a los profesionales a centrarse en el paciente
+              Cómo DeepClinic Copilot ayuda a los profesionales a centrarse en el paciente
             </h1>
             <p className="mt-4 text-[15px] text-slate-600">
-              Clínicas, hospitales y proveedores digitales utilizan Copiloto Médico para reducir horas de documentación y
+              Clínicas, hospitales y proveedores digitales utilizan DeepClinic Copilot para reducir horas de documentación y
               devolver el foco a la consulta.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4">
@@ -101,7 +101,7 @@ export default function CustomerStoriesPage() {
               </p>
               <p className="text-sm text-slate-900">
                 &quot;Ahora pienso en el paciente, no en las notas.&quot; &quot;Me ahorro varios minutos en cada visita.&quot; &quot;Es difícil
-                imaginar volver a teclear todo a mano.&quot; Son frases reales de profesionales que utilizan Copiloto Médico en
+                imaginar volver a teclear todo a mano.&quot; Son frases reales de profesionales que utilizan DeepClinic Copilot en
                 su día a día.
               </p>
               <p className="text-xs text-slate-500">
@@ -185,7 +185,7 @@ export default function CustomerStoriesPage() {
                   Más tiempo mirando al paciente, menos a la pantalla
                 </p>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Centros de salud que utilizan Copiloto Médico para que cada profesional pueda dedicar más minutos a la
+                  Centros de salud que utilizan DeepClinic Copilot para que cada profesional pueda dedicar más minutos a la
                   conversación clínica.
                 </p>
               </div>
@@ -226,7 +226,7 @@ export default function CustomerStoriesPage() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p className="text-sm text-slate-800">
-                  &quot;El uso de Copiloto Médico no va de estar a la última en tecnología, sino de buena práctica clínica. Me evita
+                  &quot;El uso de DeepClinic Copilot no va de estar a la última en tecnología, sino de buena práctica clínica. Me evita
                   pasar horas tecleando al final del día y me permite dedicar ese tiempo a mis pacientes. Una vez lo pruebas,
                   no quieres volver atrás.&quot;
                 </p>
@@ -252,7 +252,7 @@ export default function CustomerStoriesPage() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p>
-                  &quot;Mientras exploro al paciente y converso con él con naturalidad, Copiloto Médico transcribe y estructura la
+                  &quot;Mientras exploro al paciente y converso con él con naturalidad, DeepClinic Copilot transcribe y estructura la
                   información clínica en segundo plano. El mayor beneficio es que las historias clínicas se redactan
                   prácticamente solas, lo que me ahorra hasta un par de horas de trabajo administrativo al día.&quot;
                 </p>
@@ -278,7 +278,7 @@ export default function CustomerStoriesPage() {
               <div className="mt-3 text-amber-400">★★★★★</div>
               <blockquote className="mt-3 space-y-2">
                 <p>
-                  &quot;Hemos desplegado Copiloto Médico en nuestras clínicas y vemos cómo mejora la dinámica de la atención. Los
+                  &quot;Hemos desplegado DeepClinic Copilot en nuestras clínicas y vemos cómo mejora la dinámica de la atención. Los
                   profesionales pueden mirar a los ojos al paciente en lugar de al ordenador, y aun así las historias clínicas
                   quedan completas y bien estructuradas.&quot;
                 </p>
@@ -298,7 +298,7 @@ export default function CustomerStoriesPage() {
             Lleva estas historias a tu consulta
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-slate-300">
-            Prueba Copiloto Médico con tu propio flujo de trabajo y comprueba cómo cambia la forma en la que documentas cada
+            Prueba DeepClinic Copilot con tu propio flujo de trabajo y comprueba cómo cambia la forma en la que documentas cada
             visita.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

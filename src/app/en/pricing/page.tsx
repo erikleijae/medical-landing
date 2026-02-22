@@ -9,7 +9,7 @@ function HeaderEn() {
             <span className="inline-block h-6 w-6 rounded-full border border-slate-900 bg-slate-900" />
             <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
           </div>
-          <span className="text-[18px] font-semibold tracking-tight text-slate-900">Copiloto Médico</span>
+          <span className="text-[18px] font-semibold tracking-tight text-slate-900">DeepClinic Copilot</span>
         </div>
 
         <nav className="hidden items-center gap-8 text-sm text-slate-800 lg:flex">
@@ -66,7 +66,7 @@ export default function PricingPageEn() {
               Pricing
             </h1>
             <p className="mt-3 text-sm text-slate-600 sm:text-[15px]">
-              Copiloto Médico is offered as a subscription service for individual clinicians and organisations. The detailed
+              DeepClinic Copilot is offered as a subscription service for individual clinicians and organisations. The detailed
               pricing table for America is being finalised; if you would like a quote, contact us and we will prepare a
               tailored proposal for your practice.
             </p>

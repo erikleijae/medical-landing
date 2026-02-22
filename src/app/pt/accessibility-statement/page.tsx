@@ -9,7 +9,7 @@ export default function AccessibilityStatementPagePt() {
           Declaração de acessibilidade
         </h1>
         <p className="mt-4 text-sm text-slate-600">
-          Queremos que o Copiloto Médico seja acessível ao maior número possível de profissionais de saúde. Estamos a
+          Queremos que o DeepClinic Copilot seja acessível ao maior número possível de profissionais de saúde. Estamos a
           trabalhar para cumprir as principais diretrizes de acessibilidade web e iremos descrever aqui os nossos
           compromissos concretos.
         </p>

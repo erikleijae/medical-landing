@@ -7,7 +7,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-display" });
 
-const defaultSiteUrl = "https://medicalcopilot.ai";
+const defaultSiteUrl = "https://deepclinic.ai";
 
 function getBaseUrl(): string {
   if (process.env.NEXT_PUBLIC_SITE_URL) {
@@ -22,20 +22,20 @@ const jsonLd = (siteUrl: string) => ({
     {
       "@type": "Organization",
       "@id": `${siteUrl}#organization`,
-      name: "Copiloto Médico",
+      name: "DeepClinic Copilot",
       url: siteUrl,
       description:
-        "Copiloto Médico es un asistente clínico basado en IA que redacta automáticamente informes y documentación clínica para que los profesionales de la salud puedan centrarse en sus pacientes.",
+        "DeepClinic Copilot es un asistente clínico basado en IA que redacta automáticamente informes y documentación clínica para que los profesionales de la salud puedan centrarse en sus pacientes.",
       logo: `${siteUrl}/680a970e6d5665751f6bfcb8_gaias.png`,
     },
     {
       "@type": "WebSite",
       "@id": `${siteUrl}#website`,
       url: siteUrl,
-      name: "Copiloto Médico",
+      name: "DeepClinic Copilot",
       inLanguage: "es",
       description:
-        "El asistente clínico de IA líder en America. Copiloto Médico redacta notas e informes clínicos después de cada consulta para ahorrar horas de trabajo administrativo.",
+        "El asistente clínico de IA líder en America. DeepClinic Copilot redacta notas e informes clínicos después de cada consulta para ahorrar horas de trabajo administrativo.",
     },
   ],
 });
@@ -51,62 +51,62 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL(siteUrl),
-  title: {
-    default: "El asistente clínico de IA líder en America | Copiloto Médico",
-    template: "%s | Copiloto Médico",
-  },
-  description:
-    "Céntrate en la asistencia mientras Copiloto Médico escribe tus informes después de cada consulta. Aumenta la productividad de tu consulta con nuestro asistente clínico basado en IA.",
-  keywords: [
-    "asistente clínico IA",
-    "escriba médico IA",
-    "documentación clínica automática",
-    "historia clínica con inteligencia artificial",
-    "software para médicos",
-    "productividad consulta médica",
-  ],
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    type: "website",
-    url: siteUrl,
-    title: "El asistente clínico de IA líder en America | Copiloto Médico",
+    title: {
+      default: "El asistente clínico de IA líder en America | DeepClinic Copilot",
+      template: "%s | DeepClinic Copilot",
+    },
     description:
-      "Céntrate en la asistencia mientras Copiloto Médico escribe tus informes después de cada consulta. Aumenta la productividad de tu consulta con nuestro asistente clínico basado en IA.",
-    siteName: "Copiloto Médico",
-    locale: "es_MX",
-    images: [
-      {
-        url: ogImageUrl,
-        width: 500,
-        height: 500,
-        alt: "Copiloto Médico, asistente clínico de IA",
-        type: "image/webp",
-      },
+      "Céntrate en la asistencia mientras DeepClinic Copilot escribe tus informes después de cada consulta. Aumenta la productividad de tu consulta con nuestro asistente clínico basado en IA.",
+    keywords: [
+      "asistente clínico IA",
+      "escriba médico IA",
+      "documentación clínica automática",
+      "historia clínica con inteligencia artificial",
+      "software para médicos",
+      "productividad consulta médica",
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "El asistente clínico de IA líder en America | Copiloto Médico",
-    description:
-      "Céntrate en la asistencia mientras Copiloto Médico escribe tus informes después de cada consulta. Aumenta la productividad de tu consulta con nuestro asistente clínico basado en IA.",
-    images: [ogImageUrl],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    alternates: {
+      canonical: "/",
+    },
+    openGraph: {
+      type: "website",
+      url: siteUrl,
+      title: "El asistente clínico de IA líder en America | DeepClinic Copilot",
+      description:
+        "Céntrate en la asistencia mientras DeepClinic Copilot escribe tus informes después de cada consulta. Aumenta la productividad de tu consulta con nuestro asistente clínico basado en IA.",
+      siteName: "DeepClinic Copilot",
+      locale: "es_MX",
+      images: [
+        {
+          url: ogImageUrl,
+          width: 500,
+          height: 500,
+          alt: "DeepClinic Copilot, asistente clínico de IA",
+          type: "image/webp",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "El asistente clínico de IA líder en America | DeepClinic Copilot",
+      description:
+        "Céntrate en la asistencia mientras DeepClinic Copilot escribe tus informes después de cada consulta. Aumenta la productividad de tu consulta con nuestro asistente clínico basado en IA.",
+      images: [ogImageUrl],
+    },
+    robots: {
       index: true,
       follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
     },
-  },
-  icons: {
-    icon: "/Captura de pantalla 2025-12-07 a la(s) 11.07.14 a.m..png",
-  },
+    icons: {
+      icon: "/Captura de pantalla 2025-12-07 a la(s) 11.07.14 a.m..png",
+    },
   };
 }
 

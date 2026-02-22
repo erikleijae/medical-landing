@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/erik/Documents/medical-copilot-erik/landing/landing-medical/src/components/auth-language-select.tsx/proxy.js"],"sourcesContent":["import { registerClientReference } from \"react-server-dom-turbopack/server.edge\";\nexport const AuthLanguageSelect = registerClientReference(\n    function() { throw new Error(\"Attempted to call AuthLanguageSelect() from the server but AuthLanguageSelect is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.\"); },\n    \"[project]/src/components/auth-language-select.tsx <module evaluation>\",\n    \"AuthLanguageSelect\",\n);\n"],"names":[],"mappings":";;;AAAA;;AACO,MAAM,qBAAqB,CAAA,GAAA,qPAAA,CAAA,0BAAuB,AAAD,EACpD;IAAa,MAAM,IAAI,MAAM;AAAoP,GACjR,yEACA"}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 21, "column": 0}, "map": {"version":3,"sources":["file:///Users/erik/Documents/medical-copilot-erik/landing/landing-medical/src/components/auth-language-select.tsx/proxy.js"],"sourcesContent":["import { registerClientReference } from \"react-server-dom-turbopack/server.edge\";\nexport const AuthLanguageSelect = registerClientReference(\n    function() { throw new Error(\"Attempted to call AuthLanguageSelect() from the server but AuthLanguageSelect is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.\"); },\n    \"[project]/src/components/auth-language-select.tsx\",\n    \"AuthLanguageSelect\",\n);\n"],"names":[],"mappings":";;;AAAA;;AACO,MAAM,qBAAqB,CAAA,GAAA,qPAAA,CAAA,0BAAuB,AAAD,EACpD;IAAa,MAAM,IAAI,MAAM;AAAoP,GACjR,qDACA"}},
+    {"offset": {"line": 29, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 35, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 45, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 49, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 60, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 60, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

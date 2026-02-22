@@ -17,7 +17,7 @@ export default function MindlerStoryPageEn() {
                 session.
               </p>
               <p className="mt-3 text-sm text-slate-600">
-                With Copiloto Médico, notes are generated during the conversation with the patient, allowing professionals
+                With DeepClinic Copilot, notes are generated during the conversation with the patient, allowing professionals
                 to focus on active listening and clinical interventions.
               </p>
             </div>
@@ -63,7 +63,7 @@ export default function MindlerStoryPageEn() {
                 writing into an additional burden.
               </p>
               <p>
-                Copiloto Médico suggests a structured draft that the professional quickly reviews before sending, keeping
+                DeepClinic Copilot suggests a structured draft that the professional quickly reviews before sending, keeping
                 the quality and level of detail of the documentation.
               </p>
             </div>
@@ -88,7 +88,7 @@ export default function MindlerStoryPageEn() {
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">AI as support, not
                 replacement</p>
               <p className="text-sm text-slate-900">
-                Copiloto Médico helps structure documentation, but clinical decisions and therapeutic judgement remain the
+                DeepClinic Copilot helps structure documentation, but clinical decisions and therapeutic judgement remain the
                 responsibility of the professional.
               </p>
             </div>
@@ -103,7 +103,7 @@ export default function MindlerStoryPageEn() {
             Apply this model to your team
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-slate-300">
-            Try Copiloto Médico with your organisation and see how it changes the way each session is documented.
+            Try DeepClinic Copilot with your organisation and see how it changes the way each session is documented.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link

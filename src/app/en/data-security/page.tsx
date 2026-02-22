@@ -6,15 +6,15 @@ export default function DataSecurityPageEn() {
       <div className="mx-auto max-w-3xl px-6 py-16">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Resources</p>
         <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-          Data security at Copiloto Médico
+          Data security at DeepClinic Copilot
         </h1>
         <p className="mt-4 text-sm text-slate-600">
-          We are consolidating our security and compliance information on this Copiloto Médico site. While we complete
+          We are consolidating our security and compliance information on this DeepClinic Copilot site. While we complete
           the documentation in English, you can contact our team to review regulatory requirements, data processing
           agreements and impact assessments in detail.
         </p>
         <p className="mt-3 text-sm text-slate-600">
-          Copiloto Médico is designed to comply with applicable data protection regulations in the Americas and the
+          DeepClinic Copilot is designed to comply with applicable data protection regulations in the Americas and the
           European Union, including encryption and strict access controls.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-4">

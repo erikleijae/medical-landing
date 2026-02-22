@@ -13,7 +13,7 @@ export default function FamiljelakarnaStoryPage() {
               <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
             </div>
             <Link href="/" className="text-[18px] font-semibold tracking-tight text-slate-900">
-              Copiloto Médico
+              DeepClinic Copilot
             </Link>
           </div>
 
@@ -70,14 +70,14 @@ export default function FamiljelakarnaStoryPage() {
                 Caso de éxito
               </p>
               <h1 className="mt-3 font-display text-[30px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[34px] md:text-[40px]">
-                Cómo una red de atención primaria aumentó el volumen de pacientes en un 15% con Copiloto Médico
+                Cómo una red de atención primaria aumentó el volumen de pacientes en un 15% con DeepClinic Copilot
               </h1>
               <p className="mt-4 text-[15px] text-slate-600">
                 Familjeläkarna es una red de clínicas de atención primaria que buscaba reducir el tiempo dedicado a la
                 documentación para poder atender a más pacientes sin sacrificar calidad.
               </p>
               <p className="mt-3 text-sm text-slate-600">
-                Con Copiloto Médico, sus equipos médicos pasaron de teclear notas al final del día a contar con borradores
+                Con DeepClinic Copilot, sus equipos médicos pasaron de teclear notas al final del día a contar con borradores
                 generados en tiempo real durante cada consulta.
               </p>
             </div>
@@ -124,7 +124,7 @@ export default function FamiljelakarnaStoryPage() {
                 Reducir el atasco administrativo para abrir más huecos de consulta
               </h2>
               <p>
-                Antes de usar Copiloto Médico, los equipos de Familjeläkarna arrastraban atrasos en la documentación debidos a
+                Antes de usar DeepClinic Copilot, los equipos de Familjeläkarna arrastraban atrasos en la documentación debidos a
                 dictados largos y a la transcripción manual. Esto añadía estrés y limitaba el número de pacientes que podían
                 ver cada día.
               </p>
@@ -146,7 +146,7 @@ export default function FamiljelakarnaStoryPage() {
                 Notas en tiempo real para todo el equipo asistencial
               </h2>
               <p>
-                Copiloto Médico se desplegó en distintos perfiles: médicos, enfermería y profesionales de salud mental. Durante
+                DeepClinic Copilot se desplegó en distintos perfiles: médicos, enfermería y profesionales de salud mental. Durante
                 cada consulta, la herramienta escucha y propone un borrador de nota clínica estructurada, que el profesional
                 solo tiene que revisar y completar.
               </p>
@@ -197,7 +197,7 @@ export default function FamiljelakarnaStoryPage() {
                 notas a mano.
               </p>
               <p>
-                Con miles de notas generadas automáticamente, Copiloto Médico se convierte en una pieza central del flujo de
+                Con miles de notas generadas automáticamente, DeepClinic Copilot se convierte en una pieza central del flujo de
                 trabajo clínico, no solo para médicos, sino para todo el equipo asistencial.
               </p>
             </div>
@@ -207,7 +207,7 @@ export default function FamiljelakarnaStoryPage() {
                 IA centrada en el profesional
               </p>
               <p className="text-sm text-slate-900">
-                Copiloto Médico está diseñado para reforzar la relación entre clínico y paciente, no para sustituirla.
+                DeepClinic Copilot está diseñado para reforzar la relación entre clínico y paciente, no para sustituirla.
               </p>
               <p className="text-xs text-slate-600">
                 Al eliminar la fricción de la documentación y automatizar buena parte de las notas, los profesionales pueden
@@ -245,7 +245,7 @@ export default function FamiljelakarnaStoryPage() {
             Aplica este modelo en tu clínica
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-slate-300">
-            Prueba Copiloto Médico con tu equipo y comprueba cómo cambia la forma de documentar y la capacidad de tu agenda.
+            Prueba DeepClinic Copilot con tu equipo y comprueba cómo cambia la forma de documentar y la capacidad de tu agenda.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link

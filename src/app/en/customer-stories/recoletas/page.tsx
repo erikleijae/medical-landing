@@ -17,7 +17,7 @@ export default function RecoletasStoryPageEn() {
                 maintaining the level of detail and quality of documentation.
               </p>
               <p className="mt-3 text-sm text-slate-600">
-                With Copiloto Médico, specialists can focus more on the conversation with the patient while the tool
+                With DeepClinic Copilot, specialists can focus more on the conversation with the patient while the tool
                 generates structured drafts of each visit in the background.
               </p>
             </div>
@@ -60,7 +60,7 @@ export default function RecoletasStoryPageEn() {
                 Fewer administrative tasks at the end of the day
               </h2>
               <p>
-                Before using Copiloto Médico, part of the documentation was completed outside clinic hours. This added
+                Before using DeepClinic Copilot, part of the documentation was completed outside clinic hours. This added
                 extra workload for teams and made it harder to maintain a sustainable pace.
               </p>
               <p>
@@ -89,7 +89,7 @@ export default function RecoletasStoryPageEn() {
             <div className="space-y-4 rounded-3xl bg-slate-50 p-6 text-sm text-slate-700 shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">Clinician‑centred AI</p>
               <p className="text-sm text-slate-900">
-                Copiloto Médico is designed so that the focus stays on the patient. The tool accompanies the consultation
+                DeepClinic Copilot is designed so that the focus stays on the patient. The tool accompanies the consultation
                 without interrupting the clinical conversation.
               </p>
             </div>
@@ -104,7 +104,7 @@ export default function RecoletasStoryPageEn() {
             Bring this model to your organisation
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-slate-300">
-            Try Copiloto Médico with your own workflow and see how it changes the way you document each visit.
+            Try DeepClinic Copilot with your own workflow and see how it changes the way you document each visit.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link

@@ -13,7 +13,7 @@ export default function FamiljelakarnaStoryPageEn() {
               <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
             </div>
             <Link href="/en" className="text-[18px] font-semibold tracking-tight text-slate-900">
-              Copiloto Médico
+              DeepClinic Copilot
             </Link>
           </div>
 
@@ -68,14 +68,14 @@ export default function FamiljelakarnaStoryPageEn() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Customer story</p>
               <h1 className="mt-3 font-display text-[30px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[34px] md:text-[40px]">
-                How a primary care network increased patient volume by 15% with Copiloto Médico
+                How a primary care network increased patient volume by 15% with DeepClinic Copilot
               </h1>
               <p className="mt-4 text-[15px] text-slate-600">
                 Familjeläkarna is a network of primary care clinics that wanted to reduce the time spent on documentation
                 in order to see more patients without sacrificing quality.
               </p>
               <p className="mt-3 text-sm text-slate-600">
-                With Copiloto Médico, their clinical teams moved from typing notes at the end of the day to having
+                With DeepClinic Copilot, their clinical teams moved from typing notes at the end of the day to having
                 structured drafts generated in real time during each consultation.
               </p>
             </div>
@@ -122,7 +122,7 @@ export default function FamiljelakarnaStoryPageEn() {
                 Reducing admin backlog to open more appointment slots
               </h2>
               <p>
-                Before Copiloto Médico, Familjeläkarna teams were dealing with documentation backlogs caused by long
+                Before DeepClinic Copilot, Familjeläkarna teams were dealing with documentation backlogs caused by long
                 dictations and manual transcription. This added stress and limited how many patients they could see each
                 day.
               </p>
@@ -144,7 +144,7 @@ export default function FamiljelakarnaStoryPageEn() {
                 Real‑time notes for the whole care team
               </h2>
               <p>
-                Copiloto Médico was deployed across different roles: physicians, nurses and mental health professionals.
+                DeepClinic Copilot was deployed across different roles: physicians, nurses and mental health professionals.
                 During each visit, the tool listens and proposes a structured clinical note draft that the professional
                 only needs to review and complete.
               </p>
@@ -194,7 +194,7 @@ export default function FamiljelakarnaStoryPageEn() {
                 by hand.
               </p>
               <p>
-                With thousands of notes generated automatically, Copiloto Médico becomes a central part of the clinical
+                With thousands of notes generated automatically, DeepClinic Copilot becomes a central part of the clinical
                 workflow, not only for physicians but for the whole care team.
               </p>
             </div>
@@ -202,7 +202,7 @@ export default function FamiljelakarnaStoryPageEn() {
             <div className="space-y-4 rounded-3xl bg-slate-50 p-6 text-sm text-slate-700 shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">Clinician‑centred AI</p>
               <p className="text-sm text-slate-900">
-                Copiloto Médico is designed to reinforce the clinician‑patient relationship, not replace it.
+                DeepClinic Copilot is designed to reinforce the clinician‑patient relationship, not replace it.
               </p>
               <p className="text-xs text-slate-600">
                 By removing documentation friction and automating a large share of the notes, professionals can devote
@@ -238,7 +238,7 @@ export default function FamiljelakarnaStoryPageEn() {
             Bring this model to your clinic
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-slate-300">
-            Try Copiloto Médico with your team and see how it changes documentation and your scheduling capacity.
+            Try DeepClinic Copilot with your team and see how it changes documentation and your scheduling capacity.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link

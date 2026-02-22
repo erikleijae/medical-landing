@@ -9,7 +9,7 @@ function HeaderPt() {
             <span className="inline-block h-6 w-6 rounded-full border border-slate-900 bg-slate-900" />
             <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
           </div>
-          <span className="text-[18px] font-semibold tracking-tight text-slate-900">Copiloto Médico</span>
+          <span className="text-[18px] font-semibold tracking-tight text-slate-900">DeepClinic Copilot</span>
         </div>
 
         <nav className="hidden items-center gap-8 text-sm text-slate-800 lg:flex">
@@ -63,7 +63,7 @@ export default function PricingPagePt() {
               Preços
             </h1>
             <p className="mt-3 text-sm text-slate-600 sm:text-[15px]">
-              O Copiloto Médico é oferecido como um serviço por assinatura para profissionais individuais e organizações.
+              O DeepClinic Copilot é oferecido como um serviço por assinatura para profissionais individuais e organizações.
               A tabela de preços para América Latina está sendo finalizada; se quiser uma proposta, entre em contato com o
               nosso time.
             </p>
