@@ -1,254 +1,205 @@
-import Link from "next/link";
+import { DeepClinicTopNav } from "../../../components/deepclinic-top-nav";
+import { GrokBackground } from "../../../components/grok-background";
+import { MotionReveal } from "../../../components/motion-reveal";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-white text-slate-900">
-      {/* HEADER */}
-      <header className="border-b border-slate-200 bg-white">
-        <div className="flex items-center justify-between gap-8 px-3 py-2 md:px-5 lg:px-6">
-          <div className="flex items-center gap-2">
-            <div className="flex items-center">
-              <span className="inline-block h-6 w-6 rounded-full border border-slate-900 bg-slate-900" />
-              <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
-            </div>
-            <Link href="/" className="text-[18px] font-semibold tracking-tight text-slate-900">
-              DeepClinic Copilot
-            </Link>
-          </div>
-
-          <nav className="hidden items-center gap-8 text-sm text-slate-800 lg:flex">
-            <Link href="/es/product" className="hover:text-slate-900">
-              Producto
-            </Link>
-            <Link href="/es/customer-stories" className="hover:text-slate-900">
-              Historias de clientes
-            </Link>
-            <Link href="/es/benefits-simulator" className="hover:text-slate-900">
-              Simulador de beneficios
-            </Link>
-            <Link href="/es/pricing" className="hover:text-slate-900">
-              Precio
-            </Link>
-          </nav>
-
-          <div className="flex items-center gap-4 text-sm">
-            <Link
-              href="/es/login"
-              target="_blank"
-              rel="noreferrer"
-              className="hidden text-slate-700 hover:text-slate-900 sm:inline"
-            >
-              Iniciar sesión
-            </Link>
-            <span className="hidden text-slate-300 sm:inline">|</span>
-            <Link
-              href="/signup"
-              className="hidden text-slate-700 hover:text-slate-900 sm:inline"
-            >
-              Registrarse
-            </Link>
-            <Link
-              href="/es/contact"
-              className="inline-flex items-center justify-center rounded-full bg-[#d5ff7c] px-5 py-2 text-[13px] font-semibold text-slate-900 shadow-sm hover:bg-[#c9f46c]"
-            >
-              Solicitar demo
-              <span className="ml-1" aria-hidden>
-                →
-              </span>
-            </Link>
-          </div>
-        </div>
-      </header>
+    <main className="relative min-h-screen bg-black text-white selection:bg-white/20">
+      <GrokBackground />
+      <DeepClinicTopNav showProductsSubnav />
 
       {/* HERO CONTACTO */}
-      <section className="bg-white">
-        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-12 md:flex-row md:items-stretch md:px-6 lg:px-0">
+      <section className="relative z-10 pt-32 pb-20 md:pt-40 md:pb-24">
+        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 md:flex-row md:items-stretch md:px-8 lg:px-0">
           {/* LADO IZQUIERDO: TESTIMONIO / CONFIANZA */}
-          <div className="flex-1 rounded-3xl bg-slate-50 p-6 md:p-8 lg:p-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
-              Utilizado por +1.000 grupos sanitarios
-            </p>
+          <div className="flex-1 rounded-[24px] border border-white/10 bg-white/5 p-8 md:p-10">
+            <MotionReveal>
+              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/40">
+                Utilizado por +1.000 grupos sanitarios
+              </p>
 
-            <div className="mt-8 flex min-h-[260px] flex-col justify-between rounded-2xl bg-gradient-to-b from-slate-50 to-slate-100 px-6 py-8 text-slate-800 sm:min-h-[320px] sm:px-8 sm:py-10">
-              <div className="space-y-4">
-                <p className="text-[22px] font-medium leading-snug text-slate-900 sm:text-[26px]">
-                  “Con la solución de IA de DeepClinic Copilot podemos centrarnos plenamente en el paciente sin preocuparnos por
-                  escribir o dictar.”
-                </p>
-                <p className="text-sm text-slate-600">
-                  El asistente clínico nos ayuda a reducir el tiempo dedicado a tareas administrativas y a mantener notas
-                  detalladas después de cada consulta.
-                </p>
-              </div>
+              <div className="mt-8 flex min-h-[260px] flex-col justify-between rounded-2xl border border-white/10 bg-white/5 px-8 py-10 sm:min-h-[320px]">
+                <div className="space-y-4">
+                  <p className="text-[22px] font-medium leading-snug text-white/90 sm:text-[26px]">
+                    “Con la solución de IA de DeepClinic Copilot podemos centrarnos plenamente en el paciente sin preocuparnos por
+                    escribir o dictar.”
+                  </p>
+                  <p className="text-[14px] leading-relaxed text-white/60">
+                    El asistente clínico nos ayuda a reducir el tiempo dedicado a tareas administrativas y a mantener notas
+                    detalladas después de cada consulta.
+                  </p>
+                </div>
 
-              <div className="mt-6 flex items-center gap-3 text-sm text-slate-600">
-                <div className="h-10 w-10 rounded-full bg-slate-300" />
-                <div className="space-y-0.5">
-                  <p className="text-sm font-semibold text-slate-900">Directora médica</p>
-                  <p className="text-xs text-slate-500">Red hospitalaria en América</p>
+                <div className="mt-6 flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-white/20" />
+                  <div className="space-y-0.5">
+                    <p className="text-[13px] font-bold text-white">Directora médica</p>
+                    <p className="text-[12px] text-white/50">Red hospitalaria en América</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="mt-6 flex items-center justify-center gap-1 text-[10px] text-slate-400">
-              <span className="inline-block h-1.5 w-4 rounded-full bg-slate-900" />
-              <span className="inline-block h-1.5 w-2 rounded-full bg-slate-300" />
-              <span className="inline-block h-1.5 w-2 rounded-full bg-slate-300" />
-            </div>
+              <div className="mt-8 flex items-center justify-center gap-1.5">
+                <span className="inline-block h-1.5 w-4 rounded-full bg-white" />
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-white/20" />
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-white/20" />
+              </div>
+            </MotionReveal>
           </div>
 
           {/* LADO DERECHO: FORMULARIO */}
-          <div className="w-full md:w-[420px] lg:w-[460px]">
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7 lg:p-8">
-              <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
-                  Demostración personalizada
-                </p>
-                <h1 className="text-lg font-semibold text-slate-900 sm:text-xl">
-                  Descubre DeepClinic Copilot con uno de nuestros especialistas
-                </h1>
-                <p className="text-xs text-slate-500 sm:text-[13px]">
-                  Comprueba cómo opera DeepClinic Copilot en la práctica diaria y resuelve dudas sobre tu caso concreto.
+          <div className="w-full md:w-[460px]">
+            <MotionReveal delayMs={100}>
+              <div className="rounded-[24px] border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+                <div className="space-y-2">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/40">
+                    Demostración personalizada
+                  </p>
+                  <h1 className="text-[20px] font-bold text-white sm:text-[22px]">
+                    Descubre DeepClinic Copilot
+                  </h1>
+                  <p className="text-[13px] leading-relaxed text-white/60">
+                    Comprueba cómo opera DeepClinic Copilot en la práctica diaria y resuelve dudas sobre tu caso concreto.
+                  </p>
+                </div>
+
+                <form className="mt-8 space-y-4" action="#" method="post" autoComplete="off">
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="space-y-1.5">
+                      <label htmlFor="firstName" className="text-[11px] font-bold uppercase tracking-wider text-white/70">
+                        Nombre
+                      </label>
+                      <input
+                        id="firstName"
+                        name="firstName"
+                        type="text"
+                        autoComplete="off"
+                        placeholder="p. ej. Javier"
+                        className="block w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white placeholder-white/20 outline-none transition focus:border-white/30 focus:bg-white/10"
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <label htmlFor="lastName" className="text-[11px] font-bold uppercase tracking-wider text-white/70">
+                        Apellido
+                      </label>
+                      <input
+                        id="lastName"
+                        name="lastName"
+                        type="text"
+                        autoComplete="off"
+                        placeholder="p. ej. Morales"
+                        className="block w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white placeholder-white/20 outline-none transition focus:border-white/30 focus:bg-white/10"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="space-y-1.5">
+                      <label htmlFor="email" className="text-[11px] font-bold uppercase tracking-wider text-white/70">
+                        Correo electrónico
+                      </label>
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autoComplete="off"
+                        placeholder="javier@clinica.es"
+                        className="block w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white placeholder-white/20 outline-none transition focus:border-white/30 focus:bg-white/10"
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <label htmlFor="phone" className="text-[11px] font-bold uppercase tracking-wider text-white/70">
+                        Teléfono
+                      </label>
+                      <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        autoComplete="off"
+                        placeholder="+XX 600..."
+                        className="block w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white placeholder-white/20 outline-none transition focus:border-white/30 focus:bg-white/10"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="space-y-1.5">
+                      <label htmlFor="clinic" className="text-[11px] font-bold uppercase tracking-wider text-white/70">
+                        Clínica
+                      </label>
+                      <input
+                        id="clinic"
+                        name="clinic"
+                        type="text"
+                        autoComplete="off"
+                        placeholder="Clínica Vida"
+                        className="block w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white placeholder-white/20 outline-none transition focus:border-white/30 focus:bg-white/10"
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <label htmlFor="country" className="text-[11px] font-bold uppercase tracking-wider text-white/70">
+                        País
+                      </label>
+                      <select
+                        id="country"
+                        name="country"
+                        className="block w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white outline-none transition focus:border-white/30 focus:bg-white/10 [&>option]:bg-black"
+                        defaultValue=""
+                      >
+                        <option value="" disabled>
+                          Elige tu país
+                        </option>
+                        <option value="es">España</option>
+                        <option value="mx">México</option>
+                        <option value="co">Colombia</option>
+                        <option value="cl">Chile</option>
+                        <option value="ar">Argentina</option>
+                        <option value="other">Otro</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label htmlFor="interest" className="text-[11px] font-bold uppercase tracking-wider text-white/70">
+                      Interés
+                    </label>
+                    <textarea
+                      id="interest"
+                      name="interest"
+                      rows={3}
+                      autoComplete="off"
+                      placeholder="Cuéntanos brevemente qué te interesa..."
+                      className="block w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white placeholder-white/20 outline-none transition focus:border-white/30 focus:bg-white/10 resize-none"
+                    />
+                  </div>
+
+                  <div className="space-y-4 pt-2">
+                    <label className="flex items-start gap-3 text-[11px] text-white/50">
+                      <input
+                        type="checkbox"
+                        name="consent"
+                        className="mt-0.5 h-4 w-4 rounded border-white/20 bg-white/5 text-white focus:ring-white/20"
+                      />
+                      <span>
+                        Acepto que DeepClinic Copilot se ponga en contacto conmigo. Mis datos se procesan de acuerdo con
+                        la política de privacidad.
+                      </span>
+                    </label>
+
+                    <button
+                      type="submit"
+                      className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 text-[13px] font-bold uppercase tracking-wider text-black transition-all hover:bg-white/90 hover:scale-[1.02]"
+                    >
+                      Reservar demostración
+                    </button>
+                  </div>
+                </form>
+
+                <p className="mt-6 text-center text-[10px] text-white/30">
+                  DeepClinic Copilot sigue estándares exigentes de seguridad y protección de datos.
                 </p>
               </div>
-
-              <form className="mt-6 space-y-4" action="#" method="post" autoComplete="off">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="space-y-1.5">
-                    <label htmlFor="firstName" className="text-xs font-medium text-slate-800">
-                      Nombre
-                    </label>
-                    <input
-                      id="firstName"
-                      name="firstName"
-                      type="text"
-                      autoComplete="off"
-                      placeholder="p. ej. Javier"
-                      className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <label htmlFor="lastName" className="text-xs font-medium text-slate-800">
-                      Apellido
-                    </label>
-                    <input
-                      id="lastName"
-                      name="lastName"
-                      type="text"
-                      autoComplete="off"
-                      placeholder="p. ej. Morales"
-                      className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="space-y-1.5">
-                    <label htmlFor="email" className="text-xs font-medium text-slate-800">
-                      Correo electrónico
-                    </label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      autoComplete="off"
-                      placeholder="javier@clinica.es"
-                      className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <label htmlFor="phone" className="text-xs font-medium text-slate-800">
-                      Número de teléfono
-                    </label>
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      autoComplete="off"
-                      placeholder="+XX 600 00 00 00"
-                      className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="space-y-1.5">
-                    <label htmlFor="clinic" className="text-xs font-medium text-slate-800">
-                      Clínica u organización
-                    </label>
-                    <input
-                      id="clinic"
-                      name="clinic"
-                      type="text"
-                      autoComplete="off"
-                      placeholder="Clínica Vida Clara"
-                      className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <label htmlFor="country" className="text-xs font-medium text-slate-800">
-                      País de práctica
-                    </label>
-                    <select
-                      id="country"
-                      name="country"
-                      className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
-                      defaultValue=""
-                    >
-                      <option value="" disabled>
-                        Elige tu país
-                      </option>
-                      <option value="es">España</option>
-                      <option value="mx">México</option>
-                      <option value="co">Colombia</option>
-                      <option value="cl">Chile</option>
-                      <option value="ar">Argentina</option>
-                      <option value="other">Otro</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="space-y-1.5">
-                  <label htmlFor="interest" className="text-xs font-medium text-slate-800">
-                    Su interés en DeepClinic Copilot
-                  </label>
-                  <textarea
-                    id="interest"
-                    name="interest"
-                    rows={3}
-                    autoComplete="off"
-                    placeholder="Cuéntanos brevemente qué te interesa de DeepClinic Copilot o qué tipo de centro gestionas."
-                    className="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
-                  />
-                </div>
-
-                <div className="space-y-3 pt-2">
-                  <label className="flex items-start gap-2 text-[11px] text-slate-600">
-                    <input
-                      type="checkbox"
-                      name="consent"
-                      className="mt-0.5 h-4 w-4 rounded border-slate-300 text-slate-900 focus:ring-slate-900"
-                    />
-                    <span>
-                      Acepto que DeepClinic Copilot se ponga en contacto conmigo. Mis datos personales se procesan de acuerdo con
-                      la política de privacidad aplicable.
-                    </span>
-                  </label>
-
-                  <button
-                    type="submit"
-                    className="inline-flex w-full items-center justify-center rounded-full bg-black px-5 py-3 text-sm font-semibold text-[#d5ff7c] shadow-sm transition hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 focus:ring-offset-white"
-                  >
-                    Reservar una demostración
-                  </button>
-                </div>
-              </form>
-
-              <p className="mt-5 text-center text-[10px] text-slate-400 sm:text-[11px]">
-                DeepClinic Copilot sigue estándares exigentes de seguridad y protección de datos y cumple con la normativa de
-                privacidad vigente.
-              </p>
-            </div>
+            </MotionReveal>
           </div>
         </div>
       </section>

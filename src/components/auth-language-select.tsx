@@ -40,7 +40,7 @@ function buildPath(nextLang: AuthLang, pathname: string | null) {
   return `/${parts.join("/")}`;
 }
 
-export function AuthLanguageSelect() {
+export function AuthLanguageSelect({ theme = "light" }: { theme?: "light" | "dark" }) {
   const pathname = usePathname();
   const router = useRouter();
   const [lang, setLang] = useState<AuthLang>("es");
@@ -49,8 +49,10 @@ export function AuthLanguageSelect() {
     setLang(resolveAuthLang(pathname));
   }, [pathname]);
 
+  const isDark = theme === "dark";
+
   return (
-    <label className="flex items-center gap-2 text-xs text-slate-500">
+    <label className={`flex items-center gap-2 text-xs ${isDark ? "text-white/50" : "text-slate-500"}`}>
       <span>{LANGUAGE_LABELS[lang]}</span>
       <select
         value={lang}
@@ -59,10 +61,13 @@ export function AuthLanguageSelect() {
           setLang(nextLang);
           router.push(buildPath(nextLang, pathname));
         }}
-        className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs text-slate-900"
+        className={`rounded-md border px-2 py-1 text-xs outline-none focus:ring-2 ${isDark
+            ? "border-white/10 bg-white/5 text-white focus:border-white/20 focus:bg-white/10 focus:ring-white/10"
+            : "border-slate-300 bg-white text-slate-900 focus:ring-slate-900/10"
+          }`}
       >
         {LANGUAGE_OPTIONS.map((option) => (
-          <option key={option.value} value={option.value}>
+          <option key={option.value} value={option.value} className="text-black">
             {option.label}
           </option>
         ))}

@@ -43,9 +43,10 @@ function formatHours(amount: number, locale: string) {
 type BenefitsSimulatorProps = {
   variant?: "full" | "compact";
   language?: Language;
+  theme?: "light" | "dark";
 };
 
-export function BenefitsSimulator({ variant = "full", language = "es" }: BenefitsSimulatorProps) {
+export function BenefitsSimulator({ variant = "full", language = "es", theme = "light" }: BenefitsSimulatorProps) {
   const [consultationsPerDay, setConsultationsPerDay] = useState<number | null>(10);
   const [consultationMinutes, setConsultationMinutes] = useState<number | null>(20);
   const [pricePerConsultation, setPricePerConsultation] = useState<number | null>(800);
@@ -54,6 +55,7 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
   const isEnglish = language === "en";
   const isPortuguese = language === "pt";
   const locale = isEnglish ? "en-US" : isPortuguese ? "pt-BR" : "es-MX";
+  const isDark = theme === "dark";
 
   const {
     hoursSavedPerDay,
@@ -100,8 +102,13 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
 
   const containerClasses =
     variant === "compact"
-      ? "relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-4 shadow-[0_14px_36px_rgba(15,23,42,0.12)]"
-      : "relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.12)]";
+      ? `relative overflow-hidden rounded-3xl border ${isDark ? "border-white/10 bg-white/5" : "border-slate-200 bg-white"} p-4 shadow-[0_14px_36px_rgba(15,23,42,0.12)]`
+      : `relative overflow-hidden rounded-3xl border ${isDark ? "border-white/10 bg-white/5" : "border-slate-200 bg-white"} p-6 shadow-[0_18px_45px_rgba(15,23,42,0.12)]`;
+
+  const labelClass = isDark ? "text-white" : "text-slate-900";
+  const subtextClass = isDark ? "text-white/50" : "text-slate-500";
+  const borderClass = isDark ? "border-white/20" : "border-slate-200";
+  const inputBgClass = isDark ? "bg-white/5 text-white" : "bg-white text-slate-900";
 
   return (
     <div className={containerClasses}>
@@ -118,7 +125,7 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
           <button
             type="button"
             onClick={() => setIsDetailsOpen(true)}
-            className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-[11px] font-medium text-slate-700 shadow-sm hover:border-slate-300 hover:bg-white"
+            className={`inline-flex items-center gap-1 rounded-full border ${isDark ? "border-white/20 bg-white/10 text-white hover:bg-white/20" : "border-slate-200 bg-white/70 text-slate-700 hover:border-slate-300 hover:bg-white"} px-3 py-1 text-[11px] font-medium shadow-sm`}
           >
             <span>
               {isEnglish
@@ -131,14 +138,14 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-slate-900">
+          <label className={`block text-sm font-medium ${labelClass}`}>
             {isEnglish
               ? "Visits you take per day"
               : isPortuguese
                 ? "Consultas que você realiza por dia"
                 : "Consultas que realizas al día"}
           </label>
-          <p className="mt-1 text-xs text-slate-500">
+          <p className={`mt-1 text-xs ${subtextClass}`}>
             {isEnglish
               ? "Use an approximate average of the patients you see on a typical workday."
               : isPortuguese
@@ -151,11 +158,10 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
                 key={option.value}
                 type="button"
                 onClick={() => setConsultationsPerDay(option.value)}
-                className={`rounded-full border px-2.5 py-1.5 font-medium transition ${
-                  consultationsPerDay === option.value
+                className={`rounded-full border px-2.5 py-1.5 font-medium transition ${consultationsPerDay === option.value
                     ? "border-slate-900 bg-slate-900 text-white"
-                    : "border-slate-200 bg-white text-slate-700 hover:border-slate-300"
-                }
+                    : `${borderClass} ${isDark ? "text-white hover:bg-white/10" : "bg-white text-slate-700 hover:border-slate-300"}`
+                  }
               `}
               >
                 {isEnglish ? option.labelEn : option.labelEs}
@@ -171,19 +177,19 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
               const value = e.target.value;
               setConsultationsPerDay(value === "" ? null : Number(value));
             }}
-            className="mt-4 w-full rounded-full border border-slate-200 px-5 py-3 text-base font-medium text-slate-900 shadow-sm focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/15"
+            className={`mt-4 w-full rounded-full border ${borderClass} px-5 py-3 text-base font-medium ${inputBgClass} shadow-sm focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/15`}
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-slate-900">
+          <label className={`block text-sm font-medium ${labelClass}`}>
             {isEnglish
               ? "Average length of each visit"
               : isPortuguese
                 ? "Duração média de cada consulta"
                 : "Duración media de cada consulta"}
           </label>
-          <p className="mt-1 text-xs text-slate-500">
+          <p className={`mt-1 text-xs ${subtextClass}`}>
             {isEnglish
               ? "Choose how much time you usually spend per visit."
               : isPortuguese
@@ -196,11 +202,10 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
                 key={option.value}
                 type="button"
                 onClick={() => setConsultationMinutes(option.value)}
-                className={`rounded-full border px-2.5 py-1.5 font-medium transition ${
-                  consultationMinutes === option.value
+                className={`rounded-full border px-2.5 py-1.5 font-medium transition ${consultationMinutes === option.value
                     ? "border-slate-900 bg-slate-900 text-white"
-                    : "border-slate-200 bg-white text-slate-700 hover:border-slate-300"
-                }
+                    : `${borderClass} ${isDark ? "text-white hover:bg-white/10" : "bg-white text-slate-700 hover:border-slate-300"}`
+                  }
               `}
               >
                 {isEnglish ? option.labelEn : option.labelEs}
@@ -211,14 +216,14 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
 
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
-            <label className="block text-sm font-medium text-slate-900">
+            <label className={`block text-sm font-medium ${labelClass}`}>
               {isEnglish
                 ? "Price charged per visit"
                 : isPortuguese
                   ? "Preço cobrado por consulta"
                   : "Precio cobrado por consulta"}
             </label>
-            <p className="mt-1 text-xs text-slate-500">
+            <p className={`mt-1 text-xs ${subtextClass}`}>
               {isEnglish
                 ? "In US dollars (USD)."
                 : isPortuguese
@@ -226,7 +231,7 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
                   : "En tu moneda local."}
             </p>
             <div className="relative mt-3">
-              <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-xs text-slate-400">
+              <span className={`pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-xs ${isDark ? "text-white/40" : "text-slate-400"}`}>
                 {isEnglish ? "$" : isPortuguese ? "R$" : ""}
               </span>
               <input
@@ -238,7 +243,7 @@ export function BenefitsSimulator({ variant = "full", language = "es" }: Benefit
                   const value = e.target.value;
                   setPricePerConsultation(value === "" ? null : Number(value));
                 }}
-                className="w-full rounded-full border border-slate-200 pl-8 pr-4 py-3 text-base font-medium text-slate-900 shadow-sm focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/15"
+                className={`w-full rounded-full border ${borderClass} pl-8 pr-4 py-3 text-base font-medium ${inputBgClass} shadow-sm focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/15`}
               />
             </div>
           </div>

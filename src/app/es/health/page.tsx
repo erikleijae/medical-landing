@@ -2,434 +2,404 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { HeroVideo } from "../../../components/hero-video";
-import { BenefitsSimulator } from "../../../components/benefits-simulator";
-import { LanguageSwitcher } from "../../../components/language-switcher";
 import { ConsultationsCounter, HoursSavedCounter } from "../../../components/consultations-counter";
 import { AudienceTabs } from "../../../components/audience-tabs";
+import { DeepClinicTopNav } from "../../../components/deepclinic-top-nav";
+import { GrokBackground } from "../../../components/grok-background";
+import { MotionReveal } from "../../../components/motion-reveal";
 
 export default function HealthPage() {
   return (
-    <main className="min-h-screen bg-white text-slate-900">
-      {/* HEADER */}
-      <header className="sticky top-0 z-40 border-b border-slate-100/80 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-8 px-6 py-4 md:px-8 lg:px-10">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex items-center">
-              <span className="inline-block h-6 w-6 rounded-full border border-brand-ink bg-[var(--brand-ink)]" />
-              <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-brand-ink bg-[var(--brand-bg)]" />
-            </div>
-            <span className="text-[18px] font-semibold tracking-tight text-slate-900">DeepClinic Health</span>
-          </Link>
-
-          <nav className="hidden items-center gap-8 text-sm text-slate-800 lg:flex">
-            <Link href="/es/product" className="hover:text-slate-900">
-              Producto
-            </Link>
-            <Link href="/es/benefits-simulator" className="hover:text-slate-900">
-              Simulador de beneficios
-            </Link>
-            <Link href="/es/pricing" className="hover:text-slate-900">
-              Precio
-            </Link>
-          </nav>
-
-          <div className="flex items-center gap-4 text-sm">
-            <LanguageSwitcher locale="es" />
-            <Link
-              href="/es/login"
-              target="_blank"
-              rel="noreferrer"
-              className="hidden text-slate-700 hover:text-slate-900 sm:inline"
-            >
-              Iniciar sesión
-            </Link>
-            <Link
-              href="/signup"
-              className="inline-flex items-center justify-center rounded-full bg-brand-accent px-5 py-2 text-[13px] font-semibold text-slate-900 shadow-sm ring-1 ring-black/5 hover:bg-brand-accent-hover"
-            >
-              Comenzar gratis
-              <span className="ml-1" aria-hidden>
-                →
-              </span>
-            </Link>
-          </div>
-        </div>
-      </header>
+    <main className="relative min-h-screen bg-black text-white selection:bg-white/20">
+      <GrokBackground />
+      <DeepClinicTopNav showProductsSubnav />
 
       {/* HERO */}
-      <section className="bg-white">
-        <div className="mx-auto flex max-w-6xl flex-col items-center px-6 pb-12 pt-20 text-center md:px-8 md:pb-16 md:pt-24 lg:px-0">
-          <h1 className="font-display text-[38px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[44px] md:text-[50px]">
-            Salud conectada para pacientes con{" "}
-            <span className="border-b-[6px] border-brand-accent-strong pb-1">DeepClinic Health</span>
-          </h1>
-          <p className="mt-3 text-[15px] text-slate-500 sm:mt-4">
-            Empodera a tus pacientes con acceso a su historial, citas y comunicación directa.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/signup"
-              className="inline-flex items-center justify-center rounded-full bg-brand-accent px-6 py-2.5 text-[13px] font-semibold text-slate-900 shadow-sm ring-1 ring-black/5 hover:bg-brand-accent-hover"
-            >
-              Comenzar gratis
-              <span className="ml-1" aria-hidden>
-                →
+      <section className="relative z-10 pt-32 pb-20 md:pt-40 md:pb-24">
+        <div className="mx-auto flex max-w-6xl flex-col items-center px-6 text-center md:px-8 lg:px-0">
+          <MotionReveal>
+            <h1 className="font-sans text-[42px] font-bold leading-[0.95] tracking-tighter text-white sm:text-[56px] md:text-[72px]">
+              Salud conectada para{" "}
+              <span className="bg-gradient-to-b from-white to-white/40 bg-clip-text text-transparent">
+                pacientes
               </span>
-            </Link>
-          </div>
+            </h1>
+          </MotionReveal>
+          
+          <MotionReveal delayMs={100}>
+            <p className="mt-6 max-w-2xl text-[18px] leading-relaxed text-white/60 sm:text-[20px]">
+              Empodera a tus pacientes con acceso a su historial, citas y comunicación directa. 
+              <span className="text-white/40"> El futuro del cuidado médico.</span>
+            </p>
+          </MotionReveal>
+
+          <MotionReveal delayMs={200}>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <Link
+                href="/signup"
+                className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/5 px-8 py-3 text-[13px] font-semibold uppercase tracking-[0.2em] text-white transition-all hover:bg-white/10 hover:border-white/40 hover:scale-105"
+              >
+                Comenzar gratis
+              </Link>
+            </div>
+          </MotionReveal>
         </div>
 
-        <div className="mx-auto max-w-6xl px-6 pb-8 md:px-8 lg:px-0">
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-8 md:gap-12">
-            <Image
-              src="/logos/doktorse.svg"
-              alt="Doktor.Se"
-              width={120}
-              height={32}
-              className="h-6 w-auto opacity-80"
-            />
-            <Image
-              src="/680a6f5dd62951a5097ddab2_nhs.svg"
-              alt="NHS"
-              width={90}
-              height={32}
-              className="h-6 w-auto opacity-80"
-            />
-            <Image
-              src="/680a970e6d5665751f6bfcb8_gaias.png"
-              alt="Clínicas Gaias"
-              width={110}
-              height={32}
-              className="h-6 w-auto opacity-80"
-            />
-            <Image
-              src="/680e64029f546840cd0fa79f_Arriaza.svg"
-              alt="Clínica Arriaza"
-              width={110}
-              height={32}
-              className="h-6 w-auto opacity-80"
-            />
-            <Image
-              src="/680e793ec5490e5100c376a2_CGM.svg"
-              alt="CompuGroup Medical"
-              width={120}
-              height={32}
-              className="h-6 w-auto opacity-80"
-            />
-            <Image
-              src="/680a6ef48f51aabf2425eca5_ncl icb.svg"
-              alt="North Central London ICB"
-              width={120}
-              height={32}
-              className="h-6 w-auto opacity-80"
-            />
+        <MotionReveal delayMs={300}>
+          <div className="mx-auto max-w-6xl px-6 pb-12 md:px-8 lg:px-0 mt-20">
+            <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 opacity-50 grayscale transition-all duration-500 hover:opacity-80 hover:grayscale-0">
+              <Image
+                src="/logos/doktorse.svg"
+                alt="Doktor.Se"
+                width={120}
+                height={32}
+                className="h-6 w-auto brightness-200 contrast-0 invert"
+              />
+              <Image
+                src="/680a6f5dd62951a5097ddab2_nhs.svg"
+                alt="NHS"
+                width={90}
+                height={32}
+                className="h-6 w-auto brightness-200 contrast-0 invert"
+              />
+              <Image
+                src="/680a970e6d5665751f6bfcb8_gaias.png"
+                alt="Clínicas Gaias"
+                width={110}
+                height={32}
+                className="h-6 w-auto brightness-200 contrast-0 invert"
+              />
+              <Image
+                src="/680e64029f546840cd0fa79f_Arriaza.svg"
+                alt="Clínica Arriaza"
+                width={110}
+                height={32}
+                className="h-6 w-auto brightness-200 contrast-0 invert"
+              />
+              <Image
+                src="/680e793ec5490e5100c376a2_CGM.svg"
+                alt="CompuGroup Medical"
+                width={120}
+                height={32}
+                className="h-6 w-auto brightness-200 contrast-0 invert"
+              />
+              <Image
+                src="/680a6ef48f51aabf2425eca5_ncl icb.svg"
+                alt="North Central London ICB"
+                width={120}
+                height={32}
+                className="h-6 w-auto brightness-200 contrast-0 invert"
+              />
+            </div>
           </div>
-        </div>
+        </MotionReveal>
 
-        <HeroVideo />
+        <MotionReveal delayMs={400}>
+          <HeroVideo theme="dark" />
+        </MotionReveal>
       </section>
 
       <ConsultationsCounter
         locale="es"
-        title="Pacientes conectados con DeepClinic Health"
+        title="Pacientes conectados"
         subtitle="Este número aumenta en tiempo real mientras navegas."
+        theme="dark"
       />
 
       <HoursSavedCounter
         locale="es"
-        title="Horas de atención optimizadas"
+        title="Horas optimizadas"
         subtitle="Mejor comunicación, menos visitas innecesarias"
+        theme="dark"
       />
 
       {/* CÓMO FUNCIONA DEEPCLINIC HEALTH */}
-      <section id="como-funciona" className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 sm:pt-28 md:px-8 md:pt-32">
+      <section id="como-funciona" className="relative z-10 py-32">
+        <div className="mx-auto max-w-6xl px-6 md:px-8">
           <div className="text-center">
-            <h2 className="font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[36px]">
-              Cómo funciona DeepClinic Health
+            <h2 className="text-[32px] font-semibold tracking-tight text-white md:text-[42px]">
+              Cómo funciona
             </h2>
-            <p className="mt-3 text-[15px] text-slate-500">
+            <p className="mt-4 text-[16px] text-white/50">
               La app que conecta al paciente con su médico y su salud.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            <article className="overflow-hidden rounded-3xl bg-white shadow-sm">
-              <div className="relative aspect-[4/3] w-full">
-                <Image
-                  src="/682dda116cdb3289f729c87c_sv1_3x-p-500.webp"
-                  alt="App de paciente"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                />
-              </div>
-              <div className="px-5 pb-6 pt-4 text-sm text-slate-700">
-                <p className="text-[13px] font-semibold text-slate-900">1. Acceso al historial</p>
-                <p className="mt-2 text-[13px] leading-relaxed text-slate-600">
-                  Los pacientes pueden consultar sus recetas, resultados de laboratorio y notas de consulta en cualquier momento.
-                </p>
-              </div>
-            </article>
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            <MotionReveal delayMs={0} className="h-full">
+              <article className="group relative h-full overflow-hidden rounded-[24px] border border-white/10 bg-white/5 transition-all duration-300 hover:border-white/20 hover:bg-white/10">
+                <div className="relative aspect-[4/3] w-full mix-blend-overlay opacity-80 transition-opacity group-hover:opacity-100">
+                  <Image
+                    src="/682dda116cdb3289f729c87c_sv1_3x-p-500.webp"
+                    alt="App de paciente"
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                  />
+                </div>
+                <div className="p-6">
+                  <p className="text-[14px] font-semibold tracking-wide text-white">01. ACCESO AL HISTORIAL</p>
+                  <p className="mt-3 text-[13px] leading-relaxed text-white/60">
+                    Los pacientes pueden consultar sus recetas, resultados de laboratorio y notas de consulta en cualquier momento.
+                  </p>
+                </div>
+              </article>
+            </MotionReveal>
 
-            <article className="overflow-hidden rounded-3xl bg-white shadow-sm">
-              <div className="relative aspect-[4/3] w-full">
-                <Image
-                  src="/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp"
-                  alt="Chat médico-paciente"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                />
-              </div>
-              <div className="px-5 pb-6 pt-4 text-sm text-slate-700">
-                <p className="text-[13px] font-semibold text-slate-900">2. Comunicación segura</p>
-                <p className="mt-2 text-[13px] leading-relaxed text-slate-600">
-                  Canal de chat seguro y directo para resolver dudas sin necesidad de visitas presenciales.
-                </p>
-              </div>
-            </article>
+            <MotionReveal delayMs={100} className="h-full">
+              <article className="group relative h-full overflow-hidden rounded-[24px] border border-white/10 bg-white/5 transition-all duration-300 hover:border-white/20 hover:bg-white/10">
+                <div className="relative aspect-[4/3] w-full mix-blend-overlay opacity-80 transition-opacity group-hover:opacity-100">
+                  <Image
+                    src="/682dda1b6e4efdc16a1d16ad_sv2_3x-p-500.webp"
+                    alt="Chat médico-paciente"
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                  />
+                </div>
+                <div className="p-6">
+                  <p className="text-[14px] font-semibold tracking-wide text-white">02. COMUNICACIÓN SEGURA</p>
+                  <p className="mt-3 text-[13px] leading-relaxed text-white/60">
+                    Canal de chat seguro y directo para resolver dudas sin necesidad de visitas presenciales.
+                  </p>
+                </div>
+              </article>
+            </MotionReveal>
 
-            <article className="overflow-hidden rounded-3xl bg-white shadow-sm">
-              <div className="relative aspect-[4/3] w-full">
-                <Image
-                  src="/682dda247bf886638e57f4a2_sv3_3x-p-500.webp"
-                  alt="Gestión de salud familiar"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                />
-              </div>
-              <div className="px-5 pb-6 pt-4 text-sm text-slate-700">
-                <p className="text-[13px] font-semibold text-slate-900">3. Salud familiar</p>
-                <p className="mt-2 text-[13px] leading-relaxed text-slate-600">
-                  Gestiona la salud de toda la familia, incluyendo niños y mascotas, desde una sola cuenta.
-                </p>
-              </div>
-            </article>
+            <MotionReveal delayMs={200} className="h-full">
+              <article className="group relative h-full overflow-hidden rounded-[24px] border border-white/10 bg-white/5 transition-all duration-300 hover:border-white/20 hover:bg-white/10">
+                <div className="relative aspect-[4/3] w-full mix-blend-overlay opacity-80 transition-opacity group-hover:opacity-100">
+                  <Image
+                    src="/682dda247bf886638e57f4a2_sv3_3x-p-500.webp"
+                    alt="Gestión de salud familiar"
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                  />
+                </div>
+                <div className="p-6">
+                  <p className="text-[14px] font-semibold tracking-wide text-white">03. SALUD FAMILIAR</p>
+                  <p className="mt-3 text-[13px] leading-relaxed text-white/60">
+                    Gestiona la salud de toda la familia, incluyendo niños y mascotas, desde una sola cuenta.
+                  </p>
+                </div>
+              </article>
+            </MotionReveal>
           </div>
         </div>
       </section>
 
-      {/* MEJORES HISTORIAS, MAYOR SEGURIDAD */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-32 text-center md:py-36">
-          <h2 className="text-[28px] font-semibold tracking-tight text-slate-900 sm:text-[32px]">
-            Pacientes comprometidos, mejores resultados
-          </h2>
-          <p className="mt-3 text-sm text-slate-500 sm:text-[15px]">
-            DeepClinic Health fomenta el autocuidado y la adherencia al tratamiento.
-          </p>
+      {/* MEJORES HISTORIAS */}
+      <section className="relative z-10 py-32 border-t border-white/5">
+        <div className="mx-auto max-w-6xl px-6 text-center md:px-8">
+          <MotionReveal>
+            <h2 className="text-[32px] font-semibold tracking-tight text-white md:text-[42px]">
+              Mejores resultados
+            </h2>
+            <p className="mt-4 text-[16px] text-white/50">
+              DeepClinic Health fomenta el autocuidado y la adherencia al tratamiento.
+            </p>
+          </MotionReveal>
 
-          <div className="mt-10 space-y-8">
-            {/* Fila superior: especialidades y transferencias */}
-            <div className="grid gap-6 text-left md:grid-cols-2">
-              {/* Especialidades */}
-              <div className="rounded-3xl bg-slate-50 p-5 shadow-sm">
-                <div className="relative overflow-hidden rounded-2xl bg-slate-100">
+          <div className="mt-16 grid gap-6 md:grid-cols-2 text-left">
+            <MotionReveal delayMs={0}>
+              <div className="rounded-[24px] border border-white/10 bg-white/5 p-6 transition-all hover:bg-white/10">
+                <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black/20">
                   <Image
                     src="/especialidades.png"
                     alt="DeepClinic Health para todos"
-                    width={640}
-                    height={360}
-                    className="h-auto w-full object-cover"
+                    fill
+                    className="object-cover opacity-80 hover:opacity-100 transition-opacity"
                     sizes="(min-width: 768px) 50vw, 100vw"
                   />
                 </div>
-                <div className="mt-4 text-sm text-slate-700">
-                  <p className="text-sm font-semibold text-slate-900">Experiencia unificada</p>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-600">
+                <div className="mt-6">
+                  <p className="text-[14px] font-semibold tracking-wide text-white">EXPERIENCIA UNIFICADA</p>
+                  <p className="mt-2 text-[13px] leading-relaxed text-white/60">
                     Una sola app para interactuar con todos sus médicos y proveedores de salud.
                   </p>
                 </div>
               </div>
+            </MotionReveal>
 
-              {/* Transferencias */}
-              <div className="rounded-3xl bg-slate-50 p-5 shadow-sm">
-                <div className="relative overflow-hidden rounded-2xl bg-slate-100">
+            <MotionReveal delayMs={150}>
+              <div className="rounded-[24px] border border-white/10 bg-white/5 p-6 transition-all hover:bg-white/10">
+                <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black/20">
                   <Image
                     src="/medico.png"
                     alt="Seguimiento de tratamiento"
-                    width={640}
-                    height={360}
-                    className="h-auto w-full object-cover"
+                    fill
+                    className="object-cover opacity-80 hover:opacity-100 transition-opacity"
                     sizes="(min-width: 768px) 50vw, 100vw"
                   />
                 </div>
-                <div className="mt-4 text-sm text-slate-700">
-                  <p className="text-sm font-semibold text-slate-900">
-                    Mejor adherencia
-                  </p>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-600">
+                <div className="mt-6">
+                  <p className="text-[14px] font-semibold tracking-wide text-white">MEJOR ADHERENCIA</p>
+                  <p className="mt-2 text-[13px] leading-relaxed text-white/60">
                     Recordatorios de medicamentos y citas ayudan a los pacientes a seguir su tratamiento al pie de la letra.
                   </p>
                 </div>
               </div>
-            </div>
+            </MotionReveal>
           </div>
         </div>
       </section>
 
-      <AudienceTabs language="es" />
+      <AudienceTabs language="es" theme="dark" />
 
-      {/* DEEPCLINIC HEALTH EN LA PRÁCTICA */}
-      <section id="producto" className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-32 md:py-36">
+      {/* EN LA PRÁCTICA */}
+      <section id="producto" className="relative z-10 py-32 border-t border-white/5">
+        <div className="mx-auto max-w-6xl px-6 md:px-8">
           <div className="text-center">
-            <h2 className="text-[28px] font-semibold tracking-tight text-slate-900 sm:text-[32px]">
-              DeepClinic Health en la práctica
+            <h2 className="text-[32px] font-semibold tracking-tight text-white md:text-[42px]">
+              En la práctica
             </h2>
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-4 text-[16px] text-white/50">
               Modernizando la experiencia del paciente
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-              <div className="relative aspect-[16/9] w-full">
-                <Image
-                  src="/Medica.png"
-                  alt="Experiencia del paciente"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                />
-              </div>
-              <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
-                <p className="text-justify">
-                  Los pacientes valoran tener el control de su salud en la palma de su mano, lo que aumenta la lealtad hacia su médico.
-                </p>
-              </div>
-            </article>
+          <div className="mt-16 grid gap-8 md:grid-cols-2">
+            <MotionReveal delayMs={0}>
+              <article className="overflow-hidden rounded-[24px] border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                <div className="relative aspect-[16/9] w-full">
+                  <Image
+                    src="/Medica.png"
+                    alt="Experiencia del paciente"
+                    fill
+                    className="object-cover opacity-90"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                  />
+                </div>
+                <div className="p-8">
+                  <p className="text-[14px] leading-relaxed text-white/80">
+                    Los pacientes valoran tener el control de su salud en la palma de su mano, lo que aumenta la lealtad hacia su médico.
+                  </p>
+                </div>
+              </article>
+            </MotionReveal>
 
-            <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-              <div className="relative aspect-[16/9] w-full">
-                <Image
-                  src="/houston.png"
-                  alt="Telemedicina"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                />
-              </div>
-              <div className="px-5 pb-5 pt-4 text-sm text-slate-700">
-                <p className="text-justify">
-                  La telemedicina integrada permite consultas rápidas y seguimiento continuo sin desplazamientos.
-                </p>
-              </div>
-            </article>
+            <MotionReveal delayMs={150}>
+              <article className="overflow-hidden rounded-[24px] border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                <div className="relative aspect-[16/9] w-full">
+                  <Image
+                    src="/houston.png"
+                    alt="Telemedicina"
+                    fill
+                    className="object-cover opacity-90"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                  />
+                </div>
+                <div className="p-8">
+                  <p className="text-[14px] leading-relaxed text-white/80">
+                    La telemedicina integrada permite consultas rápidas y seguimiento continuo sin desplazamientos.
+                  </p>
+                </div>
+              </article>
+            </MotionReveal>
           </div>
         </div>
       </section>
 
-      {/* ESTUDIOS DE CASO DESTACADOS */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-32 md:py-36">
-          {/* Caso 1 */}
-          <div className="grid items-stretch gap-6 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)]">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-slate-200">
-              <Image
-                src="/680b8bd084ba7f136270ee2a_testimonial1.png"
-                alt="Paciente utilizando DeepClinic Health"
-                fill
-                className="object-cover"
-                sizes="(min-width: 768px) 22rem, 100vw"
-              />
-            </div>
-            <div className="flex flex-col justify-center rounded-3xl border border-slate-200 bg-white p-6 text-left shadow-sm">
-              <div className="space-y-3">
-                <p className="text-lg font-medium leading-snug text-slate-900 sm:text-xl">
-                  «Tener todas las recetas y citas de mis hijos y mías en una sola app es increíble. Ya no pierdo papeles ni olvido cuándo toca la próxima revisión.»
-                </p>
-                <div className="text-xs text-slate-600">
-                  <p className="font-semibold text-slate-900">María López</p>
-                  <p>Madre de familia</p>
-                  <p>Usuaria de DeepClinic Health</p>
+      {/* TESTIMONIAL */}
+      <section className="relative z-10 py-32 border-t border-white/5 bg-white/[0.02]">
+        <div className="mx-auto max-w-6xl px-6 md:px-8">
+          <MotionReveal>
+            <div className="grid items-center gap-8 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
+              <div className="relative aspect-square w-full overflow-hidden rounded-[32px] border border-white/10 bg-black">
+                <Image
+                  src="/680b8bd084ba7f136270ee2a_testimonial1.png"
+                  alt="Paciente utilizando DeepClinic Health"
+                  fill
+                  className="object-cover opacity-80"
+                  sizes="(min-width: 768px) 22rem, 100vw"
+                />
+              </div>
+              <div className="flex flex-col justify-center p-6 text-left">
+                <div className="space-y-6">
+                  <p className="text-2xl font-medium leading-relaxed text-white/90">
+                    «Tener todas las recetas y citas de mis hijos y mías en una sola app es increíble. Ya no pierdo papeles ni olvido cuándo toca la próxima revisión.»
+                  </p>
+                  <div className="border-l-2 border-white/20 pl-4">
+                    <p className="text-sm font-bold uppercase tracking-wider text-white">María López</p>
+                    <p className="text-sm text-white/50">Madre de familia • Usuaria de DeepClinic Health</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
+          </MotionReveal>
         </div>
       </section>
 
       {/* SEGURIDAD */}
-      <section id="seguridad" className="border-b border-slate-100 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-32 md:py-36">
-          {/* Título y subtítulo centrados */}
+      <section id="seguridad" className="relative z-10 border-t border-white/5 py-32">
+        <div className="mx-auto max-w-6xl px-6 md:px-8">
           <div className="text-center">
-            <h2 className="font-display text-[32px] font-semibold leading-tight tracking-tight text-slate-900 sm:text-[36px]">
-              Priorizamos la seguridad y la integridad
+            <h2 className="text-[32px] font-semibold tracking-tight text-white md:text-[42px]">
+              Seguridad e integridad
             </h2>
-            <p className="mt-3 text-[15px] text-slate-500">
+            <p className="mt-4 text-[16px] text-white/50">
               DeepClinic Health protege la privacidad de tu información médica.
             </p>
           </div>
 
-          {/* Fila de 3 bullets */}
-          <div className="mt-12 grid gap-10 text-center text-sm text-slate-700 sm:text-base md:grid-cols-3">
-            <div className="space-y-3">
-              <div className="text-sm text-slate-500">
-                <span aria-hidden>✓</span>
-              </div>
-              <p className="text-sm font-semibold text-slate-900">
-                Acceso biométrico
-              </p>
-              <p className="text-sm text-slate-700">
-                Protege el acceso a tu app con huella digital o reconocimiento facial.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <div className="text-sm text-slate-500">
-                <span aria-hidden>✓</span>
-              </div>
-              <p className="text-sm font-semibold text-slate-900">
-                Tus datos son tuyos
-              </p>
-              <p className="text-sm text-slate-700">
-                Tú decides qué compartir y con quién. Tienes control total sobre tu información.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <div className="text-sm text-slate-500">
-                <span aria-hidden>✓</span>
-              </div>
-              <p className="text-sm font-semibold text-slate-900">
-                Cumplimiento de privacidad
-              </p>
-              <p className="text-sm text-slate-700">
-                Cumplimos con todas las normativas de protección de datos personales en salud.
-              </p>
-            </div>
+          <div className="mt-16 grid gap-10 text-center md:grid-cols-3">
+            {[
+              {
+                title: "Acceso biométrico",
+                desc: "Protege el acceso a tu app con huella digital o reconocimiento facial."
+              },
+              {
+                title: "Tus datos son tuyos",
+                desc: "Tú decides qué compartir y con quién. Tienes control total sobre tu información."
+              },
+              {
+                title: "Cumplimiento de privacidad",
+                desc: "Cumplimos con todas las normativas de protección de datos personales en salud."
+              }
+            ].map((item, i) => (
+              <MotionReveal key={i} delayMs={i * 100}>
+                <div className="rounded-[24px] border border-white/5 bg-white/[0.02] p-8 transition-colors hover:bg-white/[0.04]">
+                  <div className="mb-4 text-sky-400">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="mx-auto">
+                      <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <p className="text-[14px] font-bold uppercase tracking-wide text-white">
+                    {item.title}
+                  </p>
+                  <p className="mt-3 text-[13px] leading-relaxed text-white/50">
+                    {item.desc}
+                  </p>
+                </div>
+              </MotionReveal>
+            ))}
           </div>
 
-          {/* Bloque inferior con imagen y texto */}
-          <div className="mt-14 grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)] md:items-center">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-slate-300">
+          <div className="mt-20 grid gap-12 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:items-center">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[24px] border border-white/10 bg-white/5">
               <Image
                 src="/hipaa.png"
-                alt="Certificaciones de seguridad de DeepClinic Health"
+                alt="Certificaciones de seguridad"
                 fill
-                className="object-cover"
+                className="object-cover opacity-80"
                 sizes="(min-width: 768px) 24rem, 100vw"
               />
             </div>
 
-            <div className="space-y-4 text-left text-sm text-slate-700">
-              <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
+            <div className="space-y-6 text-left">
+              <h3 className="text-[24px] font-semibold leading-tight text-white">
                 Con la confianza de familias en toda América
               </h3>
-              <p>
+              <p className="text-[15px] leading-relaxed text-white/60">
                 Basado en los más altos estándares de seguridad, DeepClinic Health garantiza una gestión de salud personal
                 segura y confiable.
               </p>
               <Link
                 href="/es/data-security"
-                className="inline-flex items-center font-medium text-brand-accent-strong hover:text-brand-accent-hover"
+                className="inline-flex items-center text-[13px] font-bold uppercase tracking-wider text-white transition-colors hover:text-sky-300"
               >
-                Conoce más sobre nuestra seguridad <span className="ml-1">→</span>
+                Conoce más sobre seguridad <span className="ml-2">→</span>
               </Link>
             </div>
           </div>

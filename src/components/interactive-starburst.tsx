@@ -1,7 +1,7 @@
 "use client";
 
 import type { PointerEvent as ReactPointerEvent } from "react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 
 type StarPoint = {
   id: string;
@@ -12,6 +12,18 @@ type StarPoint = {
   fill: string;
   question: string;
 };
+
+function round3(value: number) {
+  return Math.round(value * 1000) / 1000;
+}
+
+function clamp(value: number, min: number, max: number) {
+  return Math.min(max, Math.max(min, value));
+}
+
+function joinClassNames(...parts: Array<string | undefined | null | false>) {
+  return parts.filter(Boolean).join(" ");
+}
 
 type StarRay = {
   id: string;
@@ -24,119 +36,58 @@ type StarRay = {
 
 type Props = {
   className?: string;
+  lang?: "es" | "en" | "pt";
+  ambientMotion?: boolean;
 };
 
-function joinClassNames(...parts: Array<string | undefined | false | null>) {
-  return parts.filter(Boolean).join(" ");
-}
+const QUESTIONS = {
+  es: [
+    "¿Qué diagnóstico diferencial considerar en cefalea súbita?",
+    "¿Interpretación inicial de gasometría arterial en disnea?",
+    "¿Manejo de hipertensión severa asintomática vs urgencia hipertensiva?",
+    "¿Cuándo iniciar antibiótico en IVU complicada y qué esquema?",
+    "¿Algoritmo de dolor abdominal agudo: laboratorios e imagen inicial?",
+    "¿Criterios de gravedad en asma y manejo en urgencias?",
+    "¿Evaluación inicial de síncope: riesgo y estudios?",
+    "¿Abordaje de fiebre sin foco: red flags y pruebas?",
+    "¿Manejo de anticoagulación perioperatoria en DOACs?",
+    "¿Interpretación de pruebas tiroideas (TSH/T4) en distintos escenarios?",
+    "¿Tratamiento inicial de insuficiencia cardiaca descompensada?",
+    "¿Cribado y manejo de enfermedad renal crónica en primer nivel?",
+  ],
+  en: [
+    "What differential diagnosis to consider in sudden headache?",
+    "Initial interpretation of arterial blood gas in dyspnea?",
+    "Management of asymptomatic severe hypertension vs hypertensive urgency?",
+    "When to start antibiotics in complicated UTI and which regimen?",
+    "Acute abdominal pain algorithm: initial labs and imaging?",
+    "Severity criteria in asthma and emergency management?",
+    "Initial evaluation of syncope: risk and studies?",
+    "Approach to fever without source: red flags and tests?",
+    "Management of perioperative anticoagulation in DOACs?",
+    "Interpretation of thyroid tests (TSH/T4) in different scenarios?",
+    "Initial treatment of decompensated heart failure?",
+    "Screening and management of chronic kidney disease in primary care?",
+  ],
+  pt: [
+    "Que diagnóstico diferencial considerar em cefaleia súbita?",
+    "Interpretação inicial de gasometria arterial em dispneia?",
+    "Manejo de hipertensão grave assintomática vs urgência hipertensiva?",
+    "Quando iniciar antibiótico em ITU complicada e qual esquema?",
+    "Algoritmo de dor abdominal aguda: laboratórios e imagem inicial?",
+    "Critérios de gravidade em asma e manejo na emergência?",
+    "Avaliação inicial de síncope: risco e estudos?",
+    "Abordagem de febre sem foco: red flags e exames?",
+    "Manejo de anticoagulação perioperatória em DOACs?",
+    "Interpretação de testes tireoidianos (TSH/T4) em diferentes cenários?",
+    "Tratamento inicial de insuficiência cardíaca descompensada?",
+    "Rastreamento e manejo de doença renal crônica na atenção primária?",
+  ],
+};
 
-function clamp(value: number, min: number, max: number) {
-  return Math.min(max, Math.max(min, value));
-}
-
-export function InteractiveStarburst({ className }: Props) {
-  const points = useMemo<StarPoint[]>(
-    () => [
-      {
-        id: "p1",
-        x: 313,
-        y: 118,
-        w: 8,
-        h: 8,
-        fill: "rgba(147,197,253,0.85)",
-        question: "¿Qué antibiótico empírico iniciar en neumonía adquirida en la comunidad?",
-      },
-      {
-        id: "p2",
-        x: 452,
-        y: 88,
-        w: 6,
-        h: 6,
-        fill: "rgba(255,255,255,0.55)",
-        question: "¿Manejo inicial de sepsis en urgencias: fluidos, antibióticos y lactato?",
-      },
-      {
-        id: "p3",
-        x: 902,
-        y: 166,
-        w: 7,
-        h: 7,
-        fill: "rgba(147,197,253,0.70)",
-        question: "¿Cómo interpretar este ECG y cuándo activar código infarto?",
-      },
-      {
-        id: "p4",
-        x: 992,
-        y: 308,
-        w: 6,
-        h: 6,
-        fill: "rgba(255,255,255,0.45)",
-        question: "¿Indicaciones de anticoagulación en fibrilación auricular (CHA2DS2-VASc)?",
-      },
-      {
-        id: "p5",
-        x: 948,
-        y: 430,
-        w: 7,
-        h: 7,
-        fill: "rgba(147,197,253,0.65)",
-        question: "¿Evaluación de anemia microcítica: ferritina, VCM y sospecha clínica?",
-      },
-      {
-        id: "p6",
-        x: 840,
-        y: 522,
-        w: 6,
-        h: 6,
-        fill: "rgba(255,255,255,0.38)",
-        question: "¿Abordaje de dolor torácico agudo: diferenciales y pruebas iniciales?",
-      },
-      {
-        id: "p7",
-        x: 410,
-        y: 518,
-        w: 7,
-        h: 7,
-        fill: "rgba(147,197,253,0.70)",
-        question: "¿Criterios para hospitalizar una exacerbación de EPOC y tratamiento?",
-      },
-      {
-        id: "p8",
-        x: 284,
-        y: 410,
-        w: 6,
-        h: 6,
-        fill: "rgba(255,255,255,0.35)",
-        question: "¿Manejo de hiperglucemia en DM2: ajuste de basal/bolo y objetivos?",
-      },
-      {
-        id: "p9",
-        x: 226,
-        y: 298,
-        w: 7,
-        h: 7,
-        fill: "rgba(147,197,253,0.60)",
-        question: "¿Sospecha de TEP: Wells, dímero D, y cuándo solicitar angio-TC?",
-      },
-    ],
-    [],
-  );
-
+export function InteractiveStarburst({ className, lang = "es", ambientMotion = false }: Props) {
   const rays = useMemo<StarRay[]>(() => {
-    const questions = [
-      "¿Qué diagnóstico diferencial considerar en cefalea súbita?",
-      "¿Interpretación inicial de gasometría arterial en disnea?",
-      "¿Manejo de hipertensión severa asintomática vs urgencia hipertensiva?",
-      "¿Cuándo iniciar antibiótico en IVU complicada y qué esquema?",
-      "¿Algoritmo de dolor abdominal agudo: laboratorios e imagen inicial?",
-      "¿Criterios de gravedad en asma y manejo en urgencias?",
-      "¿Evaluación inicial de síncope: riesgo y estudios?",
-      "¿Abordaje de fiebre sin foco: red flags y pruebas?",
-      "¿Manejo de anticoagulación perioperatoria en DOACs?",
-      "¿Interpretación de pruebas tiroideas (TSH/T4) en distintos escenarios?",
-      "¿Tratamiento inicial de insuficiencia cardiaca descompensada?",
-      "¿Cribado y manejo de enfermedad renal crónica en primer nivel?",
-    ];
+    const questions = QUESTIONS[lang];
 
     const major = [
       0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 132, 144, 156, 168, 180, 192, 204,
@@ -148,8 +99,8 @@ export function InteractiveStarburst({ className }: Props) {
     const majorRays: StarRay[] = major.map((deg, idx) => ({
       id: `ray-major-${deg}`,
       deg,
-      len: 320,
-      stroke: "rgba(255,255,255,0.08)",
+      len: 210 + ((idx * 13) % 34),
+      stroke: "rgba(255,255,255,0.075)",
       strokeWidth: 2,
       question: questions[idx % questions.length] ?? questions[0] ?? "",
     }));
@@ -157,14 +108,38 @@ export function InteractiveStarburst({ className }: Props) {
     const minorRays: StarRay[] = minor.map((deg, idx) => ({
       id: `ray-minor-${deg}`,
       deg,
-      len: 390,
-      stroke: "rgba(255,255,255,0.05)",
+      len: 240 + ((idx * 17) % 64),
+      stroke: "rgba(255,255,255,0.045)",
       strokeWidth: 1,
       question: questions[(idx + majorRays.length) % questions.length] ?? questions[0] ?? "",
     }));
 
     return [...majorRays, ...minorRays];
-  }, []);
+  }, [lang]);
+
+  const points = useMemo<StarPoint[]>(() => {
+    const cx = 600;
+    const cy = 320;
+
+    return rays.map((ray, idx) => {
+      const rad = (ray.deg * Math.PI) / 180;
+      const len = ray.len;
+      const x = cx + Math.sin(rad) * len;
+      const y = cy - Math.cos(rad) * len;
+      const size = idx % 7 === 0 ? 8 : idx % 3 === 0 ? 7 : 6;
+      const fill = idx % 5 === 0 ? "rgba(191,219,254,0.96)" : "rgba(255,255,255,0.74)";
+
+      return {
+        id: ray.id,
+        x: round3(x - size / 2),
+        y: round3(y - size / 2),
+        w: size,
+        h: size,
+        fill,
+        question: ray.question,
+      };
+    });
+  }, [rays]);
 
   const [activePointId, setActivePointId] = useState("");
   const [offset, setOffset] = useState({ x: 0, y: 0 });
@@ -185,17 +160,6 @@ export function InteractiveStarburst({ className }: Props) {
     startOffsetY: 0,
     moved: false,
   });
-
-  const activeQuestion = useMemo(() => {
-    if (!activePointId) return "";
-    const point = points.find((p) => p.id === activePointId);
-    if (point) return point.question;
-
-    const ray = rays.find((r) => r.id === activePointId);
-    if (ray) return ray.question;
-
-    return points[0]?.question ?? rays[0]?.question ?? "";
-  }, [activePointId, points, rays]);
 
   const onPointerDown = (e: ReactPointerEvent<HTMLDivElement>) => {
     if (e.button !== 0) return;
@@ -238,12 +202,6 @@ export function InteractiveStarburst({ className }: Props) {
     setDragging(false);
   };
 
-  const onClickBackground = () => {
-    if (!dragRef.current.moved) {
-      setOffset((prev) => ({ x: clamp(prev.x - 18, -70, 70), y: clamp(prev.y + 8, -40, 40) }));
-    }
-  };
-
   return (
     <div
       className={joinClassNames(
@@ -257,145 +215,199 @@ export function InteractiveStarburst({ className }: Props) {
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
       onPointerCancel={onPointerCancel}
-      onClick={onClickBackground}
     >
-      {activeQuestion ? (
-        <div className="pointer-events-none absolute left-1/2 top-12 w-[min(880px,92vw)] -translate-x-1/2 text-center md:top-16">
-          <div className="text-[10px] font-semibold uppercase tracking-[0.34em] text-white/45">
-            {activeQuestion}
-          </div>
-        </div>
-      ) : null}
-
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="dc_motion animate-[dc_star_drift_48s_ease-in-out_infinite]">
-          <div className="dc_motion will-change-transform" style={{ transform: `translate3d(${offset.x}px, ${offset.y}px, 0)` }}>
-            <div className="dc_motion origin-center transform-gpu will-change-transform animate-[dc_spin_110s_linear_infinite]">
-              <svg
-                viewBox="0 0 1200 640"
-                className="h-[620px] w-[1160px] select-none md:h-[760px] md:w-[1400px] lg:h-[820px] lg:w-[1520px]"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
+        <div className="dc_motion">
+          <div className={joinClassNames("dc_motion will-change-transform", ambientMotion ? "dc_starburst_drift" : null)}>
+            <div className="dc_motion will-change-transform" style={{ transform: `translate3d(${offset.x}px, ${offset.y}px, 0)` }}>
+              <div
+                className="dc_motion dc_starburst_spin origin-center transform-gpu will-change-transform"
+                style={{ transformOrigin: "50% 50%" }}
               >
-                <g opacity="0.72">
-                  <g transform="translate(600 320)">
-                    {rays.map((ray) => {
-                      const isActive = ray.id === activePointId;
-                      return (
-                        <g key={ray.id}>
-                          <line
-                            x1={0}
-                            y1={0}
-                            x2={0}
-                            y2={-ray.len}
-                            transform={`rotate(${ray.deg})`}
-                            stroke={isActive ? "rgba(255,255,255,0.26)" : ray.stroke}
-                            strokeWidth={isActive ? Math.max(ray.strokeWidth, 2) : ray.strokeWidth}
-                            strokeLinecap="round"
-                          />
+                <svg
+                  viewBox="0 0 1200 640"
+                  className="h-[620px] w-[1160px] select-none md:h-[760px] md:w-[1400px] lg:h-[820px] lg:w-[1520px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                >
+                  <g>
+                    <g opacity="0.62" transform="translate(600 360)">
+                      {rays.map((ray) => {
+                        const isActive = ray.id === activePointId;
+                        return (
+                          <g key={ray.id}>
+                            <line
+                              x1={0}
+                              y1={0}
+                              x2={0}
+                              y2={-ray.len}
+                              transform={`rotate(${ray.deg})`}
+                              stroke={isActive ? "rgba(255,255,255,0.26)" : ray.stroke}
+                              strokeWidth={isActive ? Math.max(ray.strokeWidth, 2) : ray.strokeWidth}
+                              strokeLinecap="round"
+                            />
+                          </g>
+                        );
+                      })}
+                    </g>
 
-                          <line
-                            x1={0}
-                            y1={0}
-                            x2={0}
-                            y2={-ray.len}
-                            transform={`rotate(${ray.deg})`}
-                            stroke="transparent"
-                            strokeWidth={14}
-                            strokeLinecap="round"
-                            pointerEvents="stroke"
-                            role="button"
-                            aria-label={ray.question}
-                            tabIndex={0}
-                            style={{ cursor: "pointer" }}
-                            onPointerDown={(e) => {
-                              e.stopPropagation();
-                            }}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setActivePointId(ray.id);
-                            }}
-                            onPointerEnter={() => {
-                              setActivePointId(ray.id);
-                            }}
-                            onFocus={() => {
-                              setActivePointId(ray.id);
-                            }}
-                            onKeyDown={(e) => {
-                              if (e.key === "Enter" || e.key === " ") {
-                                e.preventDefault();
-                                setActivePointId(ray.id);
-                              }
-                            }}
+                    <g opacity="0.96">
+                      {points
+                        .filter((p) => p.id !== activePointId)
+                        .map((p, idx) => (
+                          <PointGroup
+                            key={p.id}
+                            p={p}
+                            idx={idx}
+                            isActive={false}
+                            setActivePointId={setActivePointId}
                           />
-                        </g>
-                      );
-                    })}
+                        ))}
+                      {points
+                        .filter((p) => p.id === activePointId)
+                        .map((p, idx) => (
+                          <PointGroup
+                            key={p.id}
+                            p={p}
+                            idx={idx}
+                            isActive={true}
+                            setActivePointId={setActivePointId}
+                          />
+                        ))}
+                    </g>
                   </g>
-
-                  {points.map((p, idx) => {
-                    const isActive = p.id === activePointId;
-                    return (
-                      <g key={p.id}>
-                        <rect
-                          x={p.x}
-                          y={p.y}
-                          width={p.w}
-                          height={p.h}
-                          fill={p.fill}
-                          rx={1}
-                          ry={1}
-                          className={joinClassNames(
-                            "dc_motion",
-                            "outline-none",
-                            "transition-[opacity,transform] duration-200",
-                            isActive ? "opacity-100" : "opacity-70",
-                            "animate-[dc_twinkle_4.2s_ease-in-out_infinite]",
-                          )}
-                          style={{ animationDelay: `${idx * 420}ms`, cursor: "pointer" }}
-                          tabIndex={0}
-                          role="button"
-                          aria-label={p.question}
-                          onPointerDown={(e) => {
-                            e.stopPropagation();
-                          }}
-                          onPointerEnter={(e) => {
-                            e.stopPropagation();
-                            setActivePointId(p.id);
-                          }}
-                          onFocus={() => setActivePointId(p.id)}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setActivePointId(p.id);
-                          }}
-                          onKeyDown={(e) => {
-                            if (e.key === "Enter" || e.key === " ") {
-                              e.preventDefault();
-                              setActivePointId(p.id);
-                            }
-                          }}
-                        />
-
-                        {isActive ? (
-                          <rect
-                            x={p.x - 3}
-                            y={p.y - 3}
-                            width={p.w + 6}
-                            height={p.h + 6}
-                            fill="transparent"
-                            stroke="rgba(255,255,255,0.45)"
-                            strokeWidth={1}
-                          />
-                        ) : null}
-                      </g>
-                    );
-                  })}
-                </g>
-              </svg>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+function PointGroup({
+  p,
+  idx,
+  isActive,
+  setActivePointId,
+}: {
+  p: StarPoint;
+  idx: number;
+  isActive: boolean;
+  setActivePointId: (id: string) => void;
+}) {
+  const hit = 22;
+  const hitX = round3(p.x - (hit - p.w) / 2);
+  const hitY = round3(p.y - (hit - p.h) / 2);
+  const rectX = round3(p.x);
+  const rectY = round3(p.y);
+
+  // Calculate active card position (centered above point)
+  const foSize = 400;
+  const foX = p.x - foSize / 2 + p.w / 2;
+  const foY = p.y - foSize / 2 + p.h / 2;
+
+  return (
+    <g>
+      <rect
+        x={hitX}
+        y={hitY}
+        width={hit}
+        height={hit}
+        fill="transparent"
+        pointerEvents="all"
+        role="button"
+        aria-label={p.question}
+        tabIndex={-1}
+        style={{ cursor: "pointer" }}
+        onPointerDown={(e) => {
+          e.stopPropagation();
+        }}
+        onClick={(e) => {
+          e.stopPropagation();
+          setActivePointId(p.id);
+        }}
+      />
+
+      <rect
+        x={rectX}
+        y={rectY}
+        width={p.w}
+        height={p.h}
+        fill={p.fill}
+        rx={1}
+        ry={1}
+        className={joinClassNames(
+          "dc_motion",
+          "outline-none",
+          "transition-[opacity] duration-200",
+          isActive ? "opacity-100" : "opacity-72",
+          "animate-dc-twinkle",
+        )}
+        style={{
+          animationDelay: `${idx * 140}ms`,
+          cursor: "pointer",
+          filter: isActive
+            ? "drop-shadow(0 0 12px rgba(255,255,255,0.45)) drop-shadow(0 0 30px rgba(191,219,254,0.22))"
+            : "drop-shadow(0 0 10px rgba(255,255,255,0.10))",
+        }}
+        tabIndex={0}
+        role="button"
+        aria-label={p.question}
+        onPointerDown={(e) => {
+          e.stopPropagation();
+        }}
+        onFocus={() => setActivePointId(p.id)}
+        onClick={(e) => {
+          e.stopPropagation();
+          setActivePointId(p.id);
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setActivePointId(p.id);
+          }
+        }}
+      />
+
+      {isActive ? (
+        <>
+          <rect
+            x={round3(rectX - 3)}
+            y={round3(rectY - 3)}
+            width={p.w + 6}
+            height={p.h + 6}
+            fill="transparent"
+            stroke="rgba(255,255,255,0.45)"
+            strokeWidth={1}
+          />
+          <foreignObject
+            x={foX}
+            y={foY}
+            width={foSize}
+            height={foSize}
+            className="overflow-visible pointer-events-none"
+          >
+            {/* Counter-rotate wrapper to keep text upright */}
+            <div
+              className="w-full h-full flex items-center justify-center animate-[dc-spin_60s_linear_infinite_reverse]"
+              style={{ animationPlayState: isActive ? "paused" : "running" }}
+            >
+              {/* Tooltip Card - Positioned above point */}
+              <div className="flex flex-col items-center justify-end -translate-y-[50px]">
+                <div className="bg-white border border-white/20 rounded-xl px-5 py-4 text-center shadow-[0_0_60px_rgba(255,255,255,0.25)] max-w-[320px]">
+                  <p className="text-base font-semibold text-black leading-snug">
+                    {p.question}
+                  </p>
+                </div>
+                {/* Small indicator arrow/triangle instead of long line */}
+                <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[10px] border-t-white mt-[-1px]"></div>
+              </div>
+            </div>
+          </foreignObject>
+        </>
+      ) : null}
+    </g>
   );
 }

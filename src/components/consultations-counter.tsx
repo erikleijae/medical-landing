@@ -24,6 +24,7 @@ type ConsultationsCounterProps = {
   minValue?: number;
   title: string;
   subtitle: string;
+  theme?: "light" | "dark";
 };
 
 type MetricSectionProps = {
@@ -35,6 +36,7 @@ type MetricSectionProps = {
   toValue: number;
   formatValue: (value: number) => string;
   subtitle: string;
+  theme?: "light" | "dark";
 };
 
 type ConsultationsStore = {
@@ -271,112 +273,115 @@ function useMosaicRevealStep() {
   return { step, increment: store.increment, decrement: store.decrement, reset: store.reset };
 }
 
-function MetricMosaic({ revealStep, extraDoctors }: { revealStep: number; extraDoctors?: number }) {
-  const circle = "relative overflow-hidden rounded-full ring-4 ring-white shadow-sm";
+function MetricMosaic({ revealStep, extraDoctors, theme = "light" }: { revealStep: number; extraDoctors?: number; theme?: "light" | "dark" }) {
+  const circle =
+    theme === "dark"
+      ? "relative overflow-hidden rounded-full ring-4 ring-black shadow-sm"
+      : "relative overflow-hidden rounded-full ring-4 ring-white shadow-sm";
 
   const isHoursMode = extraDoctors !== undefined;
 
   const slots = isHoursMode
     ? ([
-        {
-          key: "h-0",
-          src: DOCTOR_IMAGES[0],
-          className: "col-start-4 col-span-2 row-start-1 -translate-y-2 sm:-translate-y-3",
-          size: "h-16 w-16 sm:h-20 sm:w-20",
-        },
-        {
-          key: "h-1",
-          src: DOCTOR_IMAGES[1],
-          className: "col-start-7 col-span-2 row-start-1 translate-y-1 sm:translate-y-2",
-          size: "h-16 w-16 sm:h-20 sm:w-20",
-        },
-        {
-          key: "h-2",
-          src: DOCTOR_IMAGES[2],
-          className: "col-start-10 col-span-2 row-start-1 -translate-y-1",
-          size: "h-16 w-16 sm:h-20 sm:w-20",
-        },
-        {
-          key: "h-3",
-          src: DOCTOR_IMAGES[3],
-          className: "col-start-5 col-span-2 row-start-2 translate-y-1",
-          size: "h-16 w-16 sm:h-20 sm:w-20",
-        },
-        {
-          key: "h-4",
-          src: DOCTOR_IMAGES[4],
-          className: "col-start-2 col-span-2 row-start-3 -translate-y-1",
-          size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
-        },
-        {
-          key: "h-5",
-          src: DOCTOR_IMAGES[5],
-          className: "col-start-7 col-span-2 row-start-3 translate-y-1",
-          size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
-        },
-        {
-          key: "h-6",
-          src: DOCTOR_IMAGES[6],
-          className: "col-start-10 col-span-2 row-start-3 -translate-y-1",
-          size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
-        },
-        {
-          key: "h-7",
-          src: DOCTOR_IMAGES[7],
-          className: "col-start-6 col-span-2 row-start-4 translate-y-1",
-          size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
-        },
-      ] as const)
+      {
+        key: "h-0",
+        src: DOCTOR_IMAGES[0],
+        className: "col-start-4 col-span-2 row-start-1 -translate-y-2 sm:-translate-y-3",
+        size: "h-16 w-16 sm:h-20 sm:w-20",
+      },
+      {
+        key: "h-1",
+        src: DOCTOR_IMAGES[1],
+        className: "col-start-7 col-span-2 row-start-1 translate-y-1 sm:translate-y-2",
+        size: "h-16 w-16 sm:h-20 sm:w-20",
+      },
+      {
+        key: "h-2",
+        src: DOCTOR_IMAGES[2],
+        className: "col-start-10 col-span-2 row-start-1 -translate-y-1",
+        size: "h-16 w-16 sm:h-20 sm:w-20",
+      },
+      {
+        key: "h-3",
+        src: DOCTOR_IMAGES[3],
+        className: "col-start-5 col-span-2 row-start-2 translate-y-1",
+        size: "h-16 w-16 sm:h-20 sm:w-20",
+      },
+      {
+        key: "h-4",
+        src: DOCTOR_IMAGES[4],
+        className: "col-start-2 col-span-2 row-start-3 -translate-y-1",
+        size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
+      },
+      {
+        key: "h-5",
+        src: DOCTOR_IMAGES[5],
+        className: "col-start-7 col-span-2 row-start-3 translate-y-1",
+        size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
+      },
+      {
+        key: "h-6",
+        src: DOCTOR_IMAGES[6],
+        className: "col-start-10 col-span-2 row-start-3 -translate-y-1",
+        size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
+      },
+      {
+        key: "h-7",
+        src: DOCTOR_IMAGES[7],
+        className: "col-start-6 col-span-2 row-start-4 translate-y-1",
+        size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
+      },
+    ] as const)
     : ([
-        {
-          key: "c-0",
-          src: DOCTOR_IMAGES[0],
-          className: "col-start-4 col-span-2 row-start-1 -translate-y-2 sm:-translate-y-3",
-          size: "h-16 w-16 sm:h-20 sm:w-20",
-        },
-        {
-          key: "c-1",
-          src: DOCTOR_IMAGES[1],
-          className: "col-start-7 col-span-2 row-start-1 translate-y-2 sm:translate-y-3",
-          size: "h-16 w-16 sm:h-20 sm:w-20",
-        },
-        {
-          key: "c-2",
-          src: DOCTOR_IMAGES[2],
-          className: "col-start-10 col-span-2 row-start-1 -translate-y-1 sm:-translate-y-2",
-          size: "h-16 w-16 sm:h-20 sm:w-20",
-        },
-        {
-          key: "c-3",
-          src: DOCTOR_IMAGES[3],
-          className: "col-start-5 col-span-2 row-start-2",
-          size: "h-16 w-16 sm:h-20 sm:w-20",
-        },
-        {
-          key: "c-4",
-          src: DOCTOR_IMAGES[4],
-          className: "col-start-8 col-span-2 row-start-2",
-          size: "h-16 w-16 sm:h-20 sm:w-20",
-        },
-        {
-          key: "c-5",
-          src: DOCTOR_IMAGES[5],
-          className: "col-start-3 col-span-2 row-start-3",
-          size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
-        },
-        {
-          key: "c-6",
-          src: DOCTOR_IMAGES[6],
-          className: "col-start-6 col-span-2 row-start-3",
-          size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
-        },
-        {
-          key: "c-7",
-          src: DOCTOR_IMAGES[7],
-          className: "col-start-9 col-span-2 row-start-4 -translate-y-1",
-          size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
-        },
-      ] as const);
+      {
+        key: "c-0",
+        src: DOCTOR_IMAGES[0],
+        className: "col-start-4 col-span-2 row-start-1 -translate-y-2 sm:-translate-y-3",
+        size: "h-16 w-16 sm:h-20 sm:w-20",
+      },
+      {
+        key: "c-1",
+        src: DOCTOR_IMAGES[1],
+        className: "col-start-7 col-span-2 row-start-1 translate-y-2 sm:translate-y-3",
+        size: "h-16 w-16 sm:h-20 sm:w-20",
+      },
+      {
+        key: "c-2",
+        src: DOCTOR_IMAGES[2],
+        className: "col-start-10 col-span-2 row-start-1 -translate-y-1 sm:-translate-y-2",
+        size: "h-16 w-16 sm:h-20 sm:w-20",
+      },
+      {
+        key: "c-3",
+        src: DOCTOR_IMAGES[3],
+        className: "col-start-5 col-span-2 row-start-2",
+        size: "h-16 w-16 sm:h-20 sm:w-20",
+      },
+      {
+        key: "c-4",
+        src: DOCTOR_IMAGES[4],
+        className: "col-start-8 col-span-2 row-start-2",
+        size: "h-16 w-16 sm:h-20 sm:w-20",
+      },
+      {
+        key: "c-5",
+        src: DOCTOR_IMAGES[5],
+        className: "col-start-3 col-span-2 row-start-3",
+        size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
+      },
+      {
+        key: "c-6",
+        src: DOCTOR_IMAGES[6],
+        className: "col-start-6 col-span-2 row-start-3",
+        size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
+      },
+      {
+        key: "c-7",
+        src: DOCTOR_IMAGES[7],
+        className: "col-start-9 col-span-2 row-start-4 -translate-y-1",
+        size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]",
+      },
+    ] as const);
 
   const baseVisibleCount = isHoursMode ? 4 : Math.min(5, slots.length);
   const revealCount = isHoursMode
@@ -685,6 +690,7 @@ export function ConsultationsCounter({
   minValue = 181_567,
   title,
   subtitle,
+  theme = "light",
 }: ConsultationsCounterProps) {
   const resolvedLocale = useMemo(() => resolveNumberLocale(locale), [locale]);
 
@@ -708,6 +714,7 @@ export function ConsultationsCounter({
       toValue={consultations}
       formatValue={formatValue}
       subtitle={subtitle}
+      theme={theme}
     />
   );
 }
@@ -717,6 +724,7 @@ export function HoursSavedCounter({
   minValue = 181_567,
   title,
   subtitle,
+  theme = "light",
 }: ConsultationsCounterProps) {
   const resolvedLocale = useMemo(() => resolveNumberLocale(locale), [locale]);
 
@@ -742,6 +750,9 @@ export function HoursSavedCounter({
       toValue={hoursSaved}
       formatValue={formatValue}
       subtitle={subtitle}
+      theme={theme}
     />
   );
 }
+
+

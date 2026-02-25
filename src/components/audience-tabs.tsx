@@ -9,6 +9,7 @@ type TabKey = "clinicians" | "revenue" | "nurses";
 
 type AudienceTabsProps = {
   language?: Language;
+  theme?: "light" | "dark";
 };
 
 const IMAGES = [
@@ -88,7 +89,7 @@ const COPY: Record<Language, Record<TabKey, { label: string; title: string; body
   },
 };
 
-export function AudienceTabs({ language = "es" }: AudienceTabsProps) {
+export function AudienceTabs({ language = "es", theme = "light" }: AudienceTabsProps) {
   const [active, setActive] = useState<TabKey>("clinicians");
 
   const tiles = useMemo(() => {
@@ -109,8 +110,16 @@ export function AudienceTabs({ language = "es" }: AudienceTabsProps) {
 
   const items: TabKey[] = ["clinicians", "revenue", "nurses"];
 
+  const bgClass = theme === "dark" ? "bg-black" : "bg-white";
+  const tileBgClass = theme === "dark" ? "bg-white/10" : "bg-slate-100";
+  const borderColor = theme === "dark" ? "border-white/10" : "border-slate-200";
+  const divideColor = theme === "dark" ? "divide-white/10" : "divide-slate-200";
+  const activeTitleColor = theme === "dark" ? "text-white" : "text-slate-900";
+  const inactiveTitleColor = theme === "dark" ? "text-white/40" : "text-slate-500";
+  const bodyTextColor = theme === "dark" ? "text-white/60" : "text-slate-700";
+
   return (
-    <section className="bg-white">
+    <section className={bgClass}>
       <div className="mx-auto max-w-6xl px-6 py-32 md:px-8 md:py-36 lg:px-0">
         <div className="grid items-center gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
           <div className="grid grid-cols-5 gap-3">
@@ -118,7 +127,9 @@ export function AudienceTabs({ language = "es" }: AudienceTabsProps) {
               <div
                 key={tile.idx}
                 className={
-                  "relative aspect-square overflow-hidden rounded-2xl bg-slate-100 transition-opacity duration-300 " +
+                  "relative aspect-square overflow-hidden rounded-2xl transition-opacity duration-300 " +
+                  tileBgClass +
+                  " " +
                   (tile.isOn ? "opacity-100" : "opacity-15")
                 }
               >
@@ -127,8 +138,8 @@ export function AudienceTabs({ language = "es" }: AudienceTabsProps) {
             ))}
           </div>
 
-          <div className="border-t border-slate-200 pt-8 md:border-t-0 md:pt-0">
-            <div className="divide-y divide-slate-200">
+          <div className={"border-t pt-8 md:border-t-0 md:pt-0 " + borderColor}>
+            <div className={"divide-y " + divideColor}>
               {items.map((key) => {
                 const isActive = active === key;
                 return (
@@ -139,11 +150,18 @@ export function AudienceTabs({ language = "es" }: AudienceTabsProps) {
                     className="flex w-full items-start justify-between gap-6 py-5 text-left"
                   >
                     <div>
-                      <p className={(isActive ? "text-slate-900" : "text-slate-500") + " text-[18px] font-semibold"}>
+                      <p
+                        className={
+                          (isActive ? activeTitleColor : inactiveTitleColor) +
+                          " text-[18px] font-semibold"
+                        }
+                      >
                         {COPY[language][key].label}
                       </p>
                       {isActive && (
-                        <p className="mt-3 text-[14px] leading-relaxed text-slate-700">{COPY[language][key].body}</p>
+                        <p className={"mt-3 text-[14px] leading-relaxed " + bodyTextColor}>
+                          {COPY[language][key].body}
+                        </p>
                       )}
                     </div>
                   </button>

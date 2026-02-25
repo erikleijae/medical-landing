@@ -18709,7 +18709,7 @@ const _hooksclientcontextsharedruntime = __turbopack_require__("[project]/node_m
 const _shared = __turbopack_require__("[project]/node_modules/next/dist/client/react-client-callbacks/shared.js [client] (ecmascript)");
 const _tracer = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/client/tracing/tracer.js [client] (ecmascript)"));
 const _reporttosocket = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/client/tracing/report-to-socket.js [client] (ecmascript)"));
-const version = "15.0.3";
+const version = "15.0.5";
 let router;
 const emitter = (0, _mitt.default)();
 const looseToArray = (input)=>[].slice.call(input);

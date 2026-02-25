@@ -1,0 +1,1650 @@
+module.exports = {
+
+"[project]/src/components/hero-video.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: require } = __turbopack_context__;
+{
+__turbopack_esm__({
+    "HeroVideo": (()=>HeroVideo)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+const BUTTON_LABEL = {
+    es: {
+        text: "Descubre cómo funciona",
+        multiline: true
+    },
+    en: {
+        text: "See how it works",
+        multiline: false
+    },
+    pt: {
+        text: "Descubra como funciona",
+        multiline: false
+    }
+};
+function HeroVideo({ theme = "light" }) {
+    const [isPlaying, setIsPlaying] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["usePathname"])();
+    const locale = pathname.startsWith("/en") ? "en" : pathname.startsWith("/pt") ? "pt" : "es";
+    const labelConfig = BUTTON_LABEL[locale] ?? BUTTON_LABEL.es;
+    const containerBorder = theme === "dark" ? "border-white/10" : "border-slate-200";
+    const containerBg = theme === "dark" ? "bg-white/5" : "bg-slate-100";
+    const shadowClass = theme === "dark" ? "shadow-[0_4px_24px_rgba(0,0,0,0.4)] group-hover:shadow-[0_8px_40px_rgba(0,0,0,0.5)] group-hover:border-white/20" : "shadow-[0_4px_24px_rgba(15,23,42,0.08)] group-hover:shadow-[0_8px_40px_rgba(15,23,42,0.12)] group-hover:border-slate-300";
+    const buttonOuterClass = theme === "dark" ? "flex h-36 w-36 sm:h-44 sm:w-44 items-center justify-center rounded-full border-[3px] border-[#d5ff7c] bg-white shadow-[0_0_40px_rgba(213,255,124,0.3)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_60px_rgba(213,255,124,0.5)]" : "flex h-32 w-32 sm:h-44 sm:w-44 items-center justify-center rounded-full border-[4px] border-brand-accent-strong bg-white/90 shadow-[0_20px_60px_rgba(15,23,42,0.2),0_0_0_1px_rgba(0,0,0,0.05)] transition-all duration-300 group-hover:scale-105 group-hover:bg-white group-hover:shadow-[0_24px_72px_rgba(15,23,42,0.25)]";
+    const buttonInnerClass = theme === "dark" ? "relative flex items-center gap-3 rounded-full bg-[#0f172a] px-5 py-3 text-left text-[14px] sm:text-[15px] font-semibold leading-tight text-white shadow-lg transition-transform duration-300 group-hover:scale-105" : "inline-flex items-center gap-2.5 rounded-full bg-slate-900 px-5 py-2.5 sm:px-6 sm:py-3 text-[14px] sm:text-[15px] font-semibold text-white shadow-lg transition-colors duration-300 group-hover:bg-slate-800";
+    const renderLabel = ()=>{
+        if (theme === "dark" && labelConfig.multiline && locale === "es") {
+            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "block leading-[1.15]",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "block",
+                        children: "Descubre"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/hero-video.tsx",
+                        lineNumber: 39,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "block",
+                        children: "cómo"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/hero-video.tsx",
+                        lineNumber: 40,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "block",
+                        children: "funciona"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/hero-video.tsx",
+                        lineNumber: 41,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/hero-video.tsx",
+                lineNumber: 38,
+                columnNumber: 9
+            }, this);
+        }
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+            className: "block max-w-[100px] sm:max-w-none leading-tight",
+            children: labelConfig.text
+        }, void 0, false, {
+            fileName: "[project]/src/components/hero-video.tsx",
+            lineNumber: 45,
+            columnNumber: 12
+        }, this);
+    };
+    if (isPlaying) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "mx-auto max-w-7xl px-4 pb-16 md:px-6 lg:px-0",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "overflow-hidden rounded-3xl bg-black/90 border " + containerBorder,
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "relative aspect-[16/9] w-full",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
+                        className: "h-full w-full rounded-3xl",
+                        src: "https://www.youtube.com/embed/rZnbL_LZSm0?autoplay=1&rel=0",
+                        title: "DeepClinic Copilot - Cómo funciona",
+                        allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+                        allowFullScreen: true
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/hero-video.tsx",
+                        lineNumber: 53,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/hero-video.tsx",
+                    lineNumber: 52,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/hero-video.tsx",
+                lineNumber: 51,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/src/components/hero-video.tsx",
+            lineNumber: 50,
+            columnNumber: 7
+        }, this);
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "mx-auto max-w-7xl px-4 pb-16 md:px-6 lg:px-0",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            type: "button",
+            onClick: ()=>setIsPlaying(true),
+            className: "group relative block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent-strong focus-visible:ring-offset-4 focus-visible:ring-offset-white rounded-3xl",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "overflow-hidden rounded-3xl border transition-shadow duration-300 " + containerBg + " " + containerBorder + " " + shadowClass,
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "relative aspect-[16/9] w-full",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
+                                src: "/tandem-hero-thumb-16-9_esp.mp4",
+                                className: "h-full w-full object-cover opacity-95 transition-opacity duration-300 group-hover:opacity-100",
+                                muted: true,
+                                loop: true,
+                                autoPlay: true,
+                                playsInline: true
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/hero-video.tsx",
+                                lineNumber: 84,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/hero-video.tsx",
+                                lineNumber: 93,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/hero-video.tsx",
+                        lineNumber: 83,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/hero-video.tsx",
+                    lineNumber: 73,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "pointer-events-none absolute inset-0 flex items-center justify-center z-10",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: buttonOuterClass,
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: buttonInnerClass,
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    className: "h-5 w-5 shrink-0 fill-current",
+                                    viewBox: "0 0 24 24",
+                                    "aria-hidden": true,
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        d: "M8 5v14l11-7z"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/hero-video.tsx",
+                                        lineNumber: 106,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/hero-video.tsx",
+                                    lineNumber: 101,
+                                    columnNumber: 15
+                                }, this),
+                                renderLabel()
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/hero-video.tsx",
+                            lineNumber: 100,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/hero-video.tsx",
+                        lineNumber: 99,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/hero-video.tsx",
+                    lineNumber: 98,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/hero-video.tsx",
+            lineNumber: 68,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/hero-video.tsx",
+        lineNumber: 67,
+        columnNumber: 5
+    }, this);
+}
+}}),
+"[project]/src/components/consultations-counter.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: require } = __turbopack_context__;
+{
+__turbopack_esm__({
+    "ConsultationsCounter": (()=>ConsultationsCounter),
+    "HoursSavedCounter": (()=>HoursSavedCounter)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+const DOCTOR_IMAGES = [
+    "/doctors/67b19236e3a3611ed6065a9b_01%20animation%20img.avif",
+    "/doctors/67b19235807867cccd9a5006_03%20animation%20img.avif",
+    "/doctors/67b19235d44d8582c04e31fd_05%20animation%20img.avif",
+    "/doctors/67b192356ced5afd78c13178_09%20animation%20img.avif",
+    "/doctors/67b19235c56540b2db753a22_10%20animation%20img.avif",
+    "/doctors/67b19235a4b91a892ffe97a7_17%20animation%20img.avif",
+    "/doctors/67b19235feae33bb5666a86a_21%20animation%20img.avif",
+    "/doctors/67b19235a4b91a892ffe97a4_28%20animation%20img.avif"
+];
+function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+}
+function clampNumber(n, min, max) {
+    return Math.min(max, Math.max(min, n));
+}
+function writeStoredCounter(key, stored) {
+    try {
+        localStorage.setItem(key, JSON.stringify(stored));
+    } catch  {}
+}
+function resolveNumberLocale(locale) {
+    if (!locale) return undefined;
+    if (locale.includes("-")) return locale;
+    if (locale === "es") {
+        const browserLocale = typeof navigator !== "undefined" ? navigator.language : "";
+        if (browserLocale.startsWith("es-") && browserLocale !== "es-MX") return browserLocale;
+        return "es-MX";
+    }
+    if (locale === "en") return "en-US";
+    if (locale === "pt") return "pt-BR";
+    return locale;
+}
+function formatWithSpaceGrouping(formatter, value) {
+    try {
+        const parts = formatter.formatToParts(value);
+        return parts.map((part)=>{
+            if (part.type === "group") return " ";
+            return part.value;
+        }).join("");
+    } catch  {
+        return String(value).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    }
+}
+let consultationsStore = null;
+let mosaicRevealStore = null;
+function getMosaicRevealStore() {
+    if (mosaicRevealStore) return mosaicRevealStore;
+    const store = {
+        step: 0,
+        subscribers: new Set(),
+        emit (step) {
+            store.step = step;
+            store.subscribers.forEach((fn)=>fn(step));
+        },
+        increment () {
+            store.emit(clampNumber(store.step + 1, 0, 4));
+        },
+        decrement () {
+            store.emit(clampNumber(store.step - 1, 0, 4));
+        },
+        reset () {
+            store.emit(0);
+        },
+        subscribe (fn) {
+            store.subscribers.add(fn);
+            fn(store.step);
+            return ()=>{
+                store.subscribers.delete(fn);
+            };
+        }
+    };
+    mosaicRevealStore = store;
+    return store;
+}
+function getConsultationsStore(initialMinValue) {
+    if (consultationsStore) return consultationsStore;
+    const storageKey = "copiloto:landing:consultationsCounter";
+    const intervalMs = 500;
+    const store = {
+        value: Math.max(0, initialMinValue),
+        subscribers: new Set(),
+        started: false,
+        isAnimating: false,
+        raf: null,
+        intervalId: null,
+        lastPersistAt: 0,
+        subscriberCount: 0,
+        minValue: initialMinValue,
+        emit (value) {
+            store.value = value;
+            store.subscribers.forEach((fn)=>fn(value));
+        },
+        stop () {
+            if (store.raf != null) {
+                cancelAnimationFrame(store.raf);
+                store.raf = null;
+            }
+            if (store.intervalId != null) {
+                clearInterval(store.intervalId);
+                store.intervalId = null;
+            }
+            store.started = false;
+            const now = Date.now();
+            writeStoredCounter(storageKey, {
+                value: store.value,
+                updatedAt: now
+            });
+            if ("TURBOPACK compile-time falsy", 0) {
+                "TURBOPACK unreachable";
+            }
+        },
+        start (minValue) {
+            store.minValue = Math.max(store.minValue, minValue);
+            if (store.started) return;
+            store.started = true;
+            const baseline = Math.max(store.minValue, store.value);
+            store.isAnimating = false;
+            store.emit(baseline);
+            store.raf = null;
+            store.intervalId = window.setInterval(()=>{
+                if (store.isAnimating) return;
+                const next = store.value + 1;
+                store.emit(next);
+                const now = Date.now();
+                if (now - store.lastPersistAt > 3000) {
+                    store.lastPersistAt = now;
+                    writeStoredCounter(storageKey, {
+                        value: next,
+                        updatedAt: now
+                    });
+                }
+            }, intervalMs);
+            window.addEventListener("beforeunload", handleBeforeUnload);
+        },
+        subscribe (fn) {
+            store.subscribers.add(fn);
+            store.subscriberCount += 1;
+            fn(store.value);
+            return ()=>{
+                store.subscribers.delete(fn);
+                store.subscriberCount = Math.max(0, store.subscriberCount - 1);
+                if (store.subscriberCount === 0) store.stop();
+            };
+        }
+    };
+    function handleBeforeUnload() {
+        const now = Date.now();
+        writeStoredCounter(storageKey, {
+            value: store.value,
+            updatedAt: now
+        });
+    }
+    consultationsStore = store;
+    return store;
+}
+function useInViewOnce(threshold = 0.35) {
+    const ref = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const [inView, setInView] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const el = ref.current;
+        if (!el || typeof IntersectionObserver === "undefined") {
+            setInView(true);
+            return;
+        }
+        const observer = new IntersectionObserver((entries)=>{
+            setInView(entries.some((entry)=>entry.isIntersecting));
+        }, {
+            threshold
+        });
+        observer.observe(el);
+        return ()=>observer.disconnect();
+    }, [
+        threshold
+    ]);
+    return {
+        ref,
+        inView
+    };
+}
+function useConsultationsValue(minValue) {
+    const store = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>getConsultationsStore(minValue), [
+        minValue
+    ]);
+    const [value, setValue] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(()=>store.value);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        store.start(minValue);
+        return store.subscribe(setValue);
+    }, [
+        minValue,
+        store
+    ]);
+    return value;
+}
+function useMosaicRevealStep() {
+    const store = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>getMosaicRevealStore(), []);
+    const [step, setStep] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(()=>store.step);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>store.subscribe(setStep), [
+        store
+    ]);
+    return {
+        step,
+        increment: store.increment,
+        decrement: store.decrement,
+        reset: store.reset
+    };
+}
+function MetricMosaic({ revealStep, extraDoctors, theme = "light" }) {
+    const circle = theme === "dark" ? "relative overflow-hidden rounded-full ring-4 ring-black shadow-sm" : "relative overflow-hidden rounded-full ring-4 ring-white shadow-sm";
+    const isHoursMode = extraDoctors !== undefined;
+    const slots = isHoursMode ? [
+        {
+            key: "h-0",
+            src: DOCTOR_IMAGES[0],
+            className: "col-start-4 col-span-2 row-start-1 -translate-y-2 sm:-translate-y-3",
+            size: "h-16 w-16 sm:h-20 sm:w-20"
+        },
+        {
+            key: "h-1",
+            src: DOCTOR_IMAGES[1],
+            className: "col-start-7 col-span-2 row-start-1 translate-y-1 sm:translate-y-2",
+            size: "h-16 w-16 sm:h-20 sm:w-20"
+        },
+        {
+            key: "h-2",
+            src: DOCTOR_IMAGES[2],
+            className: "col-start-10 col-span-2 row-start-1 -translate-y-1",
+            size: "h-16 w-16 sm:h-20 sm:w-20"
+        },
+        {
+            key: "h-3",
+            src: DOCTOR_IMAGES[3],
+            className: "col-start-5 col-span-2 row-start-2 translate-y-1",
+            size: "h-16 w-16 sm:h-20 sm:w-20"
+        },
+        {
+            key: "h-4",
+            src: DOCTOR_IMAGES[4],
+            className: "col-start-2 col-span-2 row-start-3 -translate-y-1",
+            size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]"
+        },
+        {
+            key: "h-5",
+            src: DOCTOR_IMAGES[5],
+            className: "col-start-7 col-span-2 row-start-3 translate-y-1",
+            size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]"
+        },
+        {
+            key: "h-6",
+            src: DOCTOR_IMAGES[6],
+            className: "col-start-10 col-span-2 row-start-3 -translate-y-1",
+            size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]"
+        },
+        {
+            key: "h-7",
+            src: DOCTOR_IMAGES[7],
+            className: "col-start-6 col-span-2 row-start-4 translate-y-1",
+            size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]"
+        }
+    ] : [
+        {
+            key: "c-0",
+            src: DOCTOR_IMAGES[0],
+            className: "col-start-4 col-span-2 row-start-1 -translate-y-2 sm:-translate-y-3",
+            size: "h-16 w-16 sm:h-20 sm:w-20"
+        },
+        {
+            key: "c-1",
+            src: DOCTOR_IMAGES[1],
+            className: "col-start-7 col-span-2 row-start-1 translate-y-2 sm:translate-y-3",
+            size: "h-16 w-16 sm:h-20 sm:w-20"
+        },
+        {
+            key: "c-2",
+            src: DOCTOR_IMAGES[2],
+            className: "col-start-10 col-span-2 row-start-1 -translate-y-1 sm:-translate-y-2",
+            size: "h-16 w-16 sm:h-20 sm:w-20"
+        },
+        {
+            key: "c-3",
+            src: DOCTOR_IMAGES[3],
+            className: "col-start-5 col-span-2 row-start-2",
+            size: "h-16 w-16 sm:h-20 sm:w-20"
+        },
+        {
+            key: "c-4",
+            src: DOCTOR_IMAGES[4],
+            className: "col-start-8 col-span-2 row-start-2",
+            size: "h-16 w-16 sm:h-20 sm:w-20"
+        },
+        {
+            key: "c-5",
+            src: DOCTOR_IMAGES[5],
+            className: "col-start-3 col-span-2 row-start-3",
+            size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]"
+        },
+        {
+            key: "c-6",
+            src: DOCTOR_IMAGES[6],
+            className: "col-start-6 col-span-2 row-start-3",
+            size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]"
+        },
+        {
+            key: "c-7",
+            src: DOCTOR_IMAGES[7],
+            className: "col-start-9 col-span-2 row-start-4 -translate-y-1",
+            size: "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px]"
+        }
+    ];
+    const baseVisibleCount = isHoursMode ? 4 : Math.min(5, slots.length);
+    const revealCount = isHoursMode ? clampNumber(baseVisibleCount + (extraDoctors ?? 0), baseVisibleCount, slots.length) : clampNumber(baseVisibleCount + revealStep * 2, baseVisibleCount, slots.length);
+    const slotClass = (visible)=>"transition-all duration-500 ease-out " + (visible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-2 scale-[0.98]");
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "relative mx-auto h-[320px] w-full max-w-[600px] sm:h-[360px] md:h-[440px] md:max-w-[720px]",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "grid h-full w-full grid-cols-12 grid-rows-4 items-center justify-items-center gap-y-8",
+            children: slots.map((slot, idx)=>{
+                const visible = idx < revealCount;
+                const sizes = slot.size.includes("h-16") ? "(min-width: 640px) 80px, 64px" : "(min-width: 640px) 84px, 72px";
+                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: slot.className,
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: circle + " " + slot.size + " " + slotClass(visible),
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            src: slot.src,
+                            alt: "",
+                            fill: true,
+                            className: "object-cover",
+                            sizes: sizes
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/consultations-counter.tsx",
+                            lineNumber: 408,
+                            columnNumber: 17
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/consultations-counter.tsx",
+                        lineNumber: 407,
+                        columnNumber: 15
+                    }, this)
+                }, slot.key, false, {
+                    fileName: "[project]/src/components/consultations-counter.tsx",
+                    lineNumber: 406,
+                    columnNumber: 13
+                }, this);
+            })
+        }, void 0, false, {
+            fileName: "[project]/src/components/consultations-counter.tsx",
+            lineNumber: 401,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/consultations-counter.tsx",
+        lineNumber: 396,
+        columnNumber: 5
+    }, this);
+}
+function MetricSection({ id, nextId, prevId, title, fromValue, toValue, formatValue, subtitle }) {
+    const { ref, inView } = useInViewOnce(0.55);
+    const lockRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(0);
+    const touchStartYRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const { step: revealStep, increment, decrement, reset } = useMosaicRevealStep();
+    const settledAtRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(0);
+    const [numberPulse, setNumberPulse] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [exitStep, setExitStep] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+    const isHoursSection = Boolean(prevId) && !nextId;
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (!inView) return;
+        settledAtRef.current = Date.now() + 500;
+        if (isHoursSection) setExitStep(0);
+    }, [
+        inView,
+        isHoursSection
+    ]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if ("TURBOPACK compile-time truthy", 1) return;
+        "TURBOPACK unreachable";
+        const t = undefined;
+    }, [
+        revealStep
+    ]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if ("TURBOPACK compile-time truthy", 1) return;
+        "TURBOPACK unreachable";
+        const isActive = undefined;
+        const jumpTo = undefined;
+        const onWheel = undefined;
+    }, [
+        decrement,
+        exitStep,
+        increment,
+        isHoursSection,
+        nextId,
+        prevId,
+        ref,
+        reset,
+        revealStep
+    ]);
+    const jumpTo = (targetId)=>{
+        if (!targetId) return;
+        const now = Date.now();
+        if (now - lockRef.current < 650) return;
+        lockRef.current = now;
+        const target = document.getElementById(targetId);
+        target?.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        id: id,
+        ref: ref,
+        className: "relative scroll-mt-24 overflow-hidden transition-colors duration-700 " + (isHoursSection ? "bg-[#fbfff5]" : "bg-white"),
+        onTouchMove: (e)=>{
+            if (!isHoursSection) return;
+            if (!inView) return;
+            if (exitStep >= 4) return;
+            e.preventDefault();
+        },
+        onTouchStart: (e)=>{
+            touchStartYRef.current = e.touches[0]?.clientY ?? null;
+        },
+        onTouchEnd: (e)=>{
+            const startY = touchStartYRef.current;
+            touchStartYRef.current = null;
+            if (!inView) return;
+            if (startY == null) return;
+            const endY = e.changedTouches[0]?.clientY;
+            if (typeof endY !== "number") return;
+            const delta = startY - endY;
+            if (Math.abs(delta) < 24) return;
+            const now = Date.now();
+            if (now < settledAtRef.current) return;
+            if (now - lockRef.current < 450) return;
+            if (delta > 0) {
+                if (nextId && revealStep < 4) {
+                    lockRef.current = now;
+                    increment();
+                    if (revealStep === 3) {
+                        window.setTimeout(()=>jumpTo(nextId), 80);
+                    }
+                    return;
+                }
+                if (isHoursSection) {
+                    const next = clampNumber(exitStep + 1, 0, 4);
+                    lockRef.current = now;
+                    setExitStep(next);
+                    if (next === 4) {
+                        window.setTimeout(()=>{
+                            window.scrollBy({
+                                top: Math.round(window.innerHeight * 0.85),
+                                behavior: "smooth"
+                            });
+                        }, 80);
+                    }
+                    return;
+                }
+                jumpTo(nextId);
+            } else {
+                if (prevId && !nextId) {
+                    lockRef.current = now;
+                    reset();
+                    window.setTimeout(()=>jumpTo(prevId), 80);
+                    return;
+                }
+                if (prevId && revealStep > 0) {
+                    lockRef.current = now;
+                    decrement();
+                    return;
+                }
+                jumpTo(prevId);
+            }
+        },
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                "aria-hidden": true,
+                className: "pointer-events-none absolute inset-0 transition-opacity duration-700 " + (inView ? "opacity-100" : "opacity-0"),
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 " + (isHoursSection ? "bg-gradient-to-b from-[#fbfff5] via-white to-white" : "bg-gradient-to-b from-white via-white to-[#fbfff5]")
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/consultations-counter.tsx",
+                        lineNumber: 621,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute left-1/2 top-1/2 h-[1200px] w-[1200px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d5ff7c]/8 blur-3xl"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/consultations-counter.tsx",
+                        lineNumber: 629,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/consultations-counter.tsx",
+                lineNumber: 614,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "mx-auto flex min-h-screen max-w-6xl items-center px-6 py-20 transition-[opacity,transform,filter] duration-700 ease-out md:px-8 lg:px-0 " + (inView ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-4 blur-[2px]"),
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "grid w-full items-center gap-14 md:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "relative flex flex-col items-center text-center",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-[14px] font-extrabold uppercase tracking-[0.32em] text-slate-900",
+                                    children: title
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/consultations-counter.tsx",
+                                    lineNumber: 640,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "relative mt-8",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            "aria-hidden": true,
+                                            className: "pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 sm:h-[620px] sm:w-[620px] " + (inView ? "opacity-90" : "opacity-0"),
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "absolute inset-0 rounded-full bg-[#d5ff7c]/10"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/consultations-counter.tsx",
+                                                    lineNumber: 652,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "absolute left-1/2 top-1/2 h-[82%] w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d5ff7c]/14"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/consultations-counter.tsx",
+                                                    lineNumber: 653,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "absolute left-1/2 top-1/2 h-[62%] w-[62%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d5ff7c]/20"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/consultations-counter.tsx",
+                                                    lineNumber: 654,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "absolute left-1/2 top-1/2 h-[44%] w-[44%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d5ff7c]/28"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/consultations-counter.tsx",
+                                                    lineNumber: 655,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "absolute left-1/2 top-1/2 h-[30%] w-[30%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d5ff7c]/36"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/consultations-counter.tsx",
+                                                    lineNumber: 656,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/consultations-counter.tsx",
+                                            lineNumber: 645,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "relative z-10 block whitespace-nowrap font-display font-normal leading-none tracking-[-0.05em] text-slate-900 transition-[filter,opacity,transform] duration-300 sm:tracking-[-0.06em] " + (numberPulse ? "opacity-90 blur-[1px]" : "opacity-100 blur-0"),
+                                            style: {
+                                                fontVariantNumeric: "tabular-nums",
+                                                fontSize: "clamp(72px, 16vw, 160px)"
+                                            },
+                                            children: (()=>{
+                                                const progress = easeOutCubic(clampNumber(revealStep / 4, 0, 1));
+                                                const computed = Math.round(fromValue + (toValue - fromValue) * progress);
+                                                return formatValue(computed);
+                                            })()
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/consultations-counter.tsx",
+                                            lineNumber: 659,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/consultations-counter.tsx",
+                                    lineNumber: 644,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "mx-auto mt-8 max-w-md text-[16px] leading-relaxed text-slate-600",
+                                    children: subtitle
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/consultations-counter.tsx",
+                                    lineNumber: 674,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/consultations-counter.tsx",
+                            lineNumber: 639,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "justify-self-center md:justify-self-end",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(MetricMosaic, {
+                                revealStep: revealStep,
+                                extraDoctors: isHoursSection ? exitStep : undefined
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/consultations-counter.tsx",
+                                lineNumber: 680,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/consultations-counter.tsx",
+                            lineNumber: 679,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/consultations-counter.tsx",
+                    lineNumber: 638,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/consultations-counter.tsx",
+                lineNumber: 632,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/consultations-counter.tsx",
+        lineNumber: 546,
+        columnNumber: 5
+    }, this);
+}
+function ConsultationsCounter({ locale, minValue = 181_567, title, subtitle, theme = "light" }) {
+    const resolvedLocale = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>resolveNumberLocale(locale), [
+        locale
+    ]);
+    const numberFormatter = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        try {
+            return new Intl.NumberFormat(resolvedLocale);
+        } catch  {
+            return new Intl.NumberFormat();
+        }
+    }, [
+        resolvedLocale
+    ]);
+    const consultations = useConsultationsValue(minValue);
+    const formatValue = (value)=>formatWithSpaceGrouping(numberFormatter, value);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(MetricSection, {
+        id: "metric-consultations",
+        nextId: "metric-hours",
+        title: title,
+        fromValue: consultations,
+        toValue: consultations,
+        formatValue: formatValue,
+        subtitle: subtitle,
+        theme: theme
+    }, void 0, false, {
+        fileName: "[project]/src/components/consultations-counter.tsx",
+        lineNumber: 709,
+        columnNumber: 5
+    }, this);
+}
+function HoursSavedCounter({ locale, minValue = 181_567, title, subtitle, theme = "light" }) {
+    const resolvedLocale = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>resolveNumberLocale(locale), [
+        locale
+    ]);
+    const numberFormatter = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        try {
+            return new Intl.NumberFormat(resolvedLocale);
+        } catch  {
+            return new Intl.NumberFormat();
+        }
+    }, [
+        resolvedLocale
+    ]);
+    const consultations = useConsultationsValue(minValue);
+    const hoursSaved = Math.floor(consultations * 12 / 60);
+    const formatValue = (value)=>formatWithSpaceGrouping(numberFormatter, value);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(MetricSection, {
+        id: "metric-hours",
+        prevId: "metric-consultations",
+        title: title,
+        fromValue: hoursSaved,
+        toValue: hoursSaved,
+        formatValue: formatValue,
+        subtitle: subtitle,
+        theme: theme
+    }, void 0, false, {
+        fileName: "[project]/src/components/consultations-counter.tsx",
+        lineNumber: 745,
+        columnNumber: 5
+    }, this);
+}
+}}),
+"[project]/src/components/audience-tabs.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: require } = __turbopack_context__;
+{
+__turbopack_esm__({
+    "AudienceTabs": (()=>AudienceTabs)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+const IMAGES = [
+    "/doctors/67b19236e3a3611ed6065a9b_01%20animation%20img.avif",
+    "/doctors/67b19235807867cccd9a5006_03%20animation%20img.avif",
+    "/doctors/67b19235d44d8582c04e31fd_05%20animation%20img.avif",
+    "/doctors/67b192356ced5afd78c13178_09%20animation%20img.avif",
+    "/doctors/67b19235c56540b2db753a22_10%20animation%20img.avif",
+    "/doctors/67b19235a4b91a892ffe97a7_17%20animation%20img.avif",
+    "/doctors/67b19235feae33bb5666a86a_21%20animation%20img.avif",
+    "/doctors/67b19235a4b91a892ffe97a4_28%20animation%20img.avif"
+];
+const HIGHLIGHTS = {
+    clinicians: [
+        2,
+        6,
+        9,
+        13,
+        17
+    ],
+    revenue: [
+        1,
+        5,
+        10,
+        14,
+        18
+    ],
+    nurses: [
+        3,
+        7,
+        11,
+        15,
+        19
+    ]
+};
+const TAB_IMAGE_OFFSETS = {
+    clinicians: 0,
+    revenue: 3,
+    nurses: 5
+};
+const COPY = {
+    es: {
+        clinicians: {
+            label: "Hospitales y Médicos",
+            title: "Hospitales y Médicos",
+            body: "Documentación clínica más rápida y precisa. Los profesionales dedican más tiempo al paciente y menos al papeleo administrativo."
+        },
+        revenue: {
+            label: "Ciclo de ingresos",
+            title: "Ciclo de ingresos",
+            body: "Estandarización de notas y captura de datos optimizada para reducir retrabajo, acelerar la facturación y maximizar ingresos."
+        },
+        nurses: {
+            label: "Enfermería",
+            title: "Enfermería",
+            body: "Documentación diseñada para el flujo de trabajo de enfermería: eficiente, precisa y centrada en el cuidado del paciente."
+        }
+    },
+    en: {
+        clinicians: {
+            label: "Hospitals & Doctors",
+            title: "Hospitals & Doctors",
+            body: "Faster, more accurate clinical documentation. Professionals spend more time with patients and less on administrative paperwork."
+        },
+        revenue: {
+            label: "Revenue Cycle",
+            title: "Revenue Cycle",
+            body: "Standardized notes and optimized data capture to reduce rework, speed up billing, and maximize revenue."
+        },
+        nurses: {
+            label: "Nurses",
+            title: "Nurses",
+            body: "Documentation designed for nursing workflows: efficient, accurate, and focused on patient care."
+        }
+    },
+    pt: {
+        clinicians: {
+            label: "Hospitais e Médicos",
+            title: "Hospitais e Médicos",
+            body: "Documentação clínica mais rápida e precisa. Os profissionais dedicam mais tempo ao paciente e menos à burocracia administrativa."
+        },
+        revenue: {
+            label: "Ciclo de receita",
+            title: "Ciclo de receita",
+            body: "Padronização de notas e captura de dados otimizada para reduzir retrabalho, acelerar faturamento e maximizar receita."
+        },
+        nurses: {
+            label: "Enfermagem",
+            title: "Enfermagem",
+            body: "Documentação projetada para o fluxo de trabalho de enfermagem: eficiente, precisa e focada no cuidado ao paciente."
+        }
+    }
+};
+function AudienceTabs({ language = "es", theme = "light" }) {
+    const [active, setActive] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("clinicians");
+    const tiles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        const highlightOrder = HIGHLIGHTS[active];
+        const highlight = new Set(highlightOrder);
+        const offset = TAB_IMAGE_OFFSETS[active] % IMAGES.length;
+        const rotatedImages = [
+            ...IMAGES.slice(offset),
+            ...IMAGES.slice(0, offset)
+        ];
+        return Array.from({
+            length: 20
+        }, (_, idx)=>{
+            const isOn = highlight.has(idx);
+            const highlightPos = highlightOrder.indexOf(idx);
+            const src = isOn ? rotatedImages[highlightPos % rotatedImages.length] : rotatedImages[(idx * 3 + offset) % rotatedImages.length];
+            return {
+                idx,
+                src,
+                isOn
+            };
+        });
+    }, [
+        active
+    ]);
+    const items = [
+        "clinicians",
+        "revenue",
+        "nurses"
+    ];
+    const bgClass = theme === "dark" ? "bg-black" : "bg-white";
+    const tileBgClass = theme === "dark" ? "bg-white/10" : "bg-slate-100";
+    const borderColor = theme === "dark" ? "border-white/10" : "border-slate-200";
+    const divideColor = theme === "dark" ? "divide-white/10" : "divide-slate-200";
+    const activeTitleColor = theme === "dark" ? "text-white" : "text-slate-900";
+    const inactiveTitleColor = theme === "dark" ? "text-white/40" : "text-slate-500";
+    const bodyTextColor = theme === "dark" ? "text-white/60" : "text-slate-700";
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: bgClass,
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "mx-auto max-w-6xl px-6 py-32 md:px-8 md:py-36 lg:px-0",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "grid items-center gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "grid grid-cols-5 gap-3",
+                        children: tiles.map((tile)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "relative aspect-square overflow-hidden rounded-2xl transition-opacity duration-300 " + tileBgClass + " " + (tile.isOn ? "opacity-100" : "opacity-15"),
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    src: tile.src,
+                                    alt: "",
+                                    fill: true,
+                                    className: "object-cover",
+                                    sizes: "(min-width: 768px) 110px, 70px"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/audience-tabs.tsx",
+                                    lineNumber: 136,
+                                    columnNumber: 17
+                                }, this)
+                            }, tile.idx, false, {
+                                fileName: "[project]/src/components/audience-tabs.tsx",
+                                lineNumber: 127,
+                                columnNumber: 15
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/audience-tabs.tsx",
+                        lineNumber: 125,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "border-t pt-8 md:border-t-0 md:pt-0 " + borderColor,
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "divide-y " + divideColor,
+                            children: items.map((key)=>{
+                                const isActive = active === key;
+                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    type: "button",
+                                    onClick: ()=>setActive(key),
+                                    className: "flex w-full items-start justify-between gap-6 py-5 text-left",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: (isActive ? activeTitleColor : inactiveTitleColor) + " text-[18px] font-semibold",
+                                                children: COPY[language][key].label
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/audience-tabs.tsx",
+                                                lineNumber: 153,
+                                                columnNumber: 23
+                                            }, this),
+                                            isActive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "mt-3 text-[14px] leading-relaxed " + bodyTextColor,
+                                                children: COPY[language][key].body
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/audience-tabs.tsx",
+                                                lineNumber: 162,
+                                                columnNumber: 25
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/audience-tabs.tsx",
+                                        lineNumber: 152,
+                                        columnNumber: 21
+                                    }, this)
+                                }, key, false, {
+                                    fileName: "[project]/src/components/audience-tabs.tsx",
+                                    lineNumber: 146,
+                                    columnNumber: 19
+                                }, this);
+                            })
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/audience-tabs.tsx",
+                            lineNumber: 142,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/audience-tabs.tsx",
+                        lineNumber: 141,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/audience-tabs.tsx",
+                lineNumber: 124,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/src/components/audience-tabs.tsx",
+            lineNumber: 123,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/audience-tabs.tsx",
+        lineNumber: 122,
+        columnNumber: 5
+    }, this);
+}
+}}),
+"[project]/src/components/deepclinic-top-nav.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: require } = __turbopack_context__;
+{
+__turbopack_esm__({
+    "DeepClinicTopNav": (()=>DeepClinicTopNav)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/link.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+function joinClassNames(...parts) {
+    return parts.filter(Boolean).join(" ");
+}
+function DeepClinicTopNav({ showProductsSubnav }) {
+    const items = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>[
+            {
+                label: "DEEPCLINIC",
+                href: "/es/deepclinic"
+            },
+            {
+                label: "API",
+                href: "/es/platform"
+            },
+            {
+                label: "EMPRESA",
+                href: "/es/about"
+            },
+            {
+                label: "SEGURIDAD",
+                href: "/es/data-security"
+            },
+            {
+                label: "PRECIOS",
+                href: "/es/pricing"
+            }
+        ], []);
+    const productItems = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>[
+            {
+                label: "COPILOTO",
+                href: "/es/product"
+            },
+            {
+                label: "INGRESOS",
+                href: "/es/revenue"
+            },
+            {
+                label: "RECEPCIÓN",
+                href: "/es/desk"
+            },
+            {
+                label: "CITAS",
+                href: "/es/booking"
+            },
+            {
+                label: "DEEPCLINIC IA",
+                href: "/es/platform"
+            },
+            {
+                label: "PACIENTES",
+                href: "/es/health"
+            }
+        ], []);
+    const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [productsOpen, setProductsOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (!open) return;
+        const onKeyDown = (e)=>{
+            if (e.key === "Escape") setOpen(false);
+        };
+        window.addEventListener("keydown", onKeyDown);
+        return ()=>window.removeEventListener("keydown", onKeyDown);
+    }, [
+        open
+    ]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (!open) return;
+        const prev = document.documentElement.style.overflow;
+        document.documentElement.style.overflow = "hidden";
+        return ()=>{
+            document.documentElement.style.overflow = prev;
+        };
+    }, [
+        open
+    ]);
+    const handleNavClick = (e, label)=>{
+        if (label === "DEEPCLINIC" && showProductsSubnav) {
+            e.preventDefault();
+            setProductsOpen((prev)=>!prev);
+        } else {
+            setProductsOpen(false);
+        }
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
+        className: "fixed inset-x-0 top-0 z-40",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "relative",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "pointer-events-none absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-transparent"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                    lineNumber: 78,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "relative z-20 mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-8 px-6 py-5 md:gap-10 md:px-10",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/es/deepclinic",
+                            className: "flex items-center gap-2 text-white",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-[12px] font-semibold text-black",
+                                children: "DC"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                lineNumber: 82,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                            lineNumber: 81,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+                            className: "hidden items-center justify-start gap-6 text-[11px] font-medium uppercase tracking-[0.24em] text-white/65 md:flex",
+                            children: items.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    href: item.href,
+                                    className: `transition-colors hover:text-white ${item.label === "DEEPCLINIC" && productsOpen ? "text-white" : ""}`,
+                                    onClick: (e)=>handleNavClick(e, item.label),
+                                    children: item.label
+                                }, item.label, false, {
+                                    fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                    lineNumber: 89,
+                                    columnNumber: 15
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                            lineNumber: 87,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center justify-end gap-3",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/signup",
+                                    className: "inline-flex items-center justify-center rounded-full border border-white/25 bg-transparent px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/90 transition-colors hover:border-white/40 hover:bg-white/[0.08]",
+                                    children: "PROBAR DEEPCLINIC"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                    lineNumber: 102,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    type: "button",
+                                    onClick: ()=>setOpen((v)=>!v),
+                                    "aria-expanded": open,
+                                    "aria-label": open ? "Cerrar menú" : "Abrir menú",
+                                    className: "inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/85 backdrop-blur transition-colors hover:bg-white/10 md:hidden",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                        width: "18",
+                                        height: "18",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                d: "M5 7h14",
+                                                stroke: "currentColor",
+                                                strokeWidth: "2",
+                                                strokeLinecap: "round"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                                lineNumber: 117,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                d: "M5 12h14",
+                                                stroke: "currentColor",
+                                                strokeWidth: "2",
+                                                strokeLinecap: "round"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                                lineNumber: 118,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                d: "M5 17h14",
+                                                stroke: "currentColor",
+                                                strokeWidth: "2",
+                                                strokeLinecap: "round"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                                lineNumber: 119,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                        lineNumber: 116,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                    lineNumber: 109,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                            lineNumber: 101,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                    lineNumber: 80,
+                    columnNumber: 9
+                }, this),
+                showProductsSubnav && productsOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "hidden md:block animate-fade-in-down",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mx-auto max-w-7xl px-6 md:px-10",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "h-px w-full bg-white/10"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                lineNumber: 128,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+                                className: "flex items-center justify-start gap-6 py-3 text-[10px] font-medium uppercase tracking-[0.26em] text-white/40",
+                                children: productItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                        href: item.href,
+                                        className: "transition-colors hover:text-white/80",
+                                        children: item.label
+                                    }, `subnav-${item.label}`, false, {
+                                        fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                        lineNumber: 131,
+                                        columnNumber: 19
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                lineNumber: 129,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "h-px w-full bg-white/10"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                lineNumber: 136,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                        lineNumber: 127,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                    lineNumber: 126,
+                    columnNumber: 11
+                }, this) : null,
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: joinClassNames("md:hidden", "fixed left-0 right-0 bottom-0 top-[72px]", "transition-opacity duration-300", open ? "opacity-100" : "pointer-events-none opacity-0"),
+                    onClick: ()=>setOpen(false),
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 bg-black/60"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                        lineNumber: 150,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                    lineNumber: 141,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: joinClassNames("md:hidden", "absolute left-0 right-0 top-full", "z-30", "transition-[opacity,transform] duration-300", open ? "opacity-100 translate-y-0" : "pointer-events-none opacity-0 -translate-y-2"),
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mx-auto max-w-7xl px-6 md:px-10",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "overflow-hidden rounded-2xl border border-white/10 bg-black/60 shadow-[0_28px_120px_rgba(0,0,0,0.7)] backdrop-blur",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex flex-col gap-1 p-3 text-[12px] font-medium uppercase tracking-[0.22em] text-white/75",
+                                children: items.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                        href: item.href,
+                                        onClick: ()=>setOpen(false),
+                                        className: "rounded-xl px-3 py-3 transition-colors hover:bg-white/5 hover:text-white",
+                                        children: item.label
+                                    }, `mobile-${item.label}`, false, {
+                                        fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                        lineNumber: 166,
+                                        columnNumber: 19
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                                lineNumber: 164,
+                                columnNumber: 15
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                            lineNumber: 163,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                        lineNumber: 162,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+                    lineNumber: 153,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+            lineNumber: 77,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/deepclinic-top-nav.tsx",
+        lineNumber: 76,
+        columnNumber: 5
+    }, this);
+}
+}}),
+"[project]/src/components/grok-background.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: require } = __turbopack_context__;
+{
+__turbopack_esm__({
+    "GrokBackground": (()=>GrokBackground)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+"use client";
+;
+function GrokBackground() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "absolute inset-0 overflow-hidden pointer-events-none select-none bg-black",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute top-[-10%] right-[-5%] w-[70vw] h-[80vh] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/40 via-indigo-900/20 to-transparent blur-[120px] mix-blend-screen animate-pulse-slow"
+            }, void 0, false, {
+                fileName: "[project]/src/components/grok-background.tsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute top-[10%] right-[10%] w-[40vw] h-[40vw] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/25 via-blue-400/20 to-transparent blur-[80px] mix-blend-screen"
+            }, void 0, false, {
+                fileName: "[project]/src/components/grok-background.tsx",
+                lineNumber: 17,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute top-[20%] left-[-10%] w-[60vw] h-[60vw] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/20 via-blue-900/10 to-transparent blur-[100px] mix-blend-screen animate-spin-slow-reverse",
+                style: {
+                    animationDuration: '40s'
+                }
+            }, void 0, false, {
+                fileName: "[project]/src/components/grok-background.tsx",
+                lineNumber: 20,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute bottom-[-20%] left-[20%] w-[80vw] h-[50vh] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-black to-transparent blur-[100px]"
+            }, void 0, false, {
+                fileName: "[project]/src/components/grok-background.tsx",
+                lineNumber: 23,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute inset-0 opacity-40 mix-blend-overlay",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 opacity-30",
+                        style: {
+                            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E")`
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/grok-background.tsx",
+                        lineNumber: 28,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] bg-gradient-to-tr from-transparent via-blue-400/10 to-transparent blur-[60px] animate-spin-slow",
+                        style: {
+                            animationDuration: '30s'
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/grok-background.tsx",
+                        lineNumber: 30,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/grok-background.tsx",
+                lineNumber: 26,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute inset-0 bg-blue-950/20 mix-blend-overlay"
+            }, void 0, false, {
+                fileName: "[project]/src/components/grok-background.tsx",
+                lineNumber: 37,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/grok-background.tsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+}}),
+"[project]/src/components/motion-reveal.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: require } = __turbopack_context__;
+{
+__turbopack_esm__({
+    "MotionReveal": (()=>MotionReveal)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+"use client";
+;
+;
+function joinClassNames(...parts) {
+    return parts.filter(Boolean).join(" ");
+}
+function MotionReveal({ children, className, delayMs = 0, durationMs = 700, once = true, offsetY = 18 }) {
+    const ref = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const [visible, setVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const transitionStyle = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>({
+            transitionDuration: `${durationMs}ms`,
+            transitionDelay: `${delayMs}ms`
+        }), [
+        delayMs,
+        durationMs
+    ]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if ("TURBOPACK compile-time truthy", 1) return;
+        "TURBOPACK unreachable";
+        const reduced = undefined;
+        const el = undefined;
+        const observer = undefined;
+    }, [
+        once
+    ]);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        ref: ref,
+        style: {
+            ...transitionStyle,
+            transform: visible ? "translate3d(0,0,0)" : `translate3d(0, ${offsetY}px, 0)`
+        },
+        className: joinClassNames("will-change-[opacity,transform,filter] transition-[opacity,transform,filter]", visible ? "opacity-100 blur-0" : "opacity-0 blur-[2px]", className),
+        children: children
+    }, void 0, false, {
+        fileName: "[project]/src/components/motion-reveal.tsx",
+        lineNumber: 71,
+        columnNumber: 5
+    }, this);
+}
+}}),
+"[project]/src/app/es/health/page.tsx [app-rsc] (ecmascript, Next.js server component, client modules ssr)": ((__turbopack_context__) => {
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, t: require } = __turbopack_context__;
+{
+}}),
+
+};
+
+//# sourceMappingURL=src_f2b21c._.js.map

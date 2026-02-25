@@ -1,3 +1,5 @@
 {
-  "/es/deepclinic/page": "app/es/deepclinic/page.js"
+  "/page": "app/page.js",
+  "/es/deepclinic/page": "app/es/deepclinic/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
 }

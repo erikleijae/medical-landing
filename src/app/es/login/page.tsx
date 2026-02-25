@@ -6,6 +6,7 @@ import { useState, type FormEvent } from "react";
 
 import { authClient, resolvePostLoginRedirectUrl } from "@/lib/auth-client";
 import { AuthLanguageSelect } from "../../../components/auth-language-select";
+import { GrokBackground } from "../../../components/grok-background";
 
 export default function LoginPageEs() {
   const [formError, setFormError] = useState<string | null>(null);
@@ -90,31 +91,33 @@ export default function LoginPageEs() {
   };
 
   return (
-    <main className="min-h-screen bg-white text-slate-900">
-      <div className="flex min-h-screen w-full flex-col lg:flex-row">
+    <main className="relative min-h-screen bg-black text-white selection:bg-white/20">
+      <GrokBackground />
+
+      <div className="relative flex min-h-screen w-full flex-col lg:flex-row">
         {/* LADO IZQUIERDO: FORMULARIO LOGIN */}
-        <section className="flex w-full flex-col justify-between bg-white px-6 py-10 sm:px-10 lg:w-1/2 lg:px-24 lg:py-12">
+        <section className="relative flex w-full flex-col justify-between overflow-hidden px-6 py-10 sm:px-10 lg:w-1/2 lg:px-24 lg:py-12 z-10">
           <div>
             <div className="flex items-center justify-between gap-4">
-              <div className="flex items-center gap-2">
+              <Link href="/es" className="flex items-center gap-2 transition-opacity hover:opacity-80 text-white">
                 <div className="flex items-center">
-                  <span className="inline-block h-6 w-6 rounded-full border border-slate-900" />
-                  <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-slate-900" />
+                  <span className="inline-block h-6 w-6 rounded-full border border-white" />
+                  <span className="-ml-3 inline-block h-6 w-6 rounded-full border border-white" />
                 </div>
-                <span className="text-[18px] font-semibold tracking-tight text-slate-900">
+                <span className="text-[18px] font-semibold tracking-tight">
                   DeepClinic
                 </span>
-              </div>
+              </Link>
 
-              <AuthLanguageSelect />
+              <AuthLanguageSelect theme="dark" />
             </div>
 
             {/* Contenido principal */}
             <div className="mt-16 max-w-sm">
-              <h1 className="font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-[32px]">
+              <h1 className="font-sans text-3xl font-semibold tracking-tight text-white sm:text-[32px]">
                 Inicia sesión
               </h1>
-              <p className="mt-3 text-sm text-slate-500">
+              <p className="mt-3 text-sm text-white/60">
                 Inicia sesión en tu cuenta para continuar a DeepClinic.
               </p>
 
@@ -127,7 +130,7 @@ export default function LoginPageEs() {
                 onSubmit={handleSubmit}
               >
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium text-slate-800">
+                  <label htmlFor="email" className="text-sm font-medium text-white/80">
                     Correo electrónico
                   </label>
                   <input
@@ -136,13 +139,13 @@ export default function LoginPageEs() {
                     type="email"
                     autoComplete="off"
                     required
-                    placeholder="Correo electrónico"
-                    className="block h-[72px] w-full rounded-md border border-slate-200 bg-slate-50 px-5 text-lg text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
+                    placeholder="nombre@ejemplo.com"
+                    className="block h-[56px] w-full rounded-xl border border-white/10 bg-white/5 px-5 text-lg text-white placeholder-white/30 outline-none transition focus:border-white/30 focus:bg-white/10 shadow-sm"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="password" className="text-sm font-medium text-slate-800">
+                  <label htmlFor="password" className="text-sm font-medium text-white/80">
                     Contraseña
                   </label>
                   <input
@@ -152,17 +155,17 @@ export default function LoginPageEs() {
                     autoComplete="off"
                     required
                     placeholder="Contraseña"
-                    className="block h-[72px] w-full rounded-md border border-slate-200 bg-slate-50 px-5 text-lg text-slate-900 placeholder-slate-400 outline-none transition focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-900/80"
+                    className="block h-[56px] w-full rounded-xl border border-white/10 bg-white/5 px-5 text-lg text-white placeholder-white/30 outline-none transition focus:border-white/30 focus:bg-white/10 shadow-sm"
                   />
                 </div>
               </form>
 
-              <div className="mt-4 space-y-3">
+              <div className="mt-6 space-y-3">
                 <button
                   type="submit"
                   form="login-form"
-                  disabled={isSubmitting || isPasskeySubmitting}
-                  className="inline-flex h-[72px] w-full items-center justify-center rounded-full bg-black px-5 text-lg font-semibold text-[#d5ff7c] shadow-sm transition hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 focus:ring-offset-white disabled:cursor-not-allowed disabled:opacity-60"
+                  disabled={isSubmitting}
+                  className="inline-flex h-[56px] w-full items-center justify-center rounded-full bg-white px-5 text-lg font-semibold text-black shadow-lg transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {isSubmitting ? "Iniciando sesión..." : "Iniciar sesión"}
                 </button>
@@ -170,9 +173,12 @@ export default function LoginPageEs() {
                 <button
                   type="button"
                   onClick={handleGoogleSignIn}
-                  disabled={isSubmitting || isPasskeySubmitting}
-                  className="inline-flex h-[72px] w-full items-center justify-center rounded-full border border-slate-300 bg-white px-5 text-lg font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 focus:ring-offset-white disabled:cursor-not-allowed disabled:opacity-60"
+                  disabled={isSubmitting}
+                  className="inline-flex h-[56px] w-full items-center justify-center rounded-full border border-white/20 bg-transparent px-5 text-lg font-semibold text-white shadow-sm transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black disabled:cursor-not-allowed disabled:opacity-60"
                 >
+                  <svg className="mr-3 h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .533 5.333.533 12S5.867 24 12.48 24c3.44 0 6.013-1.147 8.027-3.24 2.053-2.053 2.72-5.2 2.72-7.813 0-.773-.08-1.52-.213-2.027h-10.533z" />
+                  </svg>
                   Iniciar sesión con Google
                 </button>
 
@@ -180,12 +186,12 @@ export default function LoginPageEs() {
                   type="button"
                   onClick={handlePasskeySignIn}
                   disabled={isSubmitting || isPasskeySubmitting}
-                  className="inline-flex h-14 w-full items-center justify-center rounded-full border border-slate-300 bg-white px-5 text-base font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 focus:ring-offset-white disabled:cursor-not-allowed disabled:opacity-60"
+                  className="inline-flex h-[56px] w-full items-center justify-center rounded-full border border-transparent bg-transparent px-5 text-base font-medium text-white/50 transition hover:bg-white/5 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   <svg
                     aria-hidden
                     viewBox="0 0 24 24"
-                    className="mr-2 h-5 w-5 text-slate-600"
+                    className="mr-2 h-5 w-5 opacity-70"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -204,28 +210,28 @@ export default function LoginPageEs() {
               </div>
 
               {formError ? (
-                <p className="mt-3 text-sm text-red-600" role="alert">
+                <p className="mt-4 rounded-lg bg-red-500/10 px-4 py-3 text-sm text-red-400 border border-red-500/20" role="alert">
                   {formError}
                 </p>
               ) : null}
             </div>
 
-            <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50/70 px-4 py-3">
-              <p className="text-center text-xs text-slate-600">
+            <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 px-4 py-4">
+              <p className="text-center text-xs text-white/60">
                 ¿Olvidaste tu contraseña?{" "}
                 <Link
                   href="/es/recovery"
-                  className="font-semibold text-slate-900 underline underline-offset-4 decoration-slate-300 transition hover:decoration-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+                  className="font-semibold text-white hover:text-white underline underline-offset-4 decoration-white/30 transition hover:decoration-white"
                 >
                   Recuperar contraseña
                 </Link>
               </p>
 
-              <p className="mt-2 text-center text-xs text-slate-600">
+              <p className="mt-2 text-center text-xs text-white/60">
                 ¿No tienes una cuenta?{" "}
                 <Link
                   href="/es/signup"
-                  className="font-semibold text-slate-900 underline underline-offset-4 decoration-slate-300 transition hover:decoration-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+                  className="font-semibold text-white hover:text-white underline underline-offset-4 decoration-white/30 transition hover:decoration-white"
                 >
                   Regístrate
                 </Link>
@@ -234,26 +240,27 @@ export default function LoginPageEs() {
           </div>
         </section>
 
-        {/* LADO DERECHO: IMAGEN + TESTIMONIO (igual que signup) */}
-        <section className="relative hidden w-full overflow-hidden lg:block lg:w-1/2">
+        {/* LADO DERECHO: IMAGEN + TESTIMONIO */}
+        <section className="relative hidden w-full overflow-hidden lg:block lg:w-1/2 border-l border-white/10">
           <Image
             src="/680b8bd084ba7f136270ee2a_testimonial1.png"
             alt="Profesional de la salud usando DeepClinic"
             fill
             sizes="50vw"
-            className="object-cover"
+            className="object-cover opacity-60"
             priority
           />
-          <div className="absolute inset-0 bg-black/55" />
+          {/* Sutil overlay degradado en la parte inferior para que el texto sea legible sobre la imagen */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
 
-          <div className="relative flex h-full flex-col justify-center px-10 py-12 text-white">
-            <blockquote className="max-w-md text-lg leading-relaxed">
+          <div className="relative flex h-full flex-col justify-end px-10 py-12 text-white">
+            <blockquote className="max-w-md text-xl font-medium leading-relaxed tracking-tight text-white/90 drop-shadow-sm">
               &quot;Estoy muy contenta con cómo DeepClinic me permite dedicar más tiempo al paciente en Médica Sur y explicar el
               diagnóstico y tratamiento de manera más completa. Bienvenida la IA que humaniza la consulta.&quot;
             </blockquote>
 
-            <div className="mt-6 flex items-center gap-3 text-xs text-slate-200">
-              <div className="relative h-10 w-10 overflow-hidden rounded-full bg-slate-300">
+            <div className="mt-8 flex items-center gap-4">
+              <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-white/20 shadow-md">
                 <Image
                   src="/6810bcac6fc499ede820f7a0_Juan Mora.png.png"
                   alt="Profesional de la salud"
@@ -261,10 +268,9 @@ export default function LoginPageEs() {
                   className="object-cover"
                 />
               </div>
-              <div className="space-y-0.5">
-                <p className="text-sm font-semibold text-white">Diana Martínez</p>
-                <p className="text-[11px] text-slate-200/80">Profesional de la salud</p>
-                <p className="text-[11px] text-slate-200/80">Médica Sur</p>
+              <div className="space-y-0.5 drop-shadow-sm">
+                <p className="text-sm font-bold text-white">Diana Martínez</p>
+                <p className="text-xs text-white/60">Profesional de la salud • Médica Sur</p>
               </div>
             </div>
           </div>
@@ -273,3 +279,4 @@ export default function LoginPageEs() {
     </main>
   );
 }
+
