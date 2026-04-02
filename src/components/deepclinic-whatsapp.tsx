@@ -121,7 +121,7 @@ function WhatsAppVisual({
   lang,
 }: {
   activeStep: number;
-  videoRef: React.RefObject<HTMLVideoElement>;
+  videoRef: React.RefObject<HTMLVideoElement | null>;
   lang: "es" | "en" | "pt";
 }) {
   const PhoneFrame = ({ children }: { children: React.ReactNode }) => {
